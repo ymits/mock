@@ -1,0 +1,52 @@
+.toggle-slide {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  direction: ltr;
+	color:#fff;
+}
+.toggle-slide .toggle-on,.toggle-slide .toggle-off,.toggle-slide .toggle-blob {
+  float: left;
+}
+.toggle-slide .toggle-blob {
+  position: relative;
+  z-index: 99;
+  cursor: hand;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+/* theme */
+/*
+.toggleLR{width:66px; height:26px;  background:url(../img/parts/toggleBaseOnOff.png) no-repeat; padding:5px 17px 5px 7px; overflow:hidden;}
+*/
+.toggleLR{width:100px; height:52px; overflow:visible}
+.toggleLR.on{background:url(../img/pts/toggleBaseActive.png) no-repeat center center;}
+.toggleLR.off{background:url(../img/pts/toggleBaseInactive.png) no-repeat center center;}
+.toggleLR {background:url(../img/pts/toggleBaseInactive.png) no-repeat center center;}
+.toggleLR .toggle-slide{width:100px; height:40px; overflow:visible;}
+.toggleLR .toggle-slide .toggle-blob{width:52px !important; height:40px;}
+.toggleLR.on .toggle-slide .toggle-blob{background:url(../img/pts/toggleActive.png) no-repeat center center;}
+.toggleLR.off .toggle-slide .toggle-blob{background:url(../img/pts/toggleInactive.png) no-repeat center center;}
+.toggleLR .toggle-slide .toggle-blob{background:url(../img/pts/toggleInactive.png) no-repeat center center;}
+
+
+
+/*
+.toggleLR .toggle-slide{width:93px !important; border:1px #c00 solid;}
+.toggleLR .toggle-slide .toggle-blob{background:url(../img/parts/toggleSwitchOnOff.png) no-repeat  !important; width:37px !important; height:26px !important;}
+
+.toggleSR{width:73px; height:24px;  background:url(../img/parts/toggleBaseWithWithout.png) no-repeat; padding:2px 17px 2px 3px; overflow:hidden;}
+.toggleSR .toggle-slide{width:103px !important;}
+.toggleSR .toggle-slide .toggle-blob{background:url(../img/parts/toggleSwitchWithWithout.png) no-repeat  !important; width:34px !important; height:20px !important;}
+
+.toggleLRs{width:56px !important; height:23px;  background:url(../img/parts/toggleBaseOnfOffSmall.png) no-repeat; padding:2px 16px 0 3px ;}
+.toggleLRs .toggle-slide {width:103px !important;}
+.toggleLRs .toggle-slide .toggle-blob{background:url(../img/parts/toggleSwitchOnOffSmall.png) no-repeat  !important; width:35px !important; height:20px !important;}
+*/

@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* buttons
+============================================================== */
+.btn{background:none; border:none; padding:0;}
+.btn{border:1px #000 solid; border-radius:4px; box-shadow:0 2px 2px rgba(255,255,255,0.5) inset,0 1px 1px rgba(255,255,255,0.3); display:inline-block; height:40px; font-size:14px; line-height:40px; padding:0 10px;}
+/* regular green */
+.btn.regular{color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:block; background:url(../img/bg/gradientGreen.png) repeat-x left center; background-size:auto 100%;}
+/* highlighted red */
+.btn.highlight{color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:block; background:url(../img/bg/gradientRed.png) repeat-x left center; background-size:auto 100%;}
+/* low priority gray */
+.btn.sub{color:#000; text-shadow:0 1px 0 rgba(255,255,255,1); display:block; background:url(../img/bg/gradientGray.png) repeat-x left center; background-size:auto 100%;}
+/* for table internal black */
+.btn.tbl{color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:block; background:url(../img/bg/gradientBlack.png) repeat-x left center; background-size:auto 100%;}
+/* for disabled */
+.btn.disabled{color:#ccc; text-shadow:0 -1px 0 rgba(0,0,0,0.5); display:block; background:url(../img/bg/gradDisabled.png) repeat-x left center; background-size:auto 100%; opacity:1; cursor:default;}
+
+.btn.regular:link,.btn.highlight:link,.btn.tbl:link,
+.btn.regular:visited,.btn.highlight:visited,.btn.tbl:visited,
+.btn.regular:hover,.btn.highlight:hover,.btn.tbl:hover{color:#fff;}
+.btn.disabled:link,.btn.disabled:visited,.btn.disabled:hover{color:#ccc;}
+
+.cancel .btn{color:#000; text-shadow:0 1px 0 rgba(255,255,255,1); display:block; background:url(../img/bg/gradientGray.png) repeat-x left center; background-size:auto 100%;}
+.search .btn{color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:inline-block; height:40px; line-height:40px; padding:0 10px 0 30px; font-size:14px; border-color:#000; vertical-align:middle;
+    background-image:url(../img/icn/search.png),url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:10px center,left center;}
+
+
+/* form objects
+============================================================== */
+/* calendar call button */
+.dialogCalendarSelect,
+.dialogCalendarSelectWareki,
+.dialogMonthlySelect{line-height:40px;}
+.dialogCalendarSelect input,
+.dialogCalendarSelectWareki input,
+.dialogMonthlySelect input{display:none;}
+.dialogCalendarSelect button,
+.dialogCalendarSelectWareki button,
+.dialogMonthlySelect button{height:40px; line-height:40px; border:1px #000 solid; border-radius:4px; color:#000; font-weight:bold; font-size:14px; padding:0 35px 0 10px; text-shadow:0 1px 0 rgba(255,255,255,1); box-shadow:0 0 7px rgba(0,0,0,0.4) inset;
+    background-image:url(../img/icn/calendar.png), url(../img/bg/gradientGray.png);
+    background-position:right center,0 center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:25px 20px,10px 100%;}
+
+
+/* select
+select parental box => each specific size neeeded */
+.selParent{display:inline-block; vertical-align:middle; font-size:14px; z-index:0;}
+.selParent .selWrap{height:40px; position:relative; border:1px solid #000; border-radius:4px; box-shadow:0 0 7px rgba(0,0,0,0.4) inset,0 1px 1px rgba(255,255,255,0.3); display:inline-block; width:100%; text-align:left; vertical-align:middle; padding:0 0 0 10px !important; text-shadow:0 1px 0 rgba(255,255,255,1); display:block; position:relative;
+    background:url(../img/bg/gradientGray.png) repeat-x left center; background-size:auto 100%; overflow:hidden;}
+.selParent .selWrap.disabled{background:url(../img/bg/gradDisabled.png) repeat-x left center; background-size:auto 100%;}
+.selParent .selWrap:after{content:''; background:url(../img/icn/selectArr.png) no-repeat; width:15px; height:6px; position:absolute; right:0; top:50%; margin-top:-3px;}
+.selParent .selWrap .selValue{height:40px; line-height:40px; padding:0 24px 0 0px !important; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; display:inline-block; width:100%;  z-index:1;}
+.selParent .selWrap select{height:40px; width:100%; opacity:0; position:absolute; left:0; top:0; z-index:9999; overflow:hidden; text-shadow:none; box-shadow:none; font-size:20px;}
+.regSelector{}
+
+.selParent.black{}
+.selParent.black .selWrap{background:url(../img/bg/gradientBlack.png) repeat-x left center; background-size:auto 100%;}
+.selParent.black .selWrap:after{background:url(../img/icn/selectArrWhite.png) no-repeat; width:15px;}
+.selParent.black .selWrap .selValue{color:#fff; text-shadow:0 1px 0 rgba(0,0,0,1);}
+
+
+/* text / password */
+input[type=text],input[type=password],input[type=number],textarea{border:1px #000 solid; border-radius:4px; background:#fff; padding:5px; font-size:14px; height:40px;}
+/* checkbox */
+label.check{position:relative; display:inline-block; line-height:20px; padding:0 25px 0 25px; cursor:pointer; z-index:1;}
+label.check input[type=checkbox]{position:absolute; left:0; top:0; z-index:1; opacity:0;}
+label.check:before{content:''; border:1px #666 solid; border-radius:3px; width:16px; height:16px; display:block; position:absolute; left:0; top:0; background:#cecaca; z-index:2; box-shadow:0 2px 4px rgba(255,255,255,0.7) inset;}
+label.check.active:after{background:url(../img/icn/checked.png) no-repeat; width:25px; height:23px; position:absolute; left:-2px; top:0; z-index:3; content:'';}
+label.check.disabled{opacity:0.5;}
+/* radio */
+label.radio{position:relative; display:inline-block; line-height:22px; padding-left:30px; cursor:pointer; z-index:1;}
+label.radio input[type=radio]{position:absolute; left:0; top:0; z-index:1; opacity:0;}
+label.radio:before{content:''; border-radius:20px; width:20px; height:20px; display:block; position:absolute; left:0; top:0; background:#e1e1e1; z-index:2; box-shadow:5px 5px 10px rgba(255,255,255,0.5) inset, 1px 1px 2px rgba(0,0,0,0.4); vertical-align:middle; border:1px #999 solid;}
+label.radio.active:after{content:''; border-radius:20px; width:14px; height:14px; display:block; position:absolute; left:0px; top:0px; background:#02983b; z-index:3; box-shadow:3px 3px 5px rgba(0,0,0,0.5) inset, 1px 1px 2px rgba(0,0,0,0.5); border:3px #fff solid; vertical-align:middle;}
+label.radio.disabled{opacity:0.5;}
+
+/* font */
+input[type=text],
+input[type=password],
+input[type=number],
+select,
+textarea{font-family:"メイリオ", Meiryo,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+
+/* disabled */
+a:hover,button:hover,a:hover img,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{opacity:0.7;}
+a.disabled,button.disabled,a.disabled img,input[type=button].disabled,input[type=submit].disabled,input[type=reset].disabled{opacity:0.3; cursor:default;}
+
+input[type=text].disabled,input[type=number].disabled,input[type=tel].disabled,input[type=url],input[type=range].disabled,textarea.disabled,
+input[type=text]:disabled,input[type=number]:disabled,input[type=tel]:disabled,input[type=url]:disabled,input[type=range]:disabled,textarea:disabled{background:#eee; border-color:#ccc;}
+

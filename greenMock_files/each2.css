@@ -1,0 +1,1383 @@
+@charset "utf-8";
+
+/* A-001
+============================================================== */
+header#pageHeader p.sorter{width:170px; height:40px; position:absolute; right:10px; top:7px;}
+header#pageHeader p.sorter .selWrap{width:170px;}
+article#pageBody.application{width:100%; float:none; height:100%;}
+article#pageBody.application header{padding:10px; z-index:2; position:relative; height:165px;}
+article#pageBody.application header .searchFunction{clear:both; text-align:right; height:40px;}
+article#pageBody.application header .searchFunction p{text-align:left; width:125px; display:inline-block; margin-left:2px; vertical-align:middle;}
+article#pageBody.application header .searchFunction p a,
+article#pageBody.application header .searchFunction p .selWrap{width:125px;}
+article#pageBody.application header .searchFunction p.search a{text-align:center; background-position:35px center,left center;}
+article#pageBody.application header .searchConditions{height:70px;}
+article#pageBody.application header .searchConditions dl{width:240px; float:left; margin-top:-5px;}
+article#pageBody.application header .searchConditions dl dt{color:#fff; font-size:14px;}
+article#pageBody.application header .searchConditions dl dd{}
+article#pageBody.application header .searchConditions dl dd input{width:110px; margin-right:2px; vertical-align:bottom;}
+article#pageBody.application header .searchConditions dl dd a{width:90px; text-align:center; padding:0 5px; display:inline-block;}
+article#pageBody.application header .searchConditions dl.dealer{width:400px;}
+article#pageBody.application header .searchConditions dl.dealer dd input{width:130px;}
+article#pageBody.application .searchResult{height:100%; overflow:hidden; z-index:0; position:relative; padding-top:165px; top:-165px;}
+article#pageBody.application .searchResult .scrlParent{overflow-x:hidden; background:#fff;}
+article#pageBody.application .searchResult table{width:100%; line-height:1.4; margin-bottom:30px;}
+article#pageBody.application .searchResult:after{content:''; display:block; height:30px; position:absolute; left:-17px; bottom:0; background:url(../img/bg/scrollOverlay.png) repeat-x bottom; width:100%; z-index:300;}
+article#pageBody.application .searchResult table col:nth-child(1){width:125px;}
+article#pageBody.application .searchResult table col:nth-child(2){width:90px;}
+article#pageBody.application .searchResult table col:nth-child(3){width:160px;}
+article#pageBody.application .searchResult table col:nth-child(4){width:160px;}
+article#pageBody.application .searchResult table col:nth-child(5){width:auto;}
+article#pageBody.application .searchResult table col:nth-child(6){width:120px;}
+article#pageBody.application .searchResult table col:nth-child(7){width:70px;}
+article#pageBody.application .searchResult table col:nth-child(8){width:190px;}
+article#pageBody.application .searchResult table.header col:nth-child(8){width:207px;}
+article#pageBody.application .searchResult table th{background:#292624; color:#fff; text-align:center; padding:3px; vertical-align:middle;}
+article#pageBody.application .searchResult table th:nth-child(6){text-align:left; padding:3px 10px;}
+article#pageBody.application .searchResult table span{display:block; text-align:right;}
+article#pageBody.application .searchResult table tr:nth-child(odd) td{background:#d9d9d9;}
+article#pageBody.application .searchResult table td{background:#fff; padding:5px; border-right:1px #000 dashed; vertical-align:middle;}
+article#pageBody.application .searchResult table td:last-child{border-right:none;}
+article#pageBody.application .searchResult table td a.btn{width:84px; display:inline-block; text-align:center; margin-right:5px; padding:0;}
+article#pageBody.application .searchResult table.header{position:fixed; left:0; top:180px; max-width:1024px; height:35px;}
+.ie article#pageBody.application .searchResult table td a.btn{text-shadow:-22px 0px 0 rgba(0,0,0,1);}/* IE9 bug ??????? */
+.ie article#pageBody.application .searchResult table td a.btn:last-child{text-shadow:-8px 0px 0 rgba(0,0,0,1);}/* IE9 bug ??????? */
+/* show detail */
+article#pageBody.application header.showDetail{height:285px;}
+article#pageBody.application  .searchResult.showDetail{padding-top:285px; top:-285px;}
+article#pageBody.application .detail{clear:both;}
+article#pageBody.application .detail table{font-size:14px; color:#fff;}
+article#pageBody.application .detail table col:nth-child(1){width:110px;}
+article#pageBody.application .detail table col:nth-child(2){width:250px;}
+article#pageBody.application .detail table col:nth-child(3){width:110px;}
+article#pageBody.application .detail table col:nth-child(4){width:205px;}
+article#pageBody.application .detail table col:nth-child(5){width:140px;}
+article#pageBody.application .detail table col:nth-child(6){width:auto;}
+article#pageBody.application .detail table th,
+article#pageBody.application .detail table td{padding:3px 0;}
+article#pageBody.application .detail p{font-size:14px; color:#fff; padding-top:3px;}
+article#pageBody.application .searchResult.showDetail table.header{top:300px;}
+/* modal */
+#modalStage.applicationSetDetails{margin-top:54px;}
+#setDetails{padding:10px; width:100%; max-width:1024px;}
+#setDetails header{height:40px; margin-bottom:40px; text-align:right;}
+#setDetails header h1{color:#fff; float:left; height:40px; line-height:40px; text-align:left;}
+#setDetails header p{display:inline-block; text-align:left; height:40px; vertical-align:middle; width:125px; margin-left:2px;}
+#setDetails header p.reset{width:150px;}
+#setDetails header p .btn{width:100%;}
+#setDetails header p.search a{text-align:center; background-position:35px center,left center;}
+#setDetails header p .selWrap{width:125px;}
+#setDetails div.conditions table th{font-size:14px; color:#fff; vertical-align:middle;}
+#setDetails div.conditions table td{font-size:14px; vertical-align:middle;}
+#setDetails div.conditions table col:nth-child(1){width:95px;}
+#setDetails div.conditions table col:nth-child(2){width:275px;}
+#setDetails div.conditions table col:nth-child(3){width:90px;}
+#setDetails div.conditions table col:nth-child(4){width:285px;}
+#setDetails div.conditions table col:nth-child(5){width:85px;}
+#setDetails div.conditions table col:nth-child(6){width:auto;}
+#setDetails div.conditions table th{padding:5px 10px 5px 0; text-align:right;}
+#setDetails div.conditions table td{padding:5px 0;}
+#setDetails div.conditions p{font-size:14px; color:#fff; padding-top:5px;}
+#setDetails div.conditions p .selWrap{color:#000;}
+#setDetails div.conditions table .selWrap,
+#setDetails div.conditions input[type=text]{width:180px; color:#000;}
+
+/* A-002
+============================================================== */
+.applicationTop{}
+.applicationTop main{padding-bottom:90px; position:relative;}
+.applicationTop #pageBody{/*width:710px;*/}
+.applicationTop main header{color:#fff; height:32px; line-height:32px; padding:0 10px; background:url(../img/bg/gradientDot.png) repeat-x left bottom;}
+.applicationTop main header p em{font-weight:bold; font-size:14px;}
+.applicationTop #pageBody{padding-bottom:0px; padding-left:289px; width:100%;}
+/* side menu */
+.applicationTop aside#menuArea{width:289px; background:url(../img/bg/hairline.png) repeat-y left top; position:absolute; left:0; top:87px; height:100%; padding-bottom:148px;}
+.applicationTop aside#menuArea .scrlParent{overflow-y:scroll; overflow-x:hidden;}
+.applicationTop aside#menuArea nav#sideMenu ul{width:273px; overflow:hidden;}
+.applicationTop aside#menuArea nav#sideMenu p.product{padding:15px 0; background:#fff; text-align:center;}
+.applicationTop aside#menuArea nav#sideMenu dl{padding:10px 10px 0;}
+.applicationTop aside#menuArea nav#sideMenu dl dt{float:left; clear:left; margin-bottom:10px; width:6em; font-size:12px;}
+.applicationTop aside#menuArea nav#sideMenu dl dd{padding:0 0 0 6em; margin-bottom:10px; font-weight:bold;}
+.applicationTop aside#menuArea nav#sideMenu dl dd span{font-size:12px;}
+.applicationTop aside#menuArea nav#sideMenu dl.zebra{padding:0;}
+.applicationTop aside#menuArea nav#sideMenu dl.zebra dt{padding:10px 10px 0; margin-bottom:0;}
+.applicationTop aside#menuArea nav#sideMenu dl.zebra dd{padding:10px; margin-bottom:0;}
+.applicationTop aside#menuArea nav#sideMenu dl.zebra dt:nth-of-type(even),
+.applicationTop aside#menuArea nav#sideMenu dl.zebra dd:nth-of-type(even){background:#fff;}
+.applicationTop aside#menuArea nav#sideMenu ul li p{padding:10px;}
+/* main */
+section.procedure{padding-top:60px;}
+section.procedure .process{width:640px; margin:0 auto 10px; background:#fff; display:table; box-shadow:0 0 20px rgba(0,0,0,0.5) inset; border-radius:7px; vertical-align:middle; border:1px #fff solid; padding:0 30px 0 50px;}
+section.procedure .process div{height:95px; display:table-cell; vertical-align:middle; width:100%;}
+section.procedure .process div img{vertical-align:middle;}
+section.procedure .process div img.complete{opacity:0.3;}
+section.procedure .process div p.ttl{font-size:14px; font-weight:bold; margin-bottom:5px;}
+section.procedure .process div.button{text-align:right; float:right; width:72px;}
+section.procedure .process div.button a,
+section.procedure .process div.button span{display:block; width:72px; height:72px; color:#fff; text-align:center; padding-top:47px; font-weight:bold; text-shadow:0 -1px 0 rgba(0,0,0,1); position:relative; top:50%; margin-top:-36px;}
+.ie section.procedure .process div.button a,
+.ie section.procedure .process div.button span{text-shadow:0 -12px 0 rgba(0,0,0,1);}
+section.procedure .process div.button span.done{opacity:0.3;}
+section.procedure .process div.button a.complete,
+section.procedure .process div.button span.complete{background:url(../img/pts/btnComplete.png) no-repeat;}
+section.procedure .process div.button a.restart,
+section.procedure .process div.button span.restart{background:url(../img/pts/btnRestart.png) no-repeat;}
+section.procedure .process div.button a.start,
+section.procedure .process div.button span.start{background:url(../img/pts/btnStart.png) no-repeat;}
+section.procedure .process div.button a.applyComplete,
+section.procedure .process div.button span.applyComplete{background:url(../img/pts/btnApplyComplete.png) no-repeat;}
+
+section.procedure .process div table{width:100%;}
+section.procedure .process div table tr td{vertical-align:middle;}
+section.procedure .process div table tr td:nth-child(1){width:120px;}
+section.procedure .process div table tr td:nth-child(2){width:auto;}
+section.procedure .process div table tr td:nth-child(3){width:120px; padding-right:25px;}
+section.procedure .process div table tr td:nth-child(1) .selWrap{width:120px;}
+section.procedure .process div table tr td:nth-child(2){font-size:28px; font-weight:bold; text-align:right; padding-right:10px;}
+section.procedure .process div table tr td:nth-child(3) .btn{width:120px; text-align:center;}
+/* footer */
+footer#pageFooter nav.btnArray ul li.confirm a{padding:0 15px 0 45px; width:160px;
+    background-image:url(../img/icn/billingConf.png),url(../img/bg/gradientGreen.png);
+    background-position:20px center, left center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:40px 30px,auto 100%;}
+
+
+/* A-004
+============================================================== */
+section.flow .pInf{padding:10px;}
+section.flow .pInf h2{padding:15px; background:#fff; border-radius:3px 3px 0 0; margin-bottom:5px; font-size:14px; font-weight:normal;}
+section.flow .pInf .body{padding:15px; background:#fff; border-radius:0 0 3px 3px; margin-bottom:15px; font-size:14px; clear:both;}
+section.flow .pInf .body p{margin-bottom:1em;}
+section.flow .pInf .body:after{clear:both; display:block; content:''}
+section.flow .pInf .container{margin-bottom:10px; font-size:14px; clear:both;}
+section.flow .pInf .container:after{clear:both; display:block; content:''}
+section.flow .pInf .container .list,
+section.flow .pInf .container .guide{width:381px; background:#fff; height:260px;}
+section.flow .pInf .container .list{float:left; border-radius:0 0 0 3px;}
+section.flow .pInf .container .guide{float:right; border-radius:0 0 3px 0;}
+section.flow .pInf .container .list h3,
+section.flow .pInf .container .guide h3{background:#c2ebd2; font-size:12px; font-weight:normal; padding:5px 10px; border-radius:3px; margin:10px;}
+section.flow .pInf .container .list ul{}
+section.flow .pInf .container .list ul li{background:url(../img/icn/paper.png) no-repeat 20px center;}
+section.flow .pInf .container .list ul li{padding:5px 10px 5px 50px;}
+section.flow .pInf .container .list ul li:nth-child(odd){background-color:#d9d9d9;}
+section.flow .pInf .container .guide h4{font-weight:normal; padding:10px 10px 30px 20px;}
+section.flow .pInf .container .guide p{background:url(../img/pts/onlineMark.png) no-repeat 50px 0; padding:0 30px 20px 150px; font-size:12px;}
+section.flow .auth{background:#000; color:#fff; border-radius:3px; padding:8px 20px 0 30px; height:60px;}
+section.flow .auth label{width:60px; float:left; position:relative; top:14px;}
+section.flow .auth p{padding-left:35px; font-size:14px; font-weight:bold; float:left}
+
+/* A-008
+============================================================== */
+/* header */
+.application #pageHeader{height:126px;}
+.application #pageHeader dl.customer{float:right; line-height:54px;}
+.application #pageHeader dl.customer dt{display:inline-block; vertical-align:middle;}
+.application #pageHeader dl.customer dd{display:inline-block; margin-right:15px; font-size:14px; vertical-align:middle; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; max-width:11em; font-weight:bold;}
+.application #pageHeader h1 span{display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.application #pageHeader h1 span.pName{max-width:18em;}
+.application #pageHeader h1 span.stat{max-width:11em;}
+
+
+/* contract info */
+.application dl.contractInf{color:#fff; height:32px; line-height:32px; padding:0 10px; background:url(../img/bg/gradientDot.png) repeat-x left bottom; clear:both;}
+.application dl.contractInf dt{display:inline-block;}
+.application dl.contractInf dd{display:inline-block; font-size:14px; font-weight:bold; padding-right:40px;}
+/* progress bar */
+.application nav#progressBar{background:url(../img/bg/progressbar.png) repeat-x bottom; height:40px; overflow:hidden; padding:0 10px;}
+.application nav#progressBar li{display:inline-block; color:#999; background:url(../img/icn/yet.png) no-repeat left center; line-height:38px; padding:0 40px 0 20px;}
+.application nav#progressBar li.done{color:#fff; background-image:url(../img/icn/proceed.png);}
+.application nav#progressBar li.done.now{
+    background-image:url(../img/icn/proceed.png), url(../img/icn/proceedTip.png);
+    background-repeat:no-repeat, no-repeat;
+    background-position:left center,42% 33px;}
+.application nav#progressBar li ul{display:inline-block; padding-left:5px;}
+.application nav#progressBar li ul li{background:url(../img/icn/proceedSub.png) no-repeat center center; width:10px; height:40px; display:inline-block; text-indent:-9999px; padding:0 8px;}
+.application nav#progressBar li ul li.done{background:url(../img/icn/nowSub.png) no-repeat center center;}
+.application nav#progressBar li ul li.now{
+    background-image:url(../img/icn/nowSub.png), url(../img/icn/proceedTip.png);
+    background-repeat:no-repeat, no-repeat;
+    background-position:center center,50% 33px;}
+
+/* main */
+.application main{padding-bottom:132px;}
+/* body */
+article#pageBody.flowParent{width:815px; position:relative; z-index:3;}
+article#pageBody.flowParent .scrlParent{padding:10px 10px 10px 0;}
+/* navigations */
+.application aside#menuArea.flowNav{width:210px; position:absolute; left:0; top:auto; z-index:0;}
+.application aside#menuArea.flowNav ul{padding:10px 0; background:url(../img/bg/flowNav.png) repeat-y left top;}
+.application aside#menuArea.flowNav ul li{height:51px; margin-bottom:3px;}
+.application aside#menuArea.flowNav ul li a{height:51px; display:table; width:178px; background:url(../img/bg/flowNavBtn.png) repeat-x left center; background-size:1px 100%; border:1px #484848 solid; border-radius:3px; margin-left:3px; line-height:1.3; text-shadow:0 1px 1px rgba(255,255,255,1);}
+.application aside#menuArea.flowNav ul li a em,
+.application aside#menuArea.flowNav ul li a span{display:table-cell; vertical-align:middle;}
+.application aside#menuArea.flowNav ul li a em{width:25px; text-align:center;}
+.application aside#menuArea.flowNav ul li.active a{width:100%; background:#02993b; margin-left:0; border-radius:0; border:none; color:#fff; text-shadow:0 -1px 1px rgba(0,0,0,1)}
+.application aside#menuArea.flowNav ul li.active a em{width:28px;}
+.ie .application aside#menuArea.flowNav ul li a{text-shadow:none !important;}/* vml hover bug */
+/* footer */
+footer#pageFooter nav.btnArray ul li.terms a{padding:0 15px 0 45px;
+    background-image:url(../img/icn/bookmark.png),url(../img/bg/gradientGreen.png);
+    background-position:15px center, left center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:16px 20px,auto 100%;}
+footer#pageFooter nav.btnArray ul li.stepPrev{border-color:#333 !important; width:160px;}
+footer#pageFooter nav.btnArray ul li.stepPrev a{font-size:14px; padding:0; color:#000; text-shadow:0 1px 0 rgba(255,255,255,1); text-indent:15px;
+    background-image:url(../img/icn/stepPrev.png),url(../img/bg/gradientGray.png);
+    background-repeat:no-repeat,repeat-x;
+    background-position:20px center,left center;
+    background-size:20px 21px,auto 100%;}
+footer#pageFooter nav.btnArray ul li.stepNext{border-color:#333 !important; width:160px;}
+footer#pageFooter nav.btnArray ul li.stepNext a{font-weight:bold; font-size:18px; padding:0; color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:block; text-indent:-23px;
+    background-image:url(../img/icn/stepNext.png), url(../img/bg/gradientRed.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:125px center,left center;
+    background-size:24px 25px,auto 100%;}
+/* section */
+section.flow{background:#02993b; border-radius:0 0 4px 4px; box-shadow:2px 2px 2px rgba(0,0,0,0.7); margin-bottom:30px; padding-bottom:1px;}
+section.flow h1{background:#015c23; padding:10px; color:#fff; text-shadow:0 -1px 1px rgba(0,0,0,1); font-weight:normal;}
+section.flow .flowBody{margin:10px; background:#fff; border-radius:5px; padding-top:1px; overflow:hidden;}
+section.flow .flowBody h2{background:#ccebd8; display:block; padding:10px; margin:10px; font-size:14px; font-weight:normal; text-shadow:0 1px 1px rgba(255,255,255,1); border-radius:3px; line-height:14px;}
+.ie section.flow .flowBody h2 span{text-shadow:none 0 !important; display:table; width:100%;}/*IE9 bug*/
+section.flow .flowBody h3{background:#5e5751; color:#fff; padding:5px 20px;}
+section.flow .flowBody .inner{padding:0 10px 10px;}
+section.flow .flowBody .inner p{padding:0 0 10px; font-size:14px;}
+
+/* section 01 */
+section.flow .flowBody table.confirmList{width:100%;}
+section.flow .flowBody table.confirmList th,
+section.flow .flowBody table.confirmList td{padding:5px 5px 5px 15px; vertical-align:middle; background:#fff; color:#000;}
+section.flow .flowBody table.confirmList td{text-align:right;}
+section.flow .flowBody table.confirmList th{font-size:14px;}
+section.flow .flowBody table.confirmList td img{vertical-align:middle; margin-left:5px;}
+section.flow .flowBody table.confirmList tr:nth-child(even) th,
+section.flow .flowBody table.confirmList tr:nth-child(even) td{background:#d9d9d9;}
+section.flow .flowBody table.confirmList tr:last-child{border-radius:0 0 5px 5px;}
+section.flow .flowBody table.confirmList tr:last-child th{border-radius:0 0 0 5px;}
+section.flow .flowBody table.confirmList tr:last-child td{border-radius:0 0 5px 0;}
+/* section 02 customer info table */
+section.flow .flowBody table.customerInf{background:#fff; width:100%; border-radius:0 0 5px 5px;}
+section.flow .flowBody table.customerInf col:nth-child(1){width:185px;}
+section.flow .flowBody table.customerInf col:nth-child(2){width:55px;}
+section.flow .flowBody table.customerInf col:nth-child(3){width:180px;}
+section.flow .flowBody table.customerInf col:nth-child(4){width:65px;}
+section.flow .flowBody table.customerInf col:nth-child(5){width:auto;}
+section.flow .flowBody table.customerInf th,
+section.flow .flowBody table.customerInf td{padding:2px; vertical-align:middle; line-height:1.1; font-size:14px; background:#fff; color:#000;}
+section.flow .flowBody table.customerInf tr.odd th,
+section.flow .flowBody table.customerInf tr.odd td{background:#d9d9d9;}
+section.flow .flowBody table.customerInf th{text-align:right; padding-right:20px;}
+section.flow .flowBody table.customerInf td .btn{display:inline-block; width:80px;}
+section.flow .flowBody table.customerInf td input[type=text]{width:290px;}
+section.flow .flowBody table.customerInf td input.addr{width:100%;}
+section.flow .flowBody table.customerInf td input.zip{width:105px; font-weight:bold;}
+section.flow .flowBody table.customerInf td input.home{width:165px;}
+section.flow .flowBody table.customerInf td input.phone,
+section.flow .flowBody table.customerInf td input.email{width:300px; font-weight:bold;}
+section.flow .flowBody table.customerInf td .selWrap{width:200px;}
+section.flow .flowBody table.customerInf td .selWrap.person{width:125px;}
+section.flow .flowBody table.customerInf td label.check{color:#02993b; font-weight:bold; font-size:14px;}
+section.flow .flowBody table.customerInf tr.firstLine th,
+section.flow .flowBody table.customerInf tr.firstLine td{padding-top:10px;}
+section.flow .flowBody table.customerInf tr.lastLine th,
+section.flow .flowBody table.customerInf tr.lastLine td{padding-bottom:10px;}
+section.flow .flowBody table.customerInf tr.firstLine.lastLine th,
+section.flow .flowBody table.customerInf tr.firstLine.lastLine td{min-height:60px;}
+section.flow .flowBody table.customerInf tr.lastLine th,
+section.flow .flowBody table.customerInf tr.lastLine td{padding-bottom:10px;}
+section.flow .flowBody table.customerInf tr td:last-child{padding-right:10px;}
+section.flow .flowBody table.customerInf tr:last-child th{border-radius:0 0 0 5px;}
+section.flow .flowBody table.customerInf tr:last-child td{border-radius:0 0 5px 0;}
+section.flow .flowBody table.customerInf.caretaker{background:#fff; width:100%;}
+section.flow .flowBody table.customerInf.caretaker col:nth-child(1){width:300px;}
+section.flow .flowBody table.customerInf.caretaker col:nth-child(2){width:145px;}
+section.flow .flowBody table.customerInf.caretaker col:nth-child(3){width:145px;}
+section.flow .flowBody table.customerInf.caretaker col:nth-child(4){width:75px;}
+section.flow .flowBody table.customerInf.caretaker col:nth-child(5){width:auto;}
+section.flow .flowBody table.customerInf.caretaker td input[type=text]{width:140px; vertical-align:middle;}
+section.flow .flowBody table.customerInf.caretaker td .selWrap{width:130px;}
+section.flow .flowBody table.customerInf.bankAccount{background:#fff; width:100%;}
+section.flow .flowBody table.customerInf.bankAccount col:nth-child(1){width:185px;}
+section.flow .flowBody table.customerInf.bankAccount col:nth-child(2){width:215px;}
+section.flow .flowBody table.customerInf.bankAccount col:nth-child(3){width:auto;}
+section.flow .flowBody table.customerInf.bankAccount td input[type=text]{width:100%; vertical-align:middle;}
+section.flow .flowBody table.customerInf.bankAccount td .selWrap{width:210px;}
+/* section 03 */
+section.flow .flowBody table.insClass,
+section.flow .flowBody table.insSpec,
+section.flow .flowBody table.insDetail{width:100%;}
+section.flow .flowBody table.insClass th,
+section.flow .flowBody table.insSpec  th,
+section.flow .flowBody table.insDetail th{background:#5e5751; color:#fff; padding:2px 5px;}
+section.flow .flowBody table.insClass td,
+section.flow .flowBody table.insSpec  td,
+section.flow .flowBody table.insDetail td{padding:5px; line-height:1.8; font-size:14px;}
+section.flow .flowBody table.insClass td em,
+section.flow .flowBody table.insSpec td em,
+section.flow .flowBody table.insDetail td em{font-weight:bold;}
+section.flow .flowBody table.insDetail tr:nth-child(odd) td{background:#d9d9d9;}
+section.flow .flowBody .otherInf p{font-size:12px;}
+section.flow .flowBody .otherInf ul{margin-left:2em;}
+section.flow .flowBody .otherInf ul li{list-style:disc; margin-bottom:10px;}
+section.flow .flowBody table.prices{width:auto;}
+section.flow .flowBody table.prices th{background:none; color:#000; padding:0 70px 0 10px;}
+section.flow .flowBody table.prices td{font-weight:bold; font-size:14px;}
+section.flow .flowBody table.insClass{width:100%;}
+section.flow .flowBody table.insClass col:nth-child(1){width:460px;}
+section.flow .flowBody table.insClass col:nth-child(2){width:auto;}
+section.flow .flowBody table.insSpec{width:100%;}
+section.flow .flowBody table.insSpec col:nth-child(1){width:250px;}
+section.flow .flowBody table.insSpec col:nth-child(2){width:210px;}
+section.flow .flowBody table.insSpec col:nth-child(3){width:auto;}
+section.flow .flowBody table.insDetail{width:100%;}
+section.flow .flowBody table.insDetail col:nth-child(1){width:25px;}
+section.flow .flowBody table.insDetail col:nth-child(2){width:290px;}
+section.flow .flowBody table.insDetail col:nth-child(3){width:200px;}
+section.flow .flowBody table.insDetail col:nth-child(4){width:120px;}
+section.flow .flowBody table.insDetail col:nth-child(5){width:auto;}
+section.flow .flowBody table.insDetail tr td:nth-child(1){padding-left:10px;}
+
+/* section 04 */
+section.flow .flowBody table.customerInf td .selWrap{width:130px;}
+section.flow .flowBody table.customerInf td .selLabel{display:inline-block; width:70px; text-align:right;}
+section.flow .flowBody table.customerInf td input.ratio{width:180px;}
+section.flow .flowBody ul.btns{padding:15px 10px 30px; background:#bababa; box-shadow:0 5px 10px rgba(0,0,0,0.7) inset; height:85px;}
+section.flow .flowBody ul.btns li{height:40px; display:block; float:left; text-align:center;}
+section.flow .flowBody ul.btns li:nth-child(1){width:33%;}
+section.flow .flowBody ul.btns li:nth-child(2){width:34%;}
+section.flow .flowBody ul.btns li:nth-child(3){width:33%;}
+section.flow .flowBody ul.btns li:nth-child(1) a{border-radius:4px 0 0 4px;}
+section.flow .flowBody ul.btns li:nth-child(2) a{border-radius:0;}
+section.flow .flowBody ul.btns li:nth-child(3) a{border-radius:0 4px 4px 0;}
+section.flow .flowBody p{padding:10px 20px 20px; font-size:14px}
+section.flow .flowBody label.radio{padding:0 70px 0 30px; display:inline-block; margin-left:15px;}
+
+/* section 06 */
+section.flow .flowBody table.bankAccount td .selWrap{width:200px;}
+
+
+/* section 07 */
+section.flow dl.appliedDate{text-align:right; padding:10px 10px 0; line-height:1; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+.ie section.flow dl.appliedDate{text-shadow:-10px -1px 0 rgba(0,0,0,1);}
+section.flow dl.appliedDate dt,section.flow#sec07 dl.appliedDate dd{display:inline; color:#fff;}
+section.flow dl.appliedDate dd{font-size:14px; font-weight:bold;}
+section.flow .signature .flowBody{position:relative; padding-bottom:1px; margin-bottom:30px;}
+section.flow .signature .flowBody p{padding:20px 20px 20px; font-size:14px}
+section.flow .signature .flowBody ul{width:270px; height:40px; position:absolute; right:20px; top:20px;}
+section.flow .signature .flowBody ul li{width:90px; float:left; text-align:center;}
+section.flow .signature .flowBody ul li:nth-child(1) a{border-radius:4px 0 0 4px;}
+section.flow .signature .flowBody ul li:nth-child(2) a{border-radius:0;}
+section.flow .signature .flowBody ul li:nth-child(3) a{border-radius:0 4px 4px 0;}
+section.flow .signature .flowBody .signPannel{height:210px; border-bottom:2px #5e5751 solid; margin:0 20px 60px 20px;}
+section.flow .subSection:last-child .flowBody{margin-bottom:10px;}
+
+/* A-010
+============================================================== */
+.application.terminal #pageHeader{height:86px;}
+.application.terminal main{padding-bottom:92px;}
+section.flow .payment{padding:10px; background:#fff; border-radius:5px; margin:10px; clear:both;}
+section.flow .payment:after{content:''; clear:both; display:block;}
+section.flow .payment h2{background:#c2ebd2; font-size:12px; font-weight:normal; padding:5px 10px; border-radius:3px; margin-bottom:10px;}
+section.flow .payment .items{width:420px; float:left; background:#d9d9d9; border-radius:5px; min-height:220px; height:100%;}
+section.flow .payment .items h3{background:#3f3933; color:#fff; font-weight:normal; font-size:14px; padding:7px 10px;}
+section.flow .payment .items h3:nth-child(1){border-radius:5px 5px 0 0;}
+section.flow .payment .items ul{padding:15px 10px; min-height:65px; margin-left:20px;}
+section.flow .payment .items ul li{list-style:disc; font-size:14px;}
+section.flow .payment .function{width:320px; float:right; background:#d9d9d9; border-radius:5px; min-height:195px; padding:25px 25px 0;}
+section.flow .payment .function p{margin-bottom:10px; font-size:14px;}
+section.flow .payment .function .btn{text-align:center;}
+section.flow .payment .paymentInf{margin:0 -10px 10px; width:768px;}
+section.flow .payment .paymentInf th{background:#3f3933; text-align:center; color:#fff; padding:2px; width:25%;}
+section.flow .payment .paymentInf td{background:#d9d9d9; text-align:center; padding:10px; font-size:14px; font-weight:bold; width:25%;}
+section.flow .payment .paymentInf tr td:nth-child(1){border-right:1px #000 dashed;}
+section.flow .payment p.select{padding:0 22px 10px 453px; text-align:center;}
+section.flow .payment p.lead{font-size:14px; line-height:1.8; margin-bottom:15px; padding:5px;}
+section.flow .payment p.case{font-size:14px; font-weight:bold; margin-bottom:15px; padding:5px;}
+section.flow .payment .calc{width:100%; margin-bottom:10px; color:#fff;}
+section.flow .payment .calc col:nth-child(1){width:30%;}
+section.flow .payment .calc col:nth-child(2){width:5%;}
+section.flow .payment .calc col:nth-child(3){width:30%;}
+section.flow .payment .calc col:nth-child(4){width:5%;}
+section.flow .payment .calc col:nth-child(5){width:30%;}
+section.flow .payment .calc tr td:nth-child(1){padding:0 15px; background:#5e5751;}
+section.flow .payment .calc tr td:nth-child(2){padding:0 5px; color:#5e5751; font-weight:bold; font-size:36px;}
+section.flow .payment .calc tr td:nth-child(3){padding:0 15px; background:#5e5751;}
+section.flow .payment .calc tr td:nth-child(4){padding:0 5px; color:#5e5751; font-weight:bold; font-size:36px;}
+section.flow .payment .calc tr td:nth-child(5){padding:0 15px; background:#02993b;}
+section.flow .payment .calc tr td{vertical-align:middle; border-radius:5px; height:120px; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+section.flow .payment .calc tr td em{font-size:18px; font-weight:bold;}
+section.flow .payment .footNote{padding:10px 10px 10px 30px; margin-bottom:10px; background:#d9d9d9; border-radius:5px;}
+section.flow .payment .footNote li{text-indent:-15px; padding-left:15px;}
+section.flow .payment .footNote li span{display:inline-block; width:15px;}
+section.flow .payment .convDate{background:#02993b; border-radius:5px; margin-bottom:10px; text-align:center; color:#fff; padding:15px; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+section.flow .payment .convDate dt{padding:0 15px; display:inline;}
+section.flow .payment .convDate dd{padding:0 15px; font-size:14px; font-weight:bold; display:inline;}
+section.flow .payment h3.caution{background:#02993b; border-radius:5px; margin:15px 0 5px 0; text-align:center; color:#fff; padding:3px 25px; float:left; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+section.flow .payment p.caution{font-size:14px; padding:5px; margin-bottom:10px; clear:both}
+
+/* modal */
+/* 02,04 */
+#paymentNotice,
+#paymentGuide{width:960px; height:auto; left:30px; top:30px; z-index:0;}
+#paymentNotice .priceTable,
+#paymentGuide  .priceTable{border-radius:5px 5px 0 0; background:#fff; box-shadow:0 5px 10px rgba(0,0,0,0.5); overflow:hidden; z-index:3; position:relative;}
+#paymentNotice .priceTable table,
+#paymentGuide  .priceTable table{width:100%;}
+#paymentNotice .priceTable table th,
+#paymentGuide  .priceTable table th{color:#fff; background:#5e5751; text-align:center; padding:3px 0;}
+#paymentNotice .priceTable table td,
+#paymentGuide  .priceTable table td{text-align:center; padding:10px 0; font-size:14px; font-weight:bold;}
+#paymentNotice .priceTable table td:nth-child(1),
+#paymentGuide  .priceTable table td:nth-child(1){border-right:1px #000 dashed;}
+/* main */
+#paymentNotice .paymentInf{box-shadow:-5px 0 10px rgba(0,0,0,0.3); position:relative; float:right; z-index:2; width:618px; height:432px; overflow:hidden;}
+#paymentGuide  .paymentInf{background:#fff; border-radius:0 0 5px 5px; clear:both; padding:20px 45px 5px;}
+#paymentGuide  .paymentInf p{font-size:14px; padding:0 0 0 5px; margin-bottom:10px;}
+#paymentNotice .paymentInf table.items{width:100%;}
+#paymentNotice .paymentInf table.items tr{border-bottom:1px #fff dashed; min-height:55px;}
+#paymentNotice .paymentInf table.items tr:last-child{border-bottom:none;}
+#paymentNotice .paymentInf table.items th{color:#fff; background:#5e5751; padding:8px 15px; border-left:1px #fff solid; vertical-align:middle; width:180px;}
+#paymentNotice .paymentInf table.items td{background:#d9d9d9; padding:5px 15px; vertical-align:middle; font-size:14px}
+#paymentNotice .paymentInf table.items td li{list-style:disc; margin-left:15px;}
+#paymentNotice .paymentInf .inputNum,
+#paymentGuide  .paymentInf .inputNum{background:#d9d9d9; border-radius:5px; margin:5px; padding:10px; font-size:14px;}
+#paymentNotice .paymentInf .inputNum dl{padding-left:130px;}
+#paymentGuide  .paymentInf .inputNum dl{padding-left:230px;}
+#paymentNotice .paymentInf .inputNum dt,
+#paymentGuide  .paymentInf .inputNum dt{float:left; clear:left; width:11em;}
+#paymentNotice .paymentInf .inputNum dd,
+#paymentGuide  .paymentInf .inputNum dd{font-weight:bold;}
+#paymentNotice .paymentInf .inputNum p.qrCode,
+#paymentGuide  .paymentInf .inputNum p.qrCode{text-align:center; padding:20px 0;}
+#paymentNotice .paymentInf .inputNum p.directMsg,
+#paymentGuide  .paymentInf .inputNum p.directMsg{text-align:center; height:346px; display:table-cell; width:587px; vertical-align:middle;}
+#paymentNotice .paymentInf .inputNum p.cacheMsg,
+#paymentGuide  .paymentInf .inputNum p.cacheMsg{text-align:center; height:220px; display:table-cell; width:587px; vertical-align:middle;}
+#paymentNotice .paymentInf .paymentFunction,
+#paymentGuide  .paymentInf .paymentFunction{padding:5px;}
+#paymentNotice .paymentInf .paymentFunction table{width:100%;}
+#paymentGuide  .paymentInf .paymentFunction table{width:100%; margin-bottom:10px;}
+#paymentNotice .paymentInf .paymentFunction table th,
+#paymentGuide  .paymentInf .paymentFunction table th{vertical-align:middle; font-size:14px; min-height:60px;}
+#paymentNotice .paymentInf .paymentFunction table th{width:370px;}
+#paymentGuide  .paymentInf .paymentFunction table th{width:580px;}
+#paymentNotice .paymentInf .paymentFunction table td,
+#paymentGuide  .paymentInf .paymentFunction table td{text-align:center; vertical-align:middle;}
+#paymentNotice footer p .btn,
+#paymentGuide  footer p .btn{float:right; width:100px; text-align:center;}
+
+/* left */
+#paymentNotice .paymentMethods{clear:both; background:#fff; border-radius:0 0 5px 5px; z-index:1; position:relative;}
+#paymentNotice .paymentMethods .paymentList{float:left; width:318px;}
+#paymentNotice .paymentMethods .paymentList ul{}
+#paymentNotice .paymentMethods .paymentList ul li{overflow:hidden;}
+#paymentNotice .paymentMethods .paymentList ul li a{height:93px; width:100%; vertical-align:middle; border-bottom:1px #8f8f8f solid; border-top:1px #fff solid; display:block;
+    background: #c1c1c1;
+    background: -moz-linear-gradient(top,  #c1c1c1 0%, #fdfdfd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1c1c1), color-stop(100%,#fdfdfd));
+    background: -webkit-linear-gradient(top,  #c1c1c1 0%,#fdfdfd 100%);
+    background: -o-linear-gradient(top,  #c1c1c1 0%,#fdfdfd 100%);
+    background: -ms-linear-gradient(top,  #c1c1c1 0%,#fdfdfd 100%);
+    background: linear-gradient(to bottom,  #c1c1c1 0%,#fdfdfd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1c1c1', endColorstr='#fdfdfd',GradientType=0 );
+}
+
+#paymentNotice .paymentMethods .paymentList ul li.active a{color:#fff; border-top:none;
+    background: #010101;
+    background: -moz-linear-gradient(top,  #010101 0%, #1c1c1c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#010101), color-stop(100%,#1c1c1c));
+    background: -webkit-linear-gradient(top,  #010101 0%,#1c1c1c 100%);
+    background: -o-linear-gradient(top,  #010101 0%,#1c1c1c 100%);
+    background: -ms-linear-gradient(top,  #010101 0%,#1c1c1c 100%);
+    background: linear-gradient(to bottom,  #010101 0%,#1c1c1c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010101', endColorstr='#1c1c1c',GradientType=0 );
+}
+
+#paymentNotice .paymentMethods .paymentList ul li.inactive{color:#fff; border-bottom:1px #a5a5a5 solid;
+    background: #808080;
+    background: -moz-linear-gradient(top,  #808080 0%, #8d8d8d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(100%,#8d8d8d));
+    background: -webkit-linear-gradient(top,  #808080 0%,#8d8d8d 100%);
+    background: -o-linear-gradient(top,  #808080 0%,#8d8d8d 100%);
+    background: -ms-linear-gradient(top,  #808080 0%,#8d8d8d 100%);
+    background: linear-gradient(to bottom,  #808080 0%,#8d8d8d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#8d8d8d',GradientType=0 );
+}
+
+
+#paymentNotice .paymentMethods .paymentList ul li span{width:40px; height:93px; text-align:center; line-height:93px; float:left; font-size:14px; font-weight:bold; text-shadow:-1px 0 0 rgba(255,255,255,1);}
+#paymentNotice .paymentMethods .paymentList ul li.active span,
+#paymentNotice .paymentMethods .paymentList ul li.inactive span{text-shadow:none;}
+#paymentNotice .paymentMethods .paymentList ul li p{height:93px; line-height:1.4; display:table-cell; vertical-align:middle; padding-right:10px;}
+#paymentNotice .paymentMethods .paymentList ul li p em{display:block;  font-weight:bold; font-size:14px; text-shadow:-1px 0 0 rgba(255,255,255,1);}
+.ie #paymentNotice .paymentMethods .paymentList ul li p em{text-shadow:none;}
+#paymentNotice .paymentMethods .paymentList ul li.thin a{height:60px;}
+#paymentNotice .paymentMethods .paymentList ul li.thin a span,
+#paymentNotice .paymentMethods .paymentList ul li.thin.inactive span{height:60px; line-height:60px; text-shadow:none;}
+#paymentNotice .paymentMethods .paymentList ul li.thin p,
+#paymentNotice .paymentMethods .paymentList ul li.thin.inactive p{height:60px;}
+#paymentNotice .paymentMethods .paymentList ul li.inactive.thin{height:60px;}
+/* 03 */
+#bankAccountInput{width:960px; height:auto; left:30px; top:30px; z-index:0;}
+#bankAccountInput footer p .btn{float:right;}
+#bankAccountInput .bankAccount{background:#fff; border-radius:5px; overflow:hidden; padding:1px;}
+#bankAccountInput .bankAccount ol{font-size:14px; margin-left:25px; line-height:2.1;}
+#bankAccountInput .bankAccount ol em{display:block; background:url(../img/icn/noticeRtArr.png) no-repeat 30px center; padding-left:50px;}
+#bankAccountInput .inputNotice{padding:15px;}
+#bankAccountInput .input{background:#d9d9d9; padding:10px 15px;}
+#bankAccountInput .input table{width:100%; font-size:14px;}
+#bankAccountInput .input table th{width:120px; text-align:right; vertical-align:middle; padding:2px 10px;}
+#bankAccountInput .input table td{padding:2px 0;}
+#bankAccountInput .input table td input[type=text]{width:100%;}
+#bankAccountInput .input table td .selWrap{width:230px;}
+#bankAccountInput .notice{padding:10px 15px 20px;}
+#bankAccountInput .notice p{font-size:14px; margin-bottom:5px;}
+#bankAccountInput footer table{width:720px; background:#3f3933; height:40px; border-radius:5px; float:left;}
+#bankAccountInput footer table th,#bankAccountInput footer table td{font-size:14px; color:#fff; vertical-align:middle;}
+#bankAccountInput footer table th{padding-left:20px !important;}
+#bankAccountInput footer table td{padding:0 15px 0 10px;}
+#bankAccountInput footer table td label{padding-right:0;}
+#bankAccountInput footer table tr td:nth-of-type(1){border-right:1px #000 dashed;}
+#bankAccountInput footer p .btn{float:right; width:100px; text-align:center; margin-left:5px;}
+
+
+/* A-013, A-014
+============================================================== */
+section.flow.questions .flowBody{padding-bottom:10px;}
+section.flow.questions .flowBody h3.subTtl{margin-bottom:10px;}
+section.flow.questions .flowBody .level{position:relative; clear:both;}
+section.flow.questions .flowBody .level p{padding:0;}
+section.flow.questions .flowBody .level:after{content:''; clear:both; display:block;}
+section.flow.questions .flowBody .level.l1{border:3px #5e5751 solid; border-radius:3px; margin:0 10px; padding:10px; background:#d9d9d9;}
+section.flow.questions .flowBody .question p{font-size:14px; line-height:1.8; padding-right:200px;}
+section.flow.questions .flowBody .answer p{padding:0;}
+section.flow.questions .flowBody .answer{width:160px; height:40px; position:absolute; right:25px; top:50%; margin-top:-20px; text-align:right;}
+section.flow.questions .flowBody .answer .btn{width:70px; text-align:center; vertical-align:middle; display:inline-block; margin:0 3px;}
+section.flow.questions .flowBody .answer .btn.tbl{width:146px; text-align:center; vertical-align:middle; display:inline-block;}
+section.flow.questions .flowBody .answer a.active{background:#5e5751; width:70px; height:40px; border-radius:4px; color:#fff; text-align:center; display:inline-block; line-height:40px; vertical-align:middle; margin:0 3px;}
+section.flow.questions .flowBody .level.l2{padding:15px 20px;}
+section.flow.questions .flowBody .level.l2 .answer{right:35px;}
+section.flow.questions .flowBody .level.l2 .question p{padding:0 200px 10px 0px;}
+section.flow.questions .flowBody .level.even{background:#d9d9d9;}
+
+section.flow.questions .flowBody dl{padding:0 100px 0 220px;}
+section.flow.questions .flowBody dl dt{float:left; width:220px; font-size:14px; clear:left;}
+section.flow.questions .flowBody dl dd{width:90px; color:#fff; background:#5e5751; text-align:center; display:inline-block; border-radius:3px; line-height:16px;}
+section.flow.questions .flowBody dl dd.done{background:#02993b; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+section.flow.questions .flowBody .level.l3{padding:15px 20px; margin-left:50px; position:relative;}
+section.flow.questions .flowBody .level.l3:before{background:url(../img/icn/branchQuestion.png) no-repeat center; position:absolute; width:15px; height:14px; left:-30px; top:50%; margin-top:-7px; content:'';}
+section.flow.questions .flowBody .level.l4 .answer{right:35px;}
+section.flow.questions .flowBody .level.l4{padding:15px 20px; margin-left:90px; position:relative;}
+section.flow.questions .flowBody .level.l4:before{background:url(../img/icn/branchQuestion.png) no-repeat center; position:absolute; width:15px; height:14px; left:-30px; top:50%; margin-top:-7px; content:'';}
+section.flow.questions .flowBody .level.l3 .answer{right:35px;}
+/* without navigation */
+#pageBody.flowParent.woNav{width:100%; float:none;}
+#pageBody.flowParent.woNav section.flow.questions .flowBody dl{padding:20px 200px 0 420px;}
+/* modal */
+#notifySelect,
+#notifySearch{width:560px; left:50%; top:90px; margin-left:-280px;}
+#notifySelect .notify{background:#fff; border-radius:5px; padding:20px 15px; height:350px;}
+#notifySelect .notify h1{font-size:14px; font-weight:normal; margin-bottom:20px;}
+#notifySelect .notify ul{padding:0 40px;}
+#notifySelect .notify ul li{margin-bottom:15px; font-size:14px;}
+#notifySelect footer p,
+#notifySearch footer p{text-align:right;}
+#notifySelect footer .btn,
+#notifySearch footer .btn{text-align:center; width:100px; display:inline-block; margin-left:5px; vertical-align:middle;}
+#notifySelect footer .btn.highlight,
+#notifySearch footer .btn.highlight{font-size:18px; font-weight:bold;}
+#notifySearch .notify{background:#5e5751; padding:5px; border-radius:5px; border:1px #fff solid; box-shadow:1px 1px 10px rgba(0,0,0,0.8);}
+#notifySearch .notify .switch{padding:15px;}
+#notifySearch .notify .switch li{display:inline-block; padding-right:40px; font-size:14px; color:#fff;}
+#notifySearch .notify .condition{background:#fff; padding:10px; height:90px;}
+#notifySearch .notify .condition table{font-size:14px; width:100%; margin-bottom:10px;}
+#notifySearch .notify .condition table th{padding-right:10px; vertical-align:middle;}
+#notifySearch .notify .condition table td{vertical-align:middle;}
+#notifySearch .notify .condition table td input[type=text]{width:350px; vertical-align:middle; margin-right:5px;}
+#notifySearch .notify .condition table td .btn{width:80px; display:inline-block; vertical-align:middle; padding-left:35px;
+    background-image:url(../img/icn/search.png), url(../img/bg/gradientBlack.png);
+    background-position:10px center, left center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:18px 19px, 1px 100%;}
+#notifySearch .notify .result{height:240px; overflow:auto; border-top:1px #000 solid; background:#fff;}
+#notifySearch .notify .result ul{overflow:hidden;}
+#notifySearch .notify .result ul li{padding:10px; font-size:14px;}
+#notifySearch .notify .result ul li:nth-child(odd){background:#d9d9d9;}
+#notifySearch .notify .result ul li.selected{background:#02993b !important; color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1);}
+#notifySearch #selector,
+#notifySearch #handWrite{height:330px;}
+#notifySearch #handWrite{display:none; background:#fff; padding:10px;}
+#notifySearch #handWrite table{width:100%; font-size:14px;}
+#notifySearch #handWrite table th{padding:7px 10px 7px 0; vertical-align:top;}
+#notifySearch #handWrite table td{padding:0 0 7px 0; vertical-align:top;}
+#notifySearch #handWrite table td input{width:430px;}
+#notifySearch #handWrite table td textarea{width:430px; height:260px;}
+
+#ddQuestion{width:880px; left:50%; top:40px; margin-left:-440px;}
+#ddQuestion .question{height:470px; position:relative; background:#d9d9d9; border-radius:5px; position:relative;}
+#ddQuestion .question .currentQuestion{padding:20px; font-size:14px;}
+#ddQuestion .question .currentQuestion dl{}
+#ddQuestion .question .currentQuestion dl dt{margin-bottom:10px;}
+#ddQuestion .question .currentQuestion dl dt em{padding-left:20px; font-weight:bold;}
+#ddQuestion .question .currentQuestion dl dd{background:#fff; padding:10px; border-radius:5px;}
+#ddQuestion .question .currentQuestion dl dd.flat span,
+#ddQuestion .question .currentQuestion dl dd.flat ul,
+#ddQuestion .question .currentQuestion dl dd.flat li{display:inline-block;}
+#ddQuestion .question .currentQuestion dl dd.flat ul{float:right;}
+#ddQuestion .question .currentQuestion dl dd.flat li{padding-left:20px;}
+#ddQuestion .question .currentQuestion dl dd.block span,
+#ddQuestion .question .currentQuestion dl dd.block ul,
+#ddQuestion .question .currentQuestion dl dd.block li{display:block;}
+#ddQuestion .question .currentQuestion dl dd.block span{margin-bottom:10px;}
+#ddQuestion .question .currentQuestion dl dd.block ul{margin-left:20px;}
+#ddQuestion .question .currentQuestion dl dd.block li{margin-bottom:10px;}
+#ddQuestion .question .currentQuestion dl dd.block li label{padding-left:40px;}
+#ddQuestion .question .currentQuestion dl dd p.input{width:100%; padding-left:30px;}
+#ddQuestion .question .currentQuestion dl dd p.input input[type=text],
+#ddQuestion .question .currentQuestion dl dd p.input input[type=number],
+#ddQuestion .question .currentQuestion dl dd p.input textarea{width:100%;}
+#ddQuestion .question .currentQuestion dl dd p.input textarea{height:120px;}
+#ddQuestion .question .formerQuestion{width:100%; height:auto; position:absolute; left:0; bottom:0;}
+#ddQuestion .question .formerQuestion .scrlParent{max-height:172px;}
+#ddQuestion .question .formerQuestion table{width:100%;}
+#ddQuestion .question .formerQuestion table th{background:#3f3933; padding:5px 10px; color:#fff;}
+#ddQuestion .question .formerQuestion table td{padding:10px; background:#fff; font-size:14px; word-break:break-all;}
+#ddQuestion .question .formerQuestion table tr:nth-child(even) td{background:#d9d9d9;}
+#ddQuestion .question .formerQuestion table tr th:nth-child(1),
+#ddQuestion .question .formerQuestion table tr td:nth-child(1){width:480px;}
+
+#ddQuestion footer{}
+#ddQuestion footer p{display:inline-block; vertical-align:middle;}
+#ddQuestion footer p .btn{text-align:center; display:inline-block; width:100px; vertical-align:middle;}
+#ddQuestion footer p.later{width:100px;}
+#ddQuestion footer p.msg{color:#fff; font-weight:bold; padding-left:20px; font-size:14px;}
+#ddQuestion footer p.action{float:right;}
+#ddQuestion footer p.action .btn{margin-left:5px;}
+#ddQuestion footer p.action .btn.highlight{font-weight:bold;}
+#ddQuestion footer p.action .btn.return{width:130px;}
+
+/* 014 */
+/* sec01 */
+section.flow.questions .flowBody table.basicInf{width:100%; margin-top:5px;}
+section.flow.questions .flowBody table.basicInf col:nth-child(1){width:320px;}
+section.flow.questions .flowBody table.basicInf col:nth-child(2){width:70px;}
+section.flow.questions .flowBody table.basicInf col:nth-child(3){width:140px;}
+section.flow.questions .flowBody table.basicInf col:nth-child(4){width:70px;}
+section.flow.questions .flowBody table.basicInf col:nth-child(5){width:auto;}
+section.flow.questions .flowBody table.basicInf th{text-align:left; padding:5px 0 5px 15px;}
+section.flow.questions .flowBody table.basicInf td{text-align:left; font-size:14px; padding:5px 0 5px 15px;}
+section.flow.questions .flowBody table.basicInf td em{font-weight:bold;}
+section.flow.questions .flowBody table.basicInf td span{font-size:12px;}
+section.flow.questions .flowBody table.basicInf td input{width:70px;}
+section.flow.questions .flowBody table.basicInf td .btn{text-align:center; width:150px;}
+section.flow.questions .flowBody table.basicInf tr:nth-child(3){background:#d9d9d9;}
+section.flow.questions .flowBody table.basicInf tr:nth-child(4) th,
+section.flow.questions .flowBody table.basicInf tr:nth-child(4) td{padding-bottom:0;}
+/* sec02 */
+section.flow.questions .flowBody.enquete{padding-top:10px;}
+section.flow.questions .flowBody.enquete p{padding:0 0 15px 0; float:left;}
+section.flow.questions .flowBody.enquete .answer{width:280px; height:auto; position:relative; top:0; right:0; margin:0; float:right;}
+section.flow.questions .flowBody.enquete .answer .selectSmoke{text-align:right; width:100%;}
+section.flow.questions .flowBody.enquete .answer .numSmoke{padding:0; font-size:12px; text-align:right; width:100%;}
+section.flow.questions .flowBody.enquete .answer .selectSmoke label{padding-right:0; margin-left:40px;}
+section.flow.questions .flowBody.enquete .answer .numSmoke input{width:50px;}
+/* sec03 */
+section.flow.questions .flowBody .answer p.ready{text-align:center; line-height:40px;}
+/* sec04 */
+table.notfyInf{width:100%; border-radius:5px; overflow:hidden; margin:-1px 0 -10px;}
+table.notfyInf th{background:#5e5751; padding:3px 10px; color:#fff;}
+table.notfyInf td{padding:5px 10px; font-size:14px;}
+table.notfyInf tr:nth-child(odd) td{background:#d9d9d9;}
+table.notfyInf tr td:nth-child(1){width:500px;}
+
+
+
+
+/* C-002
+============================================================== */
+.customerEdit{}
+.customerEdit main{padding-bottom:90px; position:relative;}
+.customerEdit #pageBody{/*width:710px;*/}
+.customerEdit dl.homeInf{color:#fff; height:32px; line-height:32px; padding:0 10px; background:url(../img/bg/gradientDot.png) repeat-x left bottom;}
+.customerEdit dl.homeInf dt{display:inline-block;}
+.customerEdit dl.homeInf dd{display:inline-block; font-size:14px; font-weight:bold; padding-right:40px;}
+/* side menu */
+.customerEdit aside#menuArea{width:289px; background:url(../img/bg/hairline.png) repeat-y left top; position:absolute; left:0; top:87px; height:100%; padding-bottom:148px;}
+.customerEdit aside#menuArea .scrlParent{overflow-y:scroll;}
+.customerEdit aside#menuArea nav#sideMenu ul{width:273px; overflow:hidden;}
+.customerEdit aside#menuArea nav#sideMenu ul li.hasSubmenu a,
+.customerEdit aside#menuArea nav#sideMenu ul li.hasSubmenuChild a{
+    background-image:url(../img/icn/menuHasSub.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:95% center,left center;
+    background-size:10px 17px,1px 100%;}
+.customerEdit aside#menuArea nav#sideMenu ul li.hasSubmenu a.open,
+.customerEdit aside#menuArea nav#sideMenu ul li.hasSubmenuChild a.open{
+    background-image:url(../img/icn/menuHasSubOpen.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:94% center,left center;
+    background-size:16px 12px,1px 100%;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl{padding:5px 40px 5px 10px; }
+.customerEdit aside#menuArea nav#sideMenu ul li dl:after{content:''; display:block; clear:both;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dt{float:left; font-size:12px; clear:left; padding:5px 10px 5px 0;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dd{font-weight:bold; padding:5px 0; font-size:14px; position:relative;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dd span{font-size:12px;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl.partner{background-color:#fff; border:1px #333 solid; border-left:none;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl.partner.open{background-color:#fff;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dd span.type{display:block; position:absolute; right:0; top:6px; border-radius:3px; color:#fff; width:65px; height:17px; line-height:17px; text-align:center; font-weight:normal;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dd span.type.kotsukotsu{background:#4a6419;}
+.customerEdit aside#menuArea nav#sideMenu ul li dl dd span.type.ac{background:#2a4b9d;}
+/* footer */
+footer#pageFooter nav.btnArray ul li.lifePlan a{padding:0 15px 0 45px; width:190px;
+    background-image:url(../img/icn/lifePlan.png),url(../img/bg/gradientGreen.png);
+    background-position:15px center, left center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:23px 22px,auto 100%;}
+footer#pageFooter nav.btnArray ul li.planningSheet a{padding:0 15px 0 45px; width:190px;
+    background-image:url(../img/icn/planSheet.png),url(../img/bg/gradientGreen.png);
+    background-position:35px center, left center;
+    background-repeat:no-repeat, repeat-x;
+    background-size:25px 20px,auto 100%;}
+footer#pageFooter nav.btnArray ul li.stepPrev{border-color:#333 !important; width:160px;}
+footer#pageFooter nav.btnArray ul li.stepPrev a{font-size:14px; padding:0; color:#000; text-shadow:0 1px 0 rgba(255,255,255,1); text-indent:15px;
+    background-image:url(../img/icn/stepPrev.png),url(../img/bg/gradientGray.png);
+    background-repeat:no-repeat,repeat-x;
+    background-position:20px center,left center;
+    background-size:20px 21px,auto 100%;}
+footer#pageFooter nav.btnArray ul li.stepNext{border-color:#333 !important; width:160px;}
+footer#pageFooter nav.btnArray ul li.stepNext a{font-weight:bold; font-size:18px; padding:0; color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); display:block; text-indent:-23px;
+    background-image:url(../img/icn/stepNext.png), url(../img/bg/gradientRed.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:125px center,left center;
+    background-size:24px 25px,auto 100%;}
+/* main */
+.customerEdit #pageBody{padding-bottom:61px; padding-left:289px; width:100%;}
+.customerEdit #pageBody header.homeOutline{height:61px; background:#37332e;}
+.customerEdit #pageBody header.homeOutline h1{height:61px; width:140px; float:left; font-size:14px; font-weight:bold; color:#fff; line-height:61px; padding-left:10px;}
+.customerEdit #pageBody header.homeOutline dl{padding-top:10px; float:left;}
+.customerEdit #pageBody header.homeOutline dl dt,
+.customerEdit #pageBody header.homeOutline dl dd{height:40px; display:inline-block;}
+.customerEdit #pageBody header.homeOutline dl dt{color:#fff; font-weight:bold; line-height:40px; padding:0 5px;}
+.customerEdit #pageBody header.homeOutline dl .selWrap{width:110px;}
+.customerEdit #pageBody header.homeOutline p.delete{float:right; width:160px; padding:10px 10px 0 0;}
+.customerEdit #pageBody header.homeOutline p.delete a.btn{padding:0 0 0 35px;
+    background-image:url(../img/icn/bin.png), url(../img/bg/gradientGreen.png) !important;
+    background-repeat:no-repeat, repeat-x !important;
+    background-position:15px center, left center !important;
+    background-size:15px 20px,auto 100% !important;}
+.customerEdit .scrlParent{overflow-x:hidden;}
+.customerEdit .unitBlock{background:#000; padding-bottom:30px;}
+.customerEdit .unitBlock header{background:url(../img/bg/gradientDark.png) repeat-x; background-size:auto 100%; height:40px;}
+.customerEdit .unitBlock header h1{font-weight:bold; float:left; height:40px; line-height:40px; padding-left:10px; color:#fff;}
+.customerEdit .unitBlock header p.add{width:80px; height:40px; float:right; border-left:#000 1px solid;}
+.customerEdit .unitBlock header p.add .btn{border-radius:0; width:80px; height:38px !important; border:0 none;
+    background-image:url(../img/icn/add.png), url(../img/bg/gradientBlack.png); padding-left:30px;
+    background-repeat:no-repeat, repeat-x;
+    background-position:12px center,left center;
+    background-size:12px 13px,auto 100%;}
+.customerEdit .unitBlock.homeInf h2{padding:5px 10px; background:#5e5751; color:#fff; font-weight:normal;}
+.customerEdit .unitBlock.homeInf h2 em{font-weight:bold;}
+.customerEdit .unitBlock.homeInf table.mainInf{width:100%; line-height:1.4; background:#fff;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(1){width:60px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(2){width:100px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(3){width:auto;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(4){width:50px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(5){width:140px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(6){width:70px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(7){width:70px;}
+.customerEdit .unitBlock.homeInf table.mainInf col:nth-child(8){width:60px;}
+.customerEdit .unitBlock.homeInf table.mainInf th{padding:5px 0 0 10px; vertical-align:top;}
+.customerEdit .unitBlock.homeInf table.mainInf td{padding:0 0 10px 10px; font-size:14px; font-weight:bold; vertical-align:top;}
+.customerEdit .unitBlock.homeInf table.mainInf tr th:last-child{padding-right:5px; text-align:right;}
+.customerEdit .unitBlock.homeInf table.progress{width:100%; background:#fff;}
+.customerEdit .unitBlock.homeInf table.progress col{width:14.285%;}
+.customerEdit .unitBlock.homeInf table.progress th,
+.customerEdit .unitBlock.homeInf table.progress td{padding:5px 0; text-align:center;}
+.customerEdit .unitBlock.homeInf table.progress th{background:#d9d9d9;}
+.customerEdit .unitBlock.homeInf table.progress td{border-right:1px #000 dashed; border-bottom:1px #d9d9d9 solid;}
+.customerEdit .unitBlock.proposalInf div.proposalInf{padding:5px 10px; background:#5e5751; color:#fff; height:40px; overflow:hidden;}
+.customerEdit .unitBlock.proposalInf div.proposalInf h2{float:left; line-height:30px;}
+.customerEdit .unitBlock.proposalInf div.proposalInf dl{float:right; text-align:right; line-height:1.3; height:30px; line-height:30px; display:inline-block;}
+.customerEdit .unitBlock.proposalInf div.proposalInf dl dt{display:inline; padding-left:20px;}
+.customerEdit .unitBlock.proposalInf div.proposalInf dl dd{font-weight:bold; font-size:14px; display:inline; padding-left:10px;}
+.customerEdit .unitBlock.proposalInf div.proposalInf dl.otherIns{float:left; padding-left:130px;}
+.customerEdit .unitBlock.proposalInf div.proposalInf dl.otherIns dd{font-weight:bold; font-size:14px; display:inline; padding-left:0;}
+.customerEdit .unitBlock.proposalInf table.proposal{width:100%; line-height:1.4; background:#fff;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(1){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(2){width:110px;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(3){width:110px;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(4){width:110px;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(5){width:140px;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(6){width:auto;}
+.customerEdit .unitBlock.proposalInf table.proposal col:nth-child(7){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal th{padding:8px 0 0 10px; vertical-align:top;}
+.customerEdit .unitBlock.proposalInf table.proposal td{padding:0 0 10px 10px; font-size:14px; font-weight:bold; vertical-align:top;}
+.customerEdit .unitBlock.proposalInf table.proposal tr th:last-child{padding:5px 5px 0 0; text-align:right;}
+.customerEdit .unitBlock.proposalInf table.proposal tr th:first-child{padding:5px 0 0 10px;}
+.customerEdit #pageBody header{}
+.customerEdit #pageBody header:after{content:''; display:block; min-width:718px; max-width:735px; height:30px; position:absolute; left:290px; bottom:60px; background:url(../img/bg/scrollOverlay.png) repeat-x bottom; z-index:300;}
+
+/* customer */
+.customerEdit #pageBody.customer{padding-bottom:230px;}
+.customerEdit #pageBody header.customerOutline{height:230px; background:#37332e; padding:10px;}
+.customerEdit #pageBody header.customerOutline section{clear:both; position:relative;}
+.customerEdit #pageBody header.customerOutline section.top{height:40px;}
+.customerEdit #pageBody header.customerOutline h1{height:40px; float:left; font-size:16px; font-weight:bold; color:#fff; line-height:40px; padding-right:20px;}
+.customerEdit #pageBody header.customerOutline h1 span{font-size:12px; font-weight:normal;}
+.customerEdit #pageBody header.customerOutline span.type{display:inline-block; padding:1px 9px; border-radius:3px; color:#fff; margin-top:7px;}
+.customerEdit #pageBody header.customerOutline span.type.kotsukotsu{background:#4a6419;}
+.customerEdit #pageBody header.customerOutline p.delete{float:right; width:170px;}
+.customerEdit #pageBody header.customerOutline p.delete a.btn{padding:0 0 0 40px;
+    background-image:url(../img/icn/bin.png), url(../img/bg/gradientGreen.png) !important;
+    background-repeat:no-repeat, repeat-x !important;
+    background-position:15px center, left center !important;
+    background-size:15px 20px,auto 100% !important;}
+.customerEdit #pageBody header.customerOutline section.mid{padding-left:50px;}
+.customerEdit #pageBody header.customerOutline section p.edit{width:45px; height:41px; position:absolute; left:0; top:5px;}
+.customerEdit #pageBody header.customerOutline section table{color:#fff; width:100%;}
+.customerEdit #pageBody header.customerOutline section table th{padding:5px 2px 0 10px;}
+.customerEdit #pageBody header.customerOutline section table td{padding:0 2px 5px 10px; font-weight:bold; font-size:14px;}
+.customerEdit #pageBody header.customerOutline section table.attr{background:#5e5751;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(1){width:60px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(2){width:60px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(3){width:150px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(4){width:58px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(5){width:58px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(6){width:68px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(7){width:63px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(8){width:63px;}
+.customerEdit #pageBody header.customerOutline section table.customer col:nth-child(9){width:auto;}
+.customerEdit #pageBody header.customerOutline section table.attr col:nth-child(1){width:60px;}
+.customerEdit #pageBody header.customerOutline section table.attr col:nth-child(2){width:60px;}
+.customerEdit #pageBody header.customerOutline section table.attr col:nth-child(3){width:150px;}
+.customerEdit #pageBody header.customerOutline section table.attr col:nth-child(4){width:185px;}
+.customerEdit #pageBody header.customerOutline section table.attr col:nth-child(5){width:auto;}
+.customerEdit #pageBody header.customerOutline section.btm{}
+.customerEdit #pageBody header.customerOutline section ul.btnArray{padding:5px 0 10px 0; height:55px; width:100%;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li{padding-right:5px; float:left; text-align:center;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li:nth-child(1){width:22%;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li:nth-child(2){width:22%;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li:nth-child(3){width:30%;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li:nth-child(4){width:26%;}
+.customerEdit #pageBody header.customerOutline section ul.btnArray li a.btn{padding:0;}
+
+.customerEdit .unitBlock.contactInf{background:#000; padding-bottom:30px;}
+.customerEdit .unitBlock.contactInf .tableWrap{padding:5px 5px 5px 60px; background:#fff; position:relative;}
+.customerEdit .unitBlock.contactInf .tableWrap .editBtn{position:absolute; left:8px; top:4px;}
+
+.customerEdit .unitBlock.contactInf table{background:#fff; width:100%;}
+.customerEdit .unitBlock.contactInf table th{padding:7px 7px 0 15px; vertical-align:middle;}
+.customerEdit .unitBlock.contactInf table th.grand{background:#000; color:#fff; padding:3px 15px; height:20px;}
+.customerEdit .unitBlock.contactInf table td{padding:0 7px 7px 15px; font-size:14px; font-weight:bold;}
+.customerEdit .unitBlock.contactInf table tr.odd{background:#d9d9d9;}
+.customerEdit .unitBlock.contactInf table span.active{display:inline-block; padding:3px 7px 1px 7px; line-height:1; color:#fff; background:#3f3933; border-radius:3px; margin-left:10px;}
+.customerEdit .unitBlock.contactInf table col:nth-child(1){width:110px;}
+.customerEdit .unitBlock.contactInf table col:nth-child(2){width:40px;}
+.customerEdit .unitBlock.contactInf table col:nth-child(3){width:170px;}
+.customerEdit .unitBlock.contactInf table col:nth-child(4){width:160px;}
+.customerEdit .unitBlock.contactInf table col:nth-child(5){width:auto;}
+
+.customerEdit .unitBlock.proposalInf div.proposalInf p.flat{float:right; text-align:right; line-height:1.3; height:30px; padding-top:7px; display:table-cell; vertical-align:middle;}
+.customerEdit .unitBlock.proposalInf div.proposalInf p.flat em:first-child{padding-right:30px;}
+
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(1){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(2){width:130px;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(3){width:160px;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(4){width:100px;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(5){width:110px;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(6){width:auto;}
+.customerEdit .unitBlock.proposalInf table.proposal.other col:nth-child(7){width:65px;}
+
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(1){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(2){width:130px;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(3){width:160px;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(4){width:100px;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(5){width:110px;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(6){width:auto;}
+.customerEdit .unitBlock.proposalInf table.proposal.cert col:nth-child(7){width:65px;}
+
+.customerEdit .unitBlock.proposalInf table.proposal.memo col:nth-child(1){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal.memo col:nth-child(2){width:auto;}
+.customerEdit .unitBlock.proposalInf table.proposal.memo col:nth-child(3){width:65px;}
+.customerEdit .unitBlock.proposalInf table.proposal.memo td{font-size:12px; font-weight:normal; vertical-align:middle; padding-top:10px;}
+
+.customerEdit .unitBlock.proposalInf h2 span.date{padding-left:30px;}
+
+
+
+/* CD-007, CD-001
+============================================================== */
+#editContactInf{width:660px; left:350px; top:40px; padding-bottom:20px;}
+#editContactInf:after{content:''; background:url(../img/pts/dialogTip.png) no-repeat; width:37px; height:61px; position:absolute; left:-26px; top:240px; display:block;}
+#editContactInf.baseInf:after{content:''; background:none; width:0; height:0; display:none;}
+#editContactInf footer{height:40px; text-align:right;}
+#editContactInf footer p{height:40px; width:100px; display:inline-block; vertical-align:middle;}
+#editContactInf footer p a.btn{height:40px; width:100px; text-align:center;}
+#editContactInf footer p.regist a{font-size:18px; font-weight:bold;}
+#editContactInf ul.switch{border:1px #fff solid; border-radius:2px 2px 0 0; background:#000; height:57px; padding:17px 0 0 20px;}
+#editContactInf ul.switch li{display:inline; padding-right:60px; color:#fff; font-size:14px;}
+#editContactInf section{border:1px #fff solid; background:#fff; height:/*420px*/}
+#editContactInf section .tableWrap{padding:0 10px 3px; min-height:70px;}
+#editContactInf section .tableWrap.odd{background:#d9d9d9;}
+#editContactInf section table{width:100%;}
+#editContactInf section table.contactPoint{line-height:1.4;}
+#editContactInf section table.contactPoint col:nth-child(1){width:170px;}
+#editContactInf section table.contactPoint col:nth-child(2){width:110px;}
+#editContactInf section table.contactPoint col:nth-child(3){width:75px;}
+#editContactInf section table.contactPoint col:nth-child(4){width:80px;}
+#editContactInf section table.contactPoint col:nth-child(5){width:auto;}
+#editContactInf section table.contactPoint input{font-weight:bold; font-size:14px;}
+#editContactInf section table.contactPoint input.addrZip1{width:50px;}
+#editContactInf section table.contactPoint input.addrZip2{width:60px;}
+#editContactInf section table.contactPoint input.addrBlock{width:210px;}
+#editContactInf section table.contactPoint input.addrBldg{width:305px;}
+#editContactInf section table.contactPoint input.fullAddr{width:480px;}
+#editContactInf section table.contactPoint a.btn{width:75px; padding:0; text-align:center;}
+#editContactInf section table.contactPoint th{padding:5px 0 0 0;}
+#editContactInf section table.contactPoint td{padding:1px 0 3px 0; vertical-align:middle;}
+#editContactInf section table.contactPoint td.city{font-weight:bold; font-size:14px; padding-right:5px;}
+#editContactInf section table.contactPoint.mail{}
+#editContactInf section table.contactPoint.mail col:nth-child(1){width:140px;}
+#editContactInf section table.contactPoint.mail col:nth-child(2){width:120px;}
+#editContactInf section table.contactPoint.mail col:nth-child(3){width:105px;}
+#editContactInf section table.contactPoint.mail col:nth-child(4){width:auto;}
+#editContactInf section table.contactPoint.mail col:nth-child(5){width:180px;}
+#editContactInf section table.contactPoint.mail input.phone{width:130px;}
+#editContactInf section table.contactPoint.mail input.mail{width:225px;}
+#editContactInf section table.contactPoint.mail td{}
+#editContactInf section table.contactPoint.mail td.adDeny label{left:17px; top:-12px; position:relative;}
+#editContactInf section table.contactPoint.mail td .dialogCalendarSelect button{width:190px !important;}
+#editContactInf div.contactClass{height:63px; background:#5e5751; clear:both; border-radius:0 0 2px 2px; }
+#editContactInf div.contactClass dl{height:63px; float:left; line-height:63px; color:#fff; padding:0 0 0 15px;}
+#editContactInf div.contactClass dl dt{display:inline-block; padding-right:10px;}
+#editContactInf div.contactClass dl dd{display:inline-block; padding-right:10px; font-size:14px;}
+#editContactInf div.contactClass dl.contactPlace{width:350px; overflow:hidden;}
+#editContactInf div.contactClass dl.contactAddr{border-left:1px #fff solid;}
+#editContactInf div.contactClass dl label.radio{padding:0 10px 0 25px;}
+#editContactInf section#contactCorp{display:none;}
+
+#editContactInf.baseInf section .tableWrap{min-height:0; padding:0;}
+#editContactInf.baseInf section table{width:100%; margin:0;}
+#editContactInf.baseInf section table th{padding:5px 0 5px 8px; font-size:14px; min-height:45px; vertical-align:middle;}
+#editContactInf.baseInf section table td{padding:5px 3px 5px 1px; font-size:14px; min-height:45px; vertical-align:middle;}
+#editContactInf.baseInf section table tr{}
+#editContactInf.baseInf section table tr th:first-child{width:90px; text-align:right; padding-right:10px;}
+#editContactInf.baseInf section table.name td input{width:265px;}
+#editContactInf.baseInf section table.relation input[type=text]{width:45px;}
+#editContactInf.baseInf section table.relation col:nth-child(2){width:185px;}
+#editContactInf.baseInf section table.relation col:nth-child(3){width:40px;}
+#editContactInf.baseInf section table.relation col:nth-child(4){width:70px;}
+#editContactInf.baseInf section table.relation col:nth-child(5){width:55px;}
+#editContactInf.baseInf section table.relation col:nth-child(6){width:70px;}
+#editContactInf.baseInf section table.relation col:nth-child(7){width:35px;}
+#editContactInf.baseInf section table.relation col:nth-child(8){width:auto;}
+#editContactInf.baseInf section table.relation tr td:nth-child(2) .selWrap{width:180px;}
+#editContactInf.baseInf section table.relation tr td:nth-child(4) .selWrap{width:65px;}
+#editContactInf.baseInf section table.relation tr td:nth-child(6) .selWrap{width:65px;}
+#editContactInf.baseInf section table.age col:nth-child(2){width:185px;}
+#editContactInf.baseInf section table.age col:nth-child(3){width:180px;}
+#editContactInf.baseInf section table.age col:nth-child(4){width:auto;}
+#editContactInf.baseInf section table.age tr td:nth-child(2) .selWrap{width:180px;}
+#editContactInf.baseInf section table.age tr th:nth-child(3){text-align:right; padding-right:10px;}
+#editContactInf.baseInf section table.date col:nth-child(2){width:185px;}
+#editContactInf.baseInf section table.date col:nth-child(3){width:auto;}
+#editContactInf.baseInf section table.date col:nth-child(4){width:200px;}
+#editContactInf.baseInf section table.date tr td:nth-child(2) button{width:180px;}
+#editContactInf.baseInf section table.date tr th:nth-child(3){text-align:right; padding-right:10px;}
+#editContactInf.baseInf section table.date tr td:nth-child(4){width:200px;}
+#editContactInf.baseInf section table.date tr td:nth-child(4) input{width:70px;}
+#editContactInf.baseInf section table.occupation col:nth-child(2){width:270px;}
+#editContactInf.baseInf section table.occupation col:nth-child(3){width:50px;}
+#editContactInf.baseInf section table.occupation col:nth-child(4){width:auto;}
+#editContactInf.baseInf section table.occupation tr td:nth-child(2) input{width:265px;}
+#editContactInf.baseInf section table.occupation tr td:nth-child(4) input{width:220px;}
+#editContactInf.baseInf section table.occupation tr td .btn{width:120px; display:inline-block; vertical-align:middle; margin-left:20px; text-align:center;}
+#editContactInf.baseInf section table.forwarder td .btn{width:200px;}
+#editContactInf.baseInf section table.baseOrgan col:nth-child(2){width:260px;}
+#editContactInf.baseInf section table.baseOrgan col:nth-child(3){width:85px;}
+#editContactInf.baseInf section table.baseOrgan col:nth-child(4){width:auto;}
+#editContactInf.baseInf section table.baseOrgan tr td:nth-child(2) .selWrap{width:255px;}
+#editContactInf.baseInf section table.baseOrgan tr td:nth-child(4) .selWrap{width:190px;}
+
+/* G-001
+============================================================== */
+.login main{height:100%; position:relative;}
+.login main #login{background:url(../img/bg/login.png) no-repeat; width:608px; height:567px; position:absolute; left:50%; top:50%; margin:-230px 0 0 -304px; padding:73px 3px 0 3px;}
+.login main #login header{height:100px; position:relative;}
+.login main #login header h1{width:156px; height:39px; position:absolute; left:40px; top:30px;}
+.login main #login header p{width:116px; height:37px; position:absolute; right:40px; top:30px;}
+.login main #login section{height:220px; padding:25px 40px;}
+.login main #login section table{width:100%; font-size:14px; color:#fff; margin-bottom:8px;}
+.login main #login section table col:nth-child(4){width:190px;}
+.login main #login section table col:nth-child(1){}
+.login main #login section table col:nth-child(1){}
+.login main #login section table col:nth-child(1){}
+.login main #login section table col:nth-child(1){}
+.login main #login section table col:nth-child(1){}
+.login main #login section table th{width:100px; padding:8px 2px;}
+.login main #login section table td{padding:8px 2px;}
+.login main #login section table td input{width:100%; color:#000 !important;}
+.login main #login section p{text-align:center;}
+.login footer{height:100px; display:table; width:100%; padding:0 40px;}
+.login footer p{display:table-cell; vertical-align:middle;}
+.login footer p.alert{background:url(../img/icn/loginAlert.png) no-repeat left center; padding-left:30px;}
+
+/* G-002
+============================================================== */
+.home header#pageHeader nav#transfer,
+.home header#pageHeader nav#transfer li,
+.home header#pageHeader nav#transfer li a{border:none;}
+.home header#pageHeader p.logout{position:absolute; top:7px; right:205px; width:125px; height:40px;}
+.home header#pageHeader p.logout .btn.regular{width:125px; padding-left:40px;
+    background-image:url(../img/icn/logout.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position: 10px center, left center;
+    background-size:19px 25px, 1px 100%;}
+.home main{padding-bottom:0;}
+.home main header{color:#fff; height:32px; line-height:32px; padding:0 10px; background:url(../img/bg/gradientDot.png) repeat-x left bottom;}
+.home main header em{font-size:14px; font-weight:bold;}
+.home main #pageBody{width:100%; padding-left:300px; position:absolute; z-index:1; padding-bottom:85px;}
+.home main #pageBody .scrlParent{}
+.home section.menu{width:650px; margin:20px auto 0;}
+.home .menuBlock{width:320px; height:170px; background:#fff; border:1px #fff solid; border-radius:5px; box-shadow:0 0 30px rgba(0,0,0,0.3) inset; float:left; margin-bottom:10px; position:relative;}
+.home .menuBlock.mode{background:none; border:none; box-shadow:0 0 30px rgba(0,0,0,0.7) inset;}
+.home section.menu .menuBlock:nth-child(even){float:right;}
+.home .menuBlock div.inner{height:72px; padding:0 15px 0 20px; position:absolute; left:0; top:50%; margin-top:-36px; width:100%;}
+.home .menuBlock div.inner p{font-size:24px; font-weight:bold; line-height:1.2; height:72px; vertical-align:middle; display:table-cell;}
+.home .menuBlock div.inner ul{text-align:right; float:right; position:relative; top:-72px;}
+.home .menuBlock div.inner ul li{display:inline-block; width:72px; height:72px; position:relative; z-index:1; margin-left:5px;}
+.home .menuBlock div.inner ul li a{width:72px; height:72px; display:block; text-align:center; padding-top:47px; color:#fff; background-repeat:no-repeat; background-position:center; text-shadow:-1px 0 0 rgba(0,0,0,1);}
+.home .menuBlock div.inner ul li a.customerSearch{background-image:url(../img/pts/mainBtnPersonSearch.png);}
+.home .menuBlock div.inner ul li a.customerNew{background-image:url(../img/pts/mainBtnPersonAdd.png);}
+.home .menuBlock div.inner ul li a.docsSearch{background-image:url(../img/pts/mainBtnDocSearch.png);}
+.home .menuBlock div.inner ul li a.docsNew{background-image:url(../img/pts/mainBtnDocAdd.png);}
+.home .menuBlock div.inner ul li a.presentation{background-image:url(../img/pts/mainBtnPresentation.png);}
+.home .menuBlock div.inner ul li em{display:inline-block; border:2px solid #fff; color:#fff; font-size:14px; font-weight:bold; background:#d02d2d; position:absolute; left:-5px; top:-5px; line-height:14px; padding:2px 5px 2px; text-align:center; border-radius:20px; z-index:2; box-shadow:2px 1px 3px rgba(0,0,0,0.3); font-family:Arial, Helvetica, sans-serif;}
+.home .menuBlock.mode{padding:30px 0 0 20px;}
+.home .menuBlock.mode p.ttl{font-size:14px; position:absolute; left:10px; top:5px; color:#fff;}
+.home .menuBlock.mode .selector{width:130px; float:left; margin:0 5px 8px; position:relative; min-height:61px;}
+.home .menuBlock.mode .selector p{color:#fff;}
+.home .menuBlock.mode .selector .selWrap{width:130px;}
+.home .menuBlock.mode .selector .toggleLR{position:absolute; right:0; top:20px; padding-right:11px;/* paddingを調整しないとpositionがうまく取れない？ */}
+.home main aside{background:url(../img/bg/hairlineMiddle.png) repeat-y; width:300px !important; position:relative; top:0; left:0;  z-index:10; overflow:hidden !important; padding-bottom:100px !important;}
+.home main aside .brand{background:#fff; padding:13px 0 13px 10px; height:65px;}
+.home main aside .scrlParent{height:294px;}
+.home main aside dl.info{padding:15px 10px 70px 10px; font-size:14px;}
+.home main aside dl.info dt{font-weight:bold;}
+.home main aside dl.info dd{border-bottom:1px #000 dotted; padding-bottom:10px; margin-bottom:10px;}
+.home main aside .recent{position:absolute; left:0; bottom:31px; width:300px; height:auto; background:#fff;}
+.home main aside .recent:before{content:''; display:block; width:283px; height:30px; background:url(../img/bg/scrollOverlay.png) repeat-x; position:absolute; top:-30px; left:0;}
+.home main aside .recent p.header{height:40px; background:#fff; box-shadow:0 5px 5px rgba(0,0,0,0.3); position:relative; z-index:10;}
+.home main aside .recent p.header a{display:block; height:40px; padding:0 5px 0 12px; color:#fff; display:block; position:relative; background:url(../img/bg/gradientGreen.png) repeat-x left center; background-size:1px 100%; text-shadow:0 -1px 0 rgba(0,0,0,1); font-size:14px; line-height:40px;
+    background-image:url(../img/icn/menuHasSub.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:270px center,left center;
+    background-size:10px 17px,1px 100%;}
+.home main aside .recent p.header a.open{
+    background-image:url(../img/icn/menuHasSubOpen.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:265px center,left center;
+    background-size:16px 12px,1px 100%;}
+.home main aside .recent ul{background:url(../img/bg/hairlineMiddle.png) repeat-y;}
+.home main aside .recent ul li{padding:10px;}
+.home main aside .recent ul li:nth-child(even){background:#fff;}
+
+/* GD-001
+============================================================== */
+#searchAddress{width:880px; height:580px; left:50%; top:50%; margin:-295px 0 0 -400px;}
+#searchAddress .searchPannel{background:#d9d9d9; border-radius:4px 4px 0 0; padding:10px 10px 15px 10px; clear:both; position:relative;}
+#searchAddress .searchPannel:after{clear:both; display:block; content:'';}
+#searchAddress .searchPannel ul.select{float:left; background:#fff; border-radius:5px; padding:15px 10px 0;}
+#searchAddress .searchPannel ul.select li{margin-bottom:15px; font-size:14px;}
+#searchAddress .searchPannel p{float:right; font-size:14px;}
+#searchAddress .searchPannel p input{width:350px; margin:0 5px;}
+#searchAddress .searchResult{background:#fff; position:relative;}
+#searchAddress .searchResult table{width:100%; position:relative; font-size:12px;}
+#searchAddress .searchResult table col:nth-child(1){width:190px;}
+#searchAddress .searchResult table col:nth-child(2){width:190px;}
+#searchAddress .searchResult table col:nth-child(3){width:190px;}
+#searchAddress .searchResult table col:nth-child(4){width:190px;}
+#searchAddress .searchResult table col:nth-child(5){width:auto;}
+#searchAddress .searchResult header{height:30px; overflow:hidden; box-shadow:0 5px 5px rgba(0,0,0,0.4);}
+#searchAddress .searchResult header table{background:#3f3933; color:#fff; box-shadow:0 5px 5px rgba(0,0,0,0.5);}
+#searchAddress .searchResult header table th{text-align:center; line-height:30px;}
+#searchAddress .searchResult table tr:nth-child(even){background:#d9d9d9;}
+#searchAddress .searchResult table td{padding:10px 5px 10px 15px; border-right:1px #000 dashed; vertical-align:middle; text-align:center; font-size:14px;}
+#searchAddress .searchResult table tr td:last-child{border-right:none; padding:5px 0; text-align:center;}
+#searchAddress .searchResult table tr td:nth-child(4){border-right:none;}
+#searchAddress .searchResult table tr td:last-child img{margin:0 auto; display:block;}
+#searchAddress .searchResult .scrlParent{height:330px; overflow:auto;}
+#searchAddress footer{height:40px;}
+#searchAddress footer p{height:40px; position:relative;}
+#searchAddress footer p.regist{float:left;}
+#searchAddress footer p.cancel{float:right;}
+#searchAddress .searchPannel.name{height:277px;}
+#searchAddress .searchPannel .list{width:670px; height:315px; position:absolute; right:-5px; top:10px;}
+#searchAddress .searchPannel .selBox{float:left; position:relative;}
+#searchAddress .searchPannel .pref{width:185px;}
+#searchAddress .searchPannel .city,
+#searchAddress .searchPannel .town{width:240px;}
+#searchAddress .searchPannel .selBox p{height:40px; margin-bottom:7px; float:left; line-height:40px; font-size:14px;}
+#searchAddress .searchPannel .selBox a.sel{width:100px; height:40px; line-height:40px; font-size:14px; position:relative; border:1px solid #000; border-radius:4px; box-shadow:0 0 7px rgba(0,0,0,0.4) inset,0 1px 1px rgba(255,255,255,0.3); display:inline-block; text-align:left; vertical-align:middle; padding:0 0 0 10px !important;  background-image:url(../img/icn/selectArr.png), url(../img/bg/gradientGray.png); float:right; margin-right:15px;
+    background-position:right center, left center;
+    background-repeat:no-repeat,repeat-x;
+    background-size:15px 6px,auto 100%; overflow:hidden;}
+#searchAddress .searchPannel .selBox .scrlParent{height:220px;}
+#searchAddress .searchPannel .selBox ul.selector{border:1px #ccc solid; border-right:none 0; padding-bottom:30px;}
+#searchAddress .searchPannel .selBox ul.selector li{font-size:12px;}
+#searchAddress .searchPannel .selBox ul.selector li a{padding:8px 10px; display:block; background:#fff; clear:both;}
+#searchAddress .searchPannel .selBox ul.selector li a:after{content:''; clear:both; display:block;}
+#searchAddress .searchPannel .selBox ul.selector li:nth-child(even) a{background:#d9d9d9;}
+#searchAddress .searchPannel .selBox ul.selector li.selected a{background:#02993b; color:#fff;}
+#searchAddress .searchPannel .selBox ul.selector li a:hover{background:#02993b; color:#fff; opacity:1;}
+
+#searchAddress .searchPannel ul.selector li a span.kanji{font-size:14px; white-space:nowrap; float:left; display:inline-block;}
+#searchAddress .searchPannel ul.selector li a span.kana{float:right; display:inline-block;}
+#searchAddress .searchPannel .pref ul.selector li a span.kanji{width:4.5em;}
+#searchAddress .searchPannel .city ul.selector li a span.kanji{width:8em;}
+#searchAddress .searchPannel .town ul.selector li a span.kanji{width:8em;}
+#searchAddress .searchPannel .pref ul.selector li a span.kana{width:6.5em;}
+#searchAddress .searchPannel .city ul.selector li a span.kana{width:7.5em;}
+#searchAddress .searchPannel .town ul.selector li a span.kana{width:7.5em;}
+#searchAddress .searchPannel .selBox:after{content:''; display:block; height:30px; width:225px; background:url(../img/bg/scrollOverlay.png) repeat-x bottom; position:absolute; left:0; bottom:0;}
+#searchAddress .searchPannel .selBox.pref:after{width:167px;}
+#searchAddress .searchResult.name .scrlParent{height:175px; overflow:auto;}
+#searchAddress .searchPannel .selBox ul.refiner{position:absolute; background:url(../img/bg/alphaBlack.png); border-radius:5px; padding:5px 0 0 5px; height:51px; width:572px; z-index:2; top:45px; left:-240px; display:none;}
+#searchAddress .searchPannel .selBox ul.refiner li{width:42px; height:40px; float:left; margin-right:5px; border-radius:3px; font-size:14px; text-align:center; line-height:40px;}
+#searchAddress .searchPannel .selBox ul.refiner li a{padding:0; width:42px; height:40px; line-height:40px; color:#fff; border-radius:3px; display:block; background:url(../img/bg/gradientGreen.png) repeat-x left center; background-size:1px 100%; box-shadow:0 1px 2px rgba(255,255,255,0.7);}
+#searchAddress .searchPannel .selBox ul.refiner li:last-child{width:90px;}
+#searchAddress .searchPannel .selBox ul.refiner li:last-child a{width:90px; background:url(../img/bg/gradientGray.png) repeat-x left center; background-size:1px 100%; box-shadow:0 1px 2px rgba(255,255,255,0.5);  color:#000; border:1px #000 solid; border-radius:4px; overflow:hidden;}
+#searchAddress .searchPannel .selBox ul.refiner:before{content:''; display:block; width:10px; height:7px; background:url(../img/pts/tipTop.png) no-repeat; position:absolute; left:350px; top:-7px; z-index:10;}
+
+#searchAddress .searchPannel .selBox.city ul.refiner{left:auto; right:15px;}
+#searchAddress .searchPannel .selBox.town ul.refiner{left:auto; right:15px;}
+#searchAddress .searchPannel .selBox.city ul.refiner:before{left:auto; right:47px;}
+#searchAddress .searchPannel .selBox.town ul.refiner:before{left:auto; right:47px;}
+
+/* GD-011
+============================================================== */
+#beneficiaryEdit{width:780px; left:50%; top:50%; margin:-295px 0 0 -390px;}
+#beneficiaryEdit .inner{background:#5e5751; padding:5px; border:1px #fff solid; border-radius:5px; box-shadow:1px 1px 5px rgba(0,0,0,0.7);}
+#beneficiaryEdit .beneficiary{background:#fff; height:300px; position:relative; margin-bottom:10px;}
+#beneficiaryEdit .demander{background:#fff;}
+#beneficiaryEdit .beneficiary:after{contnet:''; width:726px; height:30px; background:url(../img/bg/scrollOverlay.png) repeat-x bottom; position:absolute; left:0; bottom:-1px; display:block; z-index:2;}
+#beneficiaryEdit .beneficiary header{height:55px; padding:10px; clear:both;}
+#beneficiaryEdit .demander header{height:40px; padding:10px; clear:both;}
+#beneficiaryEdit .beneficiary header:after,
+#beneficiaryEdit .demander header:after{clear:both; display:block; content:'';}
+#beneficiaryEdit .beneficiary header h1,
+#beneficiaryEdit .demander header h1{float:left; font-weight:normal; color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,1); background:#02993b; text-align:center; padding:1px 7px 0; border-radius:3px; line-height:18px; height:18px; font-size:12px;}
+#beneficiaryEdit .beneficiary header ul{width:240px; height:40px; float:right;}
+#beneficiaryEdit .beneficiary header ul li{width:120px; float:left; font-weight:normal;}
+#beneficiaryEdit .beneficiary header ul li.edit .btn{border-radius:5px 0 0 5px;
+    background-image:url(../img/icn/editWhite.png), url(../img/bg/gradientBlack.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:15px center, left center;
+    background-size:16px, 10px 100%; padding-left:40px;}
+#beneficiaryEdit .beneficiary header ul li.add .btn{border-radius:0 5px 5px 0;
+    background-image:url(../img/icn/addDark.png), url(../img/bg/gradientGray.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:10px center, left center;
+    background-size:12px 13px, 10px 100%; padding-left:30px;}
+#beneficiaryEdit .beneficiary .scrlParent{height:220px;}
+#beneficiaryEdit .beneficiary table,
+#beneficiaryEdit .demander table{width:100%;}
+#beneficiaryEdit .beneficiary table col:nth-child(1){width:195px;}
+#beneficiaryEdit .beneficiary table col:nth-child(2){width:200px;}
+#beneficiaryEdit .beneficiary table col:nth-child(3){width:195px;}
+#beneficiaryEdit .beneficiary table col:nth-child(4){width:83px;}
+#beneficiaryEdit .beneficiary table col:nth-child(5){width:auto;}
+#beneficiaryEdit .demander table col:nth-child(1){width:200px;}
+#beneficiaryEdit .demander table col:nth-child(2){width:250px;}
+#beneficiaryEdit .demander table col:nth-child(3){width:195px;}
+#beneficiaryEdit .demander table col:nth-child(4){width:auto;}
+#beneficiaryEdit .beneficiary table th,
+#beneficiaryEdit .demander table th{background:#d9d9d9; text-align:center; padding:3px;}
+#beneficiaryEdit .beneficiary table td,
+#beneficiaryEdit .demander table td{border-right:1px #000 dashed; padding:10px 5px; vertical-align:middle;}
+#beneficiaryEdit .beneficiary table td input[type=text]{width:50px;}
+#beneficiaryEdit .beneficiary table tr:nth-child(even) td{background:#d9d9d9;}
+#beneficiaryEdit .beneficiary table td:nth-child(5),
+#beneficiaryEdit .demander table td:nth-child(4){border:none; text-align:center;}
+#beneficiaryEdit .beneficiary table td:nth-child(2),
+#beneficiaryEdit .demander table td:nth-child(2){line-height:1.8;}
+#beneficiaryEdit .beneficiary table td:nth-child(2) em,
+#beneficiaryEdit .demander table td:nth-child(2) em{font-weight:bold; font-size:14px;}
+#beneficiaryEdit .beneficiary table td .selWrap,
+#beneficiaryEdit .demander table td .selWrap{display:inline-block;}
+#beneficiaryEdit .beneficiary table td .selWrap.customer,
+#beneficiaryEdit .demander table td .selWrap.customer{width:120px;}
+#beneficiaryEdit .beneficiary table td .selWrap.type,
+#beneficiaryEdit .demander table td .selWrap.type{width:190px; margin-bottom:5px;}
+#beneficiaryEdit .beneficiary table td .selWrap.relation,
+#beneficiaryEdit .demander table td .selWrap.relation{width:190px;}
+#beneficiaryEdit .beneficiary table tr td:nth-child(1) .btn,
+#beneficiaryEdit .demander table tr td:nth-child(1) .btn{width:65px; display:inline-block; vertical-align:middle; text-align:center;}
+
+#beneficiaryEdit footer{height:40px;}
+#beneficiaryEdit footer p{height:40px; float:right;}
+#beneficiaryEdit footer p .btn{display:inline-block; margin-left:5px; width:100px; text-align:center;}
+#beneficiaryEdit footer p .highlight{font-size:18px; font-weight:bold;}
+
+/* M-001
+============================================================== */
+/* main */
+article#pageBody.customerInf{height:100%; position:relative;}
+article#pageBody.customerInf header{height:65px; position:relative; padding:0 10px;}
+article#pageBody.customerInf header:after{content:''; display:block; height:5px; box-shadow:0 5px 5px rgba(0,0,0,0.5); z-index:10; position:relative; margin:-6px 5px 0 -10px;}
+article#pageBody.customerInf header h1{color:#fff; font-size:14px; font-weight:bold; line-height:65px;}
+article#pageBody.customerInf header p{position:absolute; right:10px; top:10px; width:110px; line-height:40px;}
+article#pageBody.customerInf header p a{color:#000; text-shadow:0 1px 0 rgba(255,255,255,1); display:block; width:110px; height:40px; padding:0 5px 0 35px; font-size:14px; border:1px #000 solid; text-shadow:0 1px 0 rgba(255,255,255,1); box-shadow:0 0 7px rgba(0,0,0,0.4) inset;
+    background-image:url(../img/icn/edit.png), url(../img/bg/gradientGray.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:10px center,left center;
+    background-size:auto 100%,;}
+article#pageBody.customerInf section.detail{height:100%; padding-bottom:176px;}
+article#pageBody.customerInf section.detail .scrlParent{background:#fff; border:1px #000 solid; border-right:none; border-bottom:none; position:relative; overflow-y:scroll;}
+article#pageBody.customerInf section.detail header{height:auto; padding:15px 10px 5px 10px;}
+article#pageBody.customerInf section.detail header:after{content:''; visibility:hidden;}
+article#pageBody.customerInf section.detail header div{float:left; width:50%;}
+article#pageBody.customerInf section.detail header h1{color:#000; font-size:18px; line-height:24px; margin-bottom:5px;}
+article#pageBody.customerInf section.detail header h1 span{font-size:14px; font-weight:normal;}
+article#pageBody.customerInf section.detail header dl{}
+article#pageBody.customerInf section.detail header dl dt{width:8em; float:left; clear:left;}
+article#pageBody.customerInf section.detail header dl dd{padding:0 0 0 8em; font-size:14px;}
+article#pageBody.customerInf section.detail .mainBlock{}
+article#pageBody.customerInf section.detail .mainBlock div.tableWrap{padding:10px 10px 30px 10px;}
+article#pageBody.customerInf section.detail .mainBlock div.tableWrap:nth-child(odd){background:#e3e1df;}
+article#pageBody.customerInf section.detail .mainBlock table{width:100%;}
+article#pageBody.customerInf section.detail .mainBlock table col:nth-child(1){width:110px;}
+article#pageBody.customerInf section.detail .mainBlock table col:nth-child(2){width:240px;}
+article#pageBody.customerInf section.detail .mainBlock table col:nth-child(3){width:80px;}
+article#pageBody.customerInf section.detail .mainBlock table col:nth-child(4){width:auto;}
+article#pageBody.customerInf section.detail .mainBlock table th{padding:2px 0;}
+article#pageBody.customerInf section.detail .mainBlock table td{font-size:14px; padding:4px 0;}
+article#pageBody.customerInf section.detail .mainBlock table td input[type=text]{width:100%;}
+article#pageBody.customerInf section.detail .mainBlock table td.phone{font-weight:bold;}
+/* footer */
+article#pageBody.customerInf footer{padding:10px; width:100%; height:115px; position:absolute; left:0; bottom:0;}
+article#pageBody.customerInf footer:before{content:''; display:block; height:30px; background:url(../img/bg/scrollOverlay.png) repeat-x bottom; position:relative; z-index:10; margin:-30px 7px 0 -9px; top:-6px; left:0px;}
+article#pageBody.customerInf footer div{float:left; height:50px;}
+article#pageBody.customerInf footer div:nth-child(odd){width:280px;}
+article#pageBody.customerInf footer div:nth-child(even){width:480px;}
+article#pageBody.customerInf footer div label{color:#fff; display:inline-block; height:50px; line-height:50px;}
+article#pageBody.customerInf footer div:nth-child(odd) label{width:8em;}
+article#pageBody.customerInf footer div:nth-child(even) label{width:14em;}
+article#pageBody.customerInf footer div .selWrap{width:140px;}
+article#pageBody.customerInf footer div input[type=text]{width:300px;}
+
+
+/* PD-010
+============================================================== */
+#searchCustomer{width:880px; height:560px; left:50%; top:50%; margin:-295px 0 0 -400px;}
+#searchCustomer .searchPannel{background:#d9d9d9; border-radius:4px 4px 0 0; padding:10px 10px 15px 10px;}
+#searchCustomer .searchPannel table{width:100%;}
+#searchCustomer .searchPannel table col:nth-child(1){width:65px;}
+#searchCustomer .searchPannel table col:nth-child(2){width:150px;}
+#searchCustomer .searchPannel table col:nth-child(3){width:75px;}
+#searchCustomer .searchPannel table col:nth-child(4){width:225px;}
+#searchCustomer .searchPannel table col:nth-child(5){width:75px;}
+#searchCustomer .searchPannel table col:nth-child(6){width:auto;}
+#searchCustomer .searchPannel table td input[type=text]{width:100%;}
+#searchCustomer .searchPannel table td{padding:0 0 5px 5px;}
+#searchCustomer .search .btn{}
+.ie #searchCustomer .search .btn{text-shadow:-30px 0px 0 rgba(0,0,0,1);}/* IE9 bug ??????? */
+#searchCustomer .searchPannel .selWrap.class{width:110px;}
+#searchCustomer .searchPannel .selWrap.sorter{width:160px;}
+#searchCustomer .searchPannel table th.homeNum,
+#searchCustomer .searchPannel table th.update,
+#searchCustomer .searchPannel table td.function{text-align:right;}
+#searchCustomer .searchPannel table th,
+#searchCustomer .searchPannel table td{vertical-align:middle;}
+#searchCustomer .searchPannel table td.kanaInput{width:225px; /*IE*/}
+#searchCustomer .searchResult{background:#fff; position:relative;}
+#searchCustomer .searchResult table{width:100%; position:relative; font-size:12px;}
+#searchCustomer .searchResult table col:nth-child(1){width:75px;}
+#searchCustomer .searchResult table col:nth-child(2){width:180px;}
+#searchCustomer .searchResult table col:nth-child(3){width:80px;}
+#searchCustomer .searchResult table col:nth-child(4){width:90px;}
+#searchCustomer .searchResult table col:nth-child(5){width:160px;}
+#searchCustomer .searchResult table col:nth-child(6){width:60px;}
+#searchCustomer .searchResult table col:nth-child(7){width:125px;}
+#searchCustomer .searchResult table col:nth-child(8){width:auto;}
+#searchCustomer .searchResult header{height:30px; overflow:hidden; box-shadow:0 5px 5px rgba(0,0,0,0.4);}
+#searchCustomer .searchResult header table{background:#3f3933; color:#fff; box-shadow:0 5px 5px rgba(0,0,0,0.5);}
+#searchCustomer .searchResult header table th{text-align:center; line-height:30px;}
+#searchCustomer .searchResult table tr:nth-child(even){background:#d9d9d9;}
+#searchCustomer .searchResult table td{padding:10px 5px 10px 15px; border-right:1px #000 dashed; vertical-align:middle;}
+#searchCustomer .searchResult table tr td:last-child{border-right:none; padding:5px 0; text-align:center;}
+#searchCustomer .searchResult table tr td:last-child img{margin:0 auto; display:block;}
+#searchCustomer .searchResult table tr td.cstName span{width:140px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;}
+#searchCustomer .searchResult .scrlParent{height:310px; overflow:auto;}
+#searchCustomer footer{height:40px;}
+#searchCustomer footer p{height:40px; position:relative;}
+#searchCustomer footer p.regist{float:left;}
+#searchCustomer footer p.cancel{float:right;}
+
+/* P-002
+============================================================== */
+/** TODO sanada スタイルが崩れるのでP-002まるごと消してeach_own.cssに移動してる。あとでここにコピペする。 **/
+
+/* PD-045 
+================================================================ */
+#editCustomerInf{width:600px; left:290px; top:54px; padding-bottom:20px;}
+#editCustomerInf:after{content:''; background:url(../img/pts/dialogTip.png) no-repeat; width:37px; height:61px; position:absolute; left:-26px; top:240px; display:block;}
+#editCustomerInf footer{height:40px; text-align:right;}
+#editCustomerInf footer p{height:40px; width:100px; display:inline-block; vertical-align:middle;}
+#editCustomerInf footer p a.btn{height:40px; width:100px; text-align:center;}
+#editCustomerInf footer p.regist a{font-size:18px; font-weight:bold;}
+#editCustomerInf ul.switch{border-radius:5px 5px 0 0; background:#5e5751; height:57px; padding:17px 0 0 20px;}
+#editCustomerInf ul.switch li{display:inline; padding-right:20px; color:#fff; font-size:14px;}
+
+#editCustomerInf section.customers{}
+#editCustomerInf section.customers .customer{position:relative; background:#fff; clear:both; padding:10px 10px 5px; min-height:60px;}
+#editCustomerInf section.customers .customer:after{content:''; display:block; clear:both;}
+#editCustomerInf section.customers .customer:nth-child(odd){background:url(../img/bg/hairlineWide.png) repeat-y top left;}
+
+#editCustomerInf section.customers .customer dl{width:380px; float:left;}
+#editCustomerInf section.customers .customer dl dt{width:6em; padding-bottom:7px; float:left; clear:left;}
+#editCustomerInf section.customers .customer dl dd{padding:0 0 7px 6em; font-size:14px;}
+#editCustomerInf section.customers .customer dl.caretaker dt{width:8em; padding-bottom:7px; float:left; clear:left;}
+#editCustomerInf section.customers .customer dl.caretaker dd{padding:0 0 7px 8em; font-size:14px;}
+
+#editCustomerInf section.customers .customer dl dt.label span{background:#02993b; padding:2px 5px; color:#fff; border-radius:2px;}
+#editCustomerInf section.customers .customer dl dd.name{font-weight:bold;}
+#editCustomerInf section.customers .customer dl dd.name em{display:inline-block; max-width:12em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle;}
+#editCustomerInf section.customers .customer dl dd.name span{font-size:12px; padding-left:0.5em;}
+#editCustomerInf section.customers .customer .form{clear:both; position:relative; top:-7px; height:40px; margin-bottom:5px;}
+#editCustomerInf section.customers .customer .form p{display:inline-block; width:150px;}
+#editCustomerInf section.customers .customer .form p.check{vertical-align:middle; padding-left:10px; float:left; height:40px; line-height:40px;}
+#editCustomerInf section.customers .customer .form p.select{vertical-align:middle; float:right; width:360px;}
+#editCustomerInf section.customers .customer .form p.select label{display:inline-block; width:5.5em; text-align:right; padding-right:5px;}
+#editCustomerInf section.customers .customer .form p.select .selWrap{width:100px;}
+#editCustomerInf section.customers .function{width:140px; height:40px; position:absolute; right:10px; top:10px;}
+#editCustomerInf section.customers .function li{float:left; width:70px;}
+#editCustomerInf section.customers .function li a.btn{width:70px;}
+#editCustomerInf section.customers .function li.edit a.btn{border-radius:4px 0 0 4px; border-right:none; color:#fff; padding-left:28px; text-shadow:0 -1px 0 rgba(0,0,0,1);
+    background-image:url(../img/icn/editWhite.png), url(../img/bg/gradientGreen.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:8px center, left center;
+    background-size:16px, auto 100%;}
+#editCustomerInf section.customers .function li.search .btn{border-radius:0 4px 4px 0; color:#000; padding-left:28px; text-shadow:0 -1px 0 rgba(255,255,255,1);
+    background-image:url(../img/icn/search2.png), url(../img/bg/gradientGray.png);
+    background-repeat:no-repeat, repeat-x;
+    background-position:8px center, left center;
+    background-size:18px 19px, auto 100%;}
+
+#editCustomerInf section.customers#corpP dl.corp{width:100%;}
+#editCustomerInf section.customers#corpP dl.corp dt{width:7.5em; height:40px; margin-bottom:5px; line-height:40px;}
+#editCustomerInf section.customers#corpP dl.corp dd{padding-right:7.5em; height:40px; margin-bottom:5px; position:relative; width:100%;}
+#editCustomerInf section.customers .customer dl.corp dd.org .selWrap{width:100px;}
+#editCustomerInf section.customers .customer dl.corp dd.org label{font-size:12px;}
+#editCustomerInf section.customers .customer dl.corp dd p.select{height:40px; text-align:right !important; line-height:40px; position:absolute; right:0; top:0;}
+#editCustomerInf section.customers .customer dl.corp dd p.select label{display:inline-block; margin-left:20px;}
+#editCustomerInf section.customers .customer dl.corp dd input[type=text]{width:465px; position:absolute; right:0; top:0;}
+#editCustomerInf section.customers .customer dl.corp dd .recieve .selWrap{width:95px; margin-right:10px;}
+#editCustomerInf section.customers .customer dl.corp dd .class .selWrap{width:265px; position:absolute; right:0; top:0;}
+#editCustomerInf section.customers .customer dl.corp dd label{font-size:12px;}
+#editCustomerInf section.customers .customer dl dd.code .selWrap{width:100px;}
+#editCustomerInf section.customers#sameP{}
+#editCustomerInf section.customers#otherP{display:none;}
+#editCustomerInf section.customers#corpP{display:none;}
+

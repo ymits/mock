@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* global initialization
+========================================================================== */
+*{margin:0; padding:0; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box;}
+em,th,address{font-style:normal;}
+ul li{list-style:none;}
+table{border-collapse:collapse;}
+img{border:none;}
+th{font-weight:normal; text-align:left;}
+
+/* HTML5 display difinition
+========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,main{display:block;}
+audio, canvas, video{display:inline-block; *display:inline; *zoom:1;}
+audio:not([controls]){display:none;}
+time{display:inline;}
+[hidden]{display:none;}
+
+/* text sizing init and overwrite
+========================================================================== */
+html{font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; height:100%;}
+body{font-size:12px; line-height:1.64; font-family:"メイリオ", Meiryo,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color:#000; height:100%; background:url(../img/bg/bodyBg.gif) repeat-x top left #312d2c; overflow:hidden;}
+button,input,select,textarea{font-family:inherit; color:inherit; vertical-align:middle;}
+abbr[title]{border-bottom:1px dotted;}
+b,strong{font-weight:bold;}
+blockquote{margin:0;}
+dfn{font-style:italic;}
+hr{display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0;}
+pre,code,kbd,samp{font-family:monospace,monospace; _font-family:'courier new', monospace; font-size:inherit;}
+pre{white-space:pre; white-space:pre-wrap; word-wrap:break-word;}
+q{quotes:none;}
+q:before,q:after{content:""; content:none;}
+small{font-size:85%;}
+sub,sup{font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,abbr,address,cite,code,
+dl,dt,dd,ol,ul,li,
+label,legend,input,textarea,select,
+table,caption,tbody,tfoot,thead,tr,th,td{font-size:100%; vertical-align:baseline;}
+
+/* link highlight
+========================================================================== */
+::-moz-selection{background:#fe57a1; color:#fff; text-shadow:none;}
+::selection{background:#fe57a1; color:#fff; text-shadow:none; }
+a{color:#000; outline:none; text-decoration:none;}
+a:visited{color:#000;}
+a:hover{color:#000;}
+a:focus{outline:none;}
+a:hover,a:active{outline:0;}
+a{-webkit-tap-highlight-color:rgba(80,180,250,0.4);}
+a,button,a img,input[type=button],input[type=submit],input[type=reset]{
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    cursor:pointer;
+}
+a:hover,button:hover,a:hover img,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{opacity:0.7;}
+a.disabled,button.disabled,a.disabled img,input[type=button].disabled,input[type=submit].disabled,input[type=reset].disabled{opacity:0.3;}
+
+
+/* cancel msie's input decoration
+============================================================== */
+input::-ms-clear {
+    visibility:hidden;
+    display:none;
+}
+input::-ms-reveal {
+    visibility:hidden;
+    display:none;
+}
+
+input:focus::-ms-clear {
+    visibility:hidden;
+    display:none;
+}
+input:focus::-ms-reveal {
+    visibility:hidden;
+    display:none;
+}
