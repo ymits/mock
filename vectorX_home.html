@@ -32,6 +32,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
 
+
+        <link rel="stylesheet" type="text/css" media="all" href="base.css">
+        <link rel="stylesheet" type="text/css" media="all" href="components.css">
         <style>
             input[type=text].invalid {
                 border: 1px #f0a0a0 solid;
@@ -146,52 +149,14 @@
     .outline article#pageBody section nav li.haitokin.small a{background-position:-672px 18px; font-size:13px;}
 
 
-    .dl-horizontal dt {
-        float: left;
-        width: 100px;
-        overflow: hidden;
-        clear: left;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .dl-horizontal dd {
-        margin-left: 120px;
-    }
-
-    keiyakugaiyou-navigation {
-
-    }
-
-    .outline article#keiyakugaiyouBody section {
-        font-size: 14px;
-    }
-
-    .outline article#keiyakugaiyouBody section {
-        height: 100%;
-        padding: 0 20px;
-    }
-    .outline article#keiyakugaiyouBody header > div {
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 20px;
-    }
-    .outline article#keiyakugaiyouBody header .calcBaseDate {
-        float: right;
-    }
-
-    .outline article#keiyakugaiyouBody main .top_message{
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .outline article#keiyakugaiyouBody main .note li:before {
+    #keiyakugaiyouHome main .note li:before {
         content:"※"
     }
-    .outline article#keiyakugaiyouBody main nav li {
+    #keiyakugaiyouHome main nav li {
         display: inline;
     }
 
-    .outline article#keiyakugaiyouBody .btn {
+    #keiyakugaiyouHome .btn {
         color: #000000;
         text-shadow: 0 -1px 0 rgba(0,0,0,.5);
         display: inline-block;
@@ -202,11 +167,6 @@
         font-weight: normal;
         margin: 20px;
 
-        border-top: 1px solid #ccc;  
-        border-right: 1px solid #999;  
-        border-bottom: 1px solid #999;  
-        border-left: 1px solid #ccc;
-
         background: #b4e391; /* Old browsers */
 background: -moz-linear-gradient(top,  #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
@@ -216,18 +176,11 @@ background: -ms-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* I
 background: linear-gradient(to bottom,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
 
-
-box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
     }
 
-    .outline article#keiyakugaiyouBody .btn:active {
+    #keiyakugaiyouHome .btn:active {
         background: #61c419;
         padding: 1px 0 0 6px;
-    }
-
-    .outline article#keiyakugaiyouBody .link {
-        text-decoration:underline;
-        color: #0000ff;
     }
 
 </style><div id="wrapper" class="outline">
@@ -242,19 +195,19 @@ box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
         <h1>設計書（契約概要）</h1>
     </header>
     <main>
-    <article id="keiyakugaiyouBody">
+    <article class="keiyakugaiyou">
         <div class="scrlParent">
-            <section>
+            <section id="keiyakugaiyouHome">
                 <header>
                     <img src="./greenMock_files/logoVectorXLarge.png" width="240" height="80" alt="ベクトルX">
                     <div>
-                        <dl class="dl-horizontal">
+                        <dl>
                             <dt>ご契約者様</dt>
                             <dd>
                                 <p><em>アライ マークン</em>様</p>
                             </dd>
                         </dl>
-                        <dl class="dl-horizontal">
+                        <dl>
                             <dt>被保険者様</dt>
                             <dd>
                                 <p><em>アライ マークン</em>様 昭和55年12月25日（42歳） 男性</p>
@@ -262,7 +215,7 @@ box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
                         </dl>
                     </div>
                     <div class="calcBaseDate">
-                        <dl class="dl-horizontal">
+                        <dl>
                             <dt>計算基準日</dt>
                             <dd>
                                 2013年12月1日
@@ -280,15 +233,15 @@ box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
                     </ul>
                     <nav>
                         <ul>
-                            <li><a href="http://localhost:8080/dummy" class="btn">1.商品の特徴としくみ</a></li>
-                            <li><a href="http://localhost:8080/dummy" class="btn">2.保障内容</a></li>
-                            <li><a href="http://localhost:8080/dummy" class="btn">3.新積立保険</a></li>
-                            <li><a href="http://localhost:8080/dummy" class="btn">4.保険料</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">1.商品の特徴としくみ</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">2.保障内容</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">3.新積立保険</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">4.保険料</a></li>
                         </ul>
                         <ul>
-                            <li><a href="http://localhost:8080/dummy" class="btn">5.ご提案内容の明細</a></li>
-                            <li><a href="http://localhost:8080/dummy" class="btn">6.解約返戻金</a></li>
-                            <li><a href="http://localhost:8080/dummy" class="btn">7.その他</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">5.ご提案内容の明細</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">6.解約返戻金</a></li>
+                            <li><a href="http://localhost:8080/dummy" class="btn linkBtn">7.その他</a></li>
                         </ul>
                     </nav>
                 </main>
@@ -302,7 +255,7 @@ box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 
         <nav class="btnArray functions">
             <ul>
-                <li class="open"><a data-bind="click: $root.clickPrintButton">印刷</a></li>
+                <li class="open"><a data-bind="click: $root.clickPrintButton">印刷・MYページ</a></li>
                 <li class="apply"><a href="javascript:void(0);" data-bind="click: clickMoushikomiButton">申込準備</a></li>
             </ul>
         </nav>

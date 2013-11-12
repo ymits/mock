@@ -34,6 +34,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
 
+
+        <link rel="stylesheet" type="text/css" media="all" href="base.css">
+        <link rel="stylesheet" type="text/css" media="all" href="components.css">
         <style>
             input[type=text].invalid {
                 border: 1px #f0a0a0 solid;
@@ -328,69 +331,53 @@
                             font-size: 13px;
                         }
 
-                        em {
-                            font-weight: bold;
-                        }
-                        .shibouHoshou {
-                            font-size: 14px;
-                        }
-                        .normal {
-                            font-size: 14px;
-                        }
-                        .large {
-                            font-size: 18px;
-                        }
-                        .small {
-                            font-size: 12px;
-                        }
-
-                        .seizenKyuhu table {
+                        #seizenKyuhu table {
                             width: 100%;
                             border-collapse: separate;
                             border-spacing: 0px;
                         }
 
-                        .seizenKyuhu table thead th:first-child {
+                        #seizenKyuhu table thead th:first-child {
                             border-radius: 5px 0 0 0;
                         }
-                        .seizenKyuhu table thead th:last-child {
+                        #seizenKyuhu table thead th:last-child {
                             border-radius: 0 5px 0 0;
                         }
-                        .seizenKyuhu table tr:nth-last-child(2) td:first-child {
+                        #seizenKyuhu table tr:nth-last-child(2) td:first-child {
                             border-radius: 0 0 0 5px;
                         }
-                        .seizenKyuhu table tr:last-child td:last-child {
+                        #seizenKyuhu table tr:last-child td:last-child {
                             border-radius: 0 0 5px 0;
                         }
 
-                        .seizenKyuhu table th, .seizenKyuhu table td {
-                            border-bottom: solid 1px #ffceef;
-                            border-right: solid 1px #ffceef;
+                        #seizenKyuhu table th, #seizenKyuhu table td {
+                            border-bottom: solid 2px #ffceef;
+                            border-right: solid 2px #ffceef;
                             line-height: 1;
                         }
 
-                        .seizenKyuhu table th {
+                        #seizenKyuhu table th {
                             height: 50px;
                             text-align: center;
                             vertical-align: middle;
                             background-color: #ffceef;
                         }
 
-                        .seizenKyuhu table tbody td {
+                        #seizenKyuhu table tbody td {
                             text-align: center;
                             vertical-align: middle;
                             height: 40px;
                             padding: 0 10px;
                         }
-                        .seizenKyuhu table tbody td.money {
+                        #seizenKyuhu table tbody td.money {
                             text-align: right;
                         }
-                        .seizenKyuhu table tbody td.reason {
+                        #seizenKyuhu table tbody td.reason {
                             text-align: left;
-                            border-left: solid 1px #ffceef;
+                            border-left: solid 2px #ffceef;
                             padding: 10px;
                         }
-                        .seizenKyuhu table tbody td .guide {
+                        #seizenKyuhu table tbody td .guide {
                             color: #0000ff;
                             border: solid 1px #A6A6A6;
                             border-radius: 5px;
@@ -404,33 +391,34 @@
                             background: linear-gradient(to bottom,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* W3C */
                             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f96d', endColorstr='#f9f96d',GradientType=0 ); /* IE6-9 */
                         }
-                        .seizenKyuhu table tbody td .guide em {
+                        #seizenKyuhu table tbody td .guide em {
                             color: #ff0000;
                         }
 
-                        .rakuraku {
-                            border: solid 1px #ffceef;
+                        #seizenKyuhu .rakuraku {
+                            border: solid 2px #ffceef;
                             border-radius: 5px;
-                            margin-top: 3px;
+                            margin: 3px 0;
+                            padding: 10px;
                         }
 
-                        .rakuraku em.large {
+                        #seizenKyuhu .rakuraku em.large {
                             color: #ff0000;
                         }
-                        .rakuraku .note {
+                        #seizenKyuhu .rakuraku .note {
                             color: #0000ff;
                         }
-                        .rakuraku li:before {
+                        #seizenKyuhu .rakuraku li:before {
                             content: "※"
                         }
-                        .emphasisMessage li {
+                        #seizenKyuhu .emphasisMessage li {
                             color: #ff0000;
                             font-weight: bold;
                         }
-                        .emphasisMessage li .order {
+                        #seizenKyuhu .emphasisMessage li .order {
                             float: left;
                         }
-                        .emphasisMessage li p {
+                        #seizenKyuhu .emphasisMessage li p {
                             padding: 0 20px;
                         }
 
@@ -461,13 +449,13 @@
         </div>
 
         <div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>
-        <div class="modalHost" style="z-index: 1058; opacity: 1;">
-            <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;">
-                <div class="overlayPannel confWin">
+        <div class="modalHost" style="z-index: 1058; opacity: 1;margin-top: -220px; margin-left: 0px;">
+            <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="">
+                <div class="overlayPannel confWin keiyakugaiyou">
                     <header data-bind="text: title">
                         生前給付保障
                     </header>
-                    <section class="seizenKyuhu">
+                    <section id="seizenKyuhu">
                         <table>
                             <thead>
                                 <tr>

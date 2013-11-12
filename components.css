@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+footer#pageFooter nav.btnArray ul li.nextPage a{
+	background-image: url(img/icn/stepNext.png), url(img/bg/gradientGreen.png);
+	background-repeat: no-repeat, repeat-x;
+	background-position: right 10px center,left center;
+	background-size: 24px 25px,auto 100%;
+	padding: 0 40px 0 15px;
+}
+footer#pageFooter nav.btnArray ul li.prevPage a{
+	background-image: url(img/tmp/stepPrev.png), url(img/bg/gradientGreen.png);
+	background-repeat: no-repeat, repeat-x;
+	background-position: left 10px center,left center;
+	background-size: 24px 25px,auto 100%;
+	padding: 0 15px 0 40px;
+}
+
+
+.keiyakugaiyou .link {
+    text-decoration:underline;
+    color: #0000ff;
+}
+
+.keiyakugaiyou .link:after {
+    content: " ";
+    display: inline-block;
+}
+
+.keiyakugaiyou .link.explain:after {
+	background:url("img/icons/icnQuestion.png") 0 0 no-repeat transparent;
+	background-size: 14px 14px;
+	background-position: 2px 0px;
+	width: 16px ;
+	height: 14px ;
+}
+.keiyakugaiyou .link.dialog:after {
+    background:url("img/tmp/exLink.png") 0 0 no-repeat transparent;
+    background-size: 14px 14px;
+	background-position: 2px 0px;
+	width: 16px ;
+	height: 14px ;
+}
+.keiyakugaiyou .link.dialog-white:after {
+    background:url("img/tmp/exLinkWhite.png") 0 0 no-repeat transparent;
+    background-size: 14px 14px;
+	background-position: 2px 0px;
+	width: 16px ;
+	height: 14px ;
+}
+.keiyakugaiyou .link.trans:after {
+    background:url("img/tmp/trans.png") 0 0 no-repeat transparent;
+    background-size: 14px 14px;
+	background-position: 2px 0px;
+	width: 16px ;
+	height: 14px ;
+}
+.keiyakugaiyou .list:after {
+    background:url("img/tmp/list.png") 0 0 no-repeat transparent;
+    background-size: 14px 14px;
+	background-position: 2px 0px;
+	width: 16px ;
+	height: 14px ;
+}
+
+.keiyakugaiyou .linkBtn{
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+}
+.keiyakugaiyou .linkBtn:active{
+	padding: 0px 9px 0px 11px;
+	opacity: 1;
+}

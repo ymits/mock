@@ -32,6 +32,9 @@
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
         <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
 
+
+        <link rel="stylesheet" type="text/css" media="all" href="base.css">
+        <link rel="stylesheet" type="text/css" media="all" href="components.css">
         <style>
             input[type=text].invalid {
                 border: 1px #f0a0a0 solid;
@@ -145,42 +148,29 @@
     .outline article#pageBody section nav li.haitokin       a{background-position:-638px 18px;}
     .outline article#pageBody section nav li.haitokin.small a{background-position:-672px 18px; font-size:13px;}
 
-
-    em {
-      font-weight: bold;
-    }
-    .shibouHoshou {
-      font-size: 14px;
-    }
-    .large {
-      font-size: 18px;
-    }
-    .small {
-      font-size: 12px;
-    }
     
-    .shibouHoshou table {
+    #shibouHoshou table {
       width: 100%;
       border-collapse: separate;
       border-spacing: 0px;
     }
     
-    .shibouHoshou table thead th:first-child {
+    #shibouHoshou table thead th:first-child {
       border-radius: 5px 0 0 0;
     }
 
-    .shibouHoshou table thead th:last-child {
+    #shibouHoshou table thead th:last-child {
       border-radius:0 5px 0 0;
     }
     
-    .shibouHoshou table th,
-    .shibouHoshou table td {
+    #shibouHoshou table th,
+    #shibouHoshou table td {
       border-bottom: solid 1px #000000;
       border-left: solid 1px #000000;
       line-height: 1;
     }
     
-    .shibouHoshou table th {
+    #shibouHoshou table th {
       border-top: solid 1px #000000;
       height: 50px;
       text-align: center;
@@ -195,56 +185,56 @@
       border-radius: 0 0 5px 0;
     }
 
-    .shibouHoshou table thead tr th:last-child,
-    .shibouHoshou table tbody tr td:last-child {
+    #shibouHoshou table thead tr th:last-child,
+    #shibouHoshou table tbody tr td:last-child {
       border-right: solid 1px #000000;
     }
     
-    .shibouHoshou table tbody tr td:first-child,
-    .shibouHoshou table tbody tr:first-child td {
+    #shibouHoshou table tbody tr td:first-child,
+    #shibouHoshou table tbody tr:first-child td {
       border-bottom: none;
     }
-    .shibouHoshou table tbody tr:last-child td:first-child {
+    #shibouHoshou table tbody tr:last-child td:first-child {
       border-bottom: solid 1px #000000;
     }
-    .shibouHoshou table tbody tr:nth-child(2) td {
+    #shibouHoshou table tbody tr:nth-child(2) td {
       border-top: solid 1px #000000;
     }
-    .shibouHoshou table tbody tr:nth-child(2) td:first-child {
+    #shibouHoshou table tbody tr:nth-child(2) td:first-child {
       border-top: none;
     }
     
-    .shibouHoshou table tbody tr td {
+    #shibouHoshou table tbody tr td {
       text-align: right;
       vertical-align: middle;
       height: 40px;
       padding-right:10px;
     }
-    .shibouHoshou table tbody tr:first-child td {
+    #shibouHoshou table tbody tr:first-child td {
       height: 60px;
     }
-    .shibouHoshou table tbody tr:first-child td:first-child {
+    #shibouHoshou table tbody tr:first-child td:first-child {
       text-align: left;
       padding-left:10px;
       background-color:#d6eeff;
     }
-    .shibouHoshou table tbody tr:nth-child(2) td:first-child,
-    .shibouHoshou table tbody tr:nth-child(3) td:first-child {
+    #shibouHoshou table tbody tr:nth-child(2) td:first-child,
+    #shibouHoshou table tbody tr:nth-child(3) td:first-child {
       width : 30px;
       background-color:#d6eeff;
     }
-    .shibouHoshou table tbody tr:nth-child(2) td:nth-child(2),
-    .shibouHoshou table tbody tr:nth-child(3) td:nth-child(2) {
+    #shibouHoshou table tbody tr:nth-child(2) td:nth-child(2),
+    #shibouHoshou table tbody tr:nth-child(3) td:nth-child(2) {
       text-align: left;
       padding-left:10px;
       background-color:#d6eeff;
     }
     
-    .shibouHoshou .btnArea {
+    #shibouHoshou .btnArea {
       margin-top:10px;
     }
     
-    .shibouHoshou .btnArea .btn.sub{
+    #shibouHoshou .btnArea .btn.sub{
       display: inline-block;
     }
 
@@ -263,11 +253,11 @@
 </section></div>
 
         <div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>
-        <div class="modalHost" style="z-index: 1058; opacity: 1;">
-            <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;">
-                <div class="overlayPannel confWin">
+        <div class="modalHost" style="z-index: 1058; opacity: 1;margin-top: -100px; margin-left: 0px;">
+            <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true">
+                <div class="overlayPannel confWin keiyakugaiyou">
                     <header data-bind="text: title">死亡・所定の高度障害状態の保障</header>
-                    <section class="shibouHoshou">
+                    <section id="shibouHoshou">
                         <table>
                             <thead>
                                 <tr>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.keiyakugaiyou {
+    font-size: 14px;
+}
+
+.keiyakugaiyou em{
+    font-weight: bold;
+}
+.keiyakugaiyou .large{
+    font-size: 18px;
+}
+
+.keiyakugaiyou .normal{
+    font-size: 14px;
+}
+
+.keiyakugaiyou .small{
+    font-size: 12px;
+}
+
+.outline article.keiyakugaiyou header > div {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}
+.outline article.keiyakugaiyou header .calcBaseDate {
+    float: right;
+}
+.outline article.keiyakugaiyou header dt {
+    float: left;
+    width: 100px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.outline article.keiyakugaiyou header dd {
+    margin-left: 120px;
+}
+
+.outline article.keiyakugaiyou section {
+    height: 100%;
+    padding: 0 20px;
+}
+
+.outline article.keiyakugaiyou main .top_message{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
