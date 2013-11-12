@@ -73,13 +73,7 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 	padding: 0px 9px 0px 11px;
 	opacity: 1;
 }
-.keiyakugaiyou .attention li {
-    color: #ff0000;
-    font-weight: bold;
-}
-.keiyakugaiyou .attention li .order {
-    float: left;
-}
-.keiyakugaiyou .attention li p {
-    padding: 0 20px;
+.keiyakugaiyou .items li {
+    text-indent: -1em;
+    padding-left: 1em;
 }

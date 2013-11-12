@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8080/#/keiyaku/gaiyo/1035 -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Keiyaku/gaiyo | Green PPL Tablet</title>
+        <meta charset="utf-8">
+        
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width">
+
+<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-landscape.png" media="(orientation:landscape)" /> -->
+<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-portrait.png" media="(orientation:portrait)" /> -->
+<!--         <link rel="apple-touch-icon" href="resources/content/images/icon.png"/> -->
+        <!-- TODO durandal.cssのダイアログスタイルをstyle.cssに移動する -->
+        <link rel="stylesheet" href="http://localhost:8080/resources/content/durandal.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.mCustomScrollbar.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/root2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/base2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/toggles2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/parts.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery-ui-datepicker.custom.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
+
+
+        <link rel="stylesheet" type="text/css" media="all" href="base.css">
+        <link rel="stylesheet" type="text/css" media="all" href="components.css">
+        <style>
+            input[type=text].invalid {
+                border: 1px #f0a0a0 solid;
+                border-radius: 5px;
+                background: #fff;
+                padding: 6px;
+                font-size: 14px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+            span.selWrap.invalid {
+                border: 1px red solid;
+            }
+        </style>
+
+        <!-- TODO 専用のcssファイルへ移動 -->
+        <style>
+            .fukidashiHost {
+                opacity: 0;
+                -webkit-backface-visibility: hidden;
+                -webkit-transition: opacity 0.1s linear;
+                -moz-transition: opacity 0.1s linear;
+                -o-transition: opacity 0.1s linear;
+                transition: opacity 0.1s linear;
+                margin: 10px;
+            }
+            .defaultArrow {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-image: url(resources/content/img/icn_own/fukidashiArrowDark.png);
+            }
+            .topArrow {  }
+            .bottomArrow {
+                transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+            }
+            .leftArrow {
+                transform:rotate(270deg);
+                -ms-transform:rotate(270deg);
+                -webkit-transform:rotate(270deg);
+            }
+            .rightArrow {
+                transform:rotate(90deg);
+                -ms-transform:rotate(90deg);
+                -webkit-transform:rotate(90deg);
+            }
+        </style>
+    </head>
+    <body style="margin-right: 0px;">
+        <!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
+        <div id="applicationHost" style="height:100%"><section style="height:100%" data-view="views/shell" data-active-view="true">
+<!--ko compose: {
+    model: router.activeItem, //wiring the router
+    afterCompose: router.afterCompose, //wiring the router
+    transition: 'entrance', //use the 'entrance' transition when switching views
+    cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
+}--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true"><style>
+    header#pageHeader div.toggleLR {position: absolute; width: 100px; height: 40px; right: 10px; top: 0px; padding-right: 0px;}
+
+    .outline main { padding: 0px; top: 0px; background: #fff; }
+        /* article （概要）
+        ============================================================== */
+    .outline article#pageBody{background:#e2e2e2; height:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden; padding-bottom:0; position:relative; float:left; width: 1024px;}
+    .outline article#pageBody section {clear:both; zoom:1; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+    .outline article#pageBody section:after{content:''; clear:both; display:block;}
+    .outline article#pageBody section:first-child {background:#fff; box-shadow:0px 1px 15px rgba(0,0,0,0.2); border-bottom:1px solid #cbcbcb; min-height:650px; padding:65px 25px 30px 294px;}
+    .outline article#pageBody section .logo {position:absolute; left:30px; top:20px;}
+    .outline article#pageBody section header h1{font-size:30px; text-align:center; color:#57b121;}
+    .outline article#pageBody section header h2{font-size:15px; color:#fff; background:#57b121; border-radius:5px 5px 0 0; padding:12px 13px; border:1px solid #eae4e6; border-bottom:none;}
+    .outline article#pageBody section:first-child ul { border:1px solid #eae4e6; border-top:none; border-radius:0 0 5px 5px; padding:12px 13px; font-size:13px; color:#57b121; font-weight:bold; margin-bottom:20px;}
+    .outline article#pageBody section:first-child ul li {text-indent:-1em; padding-left:1em;}
+    .outline article#pageBody section:first-child ul li span{display:block; width:1em; float:left;}
+    .outline article#pageBody section p.note{font-size:13px; color:#fff; background:#57b121; border-radius:5px; padding:0 13px; border:1px solid #eae4e6; line-height:50px; font-weight:bold;}
+    .outline article#pageBody section .information {position:absolute; left:38px; top:135px; width:220px;}
+    .outline article#pageBody section .information h2{color:#57b121; font-size:14px; font-weight:bold; margin:0 0 7px;}
+    .outline article#pageBody section .information h3{font-size:18px; font-weight:bold; line-height:1.3;}
+    .outline article#pageBody section .information h3 span {font-size:12px;}
+    .outline article#pageBody section .information p {font-size:9px; font-weight:bold;}
+    .outline article#pageBody section .information p.kana{margin:0 0 10px;}
+    .outline article#pageBody section .information div{padding-bottom:25px;}
+
+    .outline article#pageBody section nav {padding:25px 0 0 20px;}
+    .outline article#pageBody section nav li {float:left; margin:0 12px 7px 0;}
+    .outline article#pageBody section nav li a{display:table-cell; vertical-align:bottom; width:160px; height:90px; border:1px solid #a6a6a6; border-radius:5px; color:#51a91c; font-weight:bold; text-align:center; font-size:19px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; padding-bottom:8px; background:url(../img/parts/outlineNav.png) left top no-repeat #fff; background-size:800px 44px;}
+    .outline article#pageBody section nav li.large a{height:186px; padding-bottom:25px; background-size:1600px 88px;}
+    .outline article#pageBody section nav li.small a{width:90px;}
+
+    .outline article#pageBody section nav li.shikumizu.large a{background-position:0 45px;}
+    .outline article#pageBody section nav li.shikumizu a      {background-position:40px 10px;}
+    .outline article#pageBody section nav li.shikumizu.small a{background-position:5px 10px; font-size:15px;}
+    .outline article#pageBody section nav li.tokuyaku.large a{background-position:-200px  30px;}
+    .outline article#pageBody section nav li.tokuyaku       a{background-position:-62px  10px;}
+    .outline article#pageBody section nav li.tokuyaku.small a{background-position:-96px  10px;}
+    .outline article#pageBody section nav li.hoshonaiyo.large a{background-position:-400px  40px;}
+    .outline article#pageBody section nav li.hoshonaiyo       a{background-position:-160px  10px;}
+    .outline article#pageBody section nav li.hoshonaiyo.small a{background-position:-196px  10px; font-size:15px;}
+    .outline article#pageBody section nav li.hokenryo.large a{background-position:-608px  48px;}
+    .outline article#pageBody section nav li.hokenryo       a{background-position:-264px  18px;}
+    .outline article#pageBody section nav li.hokenryo.small a{background-position:-300px  18px;}
+    .outline article#pageBody section nav li.kaiyaku.large a{background-position:-844px  48px;}
+    .outline article#pageBody section nav li.kaiyaku       a{background-position:-385px  18px;}
+    .outline article#pageBody section nav li.kaiyaku.small a{background-position:-415px  18px; font-size:15px;}
+    .outline article#pageBody section nav li.sonota.large a{background-position:-1100px 46px;}
+    .outline article#pageBody section nav li.sonota       a{background-position:-512px 16px;}
+    .outline article#pageBody section nav li.sonota.small a{background-position:-546px 16px;}
+    .outline article#pageBody section nav li.haitokin.large a{background-position:-1352px 46px;}
+    .outline article#pageBody section nav li.haitokin       a{background-position:-638px 18px;}
+    .outline article#pageBody section nav li.haitokin.small a{background-position:-672px 18px; font-size:13px;}
+
+    #newSaveingInsurance {
+        height: 670px;
+    }
+    #newSaveingInsurance .feature .note,
+    #newSaveingInsurance .image h1 span{
+        color: #ff0000;
+    }
+    #newSaveingInsurance main > div{
+        /*margin-bottom: 10px;*/
+    }
+
+    #newSaveingInsurance .feature .rate{
+        color: #0000ff;
+    }
+    #newSaveingInsurance .feature .note{
+        margin-top: 5px;
+    }
+    #newSaveingInsurance .premium,
+    #newSaveingInsurance .guarantee{
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+    }
+
+</style>
+<style>
+    
+    .confWin{
+        display:block;
+    }
+    .confWin section h1.ERROR{background-image:url(img/icons/icnNoticeFailure.png);}
+    .confWin section h1.JYOHO{background-image:url(img/icons/icnNoticeInfo.png);}
+    .confWin section h1.KANRYO{background-image:url(img/icons/icnNoticeCheckMark.png);}
+    .confWin section h1.KEIKOKU{background-image:url(img/icons/icnNoticeAlert.png);}
+    .confWin section h1.TOIAWASE{background-image:url(img/icons/icnNoticeQuestion.png);}
+    .confWin footer p { min-width: 110px; width: auto;}
+    .confWin {min-height: 270px; height: auto;}
+    .confWin section {min-height: 230px; height: auto;}
+    .confWin footer {position: relative; height: 50px;}
+</style>
+<div id="wrapper" class="outline">
+    <header id="pageHeader">
+        <nav id="transfer">
+            <ul>
+                <li class="homeLink"><a data-bind="attr: { href: routing.paths.home.hash }" href="http://localhost:8080/#/home">HOME</a></li>
+                <li class="return"><a href="javascript:void(0);" data-bind="click: function() { $root.clickBackButton(false) }, active: senimotoShortName !== ''" class="">前画面に戻る</a></li>
+            </ul>
+                
+        </nav>
+        <h1>3.新積立保険</h1>
+    </header>
+    <main>
+    <article class="keiyakugaiyou">
+        <div class="scrlParent">
+            <section id="newSaveingInsurance">
+                <header>
+                    <div class="calcBaseDate">
+                        <dl>
+                            <dt>計算基準日</dt>
+                            <dd>
+                                2013年12月1日
+                            </dd>
+                        </dl>
+                    </div>
+                </header>
+                <main>
+                    <div class="feature">
+                        <h1 class="large"><a href="javascript:void(0);" class="link explain">新積立保険</a>の特徴</h1>
+                        <ul class="items">
+                            <li>
+                                ◎計画的な資産形成が可能で(<span class="rate">最低基準利益(年1.00%)</span>を保証します。)、急にまとまったお金が必要になったときに備える事ができます。(引き出し時には所定の手数料が控除されます。)
+                            </li>
+                            <li>
+                                ◎積立金を取り崩す事により、毎回の払込保険料の負担を抑えることができます。(保険料調整機能)なお、この設計プランでは定期取崩による保険料調整機能を活用しています。
+                            </li>
+                            <li class="note">
+                                ※新積立保険は手数料の控除や災害死亡保障がある等、預貯金とは性格が異なります。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="image">
+                        <h1 class="large">＜新積立保険のイメージ＞<span class="small">※下図はあくまでイメージです。定期取崩により積立金は減少します。</spam></h1>
+                        <img src="img/tmp/newSaveingInsuranceImage.png"></img>
+                    </div>
+                    <div>
+                        <div class="premium">
+                            <h1 class="large">＜新積立保険の保険料＞</h1>
+                            <div></div>
+                        </div>
+                        <div class="guarantee">
+                            <h1 class="large">＜新積立保険の死亡保障＞</h1>
+                            <ul>
+                                <li>病気死亡のとき・・・積立金額</li>
+                                <li>災害死亡のとき・・・積立金額の1.1倍相当額</li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </divd>
+    </article>
+    </main>
+    <footer id="pageFooter">
+        <nav class="btnArray links">
+        </nav>
+
+        <nav class="btnArray functions">
+            <ul>
+                <li class="open"><a data-bind="click: $root.clickPrintButton">設計書（契約概要）HOME</a></li>
+                <li class="prevPage"><a href="javascript:void(0);" data-bind="click: clickMoushikomiButton">2.保障内容</a></li>
+                <li class="nextPage"><a href="javascript:void(0);" data-bind="click: clickMoushikomiButton">4.保険料</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div></div><!--/ko-->
+</section></div>
+
+        <script src="./greenMock_files/jquery.js"></script>
+        <script src="./greenMock_files/bootstrap.js"></script>
+        <script type="text/javascript">
+          $('.explain').on('click', function(){
+            $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
+            $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
+            $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');
+            $('body .modalHost .durandal-wrapper').append('<div class="overlayPannel confWin"></div>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<header data-bind="text: title">ヘルプ</header>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 class="JYOHO" data-bind="attr: { "class" : type }"><span data-bind="text: title">ヘルプ</span><div data-bind="text:summary">責任開始予定日</div></h1><p data-bind="html: message">告知日または領収日が、「翌月」または「直後に到来する転換前契約の月単位の応当日以降」となる予定の場合は、告知日または領収日いずれか遅い方の予定日を入力してください。</p></section>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
+          });
+          $('.dialog-white').on('click', function(){
+            $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
+            $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
+            $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');
+            $('body .modalHost .durandal-wrapper').append('<div class="overlayPannel confWin"></div>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<header data-bind="text: title">保障内容</header>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 data-bind="attr: { "class" : type }"><span data-bind="text: title">保障内容</span><div data-bind="text:summary">保障内容について書く</div></h1></section>');
+            $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
+          });
+
+          $('body').on('click', '.modalHost .btn.sub', function(){
+            $('.modalBlockout').remove();
+            $('.modalHost').remove();
+          });
+        </script>
+
+</body></html>
