@@ -159,7 +159,7 @@
         /*margin-bottom: 10px;*/
     }
 
-    #newSaveingInsurance .feature .rate{
+    #newSaveingInsurance .feature .info{
         color: #0000ff;
     }
     #newSaveingInsurance .feature .note{
@@ -171,7 +171,57 @@
         vertical-align: top;
         width: 45%;
     }
-
+    #newSaveingInsurance .premium .box {
+        border:2px solid #999999;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: 1em;
+    }
+    #newSaveingInsurance .premium .box .head{
+        border-bottom:1px solid #999999;
+        padding: 0px 10px;
+    }
+    #newSaveingInsurance .premium .box .head span:first-child{
+        margin-right: 100px;
+    }
+    #newSaveingInsurance .premium .box .head span:nth-child(2){
+        margin-right: 50px;
+    }
+    #newSaveingInsurance .premium .body{
+        padding: 0 0 5px 10px;
+    }
+    #newSaveingInsurance .premium .body dt{
+        float: left;
+        width: 200px;
+        overflow: hidden;
+        clear: left;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #newSaveingInsurance .premium .body dt.payment{
+        padding-left:100px;
+    }
+    #newSaveingInsurance .premium .body dd{
+        margin-left: 220px;
+        text-align: right;
+    }
+    #newSaveingInsurance .premium .body dd .unit{
+        display: inline-block;
+        min-width: 50px;
+        text-align: left;
+    }
+    #newSaveingInsurance .message li{
+        color: #0000ff;
+    }
+    #newSaveingInsurance .message li span{
+        color: #ff0000;
+    }
+    #newSaveingInsurance .shift .btn.sub{
+        display: inline-block;
+        width:400px;
+        text-align:center;
+    }
 </style>
 <style>
     
@@ -218,7 +268,7 @@
                         <h1 class="large"><a href="javascript:void(0);" class="link explain">新積立保険</a>の特徴</h1>
                         <ul class="items">
                             <li>
-                                ◎計画的な資産形成が可能で(<span class="rate">最低基準利益(年1.00%)</span>を保証します。)、急にまとまったお金が必要になったときに備える事ができます。(引き出し時には所定の手数料が控除されます。)
+                                ◎計画的な資産形成が可能で(<span class="info">最低基準利益(年1.00%)</span>を保証します。)、急にまとまったお金が必要になったときに備える事ができます。(引き出し時には所定の手数料が控除されます。)
                             </li>
                             <li>
                                 ◎積立金を取り崩す事により、毎回の払込保険料の負担を抑えることができます。(保険料調整機能)なお、この設計プランでは定期取崩による保険料調整機能を活用しています。
@@ -235,15 +285,45 @@
                     <div>
                         <div class="premium">
                             <h1 class="large">＜新積立保険の保険料＞</h1>
-                            <div></div>
+                            <div class="box">
+                                <div class="head">
+                                    <span>ご契約時</span>
+                                    <span>月払</span>
+                                    <span>(口座振替扱)</span>
+                                </div>
+                                <div class="body">
+                                    <dl>
+                                        <dt>新積立保険の保険料</dt>
+                                        <dd><em>0</em><span class="small unit">円</span></dd>
+                                        <dt>（定期取崩保険料</dt>
+                                        <dd><em>▲1,000</em><span class="small unit">円)</span></dd>
+                                        <dt class="payment">[払込保険料</dt>
+                                        <dd><em>22,144</em><span class="small unit">円]</span></dd>
+                                        <dt>任意積立保険料</dt>
+                                        <dd><em>500,000</em><span class="small unit">円</span></dd>
+                                    </dl>
+                                    <div class="small">※主契約充当転換方式をご利用いただいています。</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="guarantee">
                             <h1 class="large">＜新積立保険の死亡保障＞</h1>
-                            <ul>
-                                <li>病気死亡のとき・・・積立金額</li>
-                                <li>災害死亡のとき・・・積立金額の1.1倍相当額</li>
+                            <ul class="itemss">
+                                <li>・病気死亡のとき・・・積立金額</li>
+                                <li>・災害死亡のとき・・・積立金額の1.1倍相当額</li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="message">
+                        <ul class="items">
+                            <li class="small">※この設計プランでは、ご契約後 10年間、毎回の保険料払込ごとに積立金から、1,000円を取り崩し、保障部分の保険料に充当することにより、払込保険料を 1,000円軽減しています。<br>
+                                <span class="attention">ただし、積立金を途中で引き出された場合、積立金から取り崩せる期間が短くなる場合があります。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shift">
+                        <h1 class="large">＜ご加入後の積立金の推移＞</h1>
+                        <a href="javascript:void(0);" class="btn sub">積立金の推移表</a>
                     </div>
                 </main>
             </section>
