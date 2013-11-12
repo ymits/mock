@@ -443,103 +443,16 @@
             <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="">
                 <div class="overlayPannel confWin keiyakugaiyou">
                     <header data-bind="text: title">
-                        生前給付保障
+                        給付事例(被保険者様)
                     </header>
-                    <section id="seizenKyuhu">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>主な支払事由</th>
-                                    <th colspan="2">支払金額</th>
-                                    <th>保障期間</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td rowspan="2" class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">3大疾病</em>(ガン・急性心筋梗塞・脳卒中)のとき</a></td>
-                                    <td>一時金</td>
-                                    <td class="money"><em class="large">500</em><span class="small">万円</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>80</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>60</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="3" class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">特定要介護状態</em>(180日継続)のとき</a>
-                                    <div class="guide small">
-                                        目安として公的介護保険制度の<em class="normal">要介護2以上</em>に相当する状態を保障<em>(1)</em>
-                                    </div></td>
-                                    <td rowspan="2">一時金</td>
-                                    <td class="money"><em class="large">700</em><span class="small">万円</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>80</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td class="money"><em class="large">200</em><span class="small">万円</span></td>
-                                    <td><em>終身保障</em></td>
-                                </tr>
-                                <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>60</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">軽度要介護状態</em>(180日継続)のとき</a>
-                                    <div class="guide small">
-                                        目安として公的介護保険制度の<em class="normal">要介護1以上</em>に相当する状態を保障<em>(1)</em>
-                                    </td>
-                                    <td>一時金</td>
-                                    <td class="money"><em class="large">20</em><span class="small">万円</span></td>
-                                    <td><em>終身保障</em></td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2" class="reason"><a href="javascript:void(0);" class="link dialog">病気や不慮の事故による所定の<em class="large">障害状態</em>のとき</a></td>
-                                    <td>一時金</td>
-                                    <td class="money"><em class="large">500</em><span class="small">万円</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>80</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>60</em>歳限度</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="rakuraku">
-                            さらに、<a href="javascript:void(0);" class="link explain"><img src="img/tmp/kai_pic01.gif"></a>により、所定の<em>3大疾病</em>・所定の<em>要介護状態</em>(180日継続)・病気による所定の障害状態のとき
-                            <br>
-                            <em class="large">以後、所定の特約の保険料は必要ありません！</em><span class="note">(特約の保険料払込期間中はいつまでも適用！)</span>
-                            <br>
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0);" class="link explain">保険料払込免除の事由</a>に該当された場合、新積立保険の保険料のお払い込みは終了します。
-                                </li>
-                            </ul>
+                    <section id="kyuhujirei">
+                        <div class="jirei">
+                            <div class="title large">胃ガンの場合</div>
+                            <div class="case">
+                                <div class="mainCase">保険期間中に初めて胃ガンにかかり、22日間(注)入院し、胃切除手術(※)(開腹手術)を受け、生存退院したとき</div>
+                                <div class="attention small">厚生労働省「平成２３年患者調査」による胃ガンの退院患者平均在院日数</div>
+                            </div>
                         </div>
-                        <ul class="attention">
-                            <li>
-                                <span class="order small">(1)</span>
-                                <p>
-                                    公的介護保険制度の「要介護2以上の相当する状態」、「要介護1以上に相当する状態」とはあくまでも目安であり、実際のお支払いは所定の基準によります。(「要支援2」の方が該当したり、「要介護2」「要介護1」の方でも該当しない場合などがあります。)なお、公的介護保険制度とは作成年月日現在のものを指します。
-                                </p>
-                            </li>
-                        </ul>
                     </section>
 
                     <footer>

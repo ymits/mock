@@ -331,85 +331,105 @@
                             font-size: 13px;
                         }
 
-                        #seizenKyuhu table {
+                        .keiyakugaiyou {
+                            width:960px;
+                        }
+                        #iryouHoshou {
+                            padding: 10px 30px;
+                        }
+                        #iryouHoshou table {
                             width: 100%;
                             border-collapse: separate;
                             border-spacing: 0px;
+                            margin-bottom: 5px;
                         }
 
-                        #seizenKyuhu table thead th:first-child {
+                        #iryouHoshou table thead th:first-child {
                             border-radius: 5px 0 0 0;
                         }
-                        #seizenKyuhu table thead th:last-child {
+                        #iryouHoshou table thead th:last-child {
                             border-radius: 0 5px 0 0;
                         }
-                        #seizenKyuhu table tr:nth-last-child(2) td:first-child {
+                        #iryouHoshou table tr:last-child td:first-child {
                             border-radius: 0 0 0 5px;
                         }
-                        #seizenKyuhu table tr:last-child td:last-child {
+                        #iryouHoshou table tr:last-child td:last-child {
                             border-radius: 0 0 5px 0;
                         }
 
-                        #seizenKyuhu table th, #seizenKyuhu table td {
-                            border-bottom: solid 2px #ffceef;
-                            border-right: solid 2px #ffceef;
+                        #iryouHoshou table th, #iryouHoshou table td {
+                            border-bottom: solid 2px #a6e22d;
+                            border-right: solid 2px #a6e22d;
                             line-height: 1;
                         }
 
-                        #seizenKyuhu table th {
+                        #iryouHoshou table th {
                             height: 50px;
                             text-align: center;
                             vertical-align: middle;
-                            background-color: #ffceef;
+                            background-color: #a6e22d;
                         }
 
-                        #seizenKyuhu table tbody td {
+                        #iryouHoshou table tbody td {
                             text-align: center;
                             vertical-align: middle;
                             height: 40px;
-                            padding: 0 10px;
+                            padding: 0px 10px;
                         }
-                        #seizenKyuhu table tbody td.money {
+                        #iryouHoshou table tbody td.money {
                             text-align: right;
                         }
-                        #seizenKyuhu table tbody td.reason {
+                        #iryouHoshou table tbody td.reason {
                             text-align: left;
-                            border-left: solid 2px #ffceef;
-                            padding: 10px;
+                            border-left: solid 2px #a6e22d;
+                            padding: 5px 10px;
+                            width: 400px;
                         }
-                        #seizenKyuhu table tbody td .guide {
-                            color: #0000ff;
-                            border: solid 1px #A6A6A6;
-                            border-radius: 5px;
-                            padding: 3px 5px;
-                            background: #f9f96d; /* Old browsers */
-                            background: -moz-linear-gradient(top,  #f9f96d 0%, #ffffff 50%, #f9f96d 100%); /* FF3.6+ */
-                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f96d), color-stop(50%,#ffffff), color-stop(100%,#f9f96d)); /* Chrome,Safari4+ */
-                            background: -webkit-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Chrome10+,Safari5.1+ */
-                            background: -o-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Opera 11.10+ */
-                            background: -ms-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* IE10+ */
-                            background: linear-gradient(to bottom,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* W3C */
-                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f96d', endColorstr='#f9f96d',GradientType=0 ); /* IE6-9 */
-                        }
-                        #seizenKyuhu table tbody td .guide em {
+                        #iryouHoshou table thead th:nth-child(3) .small,
+                        #iryouHoshou table thead th:nth-child(4) em,
+                        #iryouHoshou table.nyuin tbody .gan td.money:nth-child(4),
+                        #iryouHoshou table.shujyutsu tbody .gan td.money:nth-child(2) span:nth-child(1),
+                        #iryouHoshou table.shujyutsu tbody .gan td.money:nth-child(2) em:nth-child(2){
                             color: #ff0000;
                         }
-
-                        #seizenKyuhu .rakuraku {
-                            border: solid 2px #ffceef;
-                            border-radius: 5px;
-                            margin: 3px 0;
-                            padding: 10px;
+                        #iryouHoshou table.nyuin tbody .gan td.money:nth-child(4){
+                            padding-left: 0;
                         }
+                        #iryouHoshou table.nyuin tbody .gan td.money:nth-child(4) div{
+                            color: #fde201;
+                            display: inline-block;
+                            text-align: center;
+                            padding: 5px;
+                            border-radius: 40px;
 
-                        #seizenKyuhu .rakuraku em.large {
+
+                            background: #e8703e; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #e8703e 0%, #e2a58c 50%, #e8703e 100%); /* FF3.6+ */
+                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8703e), color-stop(50%,#e2a58c), color-stop(100%,#e8703e)); /* Chrome,Safari4+ */
+                            background: -webkit-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* Chrome10+,Safari5.1+ */
+                            background: -o-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* Opera 11.10+ */
+                            background: -ms-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* IE10+ */
+                            background: linear-gradient(to bottom,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* W3C */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8703e', endColorstr='#e8703e',GradientType=0 ); /* IE6-9 */
+
+                        }
+                        #iryouHoshou table.shujyutsu tbody .gan td.money:nth-child(2) span:nth-child(3) {
+                            margin-right: 10px;
+                        }
+                        #iryouHoshou table.other tbody tr:first-child td:first-child em {
+                            color: #ff9100;
+                        }
+                        #iryouHoshou table.other tbody tr:first-child td:nth-child(2) div:nth-child(2) {
                             color: #ff0000;
                         }
-                        #seizenKyuhu .rakuraku .note {
-                            color: #0000ff;
+                        #iryouHoshou table.other tbody tr td:nth-child(2) {
+                            text-align: left;
                         }
-                        #seizenKyuhu .rakuraku li:before {
-                            content: "※"
+                        #iryouHoshou table.other tbody tr:nth-child(2) td:nth-child(2) {
+                            text-align: right;
+                        }
+                        #iryouHoshou table.other tbody tr:nth-child(2) td:nth-child(2) span:nth-child(2) {
+                            margin-left: 30px;
                         }
 
                     </style>
@@ -439,104 +459,154 @@
         </div>
 
         <div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>
-        <div class="modalHost" style="z-index: 1058; opacity: 1;margin-top: -220px; margin-left: 0px;">
+        <div class="modalHost" style="z-index: 1058; opacity: 1;margin-top: -240px; margin-left: -55px;">
             <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="">
                 <div class="overlayPannel confWin keiyakugaiyou">
                     <header data-bind="text: title">
-                        生前給付保障
+                        医療保障
                     </header>
-                    <section id="seizenKyuhu">
-                        <table>
+                    <section id="iryouHoshou">
+                        <table class="nyuin">
                             <thead>
                                 <tr>
-                                    <th>主な支払事由</th>
-                                    <th colspan="2">支払金額</th>
+                                    <th>入院保障</th>
+                                    <th>入院した時</th>
+                                    <th>1〜4日目まで<br><span class="small">まとめて<br>4日分の支払い</span></th>
+                                    <th>5〜<em>90</em>日目まで<br>1日につき</th>
                                     <th>保障期間</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="2" class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">3大疾病</em>(ガン・急性心筋梗塞・脳卒中)のとき</a></td>
-                                    <td>一時金</td>
-                                    <td class="money"><em class="large">500</em><span class="small">万円</span></td>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog"><em class="large">ケガ</em>で<em class="large">入院</em>のとき</a></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">40,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
                                     <td><em>10</em>年更新
                                     <br>
                                     <em>80</em>歳限度</td>
                                 </tr>
                                 <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
-                                    <td><em>10</em>年更新
-                                    <br>
-                                    <em>60</em>歳限度</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="3" class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">特定要介護状態</em>(180日継続)のとき</a>
-                                    <div class="guide small">
-                                        目安として公的介護保険制度の<em class="normal">要介護2以上</em>に相当する状態を保障<em>(1)</em>
-                                    </div></td>
-                                    <td rowspan="2">一時金</td>
-                                    <td class="money"><em class="large">700</em><span class="small">万円</span></td>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog"><em class="large">病気</em>で<em class="large">入院</em>のとき</a></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">40,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
                                     <td><em>10</em>年更新
                                     <br>
                                     <em>80</em>歳限度</td>
                                 </tr>
                                 <tr>
-                                    <td class="money"><em class="large">200</em><span class="small">万円</span></td>
-                                    <td><em>終身保障</em></td>
-                                </tr>
-                                <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">生活習慣病</em>(ガン以外)で<em class="large">入院</em>のとき</a></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">40,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
                                     <td><em>10</em>年更新
                                     <br>
-                                    <em>60</em>歳限度</td>
+                                    <em>80</em>歳限度</td>
+                                </tr>
+                                <tr class="gan">
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog"><em class="large">ガン</em>で<em class="large">入院</em>のとき</a></td>
+                                    <td class="money"><em class="large">210,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">80,000</em><span class="small">円</span></td>
+                                    <td class="money"><div class="small">支払日数<br>無制限</div><em class="large">20,000</em><span class="small">円</span></td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em>80</em>歳限度</td>
                                 </tr>
                                 <tr>
-                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">軽度要介護状態</em>(180日継続)のとき</a>
-                                    <div class="guide small">
-                                        目安として公的介護保険制度の<em class="normal">要介護1以上</em>に相当する状態を保障<em>(1)</em>
-                                    </td>
-                                    <td>一時金</td>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">女性特有の病気</em>(ガン以外)で<em class="large">入院</em>のとき</a></td>
+                                    <td class="money"><em class="large">10,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">80,000</em><span class="small">円</span></td>
+                                    <td class="money"><em class="large">20,000</em><span class="small">円</span></td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em
+                            </tbody>
+                        </table>
+                        <table class="shujyutsu">
+                            <thead>
+                                <tr>
+                                    <th>手術等の保障</th>
+                                    <th>入院中に手術を<br>受けたとき</th>
+                                    <th>入院せずに手術を<br>受けたとき</th>
+                                    <th>放射線治療を<br>うけたとき</th>
+                                    <th>保障期間</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog"><em class="large">ケガ</em>や<em class="large">病気</em>により</a></td>
                                     <td class="money"><em class="large">20</em><span class="small">万円</span></td>
-                                    <td><em>終身保障</em></td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2" class="reason"><a href="javascript:void(0);" class="link dialog">病気や不慮の事故による所定の<em class="large">障害状態</em>のとき</a></td>
-                                    <td>一時金</td>
-                                    <td class="money"><em class="large">500</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">5</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">10</em><span class="small">万円</span></td>
                                     <td><em>10</em>年更新
                                     <br>
                                     <em>80</em>歳限度</td>
                                 </tr>
                                 <tr>
-                                    <td>年金</td>
-                                    <td class="money"><em class="large">190</em><span class="small">万円</span><br>
-                                    ×10<span class="small">年</span></td>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">生活習慣病</em>(ガン以外)により</a></td>
+                                    <td class="money"><em class="large">20</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">5</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">10</em><span class="small">万円</span></td>
                                     <td><em>10</em>年更新
                                     <br>
-                                    <em>60</em>歳限度</td>
+                                    <em>80</em>歳限度</td>
+                                </tr>
+                                <tr class="gan">
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog"><em class="large">ガン</em>により</a></td>
+                                    <td class="money"><span class="small">(2)</span><em class="large">80</em><span class="small">万円</span><em class="large">20</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">10</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">20</em><span class="small">万円</span></td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em>80</em>歳限度</td>
+                                </tr>
+                                <tr>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">所定の<em class="large">女性特有の病気</em>(ガン以外)により</a></td>
+                                    <td class="money"><em class="large">40</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">10</em><span class="small">万円</span></td>
+                                    <td class="money"><em class="large">20</em><span class="small">万円</span></td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em>80</em>歳限度</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="rakuraku">
-                            さらに、<a href="javascript:void(0);" class="link explain"><img src="img/tmp/kai_pic01.gif"></a>により、所定の<em>3大疾病</em>・所定の<em>要介護状態</em>(180日継続)・病気による所定の障害状態のとき
-                            <br>
-                            <em class="large">以後、所定の特約の保険料は必要ありません！</em><span class="note">(特約の保険料払込期間中はいつまでも適用！)</span>
-                            <br>
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0);" class="link explain">保険料払込免除の事由</a>に該当された場合、新積立保険の保険料のお払い込みは終了します。
-                                </li>
-                            </ul>
-                        </div>
+                        <table class="other">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">その他</th>
+                                    <th>保障期間</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">ケガや病気で<em class="large">先進医療による治療</em>を受けたとき</a></td>
+                                    <td>
+                                        <div class="small">被保険者が負担した先進医療の技術にかかる費用相当額</div>
+                                        <div class="small">(１回・通算とも1,000万円まで保障！)</div>
+                                    </td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em>80</em>歳限度</td>
+                                </tr>
+                                <tr>
+                                    <td class="reason"><a href="javascript:void(0);" class="link dialog">ケガによる<em class="large">骨折・関節脱臼・腱の断裂・靭帯の断裂</em>に対する治療を受けたとき</a></td>
+                                    <td>
+                                        <span >１回につき</span>
+                                        <span class="small"><em class="large">5</em>万円</span>
+                                    </td>
+                                    <td><em>10</em>年更新
+                                    <br>
+                                    <em>65</em>歳限度</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <ul class="attention">
                             <li>
-                                <span class="order small">(1)</span>
+                                <span class="order small">(2)</span>
                                 <p>
-                                    公的介護保険制度の「要介護2以上の相当する状態」、「要介護1以上に相当する状態」とはあくまでも目安であり、実際のお支払いは所定の基準によります。(「要支援2」の方が該当したり、「要介護2」「要介護1」の方でも該当しない場合などがあります。)なお、公的介護保険制度とは作成年月日現在のものを指します。
+                                    ガン治療のための開頭術・開胸術・開腹術には 80万円、その他のガン治療のための手術には 40万円をお支払いします。
                                 </p>
                             </li>
                         </ul>
