@@ -331,85 +331,74 @@
                             font-size: 13px;
                         }
 
-                        #seizenKyuhu table {
-                            width: 100%;
-                            border-collapse: separate;
-                            border-spacing: 0px;
+                        #kyuhujirei {
+                            max-height: 600px;
                         }
-
-                        #seizenKyuhu table thead th:first-child {
-                            border-radius: 5px 0 0 0;
+                        #kyuhujirei .jirei{
+                            border: 2px solid #6bb5bd;
+                            border-radius: 10px;
+                            width:  440px;
                         }
-                        #seizenKyuhu table thead th:last-child {
-                            border-radius: 0 5px 0 0;
-                        }
-                        #seizenKyuhu table tr:nth-last-child(2) td:first-child {
-                            border-radius: 0 0 0 5px;
-                        }
-                        #seizenKyuhu table tr:last-child td:last-child {
-                            border-radius: 0 0 5px 0;
-                        }
-
-                        #seizenKyuhu table th, #seizenKyuhu table td {
-                            border-bottom: solid 2px #ffceef;
-                            border-right: solid 2px #ffceef;
-                            line-height: 1;
-                        }
-
-                        #seizenKyuhu table th {
-                            height: 50px;
+                        #kyuhujirei .jirei .title{
+                            background-color: #6bb5bd;
                             text-align: center;
-                            vertical-align: middle;
-                            background-color: #ffceef;
+                            border-radius: 10px 10px 0 0;
+                        }
+                        #kyuhujirei .jirei .scenario{
+                            background-color: #c6e7b5;
+                            padding: 0 10px; 
+                        }
+                        #kyuhujirei .jirei .case{
+                            border: 1px solid #6bb5bd;
+                            border-top: none;
+                            border-radius: 10px 10px 0 0;
+                            margin: 5px 10px 0 10px; 
+                        }
+                        
+                        #kyuhujirei .jirei .case .main{
+                            border: 1px solid #6bb5bd;
+                            border-radius: 10px;
+                            padding: 0 20px;
+                        }
+                        #kyuhujirei .jirei .case .main dt{
+                            display: inline-block;
+                        }
+                        #kyuhujirei .jirei .case .main dd{
+                            float: right;
+                        }
+                        #kyuhujirei .jirei .breakdown{
+                            padding: 10px 0 10px 30px;
+                        }
+                        #kyuhujirei .jirei .case .breakdown dt{
+                            display: inline-block;
+                        }
+                        #kyuhujirei .jirei .case .breakdown dd{
+                            float: right;
+                        }
+                        #kyuhujirei .jirei .case .breakdown dd .unit{
+                            display: inline-block;
+                            min-width: 90px;
+                        }
+                        #kyuhujirei .jirei .case > div {
+                            margin-left: 20px;
+                        }
+                        #kyuhujirei .jirei .downArrow{
+                            content: " "; 
+                            display: block;
+                            background:url("img/tmp/underArrow.png") 0 0 no-repeat transparent;
+                            background-position: center; 0px;
+                            height: 20px ;
+                        }
+                        #kyuhujirei .jirei .summary{
+                            background-color: #c6e7b5;
+                            border-top: 3px solid #000000;
+                            border-bottom: 3px solid #000000;
+                            margin: 10px; 
+                            padding: 0 20px;
                         }
 
-                        #seizenKyuhu table tbody td {
-                            text-align: center;
-                            vertical-align: middle;
-                            height: 40px;
-                            padding: 0 10px;
-                        }
-                        #seizenKyuhu table tbody td.money {
-                            text-align: right;
-                        }
-                        #seizenKyuhu table tbody td.reason {
-                            text-align: left;
-                            border-left: solid 2px #ffceef;
-                            padding: 10px;
-                        }
-                        #seizenKyuhu table tbody td .guide {
-                            color: #0000ff;
-                            border: solid 1px #A6A6A6;
-                            border-radius: 5px;
-                            padding: 3px 5px;
-                            background: #f9f96d; /* Old browsers */
-                            background: -moz-linear-gradient(top,  #f9f96d 0%, #ffffff 50%, #f9f96d 100%); /* FF3.6+ */
-                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f96d), color-stop(50%,#ffffff), color-stop(100%,#f9f96d)); /* Chrome,Safari4+ */
-                            background: -webkit-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Chrome10+,Safari5.1+ */
-                            background: -o-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Opera 11.10+ */
-                            background: -ms-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* IE10+ */
-                            background: linear-gradient(to bottom,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* W3C */
-                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f96d', endColorstr='#f9f96d',GradientType=0 ); /* IE6-9 */
-                        }
-                        #seizenKyuhu table tbody td .guide em {
-                            color: #ff0000;
-                        }
-
-                        #seizenKyuhu .rakuraku {
-                            border: solid 2px #ffceef;
-                            border-radius: 5px;
-                            margin: 3px 0;
-                            padding: 10px;
-                        }
-
-                        #seizenKyuhu .rakuraku em.large {
-                            color: #ff0000;
-                        }
-                        #seizenKyuhu .rakuraku .note {
-                            color: #0000ff;
-                        }
-                        #seizenKyuhu .rakuraku li:before {
-                            content: "※"
+                        #kyuhujirei .jirei .summary > span:nth-child(2) {
+                            float: right;
                         }
 
                     </style>
@@ -445,12 +434,79 @@
                     <header data-bind="text: title">
                         給付事例(被保険者様)
                     </header>
-                    <section id="kyuhujirei">
+                    <section id="kyuhujirei" class="scrlParent">
                         <div class="jirei">
-                            <div class="title large">胃ガンの場合</div>
+                            <div class="title"><em class="large">胃ガンの場合</em></div>
+                            <div class="scenario">
+                                <div class="mainScenario">保険期間中に初めて胃ガンにかかり、22日間<span class="small">(注)</span>入院し、胃切除手術(※)(開腹手術)を受け、生存退院したとき</div>
+                                <div class="attention small">(注)厚生労働省「平成２３年患者調査」による胃ガンの退院患者平均在院日数</div>
+                            </div>
                             <div class="case">
-                                <div class="mainCase">保険期間中に初めて胃ガンにかかり、22日間(注)入院し、胃切除手術(※)(開腹手術)を受け、生存退院したとき</div>
-                                <div class="attention small">厚生労働省「平成２３年患者調査」による胃ガンの退院患者平均在院日数</div>
+                                <dl class="main">
+                                    <dt class="large">入院開始</dt>
+                                    <dd><em class="large">921.00</em><span class="small">万円</span></dd>
+                                </dl>
+                                <dl class="breakdown">
+                                    <dt class="small">ワイドディフェンス特約A (有期型)</dt>
+                                    <dd><em>500</em><span class="small unit">万円(※)</span></dd>
+                                    <dt class="small">ナイスリー特約A (終身型)</dt>
+                                    <dd><em>400</em><span class="small unit">万円(※)</span></dd>
+                                    <dt class="small">総合入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円</span></dd>
+                                    <dt class="small">ガン入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×20倍</span></dd>
+                                </dl>
+                                <div class="small">なお、上記支払いにより、(※)の特約は消滅します。</div>
+                            </div>
+                            <div class="downArrow"></div>
+                            <div class="case">
+                                <dl class="main">
+                                    <dt class="large">22日間入院</dt>
+                                    <dd><em class="large">76.00</em><span class="small">万円</span></dd>
+                                </dl>
+                                <dl class="breakdown">
+                                    <dt class="small">総合入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×22日</span></dd>
+                                    <dt class="small">生活習慣病入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×22日</span></dd>
+                                    <dt class="small">ガン入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×22日</span></dd>
+                                    <dt class="small">入院時生活費サポート特約2007</dt>
+                                    <dd><em>10.0</em><span class="small unit">万円(15日入院したとき)</span></dd>
+                                </dl>
+                            </div>
+                            <div class="downArrow"></div>
+                            <div class="case">
+                                <dl class="main">
+                                    <dt class="large">胃切除術を受けた</dt>
+                                    <dd><em class="large">170.00</em><span class="small">万円</span></dd>
+                                </dl>
+                                <dl class="breakdown">
+                                    <dt class="small">護臓ろっぷ特約 (有期型)</dt>
+                                    <dd><em>50</em><span class="small unit">万円</span></dd>
+                                    <dt class="small">総合入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×40倍</span></dd>
+                                    <dt class="small">生活習慣病入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×40倍</span></dd>
+                                    <dt class="small">ガン入院特約2011 (有期型)</dt>
+                                    <dd><em>10,000</em><span class="small unit">円×40倍</span></dd>
+                                </dl>
+                            </div>
+                            <div class="downArrow"></div>
+                            <div class="case">
+                                <dl class="main">
+                                    <dt class="large">生存退院した</dt>
+                                    <dd><em class="large">5.00</em><span class="small">万円</span></dd>
+                                </dl>
+                                <dl class="breakdown">
+                                    <dt class="small">退院給付特約2009 (有期型)</dt>
+                                    <dd><em>50,000</em><span class="small unit">円</span></dd>
+                                </dl>
+                            </div>
+                            <div class="downArrow"></div>
+                            <div class="summary">
+                                <span class="large">合計</span>
+                                <span><em class="large">2,563.00</em><span class="small">万円</span></span>
                             </div>
                         </div>
                     </section>
