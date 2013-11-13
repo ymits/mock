@@ -150,12 +150,16 @@
 
     .keiyakugaiyou {
         width:960px;
-        margin-top: -100px; 
+        margin-top: -350px; 
         margin-left:-480px;
+    }
+    #saveingInsuranceShift {
+      max-height: 600px;
     }
     #saveingInsuranceShift .listArea {
       border:solid 1px #7D26CD;
       padding: 5px 10px;
+      margin-bottom: 10px;
     }
     #saveingInsuranceShift .listArea .message .info{
       color: #0000ff;
@@ -189,7 +193,7 @@
       border-right: 1px solid #7D26CD;
     }
     #saveingInsuranceShift .listArea .list table tbody tr:nth-child(odd) td{
-      background-color: #D9FF93;
+      background-color: #d6ffd6;
     }
     #saveingInsuranceShift .listArea .list table tbody:before {
         line-height:0.3em;
@@ -270,6 +274,60 @@
         min-width: 50px;
         text-align: left;
     }
+
+    #saveingInsuranceShift .example{
+      background-color: #d6ffd6;
+      border: solid 1px #00ff00;
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+    #saveingInsuranceShift .example > div{
+        display: inline-block;
+        vertical-align: top;
+    }
+    #saveingInsuranceShift .example .totalBox,
+    #saveingInsuranceShift .example .withdrawalBox{
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        background-color: #ffffff;
+        height: 40px;
+        line-height: 1;
+        margin: 5px;
+        padding: 0px 10px;
+    }
+    #saveingInsuranceShift .example .describe{
+        display: inline-block;
+    }
+    #saveingInsuranceShift .example .totalBox .describe{
+        width: 100px;
+    }
+    #saveingInsuranceShift .example .withdrawalBox .describe{
+        width: 135px;
+    }
+    #saveingInsuranceShift .example .data{
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+    #saveingInsuranceShift .example .totalBox > span {
+        margin-top: 12px;
+    }
+    #saveingInsuranceShift .example .withdrawalBox .data {
+        margin-bottom: 20px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    #saveingInsuranceShift .example .totalBox {
+        margin-left: 100px;
+    }
+
+    #saveingInsuranceShift .example .toRight {
+        background:url("img/tmp/rightArrow.png") 0 0 no-repeat transparent;
+        height: 40px ;
+        width: 25px ;
+        background-size:100% 100%;
+        margin: 5px 0 0 10px;
+    }
 </style>
 <style>
     
@@ -289,7 +347,7 @@
             <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true">
                 <div class="overlayPannel confWin keiyakugaiyou">
                     <header data-bind="text: title">積立金推移表</header>
-                    <section id="saveingInsuranceShift">
+                    <section id="saveingInsuranceShift" class="scrlParent">
                         <div class="listArea">
                             <div class="message">
                                 【<span class="info">ご契約時の運用利率 年1.00%</span>】(<span class="info">最低基準利率 (年1.00%)</span>は保障されます。)
@@ -476,8 +534,30 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+                        <div class="example">
+                            <div class="case">
+                                <div class="title">【例1の場合】</div>
+                                <div class="status">80歳時の積立金状況</div>
+                            </div>
+                            <div class="totalBox small">
+                                <span class="describe">積立金総額</span>
+                                <span class="data">約<span class="normal">2,357</span>万円</span>
+                            </div>
+                            <div class="toRight">
+                            </div>
+                            <div class="withdrawalBox small">
+                                <span class="describe">まとまったお金を一度にお受け取りいただく場合<br>(積立金の引出可能額)</span>
+                                <span class="data">約<span class="normal">2,356</span>万円</span>
+                            </div>
+                        </div>
+                        <div class="messagee small">
+                            <ul class="items">
+                                <li>※記載の「年平均利回り」は新積立保険の保険料に対する解約返戻金の1年あたりの平均利回り（単利）の試算です。上記の積立金推移表に記載の各金額や利回りは、適用利率が年 1.00%のまま一定でそのまま推移したものと仮定しています。</li>
+                                <li>※<span class="attention">記載の積立金・引出可能額・解約返戻金は、計算基準日現在の適用利率にもとずいた試算であり、将来の受取金額を保証するものではありません。</span>また、各経過年後の契約応答日の前日を基準として、事前に一度もお引き出し等がなく、この設計プランの保障内容のままご継続いただいた場合の金額です。記載の解約返戻金は新積立保険のものです。このほかに特約の解約返戻金がある場合もあります。</li>
+                                <li>※<span class="attention">ご契約を解約された場合、解約時手数料として所定の金額が積立金から控除されます。また積立金の一部引き出しの場合、引き出した部分は解約されたものとし、積立金の減少額は引出金額よりも多くなります。<br>(契約転換制度または契約分割転換制度をご利用の場合、ご契約後数年間はこの控除額が大きくなる事があります。)</span></li>
+                                <li>※<span class="attention">この設計プランでは、ご契約後２年間は積立金の一部引き出しの際、初回の引き出しに限り、ＡＴＭ・ＣＤによるお取り扱いは出来ず、請求書によるお手続きとさせていただきます。</span></li>
+                            </ul>
+                        </div>
                     </section>
                     
                     <footer>

@@ -18,6 +18,14 @@
 .keiyakugaiyou .small{
     font-size: 12px;
 }
+.keiyakugaiyou .items li {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+.keiyakugaiyou .attention {
+	color: #ff0000;
+	text-decoration: underline;
+}
 
 .outline article.keiyakugaiyou header > div {
     display: inline-block;
