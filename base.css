@@ -26,6 +26,9 @@
 	color: #ff0000;
 	text-decoration: underline;
 }
+.keiyakugaiyou .info {
+    color: #0000ff;
+}
 
 .outline article.keiyakugaiyou header > div {
     display: inline-block;

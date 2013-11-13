@@ -77,3 +77,19 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
     text-indent: -1em;
     padding-left: 1em;
 }
+
+.keiyakugaiyou .dl-horizontal dt{
+    float: left;
+    overflow: hidden;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.keiyakugaiyou .dl-horizontal dd{
+    text-align: right;
+}
+.keiyakugaiyou .dl-horizontal dd .unit{
+    display: inline-block;
+    text-align: left;
+}
