@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8080/#/keiyaku/gaiyo/1035 -->
+<html style="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Keiyaku/gaiyo | Green PPL Tablet</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width">
+		<!--		 <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-landscape.png" media="(orientation:landscape)" /> -->
+		<!--		 <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-portrait.png" media="(orientation:portrait)" /> -->
+		<!--		 <link rel="apple-touch-icon" href="resources/content/images/icon.png"/> -->
+		<!-- TODO durandal.cssのダイアログスタイルをstyle.cssに移動する -->
+		<link rel="stylesheet" href="http://localhost:8080/resources/content/durandal.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/root2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/base2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/toggles2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/parts.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery-ui-datepicker.custom.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
+		<link rel="stylesheet" type="text/css" media="all" href="base.css">
+		<link rel="stylesheet" type="text/css" media="all" href="components.css">
+		<!-- TODO 専用のcssファイルへ移動 -->
+		</head>
+		<body style="margin-right: 0px;">
+		<!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
+		<section style="height:100%" data-view="views/shell" data-active-view="true">
+		
+		<style>
+			.confWin {
+				display: block;
+				margin-top: -380px; /** TODO Kawabata 見えないのでmargin-top調整 **/
+			}
+			.confWin footer p {
+				min-width: 110px;
+				width: auto;
+			}
+			.confWin {
+				min-height: 270px;
+				height: auto;
+			}
+			.confWin section {
+				min-height: 230px;
+				height: auto;
+			}
+			.confWin footer {
+				position: relative;
+				height: 50px;
+			}
+		</style>
+		<style>
+			.kaiyakuhenreikin-header .header-left {
+				float : left;
+				height : 90px;
+				width : 60%;
+				text-align : center;
+			}
+			.kaiyakuhenreikin-header .header-right {
+				height : 100px;
+			}
+			.kaiyakuhenreikin-header .henreikinTitle {
+				font-size : 48px;
+			}
+			.kaiyakuhenreikin-header .heireikinHosoku {
+				font-size : 12px;
+			}
+			.sekkeiNumber {
+				font-size : 16px;
+				border-bottom : solid thin;
+				text-indent : 1em;
+			}
+			
+			.sekkeiExplain {
+				color : blue;
+				font-weight : bold;
+			}
+			
+			.sekkeiProcutName > table {
+				width : 100%;
+			
+			}
+			.sekkeiProcutName > table , th {
+				border : 1px solid;
+				margin-bottom : 14px;
+			}
+			
+			.kaiyakuhenreikin-table {
+				width : 100%;
+				font-size : 12px;
+			}
+			
+			th.uketorigoukeigaku {
+				border-right-style : hidden;
+				border-bottom-style : hidden;
+			}
+			th.side-border-style-none{
+				border-right-style : hidden;
+				border-left-style : hidden;
+			}
+			
+			.kaiyakuhenreikin-table-wrap {
+				overflow-y:scroll;
+				height : 264px;
+			}
+
+			.kaiyakuhenreikin-table th {
+				background-color: #CCF1B3;
+				text-align : center;
+				padding-right : 10px;
+				font-weight : bold;
+			} 
+			.kaiyakuhenreikin-table td {
+				text-align : right;
+				padding-right : 8px;
+				border : solid 1px;
+			} 
+			.kaiyakuhenreikin-table tr:nth-of-type(odd) > td {
+				background-color: while;
+			} 
+			.kaiyakuhenreikin-table tr:nth-of-type(even) > td {
+				background-color: #CCF1B3;
+			} 
+			
+			div.kaiyakuhenreikinNoSuii-hosoku > div {
+				text-indent:-1em;
+				padding-left:1em;
+				font-size : 12px;
+			}
+			
+		</style>
+		</section>
+		</div>
+		<div class="overlayPannel confWin keiyakugaiyou">
+		<section class="kaiyakuhenreikinNoSuii">
+			<div class="kaiyakuhenreikin-header">
+				<div class="header-left">
+					<div class="henreikinTitle">
+						<b>解約返戻金の推移</b>
+					</div>
+					<div class="heireikinHosoku">
+						（当該設計プランの内容のままご継続いただいた前提）
+					</div>
+				</div>
+				<div class="header-right">
+					<div>
+						<span>ご契約者：</span>
+						<span><ruby>
+						<rb>三井 生命 </rb><rp>(</rp><rt>ﾐﾂｲ ｾｲﾒｲ</rt><rp>)</rp> &nbsp;様
+						</ruby></span>
+					</div>
+					<div>
+						<span>被保険者：</span>
+						<span><ruby>
+						<rb>三生 保険 </rb><rp>(</rp><rt>ｻﾝｾｲ ﾎｹﾝ</rt><rp>)</rp> &nbsp;様
+						</ruby></span>
+					</div>
+					<div>
+						昭和46年  1月  23日生 （42歳）
+					</div>
+				</div>
+				<div style="clear:left">
+				</div>
+			</div>
+		<div class="sekkeiNumber">
+			＜この設計書は022280-0347-1-04の付属設計書です＞
+		</div>
+		<div class="sekkeiExplain">
+			上記設計書No.のプランに基づく解約返戻金の推移です。該当の設計書（契約概要）と合わせてご覧ください。
+		</div>
+		<div class="sekkeiProcutName">
+			<table>
+			<thead>
+				<th sytle="border : solid ;">商品名</th>
+				<th>ベクトルX</th>
+				<th>＜3年ごと利差配当付利益変動型新積立保険＞</th>
+			</thead>
+			</table>
+		</div>
+		<div class="kaiyakuhenreikin-table-wrap" style="overflow-y:scroll">
+		<table class="kaiyakuhenreikin-table">
+			<thead>
+				<th></th>
+				<th></th>
+				<th>(1)</th>
+				<th class="uketorigoukeigaku">(2)</th>
+				<th class="side-border-style-none"></th>
+				<th class="side-border-style-none"></th>
+				<th></th>
+				<th>(3)</th>
+				<th>(4)</th>
+			</thead>
+			<thead>
+				<th>経過<br>年数<br>(年後)</th>
+				<th>年齢<br> <br>(歳時)</th>
+				<th>保険料<br>累計額<br>(約　万円)</th>
+				<th id="uketorigoukeigaku">解約時の受取合計額<br>年数<br>(約　万円)</th>
+				<th>うち<br>新積立保険部分<br>(約　万円)</th>
+				<th>うち<br>特約部分<br>(約　万円)</th>
+				<th>うち<br>無事故給付金<br>(約　万円)</th>
+				<th>返戻率<br>[ (2) ÷ (1)]<br></th>
+				<th>新積立保険<br>引出可能額<br>(約　万円)</th>
+			</thead>
+			<tbody>
+				<tr><td>1</td><td>43</td><td>86</td><td>17</td><td>5</td><td>11</td><td>0</td><td>20.0%</td><td>4</td></tr>
+				<tr><td>2</td><td>44</td><td>171</td><td>46</td><td>11</td><td>34</td><td>0</td><td>27.0%</td><td>10</td></tr>
+				<tr><td>3</td><td>45</td><td>257</td><td>75</td><td>17</td><td>58</td><td>0</td><td>29.5%</td><td>16</td></tr>
+				<tr><td>4</td><td>46</td><td>342</td><td>105</td><td>23</td><td>81</td><td>0</td><td>30.8%</td><td>22</td></tr>
+				<tr><td>5</td><td>47</td><td>427</td><td>140</td><td>29</td><td>105</td><td>5</td><td>32.8%</td><td>28</td></tr>
+				<tr><td>6</td><td>48</td><td>513</td><td>169</td><td>36</td><td>128</td><td>5</td><td>33.1%</td><td>35</td></tr>
+				<tr><td>7</td><td>49</td><td>598</td><td>199</td><td>42</td><td>152</td><td>5</td><td>33.4%</td><td>41</td></tr>
+				<tr><td>8</td><td>50</td><td>683</td><td>24</td><td>48</td><td>18</td><td>5</td><td>33.6%</td><td>47</td></tr>
+				<tr><td>9</td><td>51</td><td>769</td><td>25</td><td>54</td><td>19</td><td>10</td><td>33.8%</td><td>53</td></tr>
+				<tr><td>10</td><td>52</td><td>854</td><td>26</td><td>14</td><td>20</td><td>10</td><td>34.5%</td><td>59</td></tr>
+				<td>11</td><td>53</td><td>966</td><td>319</td><td>66</td><td>248</td><td>10</td><td>35.2%</td><td>103</td></tr>
+				<td>12</td><td>54</td><td>1078</td><td>349</td><td>72</td><td>272</td><td>10</td><td>35.9%</td><td>107</td></tr>
+				<td>13</td><td>55</td><td>1190</td><td>379</td><td>78</td><td>296</td><td>10</td><td>36.6%</td><td>111</td></tr>
+				<td>14</td><td>56</td><td>1302</td><td>409</td><td>84</td><td>320</td><td>15</td><td>37.3%</td><td>115</td></tr>
+				<td>15</td><td>57</td><td>1414</td><td>439</td><td>90</td><td>344</td><td>15</td><td>38.0%</td><td>119</td></tr>
+				<td>16</td><td>58</td><td>1526</td><td>469</td><td>96</td><td>368</td><td>15</td><td>38.7%</td><td>123</td></tr>
+				<td>17</td><td>59</td><td>1638</td><td>499</td><td>102</td><td>392</td><td>15</td><td>39.4%</td><td>127</td></tr>
+				<td>18</td><td>60</td><td>1750</td><td>529</td><td>108</td><td>416</td><td>15</td><td>40.1%</td><td>131</td></tr>
+				<td>19</td><td>61</td><td>1862</td><td>559</td><td>114</td><td>440</td><td>18</td><td>40.8%</td><td>135</td></tr>
+				<td>20</td><td>62</td><td>1974</td><td>589</td><td>120</td><td>464</td><td>19</td><td>41.5%</td><td>139</td></tr>
+				<td>21</td><td>63</td><td>2086</td><td>619</td><td>126</td><td>488</td><td>20</td><td>42.2%</td><td>143</td></tr>
+				<td>22</td><td>64</td><td>2198</td><td>649</td><td>132</td><td>512</td><td>21</td><td>42.9%</td><td>147</td></tr>
+				<td>23</td><td>65</td><td>2310</td><td>679</td><td>138</td><td>536</td><td>22</td><td>43.6%</td><td>151</td></tr>
+				<td>24</td><td>66</td><td>2422</td><td>709</td><td>144</td><td>560</td><td>23</td><td>44.3%</td><td>155</td></tr>
+				<td>25</td><td>67</td><td>2534</td><td>739</td><td>150</td><td>584</td><td>24</td><td>45.0%</td><td>159</td></tr>
+				<td>26</td><td>68</td><td>2646</td><td>769</td><td>156</td><td>608</td><td>25</td><td>45.7%</td><td>163</td></tr>
+				<td>27</td><td>69</td><td>2758</td><td>799</td><td>162</td><td>632</td><td>26</td><td>46.4%</td><td>167</td></tr>
+				<td>28</td><td>70</td><td>2870</td><td>829</td><td>168</td><td>656</td><td>27</td><td>47.1%</td><td>171</td></tr>
+				<td>29</td><td>71</td><td>2982</td><td>859</td><td>174</td><td>680</td><td>28</td><td>47.8%</td><td>175</td></tr>
+				<td>30</td><td>72</td><td>3094</td><td>889</td><td>180</td><td>704</td><td>29</td><td>48.5%</td><td>179</td></tr>
+				</tbody>
+		</table>
+		</div>
+		<div class="kaiyakuhenreikinNoSuii-hosoku">
+			<div>
+			※記載の保険料累計額は1万円未満を切り上げて、それ以外の数値は1万円未満を切り捨てて表示していますが、各数値の算出の際には端数処理前の数値を使用しています。したがって、解約時の受取合計額は「うち」と記載の内訳金額の合計と相違する場合があります。
+			</div>
+			<div>
+			※更新可能な特約が不可されている場合、更新可能な特約部分の解約返戻金は、計算基準日現在の保険料率にもとづき算出しています。
+			</div>
+			<div>
+			※新積立保険の解約返戻金、引出可能額は、事前にお引き出しがなく、契約人の適用利率がそのまま推移したものとして試算（1年経過以降の適用利率がご契約時の適用利率のまま推移した場合）しています。なお、集信保険特約2007、「（終身型）」のワイドディフェンス特約A・介護保障特約A・障害サポート特約Aは低解約返戻金型（一定期間、解約返戻金を抑制するしくみで保険料を計算）で、それ以外の特約に解約返戻金はありません。
+			</div>
+			<div>
+			※記載の無事故給付金は、記載の期間を通じて入院給付金等のお支払いがなく、また作成年月日現在の利率でそのまますえ置いたものとして算出しています。なお、すえ置き利率は今後変動（上下）することがあります。
+			</div>
+			<div>
+			※記載の解約返戻金は各経過年数の契約応当日前日のものです。（払込期間中は契約応当日前日までの保険料が払い込まれたものとして算出）
+			</div>
+			<div>
+			※契約者配当金のある場合には、上記金額に合意して、お支払いします。（なお、上記には契約者配当金は含まれていません。）
+			</div>
+			<div>
+			※保険料累計額は、転換価格・任意積立保険料を含めた数値で表示しております。
+			</div>
+			<div style="margin-top:24px;margin-bottom:24px;">
+			※記載の保険料累計額は、更新時年齢が60歳以下のときには健康自慢を付加したものとして算出しています。
+			</div>
+		</div>
+		<div class ="kaiyakuhenreikinNoSuii-footer">
+			<div style="font-seize:12px;color:red; height:40px; float:left; width:40%; text-indent:-1em">
+			※解約返戻金をお支払いした場合、以後の保障はなくなります。
+			</div>
+			<div style="font-size:12px;color:black;float:right; border:solid; width:60%;">
+				<table width=100%>
+					<thead>
+					</thead>
+					<tbody>
+						<tr><td>（MLI）開発本部</td><td style="text-align:right;">計算基準日：2013年 12月 1日&nbsp; </td></tr>
+						<tr><td>個人保険システム第一グループ</td><td style="text-align:right;">作成年月日：2013年 11月 5日&nbsp; </td></tr>
+						<tr><td>梅戸　祥彦</td><td style="text-align:right;">設計書No. 022280 -0347 -1 - 04（付属）&nbsp; </td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div style="clear:left;">
+			</div>
+			<footer>
+				<p>
+				<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
