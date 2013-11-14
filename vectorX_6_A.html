@@ -33,11 +33,10 @@
 		</head>
 		<body style="margin-right: 0px;">
 		<!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
-		<section style="height:100%" data-view="views/shell" data-active-view="true">
-		
 		<style>
 			.confWin {
 				display: block;
+				width : 960px;
 				margin-top: -380px; /** TODO Kawabata 見えないのでmargin-top調整 **/
 			}
 			.confWin footer p {
@@ -108,15 +107,14 @@
 			}
 			
 			.kaiyakuhenreikin-table-wrap {
-				overflow-y:scroll;
-				height : 264px;
+				
 			}
 
 			.kaiyakuhenreikin-table th {
 				background-color: #CCF1B3;
 				text-align : center;
-				padding-right : 10px;
 				font-weight : bold;
+				line-height : 100%;
 			} 
 			.kaiyakuhenreikin-table td {
 				text-align : right;
@@ -130,17 +128,24 @@
 				background-color: #CCF1B3;
 			} 
 			
+			section.kaiyakuhenreikinNoSuii {
+				padding-top : 12px;
+				height : 90%;
+				overflow-y : scroll;
+			}
 			div.kaiyakuhenreikinNoSuii-hosoku > div {
 				text-indent:-1em;
 				padding-left:1em;
 				font-size : 12px;
 			}
-			
 		</style>
-		</section>
 		</div>
-		<div class="overlayPannel confWin keiyakugaiyou">
+		<div class="overlayPannel confWin keiyakugaiyou" style ="height:600px ; padding-bottom : 25px;">
+		<header data-bind="text: title">
+			解約返戻金の推移
+        </header>
 		<section class="kaiyakuhenreikinNoSuii">
+        <!--
 			<div class="kaiyakuhenreikin-header">
 				<div class="header-left">
 					<div class="henreikinTitle">
@@ -185,7 +190,8 @@
 			</thead>
 			</table>
 		</div>
-		<div class="kaiyakuhenreikin-table-wrap" style="overflow-y:scroll">
+		-->
+		<div class="kaiyakuhenreikin-table-wrap">
 		<table class="kaiyakuhenreikin-table">
 			<thead>
 				<th></th>
@@ -211,35 +217,55 @@
 			</thead>
 			<tbody>
 				<tr><td>1</td><td>43</td><td>86</td><td>17</td><td>5</td><td>11</td><td>0</td><td>20.0%</td><td>4</td></tr>
-				<tr><td>2</td><td>44</td><td>171</td><td>46</td><td>11</td><td>34</td><td>0</td><td>27.0%</td><td>10</td></tr>
-				<tr><td>3</td><td>45</td><td>257</td><td>75</td><td>17</td><td>58</td><td>0</td><td>29.5%</td><td>16</td></tr>
-				<tr><td>4</td><td>46</td><td>342</td><td>105</td><td>23</td><td>81</td><td>0</td><td>30.8%</td><td>22</td></tr>
-				<tr><td>5</td><td>47</td><td>427</td><td>140</td><td>29</td><td>105</td><td>5</td><td>32.8%</td><td>28</td></tr>
-				<tr><td>6</td><td>48</td><td>513</td><td>169</td><td>36</td><td>128</td><td>5</td><td>33.1%</td><td>35</td></tr>
-				<tr><td>7</td><td>49</td><td>598</td><td>199</td><td>42</td><td>152</td><td>5</td><td>33.4%</td><td>41</td></tr>
-				<tr><td>8</td><td>50</td><td>683</td><td>24</td><td>48</td><td>18</td><td>5</td><td>33.6%</td><td>47</td></tr>
-				<tr><td>9</td><td>51</td><td>769</td><td>25</td><td>54</td><td>19</td><td>10</td><td>33.8%</td><td>53</td></tr>
-				<tr><td>10</td><td>52</td><td>854</td><td>26</td><td>14</td><td>20</td><td>10</td><td>34.5%</td><td>59</td></tr>
-				<td>11</td><td>53</td><td>966</td><td>319</td><td>66</td><td>248</td><td>10</td><td>35.2%</td><td>103</td></tr>
-				<td>12</td><td>54</td><td>1078</td><td>349</td><td>72</td><td>272</td><td>10</td><td>35.9%</td><td>107</td></tr>
-				<td>13</td><td>55</td><td>1190</td><td>379</td><td>78</td><td>296</td><td>10</td><td>36.6%</td><td>111</td></tr>
-				<td>14</td><td>56</td><td>1302</td><td>409</td><td>84</td><td>320</td><td>15</td><td>37.3%</td><td>115</td></tr>
-				<td>15</td><td>57</td><td>1414</td><td>439</td><td>90</td><td>344</td><td>15</td><td>38.0%</td><td>119</td></tr>
-				<td>16</td><td>58</td><td>1526</td><td>469</td><td>96</td><td>368</td><td>15</td><td>38.7%</td><td>123</td></tr>
-				<td>17</td><td>59</td><td>1638</td><td>499</td><td>102</td><td>392</td><td>15</td><td>39.4%</td><td>127</td></tr>
-				<td>18</td><td>60</td><td>1750</td><td>529</td><td>108</td><td>416</td><td>15</td><td>40.1%</td><td>131</td></tr>
-				<td>19</td><td>61</td><td>1862</td><td>559</td><td>114</td><td>440</td><td>18</td><td>40.8%</td><td>135</td></tr>
-				<td>20</td><td>62</td><td>1974</td><td>589</td><td>120</td><td>464</td><td>19</td><td>41.5%</td><td>139</td></tr>
-				<td>21</td><td>63</td><td>2086</td><td>619</td><td>126</td><td>488</td><td>20</td><td>42.2%</td><td>143</td></tr>
-				<td>22</td><td>64</td><td>2198</td><td>649</td><td>132</td><td>512</td><td>21</td><td>42.9%</td><td>147</td></tr>
-				<td>23</td><td>65</td><td>2310</td><td>679</td><td>138</td><td>536</td><td>22</td><td>43.6%</td><td>151</td></tr>
-				<td>24</td><td>66</td><td>2422</td><td>709</td><td>144</td><td>560</td><td>23</td><td>44.3%</td><td>155</td></tr>
-				<td>25</td><td>67</td><td>2534</td><td>739</td><td>150</td><td>584</td><td>24</td><td>45.0%</td><td>159</td></tr>
-				<td>26</td><td>68</td><td>2646</td><td>769</td><td>156</td><td>608</td><td>25</td><td>45.7%</td><td>163</td></tr>
-				<td>27</td><td>69</td><td>2758</td><td>799</td><td>162</td><td>632</td><td>26</td><td>46.4%</td><td>167</td></tr>
-				<td>28</td><td>70</td><td>2870</td><td>829</td><td>168</td><td>656</td><td>27</td><td>47.1%</td><td>171</td></tr>
-				<td>29</td><td>71</td><td>2982</td><td>859</td><td>174</td><td>680</td><td>28</td><td>47.8%</td><td>175</td></tr>
-				<td>30</td><td>72</td><td>3094</td><td>889</td><td>180</td><td>704</td><td>29</td><td>48.5%</td><td>179</td></tr>
+				<tr><td>2</td><td>44</td><td>171</td><td>46</td><td>11</td><td>34</td><td>0</td><td>26.9%</td><td>10</td></tr>
+				<tr><td>3</td><td>45</td><td>257</td><td>75</td><td>17</td><td>58</td><td>0</td><td>29.2%</td><td>16</td></tr>
+				<tr><td>4</td><td>46</td><td>342</td><td>105</td><td>23</td><td>81</td><td>0</td><td>30.7%</td><td>22</td></tr>
+				<tr><td>5</td><td>47</td><td>427</td><td>140</td><td>29</td><td>104</td><td>5</td><td>32.8%</td><td>28</td></tr>
+				<tr><td>6</td><td>48</td><td>513</td><td>169</td><td>35</td><td>127</td><td>5</td><td>32.9%</td><td>35</td></tr>
+				<tr><td>7</td><td>49</td><td>598</td><td>199</td><td>41</td><td>150</td><td>5</td><td>33.3%</td><td>41</td></tr>
+				<tr><td>8</td><td>50</td><td>683</td><td>229</td><td>47</td><td>173</td><td>5</td><td>33.5%</td><td>47</td></tr>
+				<tr><td>9</td><td>51</td><td>769</td><td>259</td><td>53</td><td>196</td><td>5</td><td>33.7%</td><td>53</td></tr>
+				<tr><td>10</td><td>52</td><td>854</td><td>294</td><td>59</td><td>219</td><td>10</td><td>34.4%</td><td>59</td></tr>
+				<tr><td>11</td><td>53</td><td>966</td><td>324</td><td>65</td><td>242</td><td>10</td><td>33.5%</td><td>65</td></tr>
+				<tr><td>12</td><td>54</td><td>1078</td><td>353</td><td>71</td><td>265</td><td>10</td><td>32.7%</td><td>71</td></tr>
+				<tr><td>13</td><td>55</td><td>1190</td><td>382</td><td>77</td><td>288</td><td>10</td><td>32.1%</td><td>78</td></tr>
+				<tr><td>14</td><td>56</td><td>1302</td><td>412</td><td>83</td><td>311</td><td>10</td><td>31.6%</td><td>84</td></tr>
+				<tr><td>15</td><td>57</td><td>1413</td><td>447</td><td>89</td><td>334</td><td>15</td><td>31.6%</td><td>90</td></tr>
+				<tr><td>16</td><td>58</td><td>1525</td><td>477</td><td>95</td><td>357</td><td>15</td><td>31.3%</td><td>96</td></tr>
+				<tr><td>17</td><td>59</td><td>1637</td><td>507</td><td>101</td><td>380</td><td>15</td><td>31.0%</td><td>103</td></tr>
+				<tr><td>18</td><td>60</td><td>1749</td><td>538</td><td>107</td><td>403</td><td>15</td><td>30.8%</td><td>109</td></tr>
+				<tr><td>19</td><td>61</td><td>1861</td><td>569</td><td>113</td><td>426</td><td>15</td><td>30.6%</td><td>115</td></tr>
+				<tr><td>20</td><td>62</td><td>1973</td><td>605</td><td>119</td><td>449</td><td>15</td><td>30.7%</td><td>122</td></tr>
+				<tr><td>21</td><td>63</td><td>2150</td><td>637</td><td>125</td><td>472</td><td>20</td><td>29.6%</td><td>158</td></tr>
+				<tr><td>22</td><td>64</td><td>2328</td><td>669</td><td>131</td><td>495</td><td>20</td><td>28.7%</td><td>134</td></tr>
+				<tr><td>23</td><td>65</td><td>2506</td><td>702</td><td>137</td><td>518</td><td>20</td><td>28.0%</td><td>141</td></tr>
+				<tr><td>24</td><td>66</td><td>2680</td><td>735</td><td>143</td><td>541</td><td>20</td><td>27.4%</td><td>147</td></tr>
+				<tr><td>25</td><td>67</td><td>2854</td><td>774</td><td>149</td><td>564</td><td>20</td><td>27.1%</td><td>154</td></tr>
+				<tr><td>26</td><td>68</td><td>3029</td><td>808</td><td>155</td><td>587</td><td>25</td><td>26.7%</td><td>160</td></tr>
+				<tr><td>27</td><td>69</td><td>3203</td><td>844</td><td>161</td><td>610</td><td>25</td><td>26.4%</td><td>167</td></tr>
+				<tr><td>28</td><td>70</td><td>3377</td><td>880</td><td>167</td><td>633</td><td>25</td><td>26.1%</td><td>173</td></tr>
+				<tr><td>29</td><td>71</td><td>3457</td><td>1185</td><td>173</td><td>656</td><td>25</td><td>34.3%</td><td>180</td></tr>
+				<tr><td>30</td><td>72</td><td>3538</td><td>1203</td><td>179</td><td>679</td><td>25</td><td>34.0%</td><td>186</td></tr>
+				<tr><td>21</td><td>73</td><td>3688</td><td>1215</td><td>185</td><td>702</td><td>30</td><td>32.9%</td><td>193</td></tr>
+				<tr><td>22</td><td>74</td><td>3839</td><td>1228</td><td>191</td><td>725</td><td>30</td><td>32.0%</td><td>200</td></tr>
+				<tr><td>23</td><td>75</td><td>3990</td><td>1240</td><td>197</td><td>748</td><td>30</td><td>31.1%</td><td>206</td></tr>
+				<tr><td>24</td><td>76</td><td>4141</td><td>1253</td><td>203</td><td>771</td><td>30</td><td>30.3%</td><td>213</td></tr>
+				<tr><td>25</td><td>77</td><td>4192</td><td>1270</td><td>209</td><td>794</td><td>30</td><td>30.3%</td><td>220</td></tr>
+				<tr><td>21</td><td>78</td><td>4442</td><td>1282</td><td>215</td><td>817</td><td>35</td><td>28.9%</td><td>226</td></tr>
+				<tr><td>22</td><td>79</td><td>4593</td><td>1294</td><td>221</td><td>840</td><td>35</td><td>28.2%</td><td>233</td></tr>
+				<tr><td>23</td><td>80</td><td>4744</td><td>1309</td><td>227</td><td>863</td><td>35</td><td>27.6%</td><td>240</td></tr>
+				<tr><td>24</td><td>81</td><td>4750</td><td>1320</td><td>233</td><td>886</td><td>35</td><td>27.8%</td><td>247</td></tr>
+				<tr><td>25</td><td>82</td><td>4756</td><td>1331</td><td>239</td><td>909</td><td>35</td><td>28.0%</td><td>253</td></tr>
+				<tr><td>21</td><td>83</td><td>4762</td><td>1343</td><td>245</td><td>932</td><td>38</td><td>28.2%</td><td>260</td></tr>
+				<tr><td>22</td><td>84</td><td>4768</td><td>1351</td><td>251</td><td>955</td><td>38</td><td>28.3%</td><td>267</td></tr>
+				<tr><td>23</td><td>85</td><td>4774</td><td>1364</td><td>257</td><td>978</td><td>38</td><td>28.6%</td><td>274</td></tr>
+				<tr><td>24</td><td>86</td><td>4780</td><td>1371</td><td>263</td><td>1001</td><td>38</td><td>28.7%</td><td>281</td></tr>
+				<tr><td>25</td><td>87</td><td>4786</td><td>1375</td><td>269</td><td>1024</td><td>38</td><td>28.7%</td><td>288</td></tr>
+				<tr><td>21</td><td>88</td><td>4792</td><td>1386</td><td>275</td><td>1047</td><td>39</td><td>28.9%</td><td>295</td></tr>
+				<tr><td>22</td><td>89</td><td>4798</td><td>1396</td><td>281</td><td>1070</td><td>39</td><td>29.1%</td><td>302</td></tr>
+				<tr><td>23</td><td>90</td><td>4804</td><td>1406</td><td>287</td><td>1093</td><td>39</td><td>29.3%</td><td>309</td></tr>
+				<tr><td>24</td><td>91</td><td>4810</td><td>1416</td><td>293</td><td>1116</td><td>39</td><td>29.4%</td><td>316</td></tr>
+				<tr><td>25</td><td>92</td><td>4816</td><td>1435</td><td>299</td><td>1139</td><td>39</td><td>29.8%</td><td>323</td></tr>
 				</tbody>
 		</table>
 		</div>
@@ -265,13 +291,17 @@
 			<div>
 			※保険料累計額は、転換価格・任意積立保険料を含めた数値で表示しております。
 			</div>
-			<div style="margin-top:24px;margin-bottom:24px;">
+			<div>
 			※記載の保険料累計額は、更新時年齢が60歳以下のときには健康自慢を付加したものとして算出しています。
 			</div>
+			<div style="color:red;">
+			※解約返戻金をお支払いした場合、以後の保障はなくなります。
+			</div>
 		</div>
+		<!--
 		<div class ="kaiyakuhenreikinNoSuii-footer">
 			<div style="font-seize:12px;color:red; height:40px; float:left; width:40%; text-indent:-1em">
-			※解約返戻金をお支払いした場合、以後の保障はなくなります。
+
 			</div>
 			<div style="font-size:12px;color:black;float:right; border:solid; width:60%;">
 				<table width=100%>
@@ -286,11 +316,13 @@
 			</div>
 			<div style="clear:left;">
 			</div>
-			<footer>
-				<p>
-				<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
-				</p>
-			</footer>
 		</div>
+		-->
+		</section>
+		<footer>
+			<p>
+			<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
+			</p>
+		</footer>
 	</body>
 </html>

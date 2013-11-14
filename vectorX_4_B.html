@@ -149,59 +149,76 @@
     .outline article#pageBody section nav li.haitokin.small a{background-position:-672px 18px; font-size:13px;}
 
     .keiyakugaiyou {
-        width:960px;
-        margin-top: -350px; 
-        margin-left:-480px;
+        margin-top: -350px;
     }
-    #insuranceShift {
+    #accounting {
       max-height: 600px;
     }
-    #insuranceShift > .unit {
-      text-align:right;
+    #accounting .block {
+        margin-bottom: 10px;
     }
-    #insuranceShift .list{
+    #accounting .block .title {
+        color: #008484;
+    }
+    #accounting .block table {
         width: 100%;
-        border-top: 2px solid #000000;
-        border-right: 2px solid #000000;
+        border-top: 1px solid #008484;
+        border-right: 1px solid #008484;
     }
-    #insuranceShift .list th,
-    #insuranceShift .list td {
-      border-bottom: solid 1px #000000;
-      border-left: solid 1px #000000;
-      line-height:1;
-      height: 35px;
-      vertical-align: middle;
+    #accounting .block table th,
+    #accounting .block table td
+    {
+        border-bottom: 1px solid #008484;
+        border-left: 1px solid #008484;
+        padding: 0px 10px;
+        height: 30px;
+        vertical-align: middle;
     }
-    #insuranceShift .list tr th:first-child,
-    #insuranceShift .list tr td:first-child{
-        border-left: solid 2px #000000;
-        border-right: solid 2px #000000;
-        width: 200px;
+    #accounting .block table td {
+        text-align: right;
     }
-    #insuranceShift .list tr:last-child td{
-        border-bottom: solid 2px #000000;
+    #accounting .block table tr td:nth-child(2) {
+        width:200px;
     }
-    #insuranceShift .list tr th{
-        border-bottom: solid 2px #000000;
-        text-align:center;
-        background-color: #d0e0ef;
+    #accounting .block table tr td:nth-child(3) {
+        width:130px;
     }
-    #insuranceShift .list tr td{
-        text-align:right;
-        padding: 0 5px;
+
+    #accounting .block:nth-of-type(1) table tr:first-child th {
+        border-bottom: none;
     }
-    #insuranceShift .list tr td:first-child{
-        text-align:left;
+    #accounting .block:nth-of-type(1) table tr td:last-child {
+        text-align: center;
     }
-    #insuranceShift .list tr:nth-last-child(2) td{
-        border-bottom: 3px double #000000;
+    #accounting .block:nth-of-type(1) table tr:first-child td:last-child {
+        color: #ff0000;
     }
-    #insuranceShift .list tr:nth-last-child(4) td{
-        border-bottom: solid 2px #000000;
+    #accounting .block:nth-of-type(1) table td .subtitle{
+        float: left;
     }
-    #insuranceShift .message {
-        border:1px solid #000000;
-        padding:5px 10px;
+
+    #accounting .block:nth-of-type(2) table tr:first-child td:last-child {
+        text-align: center;
+    }
+    #accounting .block:nth-of-type(2) table tr:nth-child(2) td,
+    #accounting .block:nth-of-type(2) table tr:nth-child(2) th {
+        border-bottom: none;
+    }
+    #accounting .block:nth-of-type(2) table tr:nth-child(2) th,
+    #accounting .block:nth-of-type(2) table tr:nth-child(3) th {
+        padding-left: 100px;
+    }
+
+    #accounting .message1{
+        background-color: #0000ff;
+        color: #ffffff;
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
+        padding:5px;
+        margin-bottom: 10px;
+    }
+    #accounting .message2 {
+        padding:5px;
+        border: 1px solid #008484;
     }
 </style>
 <style>
@@ -221,217 +238,74 @@
         <div class="modalHost" style="z-index: 1058; opacity: 1;">
             <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true">
                 <div class="overlayPannel confWin keiyakugaiyou">
-                    <header data-bind="text: title">ご加入後の保険料の推移</header>
-                    <section id="insuranceShift" class="scrlParent">
-                        <div class="small unit">【単位：円】</div>
-                        <table class="list">
-                            <thead>
-                                <tr>
-                                    <th>主契約・特約</th>
-                                    <th>ご契約時</th>
-                                    <th>35歳時</th>
-                                    <th>45歳時</th>
-                                    <th>55歳時</th>
-                                    <th>60歳時</th>
-                                    <th>65歳時</th>
-                                    <th>75歳時</th>
-                                    <th>80歳時</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>定期保険特約2007</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>ワイドディフェンス生活保障特約Ａ(10年確定タイプ)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>ワイドディフェンス特約Ａ(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>ナイスリー特約Ａ(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>災害割増特約2007</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>障害特約2007</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>特定損傷特約2007</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>総合入院特約2011(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>生活習慣病入院特約2011(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>ガン入院特約2011(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>ストレス性疾患入院特約2011(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>先進医療特約2011(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>退院給付特約2007(有期型)</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>保障部分の保険料</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td>新積立保険部分の保険料</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                                <tr>
-                                    <td class="large">払込保険料</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                    <td>999,999</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <ul class="items small">
-                            <li class="attention">※XX歳時以降の保険料は表示していません。</li>
-                            <li class="info">※「保障分の保険料」の※印には高額割引保険料率が適用されています。</li>
-                            <li class="info">※楽々名人が付加されています。</li>
-                        </ul>
-                        <div class="message">
+                    <header data-bind="text: title">法人契約の経理処理</header>
+                    <section id="accounting" class="scrlParent">
+                        <div class="block">
+                            <div class="title">【1】ご契約時の月払保険料について</div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="title large">特約(保障部分)の月払保険料</td>
+                                        <td><span class="subtitle">うち</span><em>29,931</em><span class="small">円</span></td>
+                                        <td>損金算入</td>
+                                    </tr>
+                                    <tr>
+                                        <td><em class="large">55,366</em><span class="small">円※</span></td>
+                                        <td><span class="subtitle">うち</span><em>25,435</em><span class="small">円</span></td>
+                                        <td>資産計上</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title large">積立保険部分の月払保険料</th>
+                                        <td><em>**</em><span class="small">円</span></td>
+                                        <td>資産計上</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <ul class="items small">
-                                <li>※更新後の保険料は、更新日における被保険者の年齢および保険料率により計算します。なお、この資料に記載の更新後の保険料は、計算基準日現在の保険料率で計算していますので、実際の更新後の保険料とはことなる場合があります。<br>更新の対象となる特約は「設計書(契約概要)」4ページ「ご提案内容の明細」でご確認ください。</li>
-                                <li>※この資料に記載のご契約時の保険料は、健康自慢を付加したものとして計算しています。</li>
-                                <li>※健康自慢は更新のお取り扱いは出来ません。適用対象特約の更新の際に新たに健康自慢の付加をお申し出いただき、健康自慢の付加条件を満たしている場合には、更新後の保険料についても健康体料率が適用されます。なお、この資料に記載の保険料は、更新日における被保険者の年齢が60歳以下のときには健康自慢を付加したものとして計算しています。</li>
-                                <li>※この資料では、ご契約後XX年間、定期取崩による保険料調整機能を活用しています。</li> 
+                                <li>(注)特約(保障部分)の保険料のうち、終身保険特約2007、ワイドディフェンス特約A(終身型)、ナイスリー特約A(終身型)、介護保障特約A
+                                    (終身型)、障害サポート特約A(終身型)の保険料は資産計上となります。</li>
+                            </ul>
+                            <div class="note small">
+                                資産計上してきた積立保険部分の金額【2】を毎月 ○○円ずつ取り崩して特約の保険料に充当しています。<br>
+                                なお、※の金額には、この ○○円の取り崩し額を含みます。
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="title">【2】積立保険に充当した任意積立保険料・転換価格について</div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="title">積立保険に充当した合計金額</td>
+                                        <td><em>1,000,000</em><span class="small">円</span></td>
+                                        <td rowspan="3">資産計上</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">（　うち　任意積立保険料</th>
+                                        <td><em>1,000,000</em><span class="small">円</span><span class="title">　）</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">（　うち　転換価格</th>
+                                        <td><em>**</em><span class="small">円</span><span class="title">　）</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="note small">
+                                この資産計上した積立金のうち、 ○○園を毎月取り崩し、特約の月払保険料に充当しています。
+                            </div>
+                        </div>
+                        <div class="message1 small">
+                            <em>表示している経理処理は、作成年月日現在の税制に基づいており、今後変更とある可能性があります。また、これは、当社がお客様に税務に関するアドバイスを行うものではありません。税務処理の詳細につきましては、所轄の税務署もしくはご担当の税理士にご確認ください。</em><br>
+                            税務処理の詳細につきましては、所轄の税務署もしくはご担当の税理士にご確認ください。
+                        </div>
+                        <div class="message2 small">
+                            <ul>
+                                <li>詳しくは、パンスレット「法人契約の経理と税務」をご覧下さい。</li>
+                                <li>ご契約形態が上記とことなる場合、経理処理は異なります。</li>
+                                <li>ご契約後、保障内容の見直しなどで保障内容が変更された場合、上記の保険料は変更される場合があります。</li>
+                                <li>序機の保険料は、健康自慢を付加した場合の保険料です。</li>
                             </ul>
                         </div>
                     </section>
-                    
                     <footer>
                         <p>
                             <a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
