@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8080/#/keiyaku/gaiyo/1035 -->
+<html style="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Keiyaku/gaiyo | Green PPL Tablet</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width">
+		<!--		 <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-landscape.png" media="(orientation:landscape)" /> -->
+		<!--		 <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-portrait.png" media="(orientation:portrait)" /> -->
+		<!--		 <link rel="apple-touch-icon" href="resources/content/images/icon.png"/> -->
+		<!-- TODO durandal.cssのダイアログスタイルをstyle.cssに移動する -->
+		<link rel="stylesheet" href="http://localhost:8080/resources/content/durandal.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/root2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/base2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/toggles2.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/parts.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery-ui-datepicker.custom.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
+		<link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
+		<link rel="stylesheet" type="text/css" media="all" href="base.css">
+		<link rel="stylesheet" type="text/css" media="all" href="components.css">
+		<!-- TODO 専用のcssファイルへ移動 -->
+		</head>
+		<body style="margin-right: 0px;">
+		<!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
+		<style>
+			.confWin {
+				display: block;
+				width : 800px;
+				height : 420px;
+				margin : -210px -400px -210px -400px;
+			}
+			.confWin footer p {
+				min-width: 110px;
+				width: auto;
+			}
+			.confWin {
+				min-height: 270px;
+			}
+			.confWin section {
+				min-height: 230px;
+				height: auto;
+			}
+			.confWin footer {
+				position: relative;
+				height: 50px;
+			}
+		</style>
+		<style>
+			.uchiwake-table {
+				margin-left : 14px;
+				width : 100%;
+			}
+			.uchiwake-table td,th {
+				border : solid 1px;
+				text-align:center;
+				font-weight:bold;
+			}
+			.uchiwake-table th {
+				background-color:##D1D1D1;
+			}
+			.uchiwake-table .textright{
+				text-align:right;
+				padding-right:14px;
+			}
+			.uchiwake-table .textleft{
+				text-align:left;
+				padding-left:14px;
+			}
+			div.hosoku {
+				text-indent : 14px;
+			}
+		</style>
+		</div>
+		<div class="overlayPannel confWin keiyakugaiyou">
+		<header data-bind="text: title">
+			■ガンで入院のとき
+        </header>
+		<section class="shiharaijiyu-explain">
+		<div class="uchiwake">
+			□支払い金額の内訳
+		</div>
+		<table class="uchiwake-table">
+			<thead>
+				<th>対象特約</th>
+				<th>入院したとき</th>
+				<th>1～4日目まで<span style="color:red;"><br>まとめて<br>4日分お支払い</span></th>
+				<th>5～<span style="color:red;">90</span>日まで<br>1日につき</span></th>
+				<th>給付限度</th>
+			</thead>
+			<tbody>
+				<tr><td rowspan="2" class="textleft">総合入院特約 2011</td><td>入院診断給付金</td><td colspan="2">疾病入院給付金</td><td rowspan="6">給付限度なし</td></tr>
+				<tr>                            <td class="textright">10,000万円</td><td class="textright">40,000万円</td><td class="textright">10,000万円</td></tr>
+				<tr><td rowspan="2" class="textleft">生活習慣病入院特約 2011</td><td>―</td><td colspan="2">生活習慣病入院給付金</td></tr>
+				<tr><td>―</td><td>40,000万円</td><td class="textright">10,000万円</td></tr>
+				<tr><td rowspan="2" class="textleft">ガン入院特約 2011</td><td >ガン入院一時給付金</td><td colspan="2">ガン入院給付金</td></tr>
+				<tr><td class="textright">20万円</td><td class="textright">40,000万円</td><td class="textright">10,000万円</td></tr>
+			</tbody>
+		</table>
+		<div class="hosoku">
+			<div>
+			※治療を目的とした病院または診療所での入院がお支払いの対象となります。
+			</div>
+		</div>
+		</section>
+		<footer>
+			<p>
+			<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style} style="margin-bottom:10px;"">閉じる</a>
+			</p>
+		</footer>
+	</body>
+</html>

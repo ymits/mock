@@ -36,8 +36,9 @@
 		<style>
 			.confWin {
 				display: block;
-				width : 960px;
-				margin-top: -380px; /** TODO Kawabata 見えないのでmargin-top調整 **/
+				width : 1000px;
+				height : 700px;
+				margin : -360px -500px -360px -500px;
 			}
 			.confWin footer p {
 				min-width: 110px;
@@ -45,7 +46,6 @@
 			}
 			.confWin {
 				min-height: 270px;
-				height: auto;
 			}
 			.confWin section {
 				min-height: 230px;
@@ -110,6 +110,10 @@
 				
 			}
 
+			.kaiyakuhenreikin-table td,th{
+				font-size:14px;
+			}
+			
 			.kaiyakuhenreikin-table th {
 				background-color: #CCF1B3;
 				text-align : center;
@@ -130,17 +134,21 @@
 			
 			section.kaiyakuhenreikinNoSuii {
 				padding-top : 12px;
-				height : 90%;
+				height : 88%;
 				overflow-y : scroll;
+				margin-bottom:1px;
 			}
 			div.kaiyakuhenreikinNoSuii-hosoku > div {
 				text-indent:-1em;
 				padding-left:1em;
-				font-size : 12px;
+			}
+			
+			.kaiyakuhenreikinNoSuii-hosoku div {
+				font-size:12px;
 			}
 		</style>
 		</div>
-		<div class="overlayPannel confWin keiyakugaiyou" style ="height:600px ; padding-bottom : 25px;">
+		<div class="overlayPannel confWin keiyakugaiyou">
 		<header data-bind="text: title">
 			解約返戻金の推移
         </header>
@@ -321,7 +329,7 @@
 		</section>
 		<footer>
 			<p>
-			<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
+			<a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style} style="margin-bottom:10px;"">閉じる</a>
 			</p>
 		</footer>
 	</body>
