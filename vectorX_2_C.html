@@ -248,6 +248,11 @@
     .confWin {min-height: 270px; height: auto;}
     .confWin section {min-height: 230px; height: auto;}
     .confWin footer {position: relative; height: 50px;}
+    
+    
+    .red {
+    	color:red;
+    }
 </style>
 </div><!--/ko-->
 </section></div>
@@ -298,14 +303,89 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="btnArea">
-                          <a href="javascript:void(0);" class="btn sub">不慮の事故による死亡・所定の高度障害状態の保障</a>
+                        <div id="popup"  style="visibility:hidden;position:absolute; left:385px; top:100px;" >
+                        	<div class="overlayPannel confWin keiyakugaiyou">
+    	                	<header data-bind="text: title">不慮の事故による死亡・所定の高度障害状態の保障</header>
+        	            	<section id="shibouHoshou">
+                        	<div class="red">
+                        		<b>70歳まで：プラス800万円　80歳までプラス＋500万円</b>
+                        	</div>
+                        	<table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2"></th>
+                                    <th>40歳～49歳</th>
+                                    <th>50歳～64歳</th>
+                                    <th>65歳～70歳</th>
+                                    <th>70歳～80歳</th>
+                                    <th>一生涯<span class="small">（終身保障）</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="summary">
+                                    <td colspan="2">合計</td>
+                                    <td><em class="large red">6,500</em><span class="small">万円</span></td>
+                                    <td><em class="large red">5,100</em><span class="small">万円</span></td>
+                                    <td><em class="large red">3,000</em><span class="small">万円</span></td>
+                                    <td><em class="large red">1,500</em><span class="small">万円</span></td>
+                                    <td><em class="large">500</em><span class="small">万円</span></td>
+                                </tr>
+                                <tr class="temporary">
+                                    <td>&nbsp;</td>
+                                    <td>一時金</td>
+                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
+                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
+                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
+                                    <td><em class="large red">1,500</em><span class="small">万円</span></td>
+                                    <td><em class="large">500</em><span class="small">万円</span></td>
+                                </tr>
+                                <tr class="pension">
+                                    <td>&nbsp;</td>
+                                    <td>年金</td>
+                                    <td>140<span class="small">万円×</span>30<span class="small">年</span><br><em class="large">4,200</em><span class="small">万円</span></td>
+                                    <td>140<span class="small">万円×</span>20<span class="small">年</span><br><em class="large">2,800</em><span class="small">万円</span></td>
+                                    <td>140<span class="small">万円×</span>5<span class="small">年</span><br><em class="large">700</em><span class="small">万円</span></td>
+                                    <td><em class="large">0</em><span class="small">万円</span></td>
+                                    <td><em class="large">0</em><span class="small">万円</span></td>
+                                </tr>
+                            </tbody>
+                        	</table>
+
+                    		</section>
+                    		 <footer>
+                        <p>
+                            <a href="javascript:void(0);" onclick="removePopUP(); return false;" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
+                        </p>
+                    </footer>
+                        	</div>
+                        	</div>
+						<script type="text/javascript"> 
+							/*
+								$("#appender").load("vectorX_2_C_POPUP.html","html");
+								alert("test");
+						 	 **/
+						 	function addElement() {
+						 	var obj = document.getElementById("popup"); 
+						 	obj.style.visibility = "visible";
+							var obj2 = document.getElementById("btnArea"); 
+						 	obj2.style.visibility = "hidden";
+							}
+							
+							function removePopUP() {
+						 	var obj = document.getElementById("popup"); 
+						 	obj.style.visibility = "hidden";
+							var obj2 = document.getElementById("btnArea"); 
+						 	obj2.style.visibility = "visible";
+
+							}
+						</script> 
+                        <div class="btnArea" id="btnArea">
+                          <a href="javascript:void(0)" onclick="addElement(); return false;" class="btn sub">不慮の事故による死亡・所定の高度障害状態の保障</a>
                         </div>
                     </section>
-                    
                     <footer>
                         <p>
-                            <a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
+                            <a href="./index.html" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
                         </p>
                     </footer>
                 </div>

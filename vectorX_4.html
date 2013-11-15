@@ -259,7 +259,7 @@
     <header id="pageHeader">
         <nav id="transfer">
             <ul>
-                <li class="homeLink"><a data-bind="attr: { href: routing.paths.home.hash }" href="http://localhost:8080/#/home">HOME</a></li>
+                <li class="homeLink"><a data-bind="attr: { href: routing.paths.home.hash }" href="./index.html">HOME</a></li>
                 <li class="return"><a href="javascript:void(0);" data-bind="click: function() { $root.clickBackButton(false) }, active: senimotoShortName !== ''" class="">前画面に戻る</a></li>
             </ul>
                 
@@ -470,5 +470,27 @@
             $('.modalBlockout').remove();
             $('.modalHost').remove();
           });
+        </script>
+        <script>
+            var isTouch = !!('ontouchstart' in window);
+            var pointer_events = {
+                start: isTouch ? 'touchstart' : 'mousedown',
+                move: isTouch ? 'touchmove' : 'mousemove',
+                end: isTouch ? 'touchend' : 'mouseup'
+            };
+            var getOffsetX = function (evt) {
+                var offsetX = evt.offsetX ? evt.offsetX : (evt.pageX - evt.currentTarget.offsetLeft);
+                return offsetX;
+            }
+            var x = 0;
+            $(window).on(pointer_events.start, function(evt){
+                x = getOffsetX(evt);
+            });
+            $(window).on(pointer_events.end, function(evt){
+                var endX = getOffsetX(evt);
+                if((endX - x) > 200){
+                    window.location.href = './index.html';
+                }
+            });
         </script>
 </body></html>
