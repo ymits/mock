@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 footer#pageFooter nav.btnArray ul li.nextPage a{
-	background-image: url(img/icn/stepNext.png), url(img/bg/gradientGreen.png);
-	background-repeat: no-repeat, repeat-x;
-	background-position: right 10px center,left center;
-	background-size: 24px 25px,auto 100%;
-	padding: 0 40px 0 15px;
+  background-image: url(img/icn/stepNext.png), url(img/bg/gradientGreen.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: right 10px center,left center;
+  background-size: 24px 25px,auto 100%;
+  padding: 0 40px 0 15px;
 }
 footer#pageFooter nav.btnArray ul li.prevPage a{
 	background-image: url(img/tmp/stepPrev.png), url(img/bg/gradientGreen.png);
@@ -17,13 +17,13 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 
 
 .keiyakugaiyou .link {
-    text-decoration:underline;
-    color: #0000ff;
+  text-decoration:underline;
+  color: #0000ff;
 }
 
 .keiyakugaiyou .link:after {
-    content: " ";
-    display: inline-block;
+  content: " ";
+  display: inline-block;
 }
 
 .keiyakugaiyou .link.explain:after {
@@ -33,41 +33,62 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 	width: 16px ;
 	height: 14px ;
 }
+.keiyakugaiyou .link.trans:after {
+  background:url("img/tmp/trans.png") 0 0 no-repeat transparent;
+  background-size: 14px 14px;
+  background-position: 2px 0px;
+  width: 16px ;
+  height: 14px ;
+}
+.keiyakugaiyou .detail {
+  background-image:url(img/tmp/exLinkWhite.png), url(img/tmp/arrow.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 14px 14px, 100% 100%;
+  background-position: 39px 6px, 0px 0px;
+  width: 67px;
+  height: 30px;
+
+  color: #ffffff;
+  line-height: 30px;
+  padding-left: 8px;
+  display: inline-block;
+  text-align: left;
+}
+.keiyakugaiyou .detail:active{
+  background-image:url(img/tmp/exLinkWhite.png), url(img/tmp/arrow2.png);
+}
+.keiyakugaiyou .detail:after {
+  content: "詳細";
+}
+/*
 .keiyakugaiyou .link.dialog:after {
-    background:url("img/tmp/exLink.png") 0 0 no-repeat transparent;
-    background-size: 14px 14px;
+  background:url("img/tmp/exLink.png") 0 0 no-repeat transparent;
+  background-size: 14px 14px;
 	background-position: 2px 0px;
 	width: 16px ;
 	height: 14px ;
 }
 .keiyakugaiyou .link.dialog-white:after {
-    background:url("img/tmp/exLinkWhite.png") 0 0 no-repeat transparent;
-    background-size: 14px 14px;
-	background-position: 2px 0px;
-	width: 16px ;
-	height: 14px ;
-}
-.keiyakugaiyou .link.trans:after {
-    background:url("img/tmp/trans.png") 0 0 no-repeat transparent;
-    background-size: 14px 14px;
+  background:url("img/tmp/exLinkWhite.png") 0 0 no-repeat transparent;
+  background-size: 14px 14px;
 	background-position: 2px 0px;
 	width: 16px ;
 	height: 14px ;
 }
 .keiyakugaiyou .list:after {
-    background:url("img/tmp/list.png") 0 0 no-repeat transparent;
-    background-size: 14px 14px;
+  background:url("img/tmp/list.png") 0 0 no-repeat transparent;
+  background-size: 14px 14px;
 	background-position: 2px 0px;
 	width: 16px ;
 	height: 14px ;
 }
-
+*/
 .keiyakugaiyou .linkBtn{
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #999;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid #ccc;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #ccc;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
 }
 .keiyakugaiyou .linkBtn:active{
 	padding: 0px 9px 0px 11px;
@@ -79,17 +100,86 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 }
 
 .keiyakugaiyou .dl-horizontal dt{
-    float: left;
-    overflow: hidden;
-    clear: left;
-    text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  float: left;
+  overflow: hidden;
+  clear: left;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .keiyakugaiyou .dl-horizontal dd{
-    text-align: right;
+  text-align: right;
 }
 .keiyakugaiyou .dl-horizontal dd .unit{
-    display: inline-block;
-    text-align: left;
+  display: inline-block;
+  text-align: left;
+}
+
+/** タブ関連 */
+.keiyakugaiyou .tab-content > .tab-pane{
+  display: none;
+}
+.keiyakugaiyou .tab-content > .active{
+  display: block;
+}
+.keiyakugaiyou .fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+     -moz-transition: opacity 0.15s linear;
+       -o-transition: opacity 0.15s linear;
+          transition: opacity 0.15s linear;
+}
+
+.keiyakugaiyou .fade.in {
+  opacity: 1;
+}
+
+/** サブタブ関連 */
+.keiyakugaiyou .subTabs {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+.keiyakugaiyou .subTabs > li {
+  display: inline-block;
+  margin-bottom: -1px;
+}
+.keiyakugaiyou .subTabs > li > a {
+  display: block;
+  padding: 8px 12px;
+  margin-right: 2px;
+  line-height: 20px;
+  color: #0088cc;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.keiyakugaiyou .subTabs > li > a:hover, 
+.keiyakugaiyou .subTabs > li > a:focus {
+  color: #005580;
+  border-color: #eeeeee #eeeeee #dddddd;
+  background-color: #eeeeee;
+}
+.keiyakugaiyou .subTabs > li.active > a, 
+.keiyakugaiyou .subTabs > li.active > a:hover, 
+.keiyakugaiyou .subTabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+/** アコーディオン関連 */
+.keiyakugaiyou .collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.keiyakugaiyou .collapse.in {
+  height: auto;
 }

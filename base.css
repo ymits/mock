@@ -2,6 +2,7 @@
 
 .keiyakugaiyou {
     font-size: 14px;
+    background-color: #ffffff;
 }
 
 .keiyakugaiyou em{
@@ -58,4 +59,46 @@
 
 .outline article.keiyakugaiyou main .top_message{
     margin-bottom: 10px;
+}
+
+/* 左メニュー */
+.keiyakugaiyou aside#menuArea {
+    width: 200px;
+}
+.keiyakugaiyou aside#menuArea .customerInfo dl{
+    padding: 0 10px;
+}
+.keiyakugaiyou aside#menuArea .customerInfo dl dd{
+    padding-left: 10px;
+}
+.keiyakugaiyou aside#menuArea .mainTabs li a {
+    height: 51px;
+    display: table;
+    width: 98%;
+    background: url(img/bg/flowNavBtn.png) repeat-x left center;
+    background-size: 1px 100%;
+    border: 1px #484848 solid;
+    border-radius: 3px;
+    margin-left: 3px;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(255,255,255,1);
+}
+.keiyakugaiyou aside#menuArea .mainTabs li.active a {
+    background: #02993b;
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,1);
+}
+.keiyakugaiyou aside#menuArea .mainTabs li a .num{
+    width: 25px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.keiyakugaiyou aside#menuArea .mainTabs li a .title{
+    display: table-cell;
+    vertical-align: middle;
+}
+/* 右コンテンツ*/
+.keiyakugaiyou article#pageBody {
+    height: 650px;
 }

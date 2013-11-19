@@ -1,399 +1,190 @@
-<!DOCTYPE html>
-<!-- saved from url=(0042)http://localhost:8080/#/keiyaku/gaiyo/1035 -->
-<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Keiyaku/gaiyo | Green PPL Tablet</title>
-        <meta charset="utf-8">
-        
-        <meta http-equiv="Content-Style-Type" content="text/css">
-        <meta http-equiv="Content-Script-Type" content="text/javascript">
-        <meta http-equiv="imagetoolbar" content="no">
-        <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style type="text/css">
+#shibouHoshou table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
 
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width">
+#shibouHoshou table thead tr:first-child th:first-child {
+  border-radius: 5px 0 0 0;
+}
 
-<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-landscape.png" media="(orientation:landscape)" /> -->
-<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-portrait.png" media="(orientation:portrait)" /> -->
-<!--         <link rel="apple-touch-icon" href="resources/content/images/icon.png"/> -->
-        <!-- TODO durandal.cssのダイアログスタイルをstyle.cssに移動する -->
-        <link rel="stylesheet" href="http://localhost:8080/resources/content/durandal.css">
+#shibouHoshou table thead tr:first-child th:last-child {
+  border-radius:0 5px 0 0;
+}
 
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.mCustomScrollbar.css">
+#shibouHoshou table th,
+#shibouHoshou table td {
+  border-bottom: solid 1px #000000;
+  border-left: solid 1px #000000;
+  line-height: 1;
+}
 
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/root2.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/base2.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each2.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/toggles2.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/parts.css">
+#shibouHoshou table th {
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  background-color:#d6eeff;
+}
+#shibouHoshou table tr:first-child th {
+  border-top: solid 1px #000000;
+}
 
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery-ui-datepicker.custom.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
+#shibouHoshou table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+#shibouHoshou table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
 
+#shibouHoshou table thead tr:first-child th:last-child,
+#shibouHoshou table tbody tr td:last-child {
+  border-right: solid 1px #000000;
+}
 
-        <link rel="stylesheet" type="text/css" media="all" href="base.css">
-        <link rel="stylesheet" type="text/css" media="all" href="components.css">
-        <style>
-            input[type=text].invalid {
-                border: 1px #f0a0a0 solid;
-                border-radius: 5px;
-                background: #fff;
-                padding: 6px;
-                font-size: 14px;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-            }
-            span.selWrap.invalid {
-                border: 1px red solid;
-            }
-        </style>
+#shibouHoshou table tbody tr td:first-child,
+#shibouHoshou table tbody tr:first-child td {
+  border-bottom: none;
+}
+#shibouHoshou table tbody tr:last-child td:first-child {
+  border-bottom: solid 1px #000000;
+}
+#shibouHoshou table tbody tr:nth-child(2) td {
+  border-top: solid 1px #000000;
+}
+#shibouHoshou table tbody tr:nth-child(2) td:first-child {
+  border-top: none;
+}
 
-        <!-- TODO 専用のcssファイルへ移動 -->
-        <style>
-            .fukidashiHost {
-                opacity: 0;
-                -webkit-backface-visibility: hidden;
-                -webkit-transition: opacity 0.1s linear;
-                -moz-transition: opacity 0.1s linear;
-                -o-transition: opacity 0.1s linear;
-                transition: opacity 0.1s linear;
-                margin: 10px;
-            }
-            .defaultArrow {
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                background-repeat: no-repeat;
-                background-image: url(resources/content/img/icn_own/fukidashiArrowDark.png);
-            }
-            .topArrow {  }
-            .bottomArrow {
-                transform:rotate(180deg);
-                -ms-transform:rotate(180deg);
-                -webkit-transform:rotate(180deg);
-            }
-            .leftArrow {
-                transform:rotate(270deg);
-                -ms-transform:rotate(270deg);
-                -webkit-transform:rotate(270deg);
-            }
-            .rightArrow {
-                transform:rotate(90deg);
-                -ms-transform:rotate(90deg);
-                -webkit-transform:rotate(90deg);
-            }
-        </style>
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./greenMock_files/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/app" src="./greenMock_files/app.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewLocator" src="./greenMock_files/viewLocator.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/system" src="./greenMock_files/system.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/plugins/router" src="./greenMock_files/router.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewEngine" src="./greenMock_files/viewEngine.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/composition" src="./greenMock_files/composition.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/widget" src="./greenMock_files/widget.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/modalDialog" src="./greenMock_files/modalDialog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/events" src="./greenMock_files/events.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewModel" src="./greenMock_files/viewModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/viewModelBinder" src="./greenMock_files/viewModelBinder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/shell" src="./greenMock_files/shell.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/config" src="./greenMock_files/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/core" src="./greenMock_files/core.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/ajaxSettings" src="./greenMock_files/ajaxSettings.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/datePicker" src="./greenMock_files/datePicker.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/toggles" src="./greenMock_files/toggles.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/validation" src="./greenMock_files/validation.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/focusSelect" src="./greenMock_files/focusSelect.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/scroll" src="./greenMock_files/scroll.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="view/koUtils" src="./greenMock_files/koUtils.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/error" src="./greenMock_files/error.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/auth" src="./greenMock_files/auth.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/hanyoDialog" src="./greenMock_files/hanyoDialog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/dialog/hanyoDialogOption" src="./greenMock_files/hanyoDialogOption.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/state" src="./greenMock_files/state.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/dialog/dialogButton" src="./greenMock_files/dialogButton.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/enums" src="./greenMock_files/enums.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/lifeCycle" src="./greenMock_files/lifeCycle.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/consts" src="./greenMock_files/consts.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/dialog/dialogCore" src="./greenMock_files/dialogCore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/gengoDate" src="./greenMock_files/gengoDate.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/dialog/fixedLayoutContext" src="./greenMock_files/fixedLayoutContext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/pplSession" src="./greenMock_files/pplSession.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/errorJoho" src="./greenMock_files/errorJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/dialog/core" src="./greenMock_files/core(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/abstractModel" src="./greenMock_files/abstractModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/metadata" src="./greenMock_files/metadata.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/transient" src="./greenMock_files/transient.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/tsusanchi" src="./greenMock_files/tsusanchi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/modelCore" src="./greenMock_files/modelCore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/formatUtils" src="./greenMock_files/formatUtils.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/abstractType" src="./greenMock_files/abstractType.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/validation" src="./greenMock_files/validation(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/normalization" src="./greenMock_files/normalization.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/okyakusamaUtils" src="./greenMock_files/okyakusamaUtils.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./greenMock_files/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/login" src="./greenMock_files/login.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/home" src="./greenMock_files/home.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/login.api" src="./greenMock_files/login.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/pplLoginYokyu" src="./greenMock_files/pplLoginYokyu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/autotab" src="./greenMock_files/autotab.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/sampleDialog" src="./greenMock_files/sampleDialog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/okyakusama/kensaku" src="./greenMock_files/kensaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/chohyo" src="./greenMock_files/chohyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/chohyoJoho" src="./greenMock_files/chohyoJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/mypage" src="./greenMock_files/mypage.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/myPageFromHome" src="./greenMock_files/myPageFromHome.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/sampleFukidashiDialog" src="./greenMock_files/sampleFukidashiDialog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/global.api" src="./greenMock_files/global.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/userIdNyuryoku" src="./greenMock_files/userIdNyuryoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shienModeYukoka" src="./greenMock_files/shienModeYukoka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shienModeMukoka" src="./greenMock_files/shienModeMukoka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teianModeYukoka" src="./greenMock_files/teianModeYukoka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teianModeMukoka" src="./greenMock_files/teianModeMukoka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/dosaMode.api" src="./greenMock_files/dosaMode.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/soshikiWatcher" src="./greenMock_files/soshikiWatcher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/okyakusama.api" src="./greenMock_files/okyakusama.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teian" src="./greenMock_files/teian.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokyaku" src="./greenMock_files/kokyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokyakuKensakuJoken" src="./greenMock_files/kokyakuKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokyakuKensakuKekka" src="./greenMock_files/kokyakuKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/mypage.api" src="./greenMock_files/mypage.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/myPageHimodukeJoho" src="./greenMock_files/myPageHimodukeJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/myPageHimodukeKekka" src="./greenMock_files/myPageHimodukeKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/myPageTorokuJoho" src="./greenMock_files/myPageTorokuJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/myPageTorokuKekka" src="./greenMock_files/myPageTorokuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/chohyo.api" src="./greenMock_files/chohyo.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoInsatsuJoho" src="./greenMock_files/chohyoInsatsuJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoInsatsuKekka" src="./greenMock_files/chohyoInsatsuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoSentakuJoho" src="./greenMock_files/chohyoSentakuJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodel/dialog/fukidashiDialogCore" src="./greenMock_files/fukidashiDialogCore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/jinji.api" src="./greenMock_files/jinji.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/soshikikanHimozukeMaster" src="./greenMock_files/soshikikanHimozukeMaster.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/soshikikanHimozukeMasterKensakuKekka" src="./greenMock_files/soshikikanHimozukeMasterKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kyotenJinjiMaster" src="./greenMock_files/kyotenJinjiMaster.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kyotenJinjiMasterKensakuJoken" src="./greenMock_files/kyotenJinjiMasterKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kyotenJinjiMasterKensakuKekka" src="./greenMock_files/kyotenJinjiMasterKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiKokyaku" src="./greenMock_files/moshikomiKokyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sekkei" src="./greenMock_files/sekkei.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sekkeishoInsatsu" src="./greenMock_files/sekkeishoInsatsu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/jiyuMemo" src="./greenMock_files/jiyuMemo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shokugyo" src="./greenMock_files/shokugyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sompoJidoshaKasaiHokenJoho" src="./greenMock_files/sompoJidoshaKasaiHokenJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sompoTashaKanyuJoho" src="./greenMock_files/sompoTashaKanyuJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/tekigoseiKakunin" src="./greenMock_files/tekigoseiKakunin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/tenyuShoken" src="./greenMock_files/tenyuShoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoFileJoho" src="./greenMock_files/chohyoFileJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/soshikikanHimozukeMasterKensakuJoken" src="./greenMock_files/soshikikanHimozukeMasterKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/dialog/fukidashiLayoutContext" src="./greenMock_files/fukidashiLayoutContext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kyotenJinjiHosokuJoho" src="./greenMock_files/kyotenJinjiHosokuJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoCategory" src="./greenMock_files/chohyoCategory.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/boshuHokoku" src="./greenMock_files/boshuHokoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/bunten" src="./greenMock_files/bunten.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/denshiChohyo" src="./greenMock_files/denshiChohyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/hitsuyoHosho" src="./greenMock_files/hitsuyoHosho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomi" src="./greenMock_files/moshikomi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiFuzoku" src="./greenMock_files/moshikomiFuzoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiSekkei" src="./greenMock_files/moshikomiSekkei.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiTebikae" src="./greenMock_files/moshikomiTebikae.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiUke" src="./greenMock_files/moshikomiUke.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/nayoseKikeiyaku" src="./greenMock_files/nayoseKikeiyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/nayoseKikeiyakuGamenyo" src="./greenMock_files/nayoseKikeiyakuGamenyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/seiseki" src="./greenMock_files/seiseki.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sekkeishoInsatsuSeigyo" src="./greenMock_files/sekkeishoInsatsuSeigyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shutoku" src="./greenMock_files/shutoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shutokuGroup" src="./greenMock_files/shutokuGroup.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/switch" src="./greenMock_files/switch.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/tenkan" src="./greenMock_files/tenkan.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/toritsukeShorui" src="./greenMock_files/toritsukeShorui.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chohyoSentaku" src="./greenMock_files/chohyoSentaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/boshuHokoku70SaiIjo" src="./greenMock_files/boshuHokoku70SaiIjo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/boshuHokokuStatus" src="./greenMock_files/boshuHokokuStatus.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/daiichijiSentakuHokoku" src="./greenMock_files/daiichijiSentakuHokoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/daisanshaUketoriHokoku" src="./greenMock_files/daisanshaUketoriHokoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/enkakuchiBoshuHokoku" src="./greenMock_files/enkakuchiBoshuHokoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/hojinDaihyoshaKakunin" src="./greenMock_files/hojinDaihyoshaKakunin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/jigyoHokenHokoku" src="./greenMock_files/jigyoHokenHokoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/seikeiShutai" src="./greenMock_files/seikeiShutai.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/torihikijiKakuninKirokuHojinyo" src="./greenMock_files/torihikijiKakuninKirokuHojinyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/torihikijiKakuninKirokuKojinyo" src="./greenMock_files/torihikijiKakuninKirokuKojinyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenShutoku" src="./greenMock_files/buntenShutoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenSonzoku" src="./greenMock_files/buntenSonzoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/dantaiAtsukaiKanyuKakunin" src="./greenMock_files/dantaiAtsukaiKanyuKakunin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/bunkatsutokuyakuChutoFukaMoshikomi" src="./greenMock_files/bunkatsutokuyakuChutoFukaMoshikomi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/denshiSign" src="./greenMock_files/denshiSign.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/ikokakunin" src="./greenMock_files/ikokakunin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchiKokyaku" src="./greenMock_files/kokuchiKokyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiChohyo" src="./greenMock_files/moshikomiChohyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shusseimaeKanyu" src="./greenMock_files/shusseimaeKanyu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiShuTokuyaku" src="./greenMock_files/moshikomiShuTokuyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiSonotaP" src="./greenMock_files/moshikomiSonotaP.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiSonotaTokusoku" src="./greenMock_files/moshikomiSonotaTokusoku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/moshikomiSonotaTokuyaku" src="./greenMock_files/moshikomiSonotaTokuyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/fuhoKijunUchiwake" src="./greenMock_files/fuhoKijunUchiwake.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/jisshitsutekiShihaisha" src="./greenMock_files/jisshitsutekiShihaisha.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kakuninShorui" src="./greenMock_files/kakuninShorui.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenGoUke" src="./greenMock_files/buntenGoUke.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenHoshoNaiyo" src="./greenMock_files/buntenHoshoNaiyo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenMaeKokyaku" src="./greenMock_files/buntenMaeKokyaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/buntenMaeUke" src="./greenMock_files/buntenMaeUke.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/interview" src="./greenMock_files/interview.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchimaeKakunin" src="./greenMock_files/kokuchimaeKakunin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/ikokakuninShosai" src="./greenMock_files/ikokakuninShosai.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/jidoSateiKekka" src="./greenMock_files/jidoSateiKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchiJiko" src="./greenMock_files/kokuchiJiko.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchiRenkeiData" src="./greenMock_files/kokuchiRenkeiData.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/sateiShitsumon" src="./greenMock_files/sateiShitsumon.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchimaeKakuninJikoMaster" src="./greenMock_files/kokuchimaeKakuninJikoMaster.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchiAction" src="./greenMock_files/kokuchiAction.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/kokuchiShitsumon" src="./greenMock_files/kokuchiShitsumon.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/chiryoJoho" src="./greenMock_files/chiryoJoho.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="durandal/transitions/entrance" src="./greenMock_files/entrance.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/okyakusama/henshu" src="./greenMock_files/henshu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/styleSwapper" src="./greenMock_files/styleSwapper.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/teian.api" src="./greenMock_files/teian.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/okyakusama/jiyuMemo" src="./greenMock_files/jiyuMemo(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/okyakusama/tenyuShoken" src="./greenMock_files/tenyuShoken(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/okyakusama/sompoTashaKanyuJoho" src="./greenMock_files/sompoTashaKanyuJoho(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="transitions/teianOkyakusama" src="./greenMock_files/teianOkyakusama.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shohinKensakuJoken" src="./greenMock_files/shohinKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shohinKensakuKekka" src="./greenMock_files/shohinKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teianKensakuJoken" src="./greenMock_files/teianKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teianKensakuKekka" src="./greenMock_files/teianKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/jidosekkeiYokyu" src="./greenMock_files/jidosekkeiYokyu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/teianShokikaJoken" src="./greenMock_files/teianShokikaJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/transition" src="./greenMock_files/transition.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="master/hokenKaisha" src="./greenMock_files/hokenKaisha.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="master/hokenShurui" src="./greenMock_files/hokenShurui.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/shohin" src="./greenMock_files/shohin.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/teian/henshu" src="./greenMock_files/henshu(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="model/modelObserver" src="./greenMock_files/modelObserver.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="modelexts/sekkei" src="./greenMock_files/sekkei(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/sekkeishoTsuikaMenu" src="./greenMock_files/sekkeishoTsuikaMenu.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/shohinSentaku" src="./greenMock_files/shohinSentaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/okyakusamaJohoHenko" src="./greenMock_files/okyakusamaJohoHenko.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/kensaku" src="./greenMock_files/kensaku(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/hozon" src="./greenMock_files/hozon.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/sekkeifuka" src="./greenMock_files/sekkeifuka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/tsusanError" src="./greenMock_files/tsusanError.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/seiseki" src="./greenMock_files/seiseki(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/switch" src="./greenMock_files/switch(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/tenkan" src="./greenMock_files/tenkan(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/teian/bunten" src="./greenMock_files/bunten(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="transitions/teianMoshikomi" src="./greenMock_files/teianMoshikomi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="utils/infinityScroll" src="./greenMock_files/infinityScroll.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="master/shohinShurui" src="./greenMock_files/shohinShurui.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/dialogs/shokenSentaku" src="./greenMock_files/shokenSentaku.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/kikeiyaku.api" src="./greenMock_files/kikeiyaku.api.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/nayoseKikeiyakuGamenyoKensakuKekka" src="./greenMock_files/nayoseKikeiyakuGamenyoKensakuKekka.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="models/nayoseKikeiyakuGamenyoKensakuJoken" src="./greenMock_files/nayoseKikeiyakuGamenyoKensakuJoken.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="viewmodels/keiyaku/gaiyo" src="./greenMock_files/gaiyo.js"></script></head>
-    <body style="margin-right: 0px;">
-        <!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
-        <div id="applicationHost" style="height:100%"><section style="height:100%" data-view="views/shell" data-active-view="true">
-<!--ko compose: {
-    model: router.activeItem, //wiring the router
-    afterCompose: router.afterCompose, //wiring the router
-    transition: 'entrance', //use the 'entrance' transition when switching views
-    cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
-}--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true"><style>
-    header#pageHeader div.toggleLR {position: absolute; width: 100px; height: 40px; right: 10px; top: 0px; padding-right: 0px;}
+#shibouHoshou table tbody tr td {
+  text-align: right;
+  vertical-align: middle;
+  height: 40px;
+  padding-right:10px;
+}
+#shibouHoshou table tbody tr:first-child td {
+  height: 60px;
+}
+#shibouHoshou table tbody tr:first-child td:first-child {
+  text-align: left;
+  padding-left:10px;
+  background-color:#d6eeff;
+}
+#shibouHoshou table tbody tr:nth-child(2) td:first-child,
+#shibouHoshou table tbody tr:nth-child(3) td:first-child {
+  width : 30px;
+  background-color:#d6eeff;
+}
+#shibouHoshou table tbody tr:nth-child(2) td:nth-child(2),
+#shibouHoshou table tbody tr:nth-child(3) td:nth-child(2) {
+  text-align: left;
+  padding-left:10px;
+  background-color:#d6eeff;
+}
 
-    .outline main { padding: 0px; top: 0px; background: #fff; }
-        /* article （概要）
-        ============================================================== */
-    .outline article#pageBody{background:#e2e2e2; height:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden; padding-bottom:0; position:relative; float:left; width: 1024px;}
-    .outline article#pageBody section {clear:both; zoom:1; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
-    .outline article#pageBody section:after{content:''; clear:both; display:block;}
-    .outline article#pageBody section:first-child {background:#fff; box-shadow:0px 1px 15px rgba(0,0,0,0.2); border-bottom:1px solid #cbcbcb; min-height:650px; padding:65px 25px 30px 294px;}
-    .outline article#pageBody section .logo {position:absolute; left:30px; top:20px;}
-    .outline article#pageBody section header h1{font-size:30px; text-align:center; color:#57b121;}
-    .outline article#pageBody section header h2{font-size:15px; color:#fff; background:#57b121; border-radius:5px 5px 0 0; padding:12px 13px; border:1px solid #eae4e6; border-bottom:none;}
-    .outline article#pageBody section:first-child ul { border:1px solid #eae4e6; border-top:none; border-radius:0 0 5px 5px; padding:12px 13px; font-size:13px; color:#57b121; font-weight:bold; margin-bottom:20px;}
-    .outline article#pageBody section:first-child ul li {text-indent:-1em; padding-left:1em;}
-    .outline article#pageBody section:first-child ul li span{display:block; width:1em; float:left;}
-    .outline article#pageBody section p.note{font-size:13px; color:#fff; background:#57b121; border-radius:5px; padding:0 13px; border:1px solid #eae4e6; line-height:50px; font-weight:bold;}
-    .outline article#pageBody section .information {position:absolute; left:38px; top:135px; width:220px;}
-    .outline article#pageBody section .information h2{color:#57b121; font-size:14px; font-weight:bold; margin:0 0 7px;}
-    .outline article#pageBody section .information h3{font-size:18px; font-weight:bold; line-height:1.3;}
-    .outline article#pageBody section .information h3 span {font-size:12px;}
-    .outline article#pageBody section .information p {font-size:9px; font-weight:bold;}
-    .outline article#pageBody section .information p.kana{margin:0 0 10px;}
-    .outline article#pageBody section .information div{padding-bottom:25px;}
+#shibouHoshou .btnArea {
+  margin:10px;
+}
 
-    .outline article#pageBody section nav {padding:25px 0 0 20px;}
-    .outline article#pageBody section nav li {float:left; margin:0 12px 7px 0;}
-    .outline article#pageBody section nav li a{display:table-cell; vertical-align:bottom; width:160px; height:90px; border:1px solid #a6a6a6; border-radius:5px; color:#51a91c; font-weight:bold; text-align:center; font-size:19px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; padding-bottom:8px; background:url(../img/parts/outlineNav.png) left top no-repeat #fff; background-size:800px 44px;}
-    .outline article#pageBody section nav li.large a{height:186px; padding-bottom:25px; background-size:1600px 88px;}
-    .outline article#pageBody section nav li.small a{width:90px;}
-
-    .outline article#pageBody section nav li.shikumizu.large a{background-position:0 45px;}
-    .outline article#pageBody section nav li.shikumizu a      {background-position:40px 10px;}
-    .outline article#pageBody section nav li.shikumizu.small a{background-position:5px 10px; font-size:15px;}
-    .outline article#pageBody section nav li.tokuyaku.large a{background-position:-200px  30px;}
-    .outline article#pageBody section nav li.tokuyaku       a{background-position:-62px  10px;}
-    .outline article#pageBody section nav li.tokuyaku.small a{background-position:-96px  10px;}
-    .outline article#pageBody section nav li.hoshonaiyo.large a{background-position:-400px  40px;}
-    .outline article#pageBody section nav li.hoshonaiyo       a{background-position:-160px  10px;}
-    .outline article#pageBody section nav li.hoshonaiyo.small a{background-position:-196px  10px; font-size:15px;}
-    .outline article#pageBody section nav li.hokenryo.large a{background-position:-608px  48px;}
-    .outline article#pageBody section nav li.hokenryo       a{background-position:-264px  18px;}
-    .outline article#pageBody section nav li.hokenryo.small a{background-position:-300px  18px;}
-    .outline article#pageBody section nav li.kaiyaku.large a{background-position:-844px  48px;}
-    .outline article#pageBody section nav li.kaiyaku       a{background-position:-385px  18px;}
-    .outline article#pageBody section nav li.kaiyaku.small a{background-position:-415px  18px; font-size:15px;}
-    .outline article#pageBody section nav li.sonota.large a{background-position:-1100px 46px;}
-    .outline article#pageBody section nav li.sonota       a{background-position:-512px 16px;}
-    .outline article#pageBody section nav li.sonota.small a{background-position:-546px 16px;}
-    .outline article#pageBody section nav li.haitokin.large a{background-position:-1352px 46px;}
-    .outline article#pageBody section nav li.haitokin       a{background-position:-638px 18px;}
-    .outline article#pageBody section nav li.haitokin.small a{background-position:-672px 18px; font-size:13px;}
-
-    
-    #shibouHoshou table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0px;
-    }
-    
-    #shibouHoshou table thead th:first-child {
-      border-radius: 5px 0 0 0;
-    }
-
-    #shibouHoshou table thead th:last-child {
-      border-radius:0 5px 0 0;
-    }
-    
-    #shibouHoshou table th,
-    #shibouHoshou table td {
-      border-bottom: solid 1px #000000;
-      border-left: solid 1px #000000;
-      line-height: 1;
-    }
-    
-    #shibouHoshou table th {
-      border-top: solid 1px #000000;
-      height: 50px;
-      text-align: center;
-      vertical-align: middle;
-      background-color:#d6eeff;
-    }
-    
-    table tr:last-child td:first-child {
-      border-radius: 0 0 0 5px;
-    }
-    table tr:last-child td:last-child {
-      border-radius: 0 0 5px 0;
-    }
-
-    #shibouHoshou table thead tr th:last-child,
-    #shibouHoshou table tbody tr td:last-child {
-      border-right: solid 1px #000000;
-    }
-    
-    #shibouHoshou table tbody tr td:first-child,
-    #shibouHoshou table tbody tr:first-child td {
-      border-bottom: none;
-    }
-    #shibouHoshou table tbody tr:last-child td:first-child {
-      border-bottom: solid 1px #000000;
-    }
-    #shibouHoshou table tbody tr:nth-child(2) td {
-      border-top: solid 1px #000000;
-    }
-    #shibouHoshou table tbody tr:nth-child(2) td:first-child {
-      border-top: none;
-    }
-    
-    #shibouHoshou table tbody tr td {
-      text-align: right;
-      vertical-align: middle;
-      height: 40px;
-      padding-right:10px;
-    }
-    #shibouHoshou table tbody tr:first-child td {
-      height: 60px;
-    }
-    #shibouHoshou table tbody tr:first-child td:first-child {
-      text-align: left;
-      padding-left:10px;
-      background-color:#d6eeff;
-    }
-    #shibouHoshou table tbody tr:nth-child(2) td:first-child,
-    #shibouHoshou table tbody tr:nth-child(3) td:first-child {
-      width : 30px;
-      background-color:#d6eeff;
-    }
-    #shibouHoshou table tbody tr:nth-child(2) td:nth-child(2),
-    #shibouHoshou table tbody tr:nth-child(3) td:nth-child(2) {
-      text-align: left;
-      padding-left:10px;
-      background-color:#d6eeff;
-    }
-    
-    #shibouHoshou .btnArea {
-      margin-top:10px;
-    }
-    
-    #shibouHoshou .btnArea .btn.sub{
-      display: inline-block;
-    }
-
+#shibouHoshou .btnArea .btn.sub{
+  display: inline-block;
+}
 </style>
-<style>
+<section class="tab-pane fade in active" id="shibouHoshou">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2"></th>
+                <th colspan="3">70歳まで</th>
+                <th rowspan="2">80歳まで</th>
+                <th rowspan="2">一生涯<span class="small">（終身保障）</span></th>
+            </tr>
+            <tr>
+                <th>40歳～49歳</th>
+                <th>50歳～64歳</th>
+                <th>65歳～70歳</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="summary">
+                <td colspan="2">合計</td>
+                <td><em class="large">5,700</em><span class="small">万円</span></td>
+                <td><em class="large">4,300</em><span class="small">万円</span></td>
+                <td><em class="large">2,200</em><span class="small">万円</span></td>
+                <td><em class="large">1,000</em><span class="small">万円</span></td>
+                <td><em class="large">500</em><span class="small">万円</span></td>
+            </tr>
+            <tr class="temporary">
+                <td>&nbsp;</td>
+                <td>一時金</td>
+                <td><em class="large">1,500</em><span class="small">万円</span></td>
+                <td><em class="large">1,500</em><span class="small">万円</span></td>
+                <td><em class="large">1,500</em><span class="small">万円</span></td>
+                <td><em class="large">1,000</em><span class="small">万円</span></td>
+                <td><em class="large">500</em><span class="small">万円</span></td>
+            </tr>
+            <tr class="pension">
+                <td>&nbsp;</td>
+                <td>年金</td>
+                <td>140<span class="small">万円×</span>30<span class="small">年</span><br><em class="large">4,200</em><span class="small">万円</span></td>
+                <td>140<span class="small">万円×</span>20<span class="small">年</span><br><em class="large">2,800</em><span class="small">万円</span></td>
+                <td>140<span class="small">万円×</span>5<span class="small">年</span><br><em class="large">700</em><span class="small">万円</span></td>
+                <td><em class="large">0</em><span class="small">万円</span></td>
+                <td><em class="large">0</em><span class="small">万円</span></td>
+            </tr>
+        </tbody>
+    </table>
     
-    .confWin{
-        display:block;
-    }
-    .confWin footer p { min-width: 110px; width: auto;}
-    .confWin {min-height: 270px; height: auto;}
-    .confWin section {min-height: 230px; height: auto;}
-    .confWin footer {position: relative; height: 50px;}
+    <div class="btnArea" id="btnArea">
+      <a href="javascript:void(0)" class="btn sub">不慮の事故による死亡・所定の高度障害状態の保障</a>
+    </div>
     
-    
-    .red {
-    	color:red;
-    }
-</style>
-</div><!--/ko-->
-</section></div>
-
-        <div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>
-        <div class="modalHost" style="z-index: 1058; opacity: 1;margin-top: -100px; margin-left: 0px;">
-            <div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true">
-                <div class="overlayPannel confWin keiyakugaiyou">
-                    <header data-bind="text: title">死亡・所定の高度障害状態の保障</header>
-                    <section id="shibouHoshou">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2"></th>
-                                    <th>40歳～49歳</th>
-                                    <th>50歳～64歳</th>
-                                    <th>65歳～70歳</th>
-                                    <th>70歳～80歳</th>
-                                    <th>一生涯<span class="small">（終身保障）</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="summary">
-                                    <td colspan="2">合計</td>
-                                    <td><em class="large">5,700</em><span class="small">万円</span></td>
-                                    <td><em class="large">4,300</em><span class="small">万円</span></td>
-                                    <td><em class="large">2,200</em><span class="small">万円</span></td>
-                                    <td><em class="large">1,000</em><span class="small">万円</span></td>
-                                    <td><em class="large">500</em><span class="small">万円</span></td>
-                                </tr>
-                                <tr class="temporary">
-                                    <td>&nbsp;</td>
-                                    <td>一時金</td>
-                                    <td><em class="large">1,500</em><span class="small">万円</span></td>
-                                    <td><em class="large">1,500</em><span class="small">万円</span></td>
-                                    <td><em class="large">1,500</em><span class="small">万円</span></td>
-                                    <td><em class="large">1,000</em><span class="small">万円</span></td>
-                                    <td><em class="large">500</em><span class="small">万円</span></td>
-                                </tr>
-                                <tr class="pension">
-                                    <td>&nbsp;</td>
-                                    <td>年金</td>
-                                    <td>140<span class="small">万円×</span>30<span class="small">年</span><br><em class="large">4,200</em><span class="small">万円</span></td>
-                                    <td>140<span class="small">万円×</span>20<span class="small">年</span><br><em class="large">2,800</em><span class="small">万円</span></td>
-                                    <td>140<span class="small">万円×</span>5<span class="small">年</span><br><em class="large">700</em><span class="small">万円</span></td>
-                                    <td><em class="large">0</em><span class="small">万円</span></td>
-                                    <td><em class="large">0</em><span class="small">万円</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div id="popup"  style="visibility:hidden;position:absolute; left:385px; top:100px;" >
-                        	<div class="overlayPannel confWin keiyakugaiyou">
-    	                	<header data-bind="text: title">不慮の事故による死亡・所定の高度障害状態の保障</header>
-        	            	<section id="shibouHoshou">
-                        	<div class="red">
-                        		<b>70歳まで：プラス800万円　80歳までプラス＋500万円</b>
-                        	</div>
-                        	<table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2"></th>
-                                    <th>40歳～49歳</th>
-                                    <th>50歳～64歳</th>
-                                    <th>65歳～70歳</th>
-                                    <th>70歳～80歳</th>
-                                    <th>一生涯<span class="small">（終身保障）</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="summary">
-                                    <td colspan="2">合計</td>
-                                    <td><em class="large red">6,500</em><span class="small">万円</span></td>
-                                    <td><em class="large red">5,100</em><span class="small">万円</span></td>
-                                    <td><em class="large red">3,000</em><span class="small">万円</span></td>
-                                    <td><em class="large red">1,500</em><span class="small">万円</span></td>
-                                    <td><em class="large">500</em><span class="small">万円</span></td>
-                                </tr>
-                                <tr class="temporary">
-                                    <td>&nbsp;</td>
-                                    <td>一時金</td>
-                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
-                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
-                                    <td><em class="large red">2,300</em><span class="small">万円</span></td>
-                                    <td><em class="large red">1,500</em><span class="small">万円</span></td>
-                                    <td><em class="large">500</em><span class="small">万円</span></td>
-                                </tr>
-                                <tr class="pension">
-                                    <td>&nbsp;</td>
-                                    <td>年金</td>
-                                    <td>140<span class="small">万円×</span>30<span class="small">年</span><br><em class="large">4,200</em><span class="small">万円</span></td>
-                                    <td>140<span class="small">万円×</span>20<span class="small">年</span><br><em class="large">2,800</em><span class="small">万円</span></td>
-                                    <td>140<span class="small">万円×</span>5<span class="small">年</span><br><em class="large">700</em><span class="small">万円</span></td>
-                                    <td><em class="large">0</em><span class="small">万円</span></td>
-                                    <td><em class="large">0</em><span class="small">万円</span></td>
-                                </tr>
-                            </tbody>
-                        	</table>
-
-                    		</section>
-                    		 <footer>
-                        <p>
-                            <a href="javascript:void(0);" onclick="removePopUP(); return false;" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
-                        </p>
-                    </footer>
-                        	</div>
-                        	</div>
-						<script type="text/javascript"> 
-							/*
-								$("#appender").load("vectorX_2_C_POPUP.html","html");
-								alert("test");
-						 	 **/
-						 	function addElement() {
-						 	var obj = document.getElementById("popup"); 
-						 	obj.style.visibility = "visible";
-							var obj2 = document.getElementById("btnArea"); 
-						 	obj2.style.visibility = "hidden";
-							}
-							
-							function removePopUP() {
-						 	var obj = document.getElementById("popup"); 
-						 	obj.style.visibility = "hidden";
-							var obj2 = document.getElementById("btnArea"); 
-						 	obj2.style.visibility = "visible";
-
-							}
-						</script> 
-                        <div class="btnArea" id="btnArea">
-                          <a href="javascript:void(0)" onclick="addElement(); return false;" class="btn sub">不慮の事故による死亡・所定の高度障害状態の保障</a>
-                        </div>
-                    </section>
-                    <footer>
-                        <p>
-                            <a href="./index.html" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a>
-                        </p>
-                    </footer>
-                </div>
-            </div>
-        </div>
-
-        <script src="./greenMock_files/jquery.js"></script>
-        <script src="./greenMock_files/bootstrap.js"></script>
-    
-
-</body></html>
+    <table class="secondTable" style="display: none;">
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2"></th>
+                <th colspan="3">70歳まで</th>
+                <th rowspan="2">80歳まで</th>
+                <th rowspan="2">一生涯<span class="small">（終身保障）</span></th>
+            </tr>
+            <tr>
+                <th>40歳～49歳</th>
+                <th>50歳～64歳</th>
+                <th>65歳～70歳</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="summary">
+                <td colspan="2">合計</td>
+                <td><em class="large">6,500</em><span class="small">万円</span></td>
+                <td><em class="large">5,100</em><span class="small">万円</span></td>
+                <td><em class="large">3,000</em><span class="small">万円</span></td>
+                <td><em class="large">1,500</em><span class="small">万円</span></td>
+                <td><em class="large">500</em><span class="small">万円</span></td>
+            </tr>
+            <tr class="temporary">
+                <td>&nbsp;</td>
+                <td>一時金</td>
+                <td><em class="large">2,300</em><span class="small">万円</span></td>
+                <td><em class="large">2,300</em><span class="small">万円</span></td>
+                <td><em class="large">2,300</em><span class="small">万円</span></td>
+                <td><em class="large">1,000</em><span class="small">万円</span></td>
+                <td><em class="large">500</em><span class="small">万円</span></td>
+            </tr>
+            <tr class="pension">
+                <td>&nbsp;</td>
+                <td>年金</td>
+                <td>140<span class="small">万円×</span>30<span class="small">年</span><br><em class="large">4,200</em><span class="small">万円</span></td>
+                <td>140<span class="small">万円×</span>20<span class="small">年</span><br><em class="large">2,800</em><span class="small">万円</span></td>
+                <td>140<span class="small">万円×</span>5<span class="small">年</span><br><em class="large">700</em><span class="small">万円</span></td>
+                <td><em class="large">0</em><span class="small">万円</span></td>
+                <td><em class="large">0</em><span class="small">万円</span></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<script>
+    $('#shibouHoshou .btnArea .btn.sub').on('click', function(evt){
+        $('#shibouHoshou table:nth-of-type(2)').toggle();
+    });
+</script>
