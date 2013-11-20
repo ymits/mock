@@ -71,6 +71,7 @@
 .keiyakugaiyou aside#menuArea .customerInfo dl dd{
     padding-left: 10px;
 }
+/*
 .keiyakugaiyou aside#menuArea .mainTabs li a {
     height: 51px;
     display: table;
@@ -98,6 +99,45 @@
     display: table-cell;
     vertical-align: middle;
 }
+*/
+
+.keiyakugaiyou .mainTabs {
+  /*border-right: 1px solid #ddd;*/
+  margin-left: 10px;
+}
+.keiyakugaiyou .mainTabs > li {
+  margin-right: -1px;
+}
+.keiyakugaiyou .mainTabs > li > a {
+  display: block;
+  padding: 8px 12px;
+  line-height: 30px;
+  color: #0088cc;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+.keiyakugaiyou .mainTabs > li > a:hover, 
+.keiyakugaiyou .mainTabs > li > a:focus {
+  color: #005580;
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+  background-color: #eeeeee;
+}
+.keiyakugaiyou .mainTabs > li.active > a, 
+.keiyakugaiyou .mainTabs > li.active > a:hover, 
+.keiyakugaiyou .mainTabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border-color: #ddd transparent #ddd #ddd;
+}
+
+.keiyakugaiyou .mainTabs > li.active + li {
+    border-right: 1px solid #ddd;
+}
+
+
 /* 右コンテンツ*/
 .keiyakugaiyou article#pageBody {
     height: 650px;

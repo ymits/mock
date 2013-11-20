@@ -17,10 +17,15 @@
 #kyuhujirei .jirei .body{
     padding: 10px; 
 }
+#kyuhujirei .jirei .case{
+    padding: 0 1px;
+}
 #kyuhujirei .jirei .case.open{
+    padding: 0;
     border: 1px solid #6bb5bd;
     border-top: none;
     border-radius: 10px 10px 0 0;
+
 }
 
 #kyuhujirei .jirei .case .main{
@@ -28,21 +33,23 @@
     border-radius: 10px;
     padding: 0 20px;
 }
-#kyuhujirei .jirei .case .main .collapse-icon{
+#kyuhujirei .jirei .case .main.collapsed .collapse-icon{
     transform:rotate(-90deg);
     -ms-transform:rotate(-90deg);
     -webkit-transform:rotate(-90deg);
+}
+#kyuhujirei .jirei .case .main .collapse-icon{
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
     background:url("img/tmp/underArrow.png") 0 0 no-repeat transparent;
     background-size: 100% 100%;
     display: inline-block;
-    width: 25px;
-    height: 15px;
+    width: 15px;
+    height: 10px;
     margin-right: 10px;
-}
-#kyuhujirei .jirei .case.open .main .collapse-icon{
-    transform:rotate(0deg);
-    -ms-transform:rotate(0deg);
-    -webkit-transform:rotate(0deg);
+    margin-bottom: 2px;
 }
 #kyuhujirei .jirei .case .main dt{
     display: inline-block;
