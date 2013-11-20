@@ -31,6 +31,7 @@
     color: #0000ff;
 }
 
+/*
 .outline article.keiyakugaiyou header > div {
     display: inline-block;
     vertical-align: top;
@@ -60,7 +61,7 @@
 .outline article.keiyakugaiyou main .top_message{
     margin-bottom: 10px;
 }
-
+*/
 /* 左メニュー */
 .keiyakugaiyou aside#menuArea {
     width: 200px;
@@ -102,27 +103,23 @@
 */
 
 .keiyakugaiyou .mainTabs {
-  /*border-right: 1px solid #ddd;*/
+  border-right: 1px solid #ddd;
   margin-left: 10px;
 }
 .keiyakugaiyou .mainTabs > li {
-  margin-right: -1px;
+  box-shadow: -10px 0px 10px -10px rgba(0,0,0,0.5) inset;
 }
 .keiyakugaiyou .mainTabs > li > a {
   display: block;
   padding: 8px 12px;
   line-height: 30px;
   color: #0088cc;
-  border: 1px solid transparent;
+
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
-}
-.keiyakugaiyou .mainTabs > li > a:hover, 
-.keiyakugaiyou .mainTabs > li > a:focus {
-  color: #005580;
-  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
-  background-color: #eeeeee;
+  
+  margin-right: 7px;
 }
 .keiyakugaiyou .mainTabs > li.active > a, 
 .keiyakugaiyou .mainTabs > li.active > a:hover, 
@@ -131,10 +128,23 @@
   cursor: default;
   background-color: #ffffff;
   border-color: #ddd transparent #ddd #ddd;
+  background-image:none;
+  margin-right: -1px;
+  box-shadow: 8px 0px 10px -2px rgba(0,0,0,0.5) inset;
 }
-
-.keiyakugaiyou .mainTabs > li.active + li {
-    border-right: 1px solid #ddd;
+.keiyakugaiyou .mainTabs > li > a:hover, 
+.keiyakugaiyou .mainTabs > li > a:focus {
+    opacity: 1;
+}
+.keiyakugaiyou .mainTabs li a .num{
+    width: 25px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.keiyakugaiyou .mainTabs li a .title{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 

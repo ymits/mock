@@ -8,6 +8,8 @@
         position: relative;
 
         margin-bottom: 10px;
+        display:inline-block;
+        vertical-align: top;
     }
 
     #shikumi .coverMoney .detail{
@@ -25,7 +27,16 @@
     #shikumi .coverMoney em{
         color: #ff0000;
     }
-
+    #shikumi .planBtnArea {
+        display: inline-block;
+        vertical-align: top;
+        margin-left:10px;
+    }
+    #shikumi .planBtnArea > div{
+        display:block;
+        text-align:center;
+        margin-bottom: 5px;
+    }
     #shikumi .option .small{
         font-size: 12px;
     }
@@ -231,7 +242,7 @@
     
     #shikumi .tsumitate > div {
       margin-left: 60px;
-      width: 520px;
+      width: 550px;
       position: relative;
     }
     #shikumi .tsumitate > div > div{
@@ -267,7 +278,8 @@
       text-align:center;
       line-height: 1;
     }
-    #shikumi .tsumitate .axis .alert {
+    #shikumi .tsumitate .axis .alert,
+    #shikumi .tsumitate .axis .alert .explain {
       top: 0px;
       left: 40px;
       color: #ff0000;
@@ -278,14 +290,14 @@
 <section class="tab-pane fade" id="shikumi">
     <p class="top_message">『ベクトルX』は、資金の計画的な積立が可能な新積立保険を主契約とし、<br>
             万一の場合の保障や生前給付保障・医療保障などを特約として付加できる商品です。<Br>
-            また、ご加入の２年経過後より、ライフサイクルにあわせて<a href="javascript:void(0);" class="link explain">保障見直し</a>が可能です。
+            また、ご加入の２年経過後より、ライフサイクルにあわせて<a href="javascript:void(0);" class="explain">保障見直し</a>が可能です。
     </p>
     <div class="coverMoney">
         <em class="large">万一の保障</em>【 33歳ご契約時】
         <table>
             <tbody>
                 <tr>
-                    <td>■死亡・<a href="javascript:void(0);" class="link explain">所定の高度障害状態</a>：</td>
+                    <td>■死亡・<a href="javascript:void(0);" class="explain">所定の高度障害状態</a>：</td>
                     <td><em class="large">4,210</em>万円</td>
                 </tr>
                 <tr>
@@ -295,6 +307,10 @@
             </tbody>
         </table>
         <div class="detail"></div>
+    </div>
+    <div class="planBtnArea">
+        <div class="hoshouGaku btn linkBtn">保障額チェック提案プラン</div>
+        <div class="iryouHoshouGaku btn linkBtn">医療保障額チェック提案プラン</div>
     </div>
     <table class="option">
         <tbody>
@@ -485,7 +501,15 @@
       <div class="axis">
         <div class="redPoint"></div>
         <div class="start">33歳<br>ご契約</div>
-        <div class="alert">※定期取崩による保険料調整機能を活用した場合、積立金額は減少します。</div>
+        <div class="alert">※<a href="javascript:void(0)" class="explain">定期取崩</a>による保険料調整機能を活用した場合、積立金額は減少します。</div>
       </div>
     </div>
 </section>
+<script>
+    $('body').on('click', '.keiyakugaiyou .planBtnArea .hoshouGaku', function(){
+        $.get('./vectorX_2_A.html', function (data) {
+            $("body").append(data);
+        });
+    });
+    
+</script>

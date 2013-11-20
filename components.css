@@ -26,7 +26,12 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   display: inline-block;
 }
 
-.keiyakugaiyou .link.explain:after {
+.keiyakugaiyou .explain {
+    text-decoration:underline;
+}
+.keiyakugaiyou .explain:after {
+    content: " ";
+    display: inline-block;
 	background:url("img/icons/icnQuestion.png") 0 0 no-repeat transparent;
 	background-size: 14px 14px;
 	background-position: 2px 0px;
@@ -84,15 +89,20 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 }
 */
 .keiyakugaiyou .linkBtn{
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #ccc;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+  border: 1px solid #dddddd;
+  
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 }
 .keiyakugaiyou .linkBtn:active{
-	padding: 0px 9px 0px 11px;
-	opacity: 1;
+	background-image:none;
+	background-color:#eeeeee;
 }
 .keiyakugaiyou .items li {
     text-indent: -1em;
@@ -139,8 +149,11 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
 }
+.keiyakugaiyou .subTabs:after {
+    content:''; clear:both; display:block;
+}
 .keiyakugaiyou .subTabs > li {
-  display: inline-block;
+  float: left;
   margin-bottom: -1px;
 }
 .keiyakugaiyou .subTabs > li > a {
@@ -149,16 +162,23 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   margin-right: 2px;
   line-height: 20px;
   color: #0088cc;
-  border: 1px solid transparent;
+  border: 1px solid #eeeeee;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 }
 .keiyakugaiyou .subTabs > li > a:hover, 
 .keiyakugaiyou .subTabs > li > a:focus {
-  color: #005580;
-  border-color: #eeeeee #eeeeee #dddddd;
-  background-color: #eeeeee;
+  opacity: 1;
 }
 .keiyakugaiyou .subTabs > li.active > a, 
 .keiyakugaiyou .subTabs > li.active > a:hover, 
@@ -168,6 +188,7 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
+  background-image: none;
 }
 
 /** アコーディオン関連 */
