@@ -2,6 +2,7 @@
     #hoshouNaiyou .planBtnArea {
         margin-bottom: 10px;
     }
+    #hoshouNaiyou .subTabs .dropdown
 </style>
 <section class="tab-pane fade" id="hoshouNaiyou">
     <div class="planBtnArea">
@@ -19,7 +20,7 @@
             <a href="javascript:void(0);" data-target="#iryouHoshou" data-toggle="tab">災害・医療保障</a>
         </li>
         <li class="dropdown">
-            <a href="javascript:void(0);" class="kyuhujirei" data-toggle="dropdown">給付事例</a>
+            <a href="javascript:void(0);" class="kyuhujirei">給付事例<span class="dropdown-icon"></span></a>
             <div class="subsubTabs" style="display:none;">
                 <ul class="dropdown-menu">
                     <li>
@@ -52,7 +53,7 @@
     $('#hoshouNaiyou .subTabs .subsubTabs a').on('click', function(evt){
         console.log($(this).parent().find('li.active'));
         $(this).closest('.dropdown-menu').find('li.active').removeClass('active');
-        $('.subsubTabs').hide();       
+        $('.subsubTabs').hide(300);       
     });
     $('body').on('click', '.dropdown > a', function(evt){
         evt.preventDefault()
