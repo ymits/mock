@@ -1,0 +1,117 @@
+<style type="text/css">
+#kyuhujirei2 .jirei{
+    border: 2px solid #6bb5bd;
+    border-radius: 10px;
+    width:  440px;
+    margin: 0 auto; 
+}
+#kyuhujirei2 .jirei .title{
+    background-color: #6bb5bd;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+#kyuhujirei2 .jirei .scenario{
+    background-color: #c6e7b5;
+    padding: 0 10px; 
+}
+#kyuhujirei2 .jirei .body{
+    padding: 10px; 
+}
+#kyuhujirei2 .jirei .case{
+    padding: 0 1px;
+}
+#kyuhujirei2 .jirei .case.open{
+    padding: 0;
+    border: 1px solid #6bb5bd;
+    border-top: none;
+    border-radius: 10px 10px 0 0;
+
+}
+
+#kyuhujirei2 .jirei .case .main{
+    border: 1px solid #6bb5bd;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+#kyuhujirei2 .jirei .case .main.collapsed .collapse-icon{
+    transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+#kyuhujirei2 .jirei .case .main .collapse-icon{
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background:url("img/tmp/underArrow.png") 0 0 no-repeat transparent;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+#kyuhujirei2 .jirei .case .main dt{
+    display: inline-block;
+}
+#kyuhujirei2 .jirei .case .main dd{
+    float: right;
+}
+#kyuhujirei2 .jirei .breakdown{
+    padding: 10px 0 10px 30px;
+}
+#kyuhujirei2 .jirei .case .breakdown dt{
+    display: inline-block;
+}
+#kyuhujirei2 .jirei .case .breakdown dd{
+    float: right;
+}
+#kyuhujirei2 .jirei .case .breakdown dd .unit{
+    display: inline-block;
+    min-width: 90px;
+}
+#kyuhujirei2 .jirei .case .note {
+    margin-left: 20px;
+}
+#kyuhujirei2 .jirei .downArrow{
+    content: " "; 
+    display: block;
+    background:url("img/tmp/underArrow.png") 0 0 no-repeat transparent;
+    background-position: center;
+    height: 20px ;
+    margin-bottom: 10px;
+}
+#kyuhujirei2 .jirei .summary{
+    background-color: #c6e7b5;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    padding: 0 20px;
+}
+
+#kyuhujirei2 .jirei .summary > span:nth-child(2) {
+    float: right;
+}
+#kyuhujirei2 .jirei .attention {
+    padding: 5px;
+}
+</style>
+<section class="tab-pane fade" id="kyuhujirei2">
+    <div class="jirei">
+        <div class="title"><em class="large">骨折の場合</em></div>
+        <div class="scenario">
+            <div class="mainScenario">保険期間中に初めて胃ガンにかかり、22日間<span class="small">(注)</span>入院し、胃切除手術(※)(開腹手術)を受け、生存退院したとき</div>
+            <div class="small">(注)厚生労働省「平成２３年患者調査」による胃ガンの退院患者平均在院日数</div>
+        </div>
+        <div class="body">
+            
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    $('#kyuhujirei2 .case .collapse').on('show', function(){
+        $(this).parent().addClass('open');
+    });
+    $('#kyuhujirei2 .case .collapse').on('hidden', function(){
+        $(this).parent().removeClass('open');
+    });
+</script>

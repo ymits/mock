@@ -109,7 +109,98 @@
     cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
 }--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true">
 <style>
+/* 左メニュー */
+.keiyakugaiyou aside#menuArea {
+    width: 200px;
+}
+.keiyakugaiyou aside#menuArea .customerInfo dl{
+    padding: 0 10px;
+}
+.keiyakugaiyou aside#menuArea .customerInfo dl dd{
+    padding-left: 10px;
+}
 
+.keiyakugaiyou .mainTabs {
+  border-right: 1px solid #ddd;
+  margin-left: 10px;
+}
+.keiyakugaiyou .mainTabs > li {
+  box-shadow: -10px 0px 10px -10px rgba(0,0,0,0.5) inset;
+}
+.keiyakugaiyou .mainTabs > li > a {
+  display: block;
+  padding: 8px 12px;
+  line-height: 30px;
+  color: #0088cc;
+
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  
+  margin-right: 7px;
+}
+.keiyakugaiyou .mainTabs > li.active > a, 
+.keiyakugaiyou .mainTabs > li.active > a:hover, 
+.keiyakugaiyou .mainTabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border-color: #ddd transparent #ddd #ddd;
+  background-image:none;
+  margin-right: -1px;
+  box-shadow: 8px 0px 10px -2px rgba(0,0,0,0.5) inset;
+}
+.keiyakugaiyou .mainTabs > li > a:hover, 
+.keiyakugaiyou .mainTabs > li > a:focus {
+    opacity: 1;
+}
+.keiyakugaiyou .mainTabs li a .num{
+    width: 25px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.keiyakugaiyou .mainTabs li a .title{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* 右コンテンツ*/
+.keiyakugaiyou article#pageBody {
+    height: 650px;
+}
+.keiyakugaiyou article#pageBody > .scrlParent > .tab-content{
+    height: 100%;
+}
+
+/** 文字サイズ設定 */
+#pageHeader .font-size-area {
+	width: 200px;
+	float: right;
+	line-height: 54px;
+}
+#pageHeader .font-size-area .btn.sub{
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+}
+#pageHeader .font-size-area .btn.sub.selected{
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+	background: url(img/bg/gradDisabled.png) repeat-x left center;
+	background-size: auto 100%;
+	opacity: 1;
+	cursor: default;
+	font-weight: bold
+}
+#pageHeader .font-size-area .btn.sub:first-of-type{
+	border-radius: 4px 0 0 4px;
+}
+#pageHeader .font-size-area .btn.sub:last-of-type{
+	border-radius: 0 4px 4px 0;
+	border-left: none;
+	/*font-size: 16px;*/
+}
 
 </style><div id="wrapper" class="outline">
     <header id="pageHeader">
@@ -121,6 +212,10 @@
                 
         </nav>
         <h1>設計書（契約概要）</h1>
+        <div class="font-size-area">
+        	<span>文字サイズ</span>
+        	<a href="javascript:void(0);" class="btn sub selected">普通</a><a href="javascript:void(0);" class="btn sub">拡大</a>
+        </div>
     </header>
     <main class="keiyakugaiyou">
     <article id="pageBody" class="flowParent">
@@ -221,6 +316,16 @@
             $('body').on('click', '.modalHost .btn.sub', function(){
                 $('.modalBlockout').remove();
                 $('.modalHost').remove();
+            });
+            $('#pageHeader .font-size-area .btn:first-of-type').on('click', function(evt){
+            	$(this).parent().find('.btn').removeClass('selected');
+            	$(this).addClass('selected');
+            	$('main.keiyakugaiyou').removeClass('fontL');
+            });
+            $('#pageHeader .font-size-area .btn:last-of-type').on('click', function(evt){
+            	$(this).parent().find('.btn').removeClass('selected');
+            	$(this).addClass('selected');
+            	$('main.keiyakugaiyou').addClass('fontL');
             });
         </script>
 </body></html>

@@ -65,29 +65,6 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 .keiyakugaiyou .detail:after {
   content: "詳細";
 }
-/*
-.keiyakugaiyou .link.dialog:after {
-  background:url("img/tmp/exLink.png") 0 0 no-repeat transparent;
-  background-size: 14px 14px;
-	background-position: 2px 0px;
-	width: 16px ;
-	height: 14px ;
-}
-.keiyakugaiyou .link.dialog-white:after {
-  background:url("img/tmp/exLinkWhite.png") 0 0 no-repeat transparent;
-  background-size: 14px 14px;
-	background-position: 2px 0px;
-	width: 16px ;
-	height: 14px ;
-}
-.keiyakugaiyou .list:after {
-  background:url("img/tmp/list.png") 0 0 no-repeat transparent;
-  background-size: 14px 14px;
-	background-position: 2px 0px;
-	width: 16px ;
-	height: 14px ;
-}
-*/
 .keiyakugaiyou .linkBtn{
   border: 1px solid #dddddd;
   
@@ -103,26 +80,6 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 .keiyakugaiyou .linkBtn:active{
 	background-image:none;
 	background-color:#eeeeee;
-}
-.keiyakugaiyou .items li {
-    text-indent: -1em;
-    padding-left: 1em;
-}
-
-.keiyakugaiyou .dl-horizontal dt{
-  float: left;
-  overflow: hidden;
-  clear: left;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.keiyakugaiyou .dl-horizontal dd{
-  text-align: right;
-}
-.keiyakugaiyou .dl-horizontal dd .unit{
-  display: inline-block;
-  text-align: left;
 }
 
 /** タブ関連 */
@@ -148,6 +105,7 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
 .keiyakugaiyou .subTabs {
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
+  position: relative;
 }
 .keiyakugaiyou .subTabs:after {
     content:''; clear:both; display:block;
@@ -189,6 +147,42 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   background-image: none;
+}
+
+/** サブサブタブ関連 */
+.keiyakugaiyou .subTabs .subsubTabs {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  background-color: #eeeeee;
+  width: 100%;
+}
+
+.keiyakugaiyou .subTabs .subsubTabs ul {
+  margin: 10px 20px 0 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  border-right: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: rgba(255, 255, 255, 1) -1px 0 0 inset;
+}
+.keiyakugaiyou .subTabs .subsubTabs ul:after {
+  content:''; clear:both; display:block;
+}
+.keiyakugaiyou .subTabs .subsubTabs li {
+  float: left;
+}
+.keiyakugaiyou .subTabs .subsubTabs li > a {
+  display: block;
+  padding: 8px 12px;
+  line-height: 20px;
+  color: #0088cc;
+  border-left: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: rgba(255, 255, 255, 1) -1px 0 0;
+}
+.keiyakugaiyou .subTabs .subsubTabs li.active > a {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
 }
 
 /** アコーディオン関連 */
