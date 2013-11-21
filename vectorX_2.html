@@ -2,7 +2,6 @@
     #hoshouNaiyou .planBtnArea {
         margin-bottom: 10px;
     }
-    #hoshouNaiyou .subTabs .dropdown
 </style>
 <section class="tab-pane fade" id="hoshouNaiyou">
     <div class="planBtnArea">
@@ -51,7 +50,6 @@
         $(this).parent().find('.subsubTabs').slideDown(300);       
     });
     $('#hoshouNaiyou .subTabs .subsubTabs a').on('click', function(evt){
-        console.log($(this).parent().find('li.active'));
         $(this).closest('.dropdown-menu').find('li.active').removeClass('active');
         $('.subsubTabs').hide(300);       
     });
