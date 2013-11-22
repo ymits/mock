@@ -5,16 +5,16 @@
     width:  440px;
     margin: 0 auto; 
 }
-#kyuhujirei .jirei .title{
+#kyuhujirei .jirei > .title{
     background-color: #6bb5bd;
     text-align: center;
     border-radius: 10px 10px 0 0;
 }
-#kyuhujirei .jirei .scenario{
+#kyuhujirei .jirei > .scenario{
     background-color: #c6e7b5;
     padding: 0 10px; 
 }
-#kyuhujirei .jirei .body{
+#kyuhujirei .jirei > .body{
     padding: 10px; 
 }
 #kyuhujirei .jirei .case{
@@ -32,6 +32,7 @@
     border: 1px solid #6bb5bd;
     border-radius: 10px;
     padding: 0 20px;
+    display: block;
 }
 #kyuhujirei .jirei .case .main.collapsed .collapse-icon{
     transform:rotate(-90deg);
@@ -51,10 +52,10 @@
     margin-right: 10px;
     margin-bottom: 2px;
 }
-#kyuhujirei .jirei .case .main dt{
+#kyuhujirei .jirei .case .main .title{
     display: inline-block;
 }
-#kyuhujirei .jirei .case .main dd{
+#kyuhujirei .jirei .case .main .data{
     float: right;
 }
 #kyuhujirei .jirei .breakdown{
@@ -104,10 +105,10 @@
         </div>
         <div class="body">
             <div class="case flow1">
-                <dl class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow1 .collapse">
-                    <dt class="large"><span class="collapse-icon"></span>入院開始</dt>
-                    <dd><em class="large">921.00</em><span class="small">万円</span></dd>
-                </dl>
+                <a href="javascript:void(0)" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow1 .collapse">
+                    <span class="title large"><span class="collapse-icon"></span>入院開始</span>
+                    <span class="data"><em class="large">921.00</em><span class="small">万円</span></span>
+                </a>
                 <div class="collapse">
                     <dl class="breakdown">
                         <dt class="small">ワイドディフェンス特約A (有期型)</dt>
@@ -124,10 +125,10 @@
             </div>
             <div class="downArrow"></div>
             <div class="case flow2">
-                <dl class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow2 .collapse">
-                    <dt class="large"><span class="collapse-icon"></span>22日間入院</dt>
-                    <dd><em class="large">76.00</em><span class="small">万円</span></dd>
-                </dl>
+                <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow2 .collapse">
+                    <span class="title large"><span class="collapse-icon"></span>22日間入院</span>
+                    <span class="data"><em class="large">76.00</em><span class="small">万円</span></span>
+                </a>
                 <div class="collapse">
                     <dl class="breakdown">
                         <dt class="small">総合入院特約2011 (有期型)</dt>
@@ -143,10 +144,10 @@
             </div>
             <div class="downArrow"></div>
             <div class="case flow3">
-                <dl class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow3 .collapse">
-                    <dt class="large"><span class="collapse-icon"></span>胃切除術を受けた</dt>
-                    <dd><em class="large">170.00</em><span class="small">万円</span></dd>
-                </dl>
+                <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow3 .collapse">
+                    <span class="title large"><span class="collapse-icon"></span>胃切除術を受けた</span>
+                    <span class="data"><em class="large">170.00</em><span class="small">万円</span></span>
+                </a>
                 <div class="collapse">
                     <dl class="breakdown">
                         <dt class="small">護臓ろっぷ特約 (有期型)</dt>
@@ -162,10 +163,10 @@
             </div>
             <div class="downArrow"></div>
             <div class="case flow4">
-                <dl class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow4 .collapse">
-                    <dt class="large"><span class="collapse-icon"></span>生存退院した</dt>
-                    <dd><em class="large">5.00</em><span class="small">万円</span></dd>
-                </dl>
+                <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow4 .collapse">
+                    <span class="title large"><span class="collapse-icon"></span>生存退院した</span>
+                    <span class="data"><em class="large">5.00</em><span class="small">万円</span></span>
+                </a>
                 <div class="collapse">
                     <dl class="breakdown">
                         <dt class="small">退院給付特約2009 (有期型)</dt>
