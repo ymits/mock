@@ -109,68 +109,6 @@
     cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
 }--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true">
 <style>
-/* 左メニュー */
-.keiyakugaiyou aside#menuArea {
-    width: 200px;
-}
-.keiyakugaiyou aside#menuArea .customerInfo dl{
-    padding: 0 10px;
-}
-.keiyakugaiyou aside#menuArea .customerInfo dl dd{
-    padding-left: 10px;
-}
-
-.keiyakugaiyou .mainTabs {
-  border-right: 1px solid #ddd;
-  margin-left: 10px;
-}
-.keiyakugaiyou .mainTabs > li {
-  box-shadow: -10px 0px 10px -10px rgba(0,0,0,0.5) inset;
-}
-.keiyakugaiyou .mainTabs > li > a {
-  display: block;
-  padding: 8px 12px;
-  line-height: 30px;
-  color: #0088cc;
-
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-  
-  margin-right: 7px;
-}
-.keiyakugaiyou .mainTabs > li.active > a, 
-.keiyakugaiyou .mainTabs > li.active > a:hover, 
-.keiyakugaiyou .mainTabs > li.active > a:focus {
-  color: #555555;
-  cursor: default;
-  background-color: #ffffff;
-  border-color: #ddd transparent #ddd #ddd;
-  background-image:none;
-  margin-right: -1px;
-  box-shadow: 8px 0px 10px -2px rgba(0,0,0,0.5) inset;
-}
-.keiyakugaiyou .mainTabs > li > a:hover, 
-.keiyakugaiyou .mainTabs > li > a:focus {
-    opacity: 1;
-}
-.keiyakugaiyou .mainTabs li a .num{
-    width: 25px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-}
-.keiyakugaiyou .mainTabs li a .title{
-    display: table-cell;
-    vertical-align: middle;
-}
-
-
-/* 右コンテンツ*/
-.keiyakugaiyou article#pageBody > .scrlParent > .tab-content{
-    height: 100%;
-}
-
 /** 文字サイズ設定 */
 #pageHeader .font-size-area {
 	width: 200px;
@@ -213,57 +151,7 @@
         	<a href="javascript:void(0);" class="btn sub selected">普通</a><a href="javascript:void(0);" class="btn sub">拡大</a>
         </div>
     </header>
-    <main class="keiyakugaiyou">
-    <article id="pageBody" class="flowParent">
-        <div class="scrlParent">
-            <div class="tab-content"></div>
-        </div>
-    </article>
-    <aside id="menuArea" class="flowNav">
-        <img src="./greenMock_files/logoVectorXLarge.png" width="200" height="80" alt="ベクトルX">
-        <div class="customerInfo">
-            <dl>
-                <dt>ご契約者様</dt>
-                <dd><em>アライ　マークン</em>様</dd>
-                <dt>被保険者様</dt>
-                <dd>
-                    <div><em>アライ　マークン</em>様</div>
-                    <div class="small">昭和55年12月25日(42歳)男性</div>
-                </dd>
-                <dt>計算基準日</dt>
-                <dd>2013年12月1日</dd>
-            </dl>
-        </div>
-        <nav>
-            <ul class="mainTabs">
-                <li class="active">
-                    <a href="javascript:void(0);" data-target="#home" data-toggle="tab"><span class="num"></span><span class="title">HOME</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#shikumi" data-toggle="tab"><span class="num">1.</span><span class="title">商品の特徴としくみ</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#hoshouNaiyou" data-toggle="tab"><span class="num">2.</span><span class="title">保障内容</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#tsumitateHoken" data-toggle="tab"><span class="num">3.</span><span class="title">新積立保険</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#hokenRyo" data-toggle="tab"><span class="num">4.</span><span class="title">保険料</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#hokenNaiyo" data-toggle="tab"><span class="num">5.</span><span class="title">ご提案内容の明細</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#kaiyakuhenreikin" data-toggle="tab"><span class="num">6.</span><span class="title">解約返戻金</span></a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" data-target="#sonota" data-toggle="tab"><span class="num">7.</span><span class="title">その他</span></a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    </main>
+    <main class="keiyakugaiyou"></main>
     <footer id="pageFooter">
         <nav class="btnArray links">
         </nav>
@@ -281,14 +169,6 @@
         <script src="./greenMock_files/jquery.js"></script>
         <script src="./greenMock_files/bootstrap.js"></script>
         <script type="text/javascript">
-            var mainContentInclude = function (url) {
-                $.get(url, function (data) {
-                    $(".keiyakugaiyou #pageBody > .scrlParent > .tab-content").append(data);
-                });
-            };
-            mainContentInclude("./vectorX_home.html");
-            mainContentInclude("./vectorX_1.html");
-            mainContentInclude("./vectorX_2.html");
 
             $('body').on('click', '.explain', function(){
                 $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
@@ -323,5 +203,12 @@
             	$(this).addClass('selected');
             	$('main.keiyakugaiyou').addClass('fontL');
             });
+            
+            $(function(){
+               $.get('./vectorX_home.html', function(data){
+                   $('main.keiyakugaiyou').append(data);
+               });
+            });
+            
         </script>
 </body></html>

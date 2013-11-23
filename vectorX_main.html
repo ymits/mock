@@ -1,0 +1,124 @@
+<style>
+/* 左メニュー */
+.keiyakugaiyou aside#menuArea {
+    width: 200px;
+}
+.keiyakugaiyou aside#menuArea .calcBaseDate{
+    padding: 10px;
+}
+.keiyakugaiyou aside#menuArea .calcBaseDate dd{
+    padding-left: 10px;
+}
+
+.keiyakugaiyou .mainTabs {
+  border-right: 1px solid #ddd;
+  margin-left: 10px;
+}
+.keiyakugaiyou .mainTabs > li {
+  box-shadow: -10px 0px 10px -10px rgba(0,0,0,0.5) inset;
+}
+.keiyakugaiyou .mainTabs > li > a {
+  display: block;
+  padding: 8px 12px;
+  line-height: 30px;
+  color: #0088cc;
+
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  
+  margin-right: 7px;
+}
+.keiyakugaiyou .mainTabs > li.active > a, 
+.keiyakugaiyou .mainTabs > li.active > a:hover, 
+.keiyakugaiyou .mainTabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border-color: #ddd transparent #ddd #ddd;
+  background-image:none;
+  margin-right: -1px;
+  box-shadow: 8px 0px 10px -2px rgba(0,0,0,0.5) inset;
+}
+.keiyakugaiyou .mainTabs > li > a:hover, 
+.keiyakugaiyou .mainTabs > li > a:focus {
+    opacity: 1;
+}
+.keiyakugaiyou .mainTabs li a .num{
+    width: 25px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.keiyakugaiyou .mainTabs li a .title{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* 右コンテンツ*/
+.keiyakugaiyou article#pageBody > .scrlParent > .tab-content{
+    height: 100%;
+}
+
+</style>
+<article id="pageBody" class="flowParent">
+    <div class="scrlParent">
+        <div class="tab-content"></div>
+    </div>
+</article>
+<aside id="menuArea" class="flowNav">
+    <dl class="calcBaseDate">
+        <dt>計算基準日</dt>
+        <dd>2013年12月1日</dd>
+    </dl>
+    <nav>
+        <ul class="mainTabs">
+            <li>
+                <a href="javascript:void(0);" ><span class="num"></span><span class="title">HOME</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#shikumi" data-toggle="tab"><span class="num">1.</span><span class="title">商品の特徴としくみ</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#hoshouNaiyou" data-toggle="tab"><span class="num">2.</span><span class="title">保障内容</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#tsumitateHoken" data-toggle="tab"><span class="num">3.</span><span class="title">新積立保険</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#hokenRyo" data-toggle="tab"><span class="num">4.</span><span class="title">保険料</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#hokenNaiyo" data-toggle="tab"><span class="num">5.</span><span class="title">ご提案内容の明細</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#kaiyakuhenreikin" data-toggle="tab"><span class="num">6.</span><span class="title">解約返戻金</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-target="#sonota" data-toggle="tab"><span class="num">7.</span><span class="title">その他</span></a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+<script type="text/javascript">
+    var mainContentInclude = function (index, url) {
+        $.get(url, function (data) {
+            $(".keiyakugaiyou #pageBody > .scrlParent > .tab-content").append(data);
+            var selectedIndex = $(".keiyakugaiyou #menuArea .mainTabs").data('index');
+            if(selectedIndex === index){
+                $('.keiyakugaiyou #menuArea .mainTabs li:nth-child('+(index+1)+') a').tab('show'); 
+            }
+        });
+    };
+    mainContentInclude(1, "./vectorX_1.html");
+    mainContentInclude(2, "./vectorX_2.html");
+    
+    
+    $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(1) a').on('click', function(){
+        $('main.keiyakugaiyou').html('');
+      $.get('./vectorX_home.html', function(data){
+          $('main.keiyakugaiyou').append(data);
+      });
+    });
+</script>

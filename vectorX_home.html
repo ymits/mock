@@ -1,11 +1,37 @@
 <style type="text/css">
+    #pageBody.keiyakugaiyouHome {
+        width:100%;
+        padding: 10px;
+    }
     #home {
         position: relative;
         height: 100%
     }
-	#home ul.items li {
-		margin-top: 10px;
-	}
+    #home .homeHeader .customerInfo{
+        display: inline-table;
+        vertical-align: top;
+        margin-top: 10px;
+        float: right;
+        width:70%;
+    }
+    #home .homeHeader .customerInfo tr th {
+        font-weight: bold;
+    }
+    #home .homeHeader .customerInfo tr th:nth-child(1){
+        min-width:20%;
+    }
+    #home .homeHeader .customerInfo tr td:nth-child(2){
+        min-width:40%;
+    }
+    #home .homeHeader .customerInfo tr th:nth-child(3){
+        min-width:20%;
+    }
+    #home .homeHeader .customerInfo tr td:nth-child(4){
+        min-width:20%;
+    }
+    #home ul.items li {
+        margin-top: 10px;
+    }
     #home nav {
         position: absolute;
         bottom: 20px;
@@ -14,9 +40,9 @@
         display: inline;
     }
     #home nav .btn {
-        height: 150px;
-        width: 170px;
-        line-height: 150px;
+        height: 100px;
+        width: 220px;
+        line-height: 100px;
         margin: 20px 0 0 20px;
 
         background: #b4e391; /* Old browsers */
@@ -44,25 +70,61 @@
         line-height: 1;
     }
 </style>
+<article id="pageBody" class="keiyakugaiyouHome">
+    <div class="scrlParent">
+    
 <section class="tab-pane fade in active" id="home">
-    <p class="large">ご契約内容等に関する重要な事項のうち、特にご確認いただきたい事項を表示しています。<br>
-            ご契約前に表示内容をご確認・ご了解のうえ、お申込みいただきますようお願いいたします。</p>
-    <ul class="items">
-        <li>※お支払事由や給付にあたっての制限事項は、概要や代表事例を表示しています。<br>お支払事由の詳細や、制限事項等についての詳細ならびに主な保険用語のご説明等については、<br>
-        <a href="" class="link">ご契約のしおりー約款</a>に記載しております。</li>
-        <li>※契約転換制度を利用しています。書面でお渡しする「転換比較表」をあわせてご確認いただきますようお願いいたします。</li>
-    </ul>
-    <nav>
-        <ul>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(2) a').tab('show');" class="btn linkBtn"><span class="num large">1.</span><span class="title large">商品の特徴としくみ</span></a></li>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(3) a').tab('show');" class="btn linkBtn"><span class="num large">2.</span><span class="title large">保障内容</span></a></li>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(4) a').tab('show');" class="btn linkBtn"><span class="num large">3.</span><span class="title large">新積立保険</span></a></li>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(5) a').tab('show');" class="btn linkBtn"><span class="num large">4.</span><span class="title large">保険料</span></a></li>
+    <div class="homeHeader">
+        <img src="./greenMock_files/logoVectorXLarge.png" width="240" height="80" alt="ベクトルX">
+        <table class="customerInfo">
+            <tbody>
+                <tr>
+                    <th>ご契約者様</th>
+                    <td><em class="large">アライ マークン</em>様</td>
+                    <th>計算基準日</th>
+                    <td>2013年12月1日</td>
+                </tr>
+                <tr>
+                    <th>被保険者様</th>
+                    <td><em class="large">アライ マークン</em>様 昭和55年12月25日（42歳） 男性</td>
+                    <th>&nbsp;</th>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="main">
+        <p class="large">ご契約内容等に関する重要な事項のうち、特にご確認いただきたい事項を表示しています。<br>
+                ご契約前に表示内容をご確認・ご了解のうえ、お申込みいただきますようお願いいたします。</p>
+        <ul class="items">
+            <li>※お支払事由や給付にあたっての制限事項は、概要や代表事例を表示しています。<br>お支払事由の詳細や、制限事項等についての詳細ならびに主な保険用語のご説明等については、<br>
+            <a href="" class="link">ご契約のしおりー約款</a>に記載しております。</li>
+            <li>※契約転換制度を利用しています。書面でお渡しする「転換比較表」をあわせてご確認いただきますようお願いいたします。</li>
         </ul>
-        <ul>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(6) a').tab('show');" class="btn linkBtn"><span class="num large">5.</span><span class="title large">ご提案内容の明細</span></a></li>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(7) a').tab('show');" class="btn linkBtn"><span class="num large">6.</span><span class="title large">解約返戻金</span></a></li>
-            <li><a href="javascript:$('.keiyakugaiyou #menuArea .mainTabs li:nth-child(8) a').tab('show');" class="btn linkBtn"><span class="num large">7.</span><span class="title large">その他</span></a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" data-index="1" class="btn linkBtn"><span class="num large">1.</span><span class="title large">商品の特徴としくみ</span></a></li>
+                <li><a href="javascript:void(0);" data-index="2" class="btn linkBtn"><span class="num large">2.</span><span class="title large">保障内容</span></a></li>
+                <li><a href="javascript:void(0);" data-index="3" class="btn linkBtn"><span class="num large">3.</span><span class="title large">新積立保険</span></a></li>
+                <li><a href="javascript:void(0);" data-index="4" class="btn linkBtn"><span class="num large">4.</span><span class="title large">保険料</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0);" data-index="5" class="btn linkBtn"><span class="num large">5.</span><span class="title large">ご提案内容の明細</span></a></li>
+                <li><a href="javascript:void(0);" data-index="6" class="btn linkBtn"><span class="num large">6.</span><span class="title large">解約返戻金</span></a></li>
+                <li><a href="javascript:void(0);" data-index="7" class="btn linkBtn"><span class="num large">7.</span><span class="title large">その他</span></a></li>
+            </ul>
+        </nav>
+    </div>
 </section>
+    </div>
+</article>
+<script>
+   $('#home nav a').on('click', function(){
+      var index = $(this).data('index');
+      $('main.keiyakugaiyou').html('');
+      $.get('./vectorX_main.html', function(data){
+          $('main.keiyakugaiyou').append(data);
+          $('main.keiyakugaiyou #menuArea .mainTabs').data('index', index);
+      });
+   });
+</script>
