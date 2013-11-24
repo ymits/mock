@@ -18,18 +18,8 @@
         <li>
             <a href="javascript:void(0);" data-target="#iryouHoshou" data-toggle="tab">災害・医療保障</a>
         </li>
-        <li class="dropdown">
-            <a href="javascript:void(0);" class="kyuhujirei">給付事例<span class="dropdown-icon"></span></a>
-            <div class="subsubTabs" style="display:none;">
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="javascript:void(0);" data-target="#kyuhujirei" data-toggle="tab">胃ガンの場合</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" data-target="#kyuhujirei2" data-toggle="tab">骨折の場合</a>
-                    </li>
-                </ul>
-            </div>
+        <li>
+            <a href="javascript:void(0);" data-target="#kyuhujirei" data-toggle="tab">給付事例</a>
         </li>
     </ul>
     <div class="tab-content"></div>
@@ -44,23 +34,4 @@
     hoshouNaiyouContentInclude("./vectorX_2_D.html");
     hoshouNaiyouContentInclude("./vectorX_2_E.html");
     hoshouNaiyouContentInclude("./vectorX_2_F.html");
-    hoshouNaiyouContentInclude("./vectorX_2_F2.html");
-
-    $('#hoshouNaiyou .subTabs .kyuhujirei').on('click', function(evt){
-        $(this).parent().find('.subsubTabs').slideDown(300);       
-    });
-    $('#hoshouNaiyou .subTabs .subsubTabs a').on('click', function(evt){
-        $(this).closest('.dropdown-menu').find('li.active').removeClass('active');
-        $('.subsubTabs').hide(300);       
-    });
-    $('body').on('click', '.dropdown > a', function(evt){
-        evt.preventDefault()
-        evt.stopPropagation()
-    });
-    $('body').on('click', '.subTabs li:not(.dropdown)', function(evt){
-        $('.subsubTabs').find('li.active').removeClass('active');
-    });
-    $('body').on('click', function(){
-        $('.subsubTabs').slideUp(300);
-    });
 </script>

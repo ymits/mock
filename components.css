@@ -148,42 +148,6 @@ footer#pageFooter nav.btnArray ul li.prevPage a{
   background-image: none;
 }
 
-/** サブサブタブ関連 */
-.keiyakugaiyou .subTabs .subsubTabs {
-  position: absolute;
-  left: 0;
-  top: 38px;
-  background-color: #eeeeee;
-  width: 100%;
-}
-
-.keiyakugaiyou .subTabs .subsubTabs ul {
-  margin: 10px 20px 0 20px;
-  display: inline-block;
-  vertical-align: bottom;
-  border-right: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: rgba(255, 255, 255, 1) -1px 0 0 inset;
-}
-.keiyakugaiyou .subTabs .subsubTabs ul:after {
-  content:''; clear:both; display:block;
-}
-.keiyakugaiyou .subTabs .subsubTabs li {
-  float: left;
-}
-.keiyakugaiyou .subTabs .subsubTabs li > a {
-  display: block;
-  padding: 8px 12px;
-  line-height: 20px;
-  color: #0088cc;
-  border-left: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: rgba(255, 255, 255, 1) -1px 0 0;
-}
-.keiyakugaiyou .subTabs .subsubTabs li.active > a {
-  color: #555555;
-  cursor: default;
-  background-color: #ffffff;
-}
-
 /** アコーディオン関連 */
 .keiyakugaiyou .collapse {
   position: relative;

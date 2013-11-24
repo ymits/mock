@@ -13,6 +13,7 @@
     }
 
     #shikumi .coverMoney .detail{
+        background-image:url(img/tmp/trans.png), url(img/tmp/arrow.png);
         position: absolute;
         right: 10px;
         top: 50%;
@@ -493,7 +494,7 @@
     <div class="tsumitate">
       <div class="graph">
         <div class="shushin">終身保障</div>
-        <div class="tsumitateHoken"><a href="xxx.html" class="link trans">【主契約】新積立保険</a></div>
+        <div class="tsumitateHoken"><a href="javascript:void(0);" class="link trans">【主契約】新積立保険</a></div>
       </div>
       <div class="axis">
         <div class="redPoint"></div>
@@ -508,5 +509,19 @@
             $("body").append(data);
         });
     });
-    
+    $('#shikumi .coverMoney .detail').on('click', function(evt){
+        $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(3) a').on('shown', function(){
+            setTimeout(function(){
+                $('#hoshouNaiyou .subTabs li:nth-child(1) a').tab('show');
+                $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(3) a').off('shown');
+            }, 0);
+        });
+        $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(3) a').tab('show');
+        
+        evt.preventDefault();
+        evt.stopPropagation();
+    });
+    $('#shikumi .tsumitate .tsumitateHoken a').on('click', function(evt){
+        $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(4) a').tab('show');
+    });
 </script>
