@@ -73,20 +73,15 @@
     margin-right: 5px;
 }
 #iryouHoshou table.nyuin tbody .gan td.money:nth-child(4) .emphasis{
-    color: #fde201;
+    color: #ffffff;
     padding: 2px 5px;
     border-radius: 40px;
     text-align: center;
 
-
-    background: #e8703e; /* Old browsers */
-    background: -moz-linear-gradient(top,  #e8703e 0%, #e2a58c 50%, #e8703e 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8703e), color-stop(50%,#e2a58c), color-stop(100%,#e8703e)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #e8703e 0%,#e2a58c 50%,#e8703e 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8703e', endColorstr='#e8703e',GradientType=0 ); /* IE6-9 */
+    /*background: linear-gradient(to bottom,  #e8703e 0%,#e2a58c 50%,#e8703e 100%);*/
+    background-image:url(img/tmp/emphasisBg.png);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
 
 }
 #iryouHoshou table.shujyutsu tbody .gan td.money:nth-child(2) span:nth-child(3) {
@@ -126,14 +121,10 @@
     border-radius: 5px;
     padding: 5px 20px;
     display: inline-block;
-    background: #f9f96d; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f9f96d 0%, #ffffff 50%, #f9f96d 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f96d), color-stop(50%,#ffffff), color-stop(100%,#f9f96d)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f96d', endColorstr='#f9f96d',GradientType=0 ); /* IE6-9 */
+     /*background: linear-gradient(to bottom,  #f9f96d 0%,#ffffff 50%,#f9f96d 100%);*/
+   background-image:url(img/tmp/guideBg.png);
+   background-repeat:no-repeat;
+   background-size:100% 100%;
 }
 #iryouHoshou table.shujyutsu th .guide {
     border: solid 3px #b381ff;
@@ -201,7 +192,7 @@
             </tr>
             <tr class="gan">
                 <td class="reason"><em class="large">ガン</em>で<em class="large">入院</em>のとき</td>
-                <td class="money"><span class="small appendix">(1)</span><em class="large">210,000</em><span class="small">円</span></td>
+                <td class="money"><span class="appendix first inline"></span><em class="large">210,000</em><span class="small">円</span></td>
                 <td class="money"><em class="large">80,000</em><span class="small">円</span></td>
                 <td class="money"><div class="small emphasis">支払日数無制限</div><em class="large">20,000</em><span class="small">円</span></td>
                 <td class="expire"><em>10</em>年更新
@@ -260,7 +251,7 @@
             </tr>
             <tr class="gan">
                 <td class="reason"><em class="large">ガン</em>により</td>
-                <td class="money"><span class="small appendix">(2)</span><em class="large">80</em><span class="small">万円</span><em class="large">20</em><span class="small">万円</span></td>
+                <td class="money"><span class="appendix second inline"></span><em class="large">80</em><span class="small">万円</span><em class="large">20</em><span class="small">万円</span></td>
                 <td class="money"><em class="large">10</em><span class="small">万円</span></td>
                 <td class="money"><em class="large">20</em><span class="small">万円</span></td>
                 <td class="expire"><em>10</em>年更新
@@ -334,10 +325,10 @@
     </table>
     <ul class="items attention">
         <li class="small">
-            <span class="appendix">(1)</span>ガン入院一時給付金が含まれています。
+            <span class="appendix first"></span>ガン入院一時給付金が含まれています。
         </li>
         <li class="small">
-            <span class="appendix">(2)</span>ガン治療のための開頭術・開胸術・開腹術には 80万円、その他のガン治療のための手術には 40万円をお支払いします。
+            <span class="appendix second"></span>ガン治療のための開頭術・開胸術・開腹術には 80万円、その他のガン治療のための手術には 40万円をお支払いします。
         </li>
     </ul>
 </section>
