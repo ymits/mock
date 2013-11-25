@@ -14,6 +14,7 @@
 #kyuhujirei .jirei > .scenario{
     background-color: #c6e7b5;
     padding: 0 10px; 
+    line-height: 1.2;
 }
 #kyuhujirei .jirei > .body{
     padding: 10px; 
@@ -34,6 +35,12 @@
     border-radius: 10px;
     padding: 0 20px;
     display: block;
+    box-shadow: 2px 2px 2px rgba(255,255,255,1) inset,-1px -1px 2px rgba(0,0,0,0.3) inset;
+    background-color: #fcfcfc;
+}
+#kyuhujirei .jirei .case .main:active{
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+    background-color: #eeeeee;
 }
 #kyuhujirei .jirei .case .main.collapsed .collapse-icon{
     transform:rotate(-90deg);
@@ -93,8 +100,9 @@
 #kyuhujirei .jirei .summary > span:nth-child(2) {
     float: right;
 }
-#kyuhujirei .jirei .attention {
-    padding: 5px;
+#kyuhujirei .jirei .body .rakuraku {
+    padding-top: 5px;
+    line-height: 1.2;
 }
 </style>
 <section class="tab-pane fade" id="kyuhujirei">
@@ -180,7 +188,7 @@
                 <span class="large">合計</span>
                 <span><em class="large">2,563.00</em><span class="small">万円</span></span>
             </div>
-            <div class="attention">
+            <div class="attention rakuraku">
                 ＜さらに「楽々名人」により、胃ガンと診断確定後、所定の特約の保険料は必要ありません！＞
             </div>
         </div>

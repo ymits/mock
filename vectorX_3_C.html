@@ -1,0 +1,569 @@
+<style type="text/css">
+#tsumitateHoken-tsuimitatekinSuii {
+  max-height: 600px;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea {
+  border:solid 1px #7D26CD;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .message .info{
+  color: #0000ff;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .message ul{
+  padding-left: 20px;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .unit{
+  text-align:right;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table{
+  display: inline-table;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table th{
+  border-left: 1px solid #ffffff;
+  background-color: #BF3EFF;
+  text-align:center;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table td{
+  text-align:right;
+  padding-right: 5px;
+  border-left: 1px solid #7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(2) td{
+  border-top: 1px solid #7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:last-child td{
+  border-bottom: 1px solid #7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr td:last-child{
+  border-right: 1px solid #7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(even) td{
+  background-color: #d6ffd6;
+}
+/*
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody {
+  border-top: 15px solid white;
+}
+*/
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody .separator{
+    height: 10px;
+}
+/*
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody:before {
+    line-height:0.3em;
+    content:"-";
+    color:white; 
+    display:block;
+}
+*/
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1{
+  width: 60%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 tr:first-child th:last-child{
+  border-bottom: 1px solid #ffffff;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 th.duration{
+  background-color:#7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 td.duration{
+  text-align:center;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 tbody tr:nth-child(even) td.duration{
+  background-color:#CDB5CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 tbody tr:nth-child(odd) td.duration{
+  background-color:#EED2EE;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .duration{
+  width:10%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .totalInsurnce{
+  width:20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .ex1{
+  width:20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .ex2{
+  width:20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .ex3{
+  width:20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2{
+  width: 38%;
+  float: right;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2 .withdrawal{
+  width: 40%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2 .policyValue{
+  width: 40%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2 .rate{
+  width: 20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note span{
+  vertical-align: top;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note .reference{
+  vertical-align: top;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note dl{
+  display: inline-block;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note dt{
+    float: left;
+    width: 280px;
+    overflow: hidden;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note dd{
+    margin-left: 300px;
+    text-align: right;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note dd .unit{
+    display: inline-block;
+    min-width: 50px;
+    text-align: left;
+}
+
+#tsumitateHoken-tsuimitatekinSuii .example{
+  background-color: #d6ffd6;
+  border: solid 1px #00ff00;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+#tsumitateHoken-tsuimitatekinSuii .example > div{
+    display: inline-block;
+    vertical-align: top;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .totalBox,
+#tsumitateHoken-tsuimitatekinSuii .example .withdrawalBox{
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 40px;
+    line-height: 1;
+    margin: 5px;
+    padding: 0px 10px;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .describe{
+    display: inline-block;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .totalBox .describe{
+    width: 100px;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .withdrawalBox .describe{
+    width: 135px;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .data{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .totalBox > span {
+    margin-top: 12px;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .withdrawalBox .data {
+    margin-bottom: 20px;
+    display: inline-table;
+    vertical-align: middle;
+}
+#tsumitateHoken-tsuimitatekinSuii .example .totalBox {
+    margin-left: 80px;
+}
+
+#tsumitateHoken-tsuimitatekinSuii .example .toRight {
+    background:url("img/tmp/rightArrow.png") 0 0 no-repeat transparent;
+    height: 40px ;
+    width: 25px ;
+    background-size:100% 100%;
+    margin: 5px 0 0 10px;
+}
+</style>
+<section class="tab-pane fade" id="tsumitateHoken-tsuimitatekinSuii">
+    <div class="listArea">
+        <div class="message">
+            【<span class="info">ご契約時の運用利率 年1.00%</span>】(<span class="info">最低基準利率 (年1.00%)</span>は保障されます。)
+            <ul class="small">
+                <li>例1：1年経過以降の適用利率がご契約時の適用利利のまま推移した場合</li>
+                <li>例2：1年経過以降の適用利率がご契約時の適用利利の+1.00%で推移した場合</li>
+            </ul>
+        </div>
+        <div class="small unit">【単位：円】</div>
+        <div class="list">
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="duration">経過<Br>年数</th>
+                        <th rowspan="2" class="totalInsurnce">新積立保険<Br>累計保険料</th>
+                        <th colspan="3">積立金</th>
+                    </tr>
+                    <tr>
+                        <th class="ex1">例1：1.00%</th>
+                        <th class="ex2">例2：2.00%</th>
+                        <th class="ex3">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="separator" colspan="5"></tr>
+                    <tr>
+                        <td class="duration">0</td>
+                        <td class="totalInsurnce">19,069,534</td>
+                        <td class="ex1">19,082,942</td>
+                        <td class="ex2">19,082,942</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">1</td>
+                        <td class="totalInsurnce">19,070,634</td>
+                        <td class="ex1">19,232,158</td>
+                        <td class="ex2">19,232,158</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">2</td>
+                        <td class="totalInsurnce">19,071,834</td>
+                        <td class="ex1">19,396,260</td>
+                        <td class="ex2">19,588,587</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">3</td>
+                        <td class="totalInsurnce">19,073,034</td>
+                        <td class="ex1">19,561,751</td>
+                        <td class="ex2">19,951,600</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">4</td>
+                        <td class="totalInsurnce">19,074,234</td>
+                        <td class="ex1">19,728,645</td>
+                        <td class="ex2">20,321,320</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">5</td>
+                        <td class="totalInsurnce">19,075,434</td>
+                        <td class="ex1">19,896,950</td>
+                        <td class="ex2">20,697,868</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">7</td>
+                        <td class="totalInsurnce">19,077,834</td>
+                        <td class="ex1">20,237,852</td>
+                        <td class="ex2">21,471,954</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">8</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">9</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">10</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">11</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">12</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">13</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">14</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">15</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">16</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">17</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">18</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">19</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">20</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">21</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">22</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">23</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">24</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">25</td>
+                        <td class="totalInsurnce">99,999,999</td>
+                        <td class="ex1">99,999,999</td>
+                        <td class="ex2">99,999,999</td>
+                        <td class="ex3">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table2">
+                <thead>
+                    <tr>
+                        <th class="withdrawal">例1の場合の<br>引出可能額</th>
+                        <th class="policyValue">例1の場合の<br>解約返戻金</th>
+                        <th class="rate">年平均<br>利回り</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="separator" colspan="5"></tr>
+                    <tr>
+                        <td class="withdrawal">18,500,751</td>
+                        <td class="policyValue">18,510,451</td>
+                        <td class="rate">**</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">18,645,458</td>
+                        <td class="policyValue">18,665,158</td>
+                        <td class="rate">**</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">18,998,487</td>
+                        <td class="policyValue">19,008,287</td>
+                        <td class="rate">**</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">19,356,198</td>
+                        <td class="policyValue">19,366,098</td>
+                        <td class="rate">0.51%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">19,718,645</td>
+                        <td class="policyValue">19,728,645</td>
+                        <td class="rate">0.85%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">19,886,950</td>
+                        <td class="policyValue">19,896,950</td>
+                        <td class="rate">0.86%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,227,852</td>
+                        <td class="policyValue">20,237,852</td>
+                        <td class="rate">0.86%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                    <tr>
+                        <td class="withdrawal">20,750,111</td>
+                        <td class="policyValue">20,760,111</td>
+                        <td class="rate">0.88%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note small">
+            <ul>
+                <li>・経過年数「0」は、ご契約直後の数値を表示しております。</li>
+                <li>・記載の新積立保険の累計保険料には、任意積立保険料・転換価格を含めています。</li>
+            </ul>
+            <div>
+                <span class="reference">＜参考＞</span>
+                <dl>
+                    <dt>[ご契約直後の積立金の引出可能額]</dt>
+                    <dd>18,500,751<span class="unit">円</span></dd>
+                    <dt>[上記金額を引き出された場合の積立金残高]</dt>
+                    <dd>約10,000<span class="unit">円</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="example">
+        <div class="case">
+            <div class="title">【例1の場合】</div>
+            <div class="status">80歳時の積立金状況</div>
+        </div>
+        <div class="totalBox small">
+            <span class="describe">積立金総額</span>
+            <span class="data">約<span class="normal">2,357</span>万円</span>
+        </div>
+        <div class="toRight">
+        </div>
+        <div class="withdrawalBox small">
+            <span class="describe">まとまったお金を一度にお受け取りいただく場合<br>(積立金の引出可能額)</span>
+            <span class="data">約<span class="normal">2,356</span>万円</span>
+        </div>
+    </div>
+    <div class="messagee small">
+        <ul class="items">
+            <li>※記載の「年平均利回り」は新積立保険の保険料に対する解約返戻金の1年あたりの平均利回り（単利）の試算です。上記の積立金推移表に記載の各金額や利回りは、適用利率が年 1.00%のまま一定でそのまま推移したものと仮定しています。</li>
+            <li>※<span class="attention">記載の積立金・引出可能額・解約返戻金は、計算基準日現在の適用利率にもとずいた試算であり、将来の受取金額を保証するものではありません。</span>また、各経過年後の契約応答日の前日を基準として、事前に一度もお引き出し等がなく、この設計プランの保障内容のままご継続いただいた場合の金額です。記載の解約返戻金は新積立保険のものです。このほかに特約の解約返戻金がある場合もあります。</li>
+            <li>※<span class="attention">ご契約を解約された場合、<a href="javascript:void(0)" class="explain">解約時手数料</a>として所定の金額が積立金から控除されます。また積立金の一部引き出しの場合、引き出した部分は解約されたものとし、積立金の減少額は引出金額よりも多くなります。<br>(契約転換制度または契約分割転換制度をご利用の場合、ご契約後数年間はこの控除額が大きくなる事があります。)</span></li>
+            <li>※<span class="attention">この設計プランでは、ご契約後２年間は積立金の一部引き出しの際、初回の引き出しに限り、ＡＴＭ・ＣＤによるお取り扱いは出来ず、請求書によるお手続きとさせていただきます。</span></li>
+        </ul>
+    </div>
+</section>

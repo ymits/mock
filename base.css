@@ -42,6 +42,7 @@
 .keiyakugaiyou .items li {
     text-indent: -1em;
     padding-left: 1em;
+    line-height: 1.2;
 }
 
 .keiyakugaiyou .dl-horizontal dt{

@@ -53,6 +53,7 @@
 .keiyakugaiyou .mainTabs li a .title{
     display: table-cell;
     vertical-align: middle;
+    line-height: 1.2;
 }
 
 
@@ -93,7 +94,7 @@
                 <a href="javascript:void(0);" data-target="#hokenNaiyo" data-toggle="tab"><span class="num">5.</span><span class="title">ご提案内容の明細</span></a>
             </li>
             <li>
-                <a href="javascript:void(0);" data-target="#kaiyakuhenreikin" data-toggle="tab"><span class="num">6.</span><span class="title">解約返戻金</span></a>
+                <a href="javascript:void(0);" data-target="#kaiyakuhenreikin" data-toggle="tab"><span class="num">6.</span><span class="title">解約返戻金・<br>契約者配当金</span></a>
             </li>
             <li>
                 <a href="javascript:void(0);" data-target="#sonota" data-toggle="tab"><span class="num">7.</span><span class="title">その他</span></a>
@@ -113,6 +114,8 @@
     };
     mainContentInclude(1, "./vectorX_1.html");
     mainContentInclude(2, "./vectorX_2.html");
+    mainContentInclude(3, "./vectorX_3.html");
+    mainContentInclude(4, "./vectorX_4.html");
     
     
     $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(1) a').on('click', function(){
