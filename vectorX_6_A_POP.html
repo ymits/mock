@@ -1,0 +1,194 @@
+<style>
+	#henreikin-suii .henreikin-suii-explain-title{
+		color:#FFFFFF;
+		background-color:#00b050;
+		border-style:solid;
+		border-color:#206040;
+		width:100%;
+		padding-left:1.5em;
+		margin-bottom:10px;
+	}
+	
+	#henreikin-suii	.kaiyakuhenreikin-table-wrap {
+		height:670px;
+	}
+	
+	#henreikin-suii .kaiyakuhenreikin-table {
+		width : 100%;
+		border : solid 1px;
+	}
+	#henreikin-suii .kaiyakuhenreikin-table th {
+		background-color: #CCF1B3;
+		text-align : center;
+		font-weight : bold;
+		line-height : 100%;
+		border : solid 1px;
+	} 	
+	#henreikin-suii .kaiyakuhenreikin-table th.border-right-and-bottom-style-none {
+		border-right-style : hidden;
+		border-bottom-style : hidden;
+	}
+	#henreikin-suii .kaiyakuhenreikin-table th.border-top-style-none {
+		border-top-style : hidden;
+	}
+	#henreikin-suii th.side-border-style-none{
+		border-right-style : hidden;
+		border-left-style : hidden;
+	}
+	#henreikin-suii .kaiyakuhenreikin-table td {
+		text-align : right;
+		padding-right : 8px;
+		border : solid 1px;
+	} 
+	#henreikin-suii .kaiyakuhenreikin-table tr:nth-of-type(odd) > td {
+		background-color: while;
+	} 
+	#henreikin-suii .kaiyakuhenreikin-table tr:nth-of-type(even) > td {
+		background-color: #CCF1B3;
+	}
+	#henreikin-suii {
+		padding-top : 12px;
+		height : 10%;
+		overflow-y : scroll;
+		margin-bottom:1px;
+	}
+	#henreikin-suii .henreikin-suii-hosoku div {
+		text-indent:-1em;
+		padding-left:1em;
+		font-size:12px;
+	}
+	#henreikin-suii .red{
+		color:red;
+	}
+</style>
+<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>
+<div class="modalHost" style="z-index: 1058; opacity: 1;">
+<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="height:650px;">
+<div class="overlayPannel confWin keiyakugaiyou" style="margin-top: -325px;margin-left: -420px; height:650px;">
+<header data-bind="text: title">
+	解約返戻金の推移（ご契約時の内容のままご継続いただいた前提）
+</header>
+<section id="henreikin-suii" style="height:550px;">
+	<!--
+	タイトルを中に表示するパターン
+	<div class="henreikin-suii-explain-title">
+	解約返戻金の推移　（ご契約時の内容のままご継続いただいた前提）
+	</div>
+	-->
+	<div class="kaiyakuhenreikin-table-wrap">
+		<table class="kaiyakuhenreikin-table">
+			<thead>
+				<th></th>
+				<th></th>
+				<th>(1)</th>
+				<th class="th.border-right-and-bottom-style-none">(2)</th>
+				<th class="side-border-style-none"></th>
+				<th class="side-border-style-none"></th>
+				<th></th>
+				<th>(3)</th>
+				<th>(4)</th>
+			</thead>
+			<thead>
+				<th>経過<br>年数<br>(年後)</th>
+				<th>年齢<br> <br>(歳時)</th>
+				<th>保険料<br>累計額<br>(約　万円)</th>
+				<th class="border-top-style-none">解約時の受取合計額<br>年数<br>(約　万円)</th>
+				<th>うち<br>新積立保険部分<br>(約　万円)</th>
+				<th>うち<br>特約部分<br>(約　万円)</th>
+				<th>うち<br>無事故給付金<br>(約　万円)</th>
+				<th>返戻率<br>[ (2) ÷ (1)]<br></th>
+				<th>新積立保険<br>引出可能額<br>(約　万円)</th>
+			</thead>
+			<tbody>
+				<tr><td>1</td><td>43</td><td>86</td><td>17</td><td>5</td><td>11</td><td>0</td><td>20.0%</td><td>4</td></tr>
+				<tr><td>2</td><td>44</td><td>171</td><td>46</td><td>11</td><td>34</td><td>0</td><td>26.9%</td><td>10</td></tr>
+				<tr><td>3</td><td>45</td><td>257</td><td>75</td><td>17</td><td>58</td><td>0</td><td>29.2%</td><td>16</td></tr>
+				<tr><td>4</td><td>46</td><td>342</td><td>105</td><td>23</td><td>81</td><td>0</td><td>30.7%</td><td>22</td></tr>
+				<tr><td>5</td><td>47</td><td>427</td><td>140</td><td>29</td><td>104</td><td>5</td><td>32.8%</td><td>28</td></tr>
+				<tr><td>6</td><td>48</td><td>513</td><td>169</td><td>35</td><td>127</td><td>5</td><td>32.9%</td><td>35</td></tr>
+				<tr><td>7</td><td>49</td><td>598</td><td>199</td><td>41</td><td>150</td><td>5</td><td>33.3%</td><td>41</td></tr>
+				<tr><td>8</td><td>50</td><td>683</td><td>229</td><td>47</td><td>173</td><td>5</td><td>33.5%</td><td>47</td></tr>
+				<tr><td>9</td><td>51</td><td>769</td><td>259</td><td>53</td><td>196</td><td>5</td><td>33.7%</td><td>53</td></tr>
+				<tr><td>10</td><td>52</td><td>854</td><td>294</td><td>59</td><td>219</td><td>10</td><td>34.4%</td><td>59</td></tr>
+				<tr><td>11</td><td>53</td><td>966</td><td>324</td><td>65</td><td>242</td><td>10</td><td>33.5%</td><td>65</td></tr>
+				<tr><td>12</td><td>54</td><td>1078</td><td>353</td><td>71</td><td>265</td><td>10</td><td>32.7%</td><td>71</td></tr>
+				<tr><td>13</td><td>55</td><td>1190</td><td>382</td><td>77</td><td>288</td><td>10</td><td>32.1%</td><td>78</td></tr>
+				<tr><td>14</td><td>56</td><td>1302</td><td>412</td><td>83</td><td>311</td><td>10</td><td>31.6%</td><td>84</td></tr>
+				<tr><td>15</td><td>57</td><td>1413</td><td>447</td><td>89</td><td>334</td><td>15</td><td>31.6%</td><td>90</td></tr>
+				<tr><td>16</td><td>58</td><td>1525</td><td>477</td><td>95</td><td>357</td><td>15</td><td>31.3%</td><td>96</td></tr>
+				<tr><td>17</td><td>59</td><td>1637</td><td>507</td><td>101</td><td>380</td><td>15</td><td>31.0%</td><td>103</td></tr>
+				<tr><td>18</td><td>60</td><td>1749</td><td>538</td><td>107</td><td>403</td><td>15</td><td>30.8%</td><td>109</td></tr>
+				<tr><td>19</td><td>61</td><td>1861</td><td>569</td><td>113</td><td>426</td><td>15</td><td>30.6%</td><td>115</td></tr>
+				<tr><td>20</td><td>62</td><td>1973</td><td>605</td><td>119</td><td>449</td><td>15</td><td>30.7%</td><td>122</td></tr>
+				<tr><td>21</td><td>63</td><td>2150</td><td>637</td><td>125</td><td>472</td><td>20</td><td>29.6%</td><td>158</td></tr>
+				<tr><td>22</td><td>64</td><td>2328</td><td>669</td><td>131</td><td>495</td><td>20</td><td>28.7%</td><td>134</td></tr>
+				<tr><td>23</td><td>65</td><td>2506</td><td>702</td><td>137</td><td>518</td><td>20</td><td>28.0%</td><td>141</td></tr>
+				<tr><td>24</td><td>66</td><td>2680</td><td>735</td><td>143</td><td>541</td><td>20</td><td>27.4%</td><td>147</td></tr>
+				<tr><td>25</td><td>67</td><td>2854</td><td>774</td><td>149</td><td>564</td><td>20</td><td>27.1%</td><td>154</td></tr>
+				<tr><td>26</td><td>68</td><td>3029</td><td>808</td><td>155</td><td>587</td><td>25</td><td>26.7%</td><td>160</td></tr>
+				<tr><td>27</td><td>69</td><td>3203</td><td>844</td><td>161</td><td>610</td><td>25</td><td>26.4%</td><td>167</td></tr>
+				<tr><td>28</td><td>70</td><td>3377</td><td>880</td><td>167</td><td>633</td><td>25</td><td>26.1%</td><td>173</td></tr>
+				<tr><td>29</td><td>71</td><td>3457</td><td>1185</td><td>173</td><td>656</td><td>25</td><td>34.3%</td><td>180</td></tr>
+				<tr><td>30</td><td>72</td><td>3538</td><td>1203</td><td>179</td><td>679</td><td>25</td><td>34.0%</td><td>186</td></tr>
+				<tr><td>21</td><td>73</td><td>3688</td><td>1215</td><td>185</td><td>702</td><td>30</td><td>32.9%</td><td>193</td></tr>
+				<tr><td>22</td><td>74</td><td>3839</td><td>1228</td><td>191</td><td>725</td><td>30</td><td>32.0%</td><td>200</td></tr>
+				<tr><td>23</td><td>75</td><td>3990</td><td>1240</td><td>197</td><td>748</td><td>30</td><td>31.1%</td><td>206</td></tr>
+				<tr><td>24</td><td>76</td><td>4141</td><td>1253</td><td>203</td><td>771</td><td>30</td><td>30.3%</td><td>213</td></tr>
+				<tr><td>25</td><td>77</td><td>4192</td><td>1270</td><td>209</td><td>794</td><td>30</td><td>30.3%</td><td>220</td></tr>
+				<tr><td>21</td><td>78</td><td>4442</td><td>1282</td><td>215</td><td>817</td><td>35</td><td>28.9%</td><td>226</td></tr>
+				<tr><td>22</td><td>79</td><td>4593</td><td>1294</td><td>221</td><td>840</td><td>35</td><td>28.2%</td><td>233</td></tr>
+				<tr><td>23</td><td>80</td><td>4744</td><td>1309</td><td>227</td><td>863</td><td>35</td><td>27.6%</td><td>240</td></tr>
+				<tr><td>24</td><td>81</td><td>4750</td><td>1320</td><td>233</td><td>886</td><td>35</td><td>27.8%</td><td>247</td></tr>
+				<tr><td>25</td><td>82</td><td>4756</td><td>1331</td><td>239</td><td>909</td><td>35</td><td>28.0%</td><td>253</td></tr>
+				<tr><td>21</td><td>83</td><td>4762</td><td>1343</td><td>245</td><td>932</td><td>38</td><td>28.2%</td><td>260</td></tr>
+				<tr><td>22</td><td>84</td><td>4768</td><td>1351</td><td>251</td><td>955</td><td>38</td><td>28.3%</td><td>267</td></tr>
+				<tr><td>23</td><td>85</td><td>4774</td><td>1364</td><td>257</td><td>978</td><td>38</td><td>28.6%</td><td>274</td></tr>
+				<tr><td>24</td><td>86</td><td>4780</td><td>1371</td><td>263</td><td>1001</td><td>38</td><td>28.7%</td><td>281</td></tr>
+				<tr><td>25</td><td>87</td><td>4786</td><td>1375</td><td>269</td><td>1024</td><td>38</td><td>28.7%</td><td>288</td></tr>
+				<tr><td>21</td><td>88</td><td>4792</td><td>1386</td><td>275</td><td>1047</td><td>39</td><td>28.9%</td><td>295</td></tr>
+				<tr><td>22</td><td>89</td><td>4798</td><td>1396</td><td>281</td><td>1070</td><td>39</td><td>29.1%</td><td>302</td></tr>
+				<tr><td>23</td><td>90</td><td>4804</td><td>1406</td><td>287</td><td>1093</td><td>39</td><td>29.3%</td><td>309</td></tr>
+				<tr><td>24</td><td>91</td><td>4810</td><td>1416</td><td>293</td><td>1116</td><td>39</td><td>29.4%</td><td>316</td></tr>
+				<tr><td>25</td><td>92</td><td>4816</td><td>1435</td><td>299</td><td>1139</td><td>39</td><td>29.8%</td><td>323</td></tr>
+			</tbody>
+		</table>
+		<div class="henreikin-suii-hosoku">
+		<div>
+		※記載の保険料累計額は1万円未満を切り上げて、それ以外の数値は1万円未満を切り捨てて表示していますが、各数値の算出の際には端数処理前の数値を使用しています。したがって、解約時の受取合計額は「うち」と記載の内訳金額の合計と相違する場合があります。
+		</div>
+		<div>
+		※更新可能な特約が不可されている場合、更新可能な特約部分の解約返戻金は、計算基準日現在の保険料率にもとづき算出しています。
+		</div>
+		<div>
+		※新積立保険の解約返戻金、引出可能額は、事前にお引き出しがなく、契約人の適用利率がそのまま推移したものとして試算（1年経過以降の適用利率がご契約時の適用利率のまま推移した場合）しています。なお、集信保険特約2007、「（終身型）」のワイドディフェンス特約A・介護保障特約A・障害サポート特約Aは低解約返戻金型（一定期間、解約返戻金を抑制するしくみで保険料を計算）で、それ以外の特約に解約返戻金はありません。
+		</div>
+		<div>
+		※記載の無事故給付金は、記載の期間を通じて入院給付金等のお支払いがなく、また作成年月日現在の利率でそのまますえ置いたものとして算出しています。なお、すえ置き利率は今後変動（上下）することがあります。
+		</div>
+		<div>
+		※記載の解約返戻金は各経過年数の契約応当日前日のものです。（払込期間中は契約応当日前日までの保険料が払い込まれたものとして算出）
+		</div>
+		<div>
+		※契約者配当金のある場合には、上記金額に合意して、お支払いします。（なお、上記には契約者配当金は含まれていません。）
+		</div>
+		<div>
+		※保険料累計額は、転換価格・任意積立保険料を含めた数値で表示しております。
+		</div>
+		<div>
+		※記載の保険料累計額は、更新時年齢が60歳以下のときには健康自慢を付加したものとして算出しています。
+		</div>
+		<div class="red">
+		※解約返戻金をお支払いした場合、以後の保障はなくなります。
+		</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<p>
+		<a href="javascript:void(0)" class="btn sub" >閉じる</a>
+	</p>
+	</footer>
+</div>
+</div>
+</div>
+</html>
