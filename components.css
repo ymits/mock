@@ -156,6 +156,7 @@ filter: none; /* IE6-8 */
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   background-image: none;
+  filter:none;
 }
 
 /** アコーディオン関連 */
