@@ -1,62 +1,3 @@
-<style>
-	#hokenNaiyo table {
-		width: 100%;
-		border-top: 1px solid #000000;
-		border-right: 1px solid #000000;
-	}
-	#hokenNaiyo table th , #hokenNaiyo table td {
-	  border-bottom: solid 1px #000000;
-	  border-left: solid 1px #000000;
-	  vertical-align: middle;
-	  line-height: 1;
-	}
-	#hokenNaiyo table th {
-		text-align: center;
-		color: #ffffff;
-		background-color: #747474;
-	}
-	#hokenNaiyo table th,td{
-		padding: 3px 3px;
-	}
-	#hokenNaiyo table tr td:nth-child(1) {
-		text-align:left;
-		padding-left:12px;
-	}
-	#hokenNaiyo table tr td:nth-child(2),td:nth-child(3) {
-		text-align:right;
-	}
-	#hokenNaiyo table tr td:nth-child(4),td:nth-child(5),td:nth-child(6) {
-		text-align:center;
-	}
-
-	/** 個別設定用*/
-	#hokenNaiyo table tr td.text-left-center{
-		text-align:left;
-		padding-left:20%;
-	}
-	#hokenNaiyo table tr td.text-align-right{
-		text-align:right;
-	}
-
-	#hokenNaiyo table td .subtitle {
-		float: left;
-		margin-left: 20px;
-	}
-
-	#hokenNaiyo ul li .item{
-		width: 45px;
-		float: left;
-	}
-	#hokenNaiyo ul li .text{
-		padding-left: 45px;
-	}
-	/** TODO 契約概要でappdendixのスタイルを統一する*/
-	#hokenNaiyo .appendix{
-		background:white;
-		color: #ff0000;
-		font-weight:bold;
-	}
-</style>
 <section class="tab-pane fade" id="hokenNaiyo">
 	<table>
 		<thead>
@@ -192,7 +133,7 @@
 			</tr>
 			<tr>
 				<td>先進医療特約2011 (終身型)</td>
-				<td>付加されています<span class="appendix small">(注1)</span></td>
+				<td>付加されています<span class="appendix first inline"></span></td>
 				<td><em>99,999,999</em><span class="small">円</span></td>
 				<td><em>終身</em></td>
 				<td><em>65</em><span class="small">歳</span></td>
@@ -224,34 +165,43 @@
 			</tr>
 			<tr>
 				<td><a href="javascript:void(0)" class="link explain">楽々名人</a></td>
-				<td colspan="5" class="text-left-center">付加されています<span class="appendix small">(注2)</span></td>
+				<td colspan="5" class="text-left-center">付加されています<span class="appendix second inline"></span></td>
 			</tr>
 			<tr>
 				<td><a href="javascript:void(0)" class="link explain">リビング・ニーズ特約</a></td>
-				<td colspan="5" class="text-left-center">付加されています<span class="appendix small">(注3)</span><span class="appendix small">(注4)</span></td>
+				<td colspan="5" class="text-left-center">付加されています<span class="appendix third inline"></span><span class="appendix fourth inline"></span></td>
 			</tr>
 			<tr>
 				<td><a href="javascript:void(0)" class="link explain">指定代理請求特約</a></td>
-				<td colspan="5" class="text-left-center">付加されています<span class="appendix small">(注3)</span></td>
+				<td colspan="5" class="text-left-center">付加されています<span class="appendix fourth inline"></span></td>
 			</tr>
 		</tbody>
 		</table>
 		<ul class="small">
 			<li>
-				<div class="item">[※]</div>
-				<div class="text">1回目の入院の給付限度の型は90日型となります。(入院時生活費サポート特約2007は、総合入院特約2011が90日型の場合、1回の入院につき、3回が給付限度となります。)<div></li>
+				<div class="item">※</div>
+				<div class="text">1回目の入院の給付限度の型は90日型となります。(入院時生活費サポート特約2007は、総合入院特約2011が90日型の場合、1回の入院につき、3回が給付限度となります。)<div>
+			</li>
 			<li>
-				<div class="item appendix">(注1)</div>
-				<div class="text">先進医療特約2011が付加されている場合、被保険者が負担した先進医療の技術に関わる費用相当額を保障します。</div></li>
+				<div class="item"><span class="appendix first"></span></div>
+				<div class="text">先進医療特約2011が付加されている場合、被保険者が負担した先進医療の技術に関わる費用相当額を保障します。</div>
+			</li>
 			<li>
-				<div class="item appendix">(注2)</div>
-				<div class="text attention">楽々名人(保険料払込免除特約2007)をふかしたご契約の特約の保険料は所定の保険料率で計算され、付加していない場合よりも高くなります。</div></li>
+				<div style="clear:left"></div>
+				<div class="item"><span class="appendix second"></span></div>
+				<div class="text attention">楽々名人(保険料払込免除特約2007)をふかしたご契約の特約の保険料は所定の保険料率で計算され、付加していない場合よりも高くなります。</div>
+			</li>
 			<li>
-				<div class="item appendix">(注3)</div>
-				<div class="text">リビング・ニーズ特約、指定代理請求特約の保険料は無料です。</div></li>
+				<div style="clear:left"></div>
+				<div class="item"><span class="appendix third"></span></div>
+				<div class="text">リビング・ニーズ特約、指定代理請求特約の保険料は無料です。</div>
+			</li>
 			<li>
-				<div class="item appendix">(注4)</div>
-				<div class="text">リビング・ニーズ特約の請求限度額は1,400万円となります。また、他契約との通算請求限度があります。</div></li>
+				<div style="clear:left"></div>
+				<div class="item"><span class="appendix fourth"></span></div>
+				<div class="text">リビング・ニーズ特約の請求限度額は1,400万円となります。また、他契約との通算請求限度があります。</div>
+			</li>
 		</ul>
+		<div class="red small" style="clear:left;">※特約の主なお支払事由や給付に際しての制限事項等については、<div class="detail"></div>をご覧ください。</div>
 		</div>
 </section>

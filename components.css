@@ -172,6 +172,39 @@ filter: none; /* IE6-8 */
 .keiyakugaiyou .collapse.in {
   height: auto;
 }
+.keiyakugaiyou [data-toggle=collapse] {
+  position: relative;
+}
+.keiyakugaiyou [data-toggle=collapse] .collapse-ui{
+  display: table;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  top: 50%;
+  margin-top: -14px;
+}
+.keiyakugaiyou [data-toggle=collapse] .collapse-ui > .title{
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.keiyakugaiyou [data-toggle=collapse].collapsed .collapse-ui > .collapse-icon{
+  background-image:url("img/tmp/plus.png");
+}
+.keiyakugaiyou [data-toggle=collapse] .collapse-ui > .collapse-icon{
+  -webkit-transition: background-image 0.35s ease;
+  -moz-transition: background-image 0.35s ease;
+  -o-transition: background-image 0.35s ease;
+  transition: background-image 0.35s ease;
+  background-image:url("img/tmp/minus.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  display: table-cell;
+  vertical-align: middle;
+}
 
 /** 索引関連 */
 .keiyakugaiyou .appendix {
@@ -197,4 +230,7 @@ filter: none; /* IE6-8 */
 }
 .keiyakugaiyou .appendix.third {
     background-image: url(img/tmp/appendix3.png);
+}
+.keiyakugaiyou .appendix.fourth {
+    background-image: url(img/tmp/appendix4.png);
 }

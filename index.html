@@ -35,69 +35,8 @@
 
         <link rel="stylesheet" type="text/css" media="all" href="base.css">
         <link rel="stylesheet" type="text/css" media="all" href="components.css">
-        <style>
-            input[type=text].invalid {
-                border: 1px #f0a0a0 solid;
-                border-radius: 5px;
-                background: #fff;
-                padding: 6px;
-                font-size: 14px;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-            }
-            span.selWrap.invalid {
-                border: 1px red solid;
-            }
-        </style>
-
-        <!-- TODO 専用のcssファイルへ移動 -->
-        <style>
-            .fukidashiHost {
-                opacity: 0;
-                -webkit-backface-visibility: hidden;
-                -webkit-transition: opacity 0.1s linear;
-                -moz-transition: opacity 0.1s linear;
-                -o-transition: opacity 0.1s linear;
-                transition: opacity 0.1s linear;
-                margin: 10px;
-            }
-            .defaultArrow {
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                background-repeat: no-repeat;
-                background-image: url(resources/content/img/icn_own/fukidashiArrowDark.png);
-            }
-            .topArrow {  }
-            .bottomArrow {
-                transform:rotate(180deg);
-                -ms-transform:rotate(180deg);
-                -webkit-transform:rotate(180deg);
-            }
-            .leftArrow {
-                transform:rotate(270deg);
-                -ms-transform:rotate(270deg);
-                -webkit-transform:rotate(270deg);
-            }
-            .rightArrow {
-                transform:rotate(90deg);
-                -ms-transform:rotate(90deg);
-                -webkit-transform:rotate(90deg);
-            }
-            .confWin{
-                display:block;
-            }
-            .confWin section h1.ERROR{background-image:url(img/icons/icnNoticeFailure.png);}
-            .confWin section h1.JYOHO{background-image:url(img/icons/icnNoticeInfo.png);}
-            .confWin section h1.KANRYO{background-image:url(img/icons/icnNoticeCheckMark.png);}
-            .confWin section h1.KEIKOKU{background-image:url(img/icons/icnNoticeAlert.png);}
-            .confWin section h1.TOIAWASE{background-image:url(img/icons/icnNoticeQuestion.png);}
-            .confWin footer p { min-width: 110px; width: auto;}
-            .confWin {min-height: 270px; height: auto;}
-            .confWin section {min-height: 230px; height: auto;}
-            .confWin footer {position: relative; height: 50px;}
-        </style>
+        <link rel="stylesheet" type="text/css" media="all" href="vectorX_style.css">
+        
     </head>
     <body style="margin-right: 0px;">
         <!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
@@ -108,35 +47,7 @@
     transition: 'entrance', //use the 'entrance' transition when switching views
     cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
 }--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true">
-<style>
-/** 文字サイズ設定 */
-#pageHeader .font-size-area {
-	width: 200px;
-	float: right;
-	line-height: 54px;
-}
-#pageHeader .font-size-area .btn.sub{
-	display: inline-block;
-	width: 60px;
-	text-align: center;
-}
-#pageHeader .font-size-area .btn.sub.selected{
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
-	background: url(img/bg/gradDisabled.png) repeat-x left center;
-	background-size: auto 100%;
-	opacity: 1;
-	cursor: default;
-	font-weight: bold
-}
-#pageHeader .font-size-area .btn.sub:first-of-type{
-	border-radius: 4px 0 0 4px;
-}
-#pageHeader .font-size-area .btn.sub:last-of-type{
-	border-radius: 0 4px 4px 0;
-	border-left: none;
-}
-
-</style><div id="wrapper" class="outline">
+<div id="wrapper" class="outline">
     <header id="pageHeader">
         <nav id="transfer">
             <ul>
@@ -155,7 +66,7 @@
     <footer id="pageFooter">
         <nav class="btnArray links">
             <ul>
-                <li class="prevPage"><a href="javascript:void(0);">提案編集画面</a></li>
+                <li class="prevPage"><a href="javascript:void(0);">提案書編集画面</a></li>
             </ul>
         </nav>
 

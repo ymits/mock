@@ -42,29 +42,12 @@
     box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
     background-color: #eeeeee;
 }
-#kyuhujirei .jirei .case .main.collapsed .collapse-icon{
-    transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    -webkit-transform:rotate(-90deg);
-}
-#kyuhujirei .jirei .case .main .collapse-icon{
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    background:url("img/tmp/underArrow.png") 0 0 no-repeat transparent;
-    background-size: 100% 100%;
-    display: inline-block;
-    width: 15px;
-    height: 10px;
-    margin-right: 10px;
-    margin-bottom: 2px;
-}
-#kyuhujirei .jirei .case .main .title{
+#kyuhujirei .jirei .case .main > .title{
     display: inline-block;
 }
-#kyuhujirei .jirei .case .main .data{
+#kyuhujirei .jirei .case .main > .data{
     float: right;
+    margin-right: 70px;
 }
 #kyuhujirei .jirei .breakdown{
     padding: 10px 0 10px 30px;
@@ -115,8 +98,9 @@
         <div class="body">
             <div class="case flow1">
                 <a href="javascript:void(0)" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow1 .collapse">
-                    <span class="title large"><span class="collapse-icon"></span>入院開始</span>
+                    <span class="title large">入院開始</span>
                     <span class="data"><em class="large">921.00</em><span class="small">万円</span></span>
+                    <div class="collapse-ui"><div class="title">開く</div><div class="collapse-icon"></div></div>
                 </a>
                 <div class="collapse">
                     <dl class="breakdown">
@@ -135,8 +119,9 @@
             <div class="downArrow"></div>
             <div class="case flow2">
                 <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow2 .collapse">
-                    <span class="title large"><span class="collapse-icon"></span>22日間入院</span>
+                    <span class="title large">22日間入院</span>
                     <span class="data"><em class="large">76.00</em><span class="small">万円</span></span>
+                    <div class="collapse-ui"><div class="title">開く</div><div class="collapse-icon"></div></div>
                 </a>
                 <div class="collapse">
                     <dl class="breakdown">
@@ -154,8 +139,9 @@
             <div class="downArrow"></div>
             <div class="case flow3">
                 <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow3 .collapse">
-                    <span class="title large"><span class="collapse-icon"></span>胃切除術を受けた</span>
+                    <span class="title large">胃切除術を受けた</span>
                     <span class="data"><em class="large">170.00</em><span class="small">万円</span></span>
+                    <div class="collapse-ui"><div class="title">開く</div><div class="collapse-icon"></div></div>
                 </a>
                 <div class="collapse">
                     <dl class="breakdown">
@@ -173,8 +159,9 @@
             <div class="downArrow"></div>
             <div class="case flow4">
                 <a href="javascript:void(0);" class="main collapsed" data-toggle="collapse" data-target="#kyuhujirei .case.flow4 .collapse">
-                    <span class="title large"><span class="collapse-icon"></span>生存退院した</span>
+                    <span class="title large">生存退院した</span>
                     <span class="data"><em class="large">5.00</em><span class="small">万円</span></span>
+                    <div class="collapse-ui"><div class="title">開く</div><div class="collapse-icon"></div></div>
                 </a>
                 <div class="collapse">
                     <dl class="breakdown">
@@ -210,5 +197,12 @@
     });
     $('#kyuhujirei .case .collapse').on('hidden', function(){
         $(this).parent().removeClass('open');
+    });
+    $('#kyuhujirei [data-toggle=collapse]').on('click', function(evt){
+      if($(this).hasClass('collapsed')){
+        $(this).find('.collapse-ui .title').text('閉じる');
+      } else {
+        $(this).find('.collapse-ui .title').text('開く');
+      }
     });
 </script>

@@ -89,27 +89,6 @@
 #shibouHoshou .btnArea .btn{
   display: block;
 }
-#shibouHoshou .btnArea .btn.collapsed .collapse-icon{
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    -webkit-transform:rotate(90deg);
-}
-#shibouHoshou .btnArea .btn .collapse-icon{
-  transform:rotate(180deg);
-  -ms-transform:rotate(180deg);
-  -webkit-transform:rotate(180deg);
-  -webkit-transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-  background:url("img/icn_own/fukidashiArrowDark.png") 0 0 no-repeat transparent;
-  background-size: 100% 100%;
-  display: inline-block;
-  width: 15px;
-  height: 10px;
-  margin-right: 10px;
-  margin-bottom: 2px;
-}
 #shibouHoshou .red{
     color:#ff0000;
 }
@@ -160,7 +139,7 @@
     </table>
     
     <div class="btnArea" id="btnArea">
-      <a href="javascript:void(0)" class="btn linkBtn collapsed" data-toggle="collapse" data-target="#shibouHoshou .collapse"><span class="collapse-icon"></span>不慮の事故による死亡・所定の高度障害状態の保障</a>
+      <a href="javascript:void(0)" class="btn linkBtn collapsed" data-toggle="collapse" data-target="#shibouHoshou .collapse">不慮の事故による死亡・所定の高度障害状態の保障<div class="collapse-ui"><div class="title">開く</div><div class="collapse-icon"></div></div></a>
     </div>
     <div class="collapse">
     <table class="secondTable">
@@ -209,9 +188,11 @@
   </div>
 </section>
 <script>
-/*
-    $('#shibouHoshou .btnArea .btn').on('click', function(evt){
-        $('#shibouHoshou table:nth-of-type(2)').toggle();
-    });
-*/
+$('#shibouHoshou .btnArea .btn').on('click', function(evt){
+  if($('#shibouHoshou .btnArea .btn').hasClass('collapsed')){
+    $('#shibouHoshou .btnArea .btn .collapse-ui .title').text('閉じる');
+  } else {
+    $('#shibouHoshou .btnArea .btn .collapse-ui .title').text('開く');
+  }
+});
 </script>
