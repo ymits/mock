@@ -109,7 +109,7 @@ span.selWrap.invalid {
 	background-color: #747474;
 }
 #hokenNaiyo table th, #hokenNaiyo table td{
-	padding: 4px 8px;
+	padding: 4px 6px;
 }
 #hokenNaiyo table tr td:nth-child(1) {
 	text-align:left;
