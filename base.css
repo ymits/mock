@@ -13,6 +13,7 @@
 .keiyakugaiyou .small{
     font-size: 12px;
 }
+/*
 .keiyakugaiyou.fontL {
     font-size: 16px;
 }
@@ -25,12 +26,22 @@
 .keiyakugaiyou.fontL .small{
     font-size: 14px;
 }
+*/
+.keiyakugaiyou.fontL .zoomTarget{
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform-origin:left top;
+  -ms-transform-origin:left top;
+  -moz-transform-origin:left top;
+  -o-transform-origin:left top;
+  -webkit-transform-origin:left top;
+}
 .keiyakugaiyou .attention {
 	color: #ff0000;
 	text-decoration: underline;
-}
-.keiyakugaiyou .btn {
-    font-size: none;
 }
 .keiyakugaiyou em{
     font-weight: bold;
