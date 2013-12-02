@@ -185,6 +185,7 @@ filter: none; /* IE6-8 */
 .keiyakugaiyou .collapse.in {
   height: auto;
 }
+/*
 .keiyakugaiyou [data-toggle=collapse] {
   position: relative;
 }
@@ -217,6 +218,28 @@ filter: none; /* IE6-8 */
   height: 25px;
   display: table-cell;
   vertical-align: middle;
+}
+*/
+.keiyakugaiyou [data-toggle=collapse].collapsed .collapse-icon{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+.keiyakugaiyou [data-toggle=collapse] .collapse-icon{
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background:url("img/icn_own/fukidashiArrowDark.png") 0 0 no-repeat transparent;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 
 /** 索引関連 */
