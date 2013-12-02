@@ -71,7 +71,7 @@
 			var bodyHeight = opts.height - offsetY;
 			crossDiv.width(offsetX).height(offsetY);
 			rowDiv
-				.width(bodyWidth - (withHeight ? 20 : 0))
+				.width(bodyWidth)
 				.height(offsetY)
 				.css({left: offsetX + 'px'});
 			rowTable.css({
@@ -87,7 +87,7 @@
 				marginBottom: (withWidth ? 20 : 0) + 'px'
 			});
 			bodyDiv
-				.width(bodyWidth -(withHeight ? 20 : 0))
+				.width(bodyWidth)
 				.height(bodyHeight - (withWidth ? 20 : 0))
 				.css({left: offsetX + 'px', top: offsetY + 'px'});
 			bodyTable.css({
