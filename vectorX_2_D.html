@@ -179,3 +179,12 @@
         </li>
     </ul>
 </section>
+<script type="text/javascript" charset="utf-8">
+    $('#hoshouNaiyou [data-target=#seizenKyuhu]').on('shown', function(){
+        $('#seizenKyuhu table tbody td.reason').each(function(){
+            console.log($(this).height());
+            $(this).find('.linkBtn.cell').css('height', $(this).height());
+        });
+    });
+	
+</script>
