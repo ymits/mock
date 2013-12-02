@@ -64,15 +64,15 @@
         width: 60px;
     }
     #shikumi table.option tr td:nth-child(2){
-        width: 470px;
+        width: 500px;
         line-height: 1;
     }
     #shikumi table.option tr td:nth-child(3){
-        width: 100px;
+        width: 110px;
         /*border-left:2px dotted #000000;*/
     }
     #shikumi table.option tr td:nth-child(4){
-        width: 100px;
+        width: 110px;
         /*border-left:2px dotted #000000;*/
     }
     #shikumi table.option tr td:nth-child(5){
@@ -150,7 +150,6 @@
 
     #shikumi table.option tr td .term1 .name{
         left:5px;
-        top:5px;
     }
     
     #shikumi table.option tr td .term1 .expire,
@@ -233,7 +232,45 @@
         left:-38px;
     }
     
-
+    #shikumi table.option .linkBtn.btn {
+        height: 35px;
+        line-height: 1;
+        display: table-cell;
+        vertical-align: middle;
+        box-shadow: 2px 4px 4px rgba(255,255,255,0.5) inset,-2px -2px 4px rgba(0,0,0,0.3) inset;
+        border: none;
+        width: 200px;
+    }
+    #shikumi table.option .linkBtn.btn.blue {
+        background-image:url(img/tmp/blueLine.png);
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+    }
+    #shikumi table.option .linkBtn.btn.blue:active {
+        background-color: #bcd3ea;
+        background-image:none;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+    }
+    #shikumi table.option .linkBtn.btn.gradient {
+        background-image:url(img/tmp/gradientLine.png);
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+    }
+    #shikumi table.option .linkBtn.btn.gradient:active {
+        background-color: #e6dbf3;
+        background-image:none;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+    }
+    #shikumi table.option .linkBtn.btn.green {
+        background-image:url(img/tmp/greenLine.png);
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+    }
+    #shikumi table.option .linkBtn.btn.green:active {
+        background-color: #c4eac4;
+        background-image:none;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+    }
     
     #shikumi .tsumitate {
       margin-bottom: 20px;
@@ -321,7 +358,7 @@
                 </td>
                 <td>
                     <div class="term1 downLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">生活保障特約2007<br><span class="small">(生活保障タイプ)</span></a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn blue">生活保障特約2007<br><span class="small">(生活保障タイプ)</span></a></div>
                         <div class="expire small"><em class="normal">60</em>歳まで</div>
                         <div class="amount">
                             <em class="large">100</em><span class="small">万円</span> × 27 〜 5<span class="small">年</span>
@@ -351,7 +388,7 @@
                 </td>
                 <td>
                     <div class="term1 blueLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">定期保険特約2007</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn blue">定期保険特約2007</a></div>
                         <div class="expire small"><em class="normal">10</em>年更新<br><em class="normal">60</em>歳限度</div>
                         <div class="amount"><em class="large">100</em><span class="small">万円</span></div>
                     </div>
@@ -368,7 +405,7 @@
                 </td>
                 <td>
                     <div class="term1 blueLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">終身保険特約2007</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn blue">終身保険特約2007</a></div>
                         <div class="expire small">&nbsp;</div>
                         <div class="amount"><em class="large">100</em><span class="small">万円</span></div>
                     </div>
@@ -390,7 +427,7 @@
                 </td>
                 <td>
                     <div class="term1 gradientLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">ワイドディフェンス特約Ａ</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn gradient">ワイドディフェンス特約Ａ</a></div>
                         <div class="expire small">&nbsp;</div>
                         <div class="amount"><em class="large">100</em><span class="small">万円</span></div>
                     </div>
@@ -412,7 +449,7 @@
                 </td>
                 <td>
                     <div class="term1 gradientLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">介護保障特約Ａ</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn gradient">介護保障特約Ａ</a></div>
                         <div class="expire small">&nbsp;</div>
                         <div class="amount"><em class="large">100</em><span class="small">万円</span></div>
                     </div>
@@ -437,7 +474,7 @@
                 </td>
                 <td>
                     <div class="term1 greenLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">災害割増特約</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn green">災害割増特約</a></div>
                         <div class="expire small"><em class="normal">10</em>年更新<br><em class="normal">60</em>歳限度</div>
                         <div class="amount"><em class="large">500</em><span class="small">万円</span></div>
                     </div>
@@ -456,7 +493,7 @@
                 </td>
                 <td>
                     <div class="term1 greenLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">特定損傷特約</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn green">特定損傷特約</a></div>
                         <div class="amount"><em class="large">5</em><span class="small">万円</span></div>
                     </div>
                 </td>
@@ -477,7 +514,7 @@
                 </td>
                 <td>
                     <div class="term1 greenLine">
-                        <div class="name"><a href="javascript:void(0);" class="explain">総合入院特約</a></div>
+                        <div class="name"><a href="javascript:void(0);" class="linkBtn btn green">総合入院特約</a></div>
                         <div class="amount"><em class="large">5,000</em><span class="small">円</span></div>
                     </div>
                 </td>
@@ -524,5 +561,15 @@
     });
     $('#shikumi .tsumitate .tsumitateHoken a').on('click', function(evt){
         $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(4) a').tab('show');
+    });
+
+    $('#shikumi table.option .linkBtn.btn').on('click', function(){
+        $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
+        $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
+        $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');
+        $('body .modalHost .durandal-wrapper').append('<div class="overlayPannel confWin"></div>');
+        $('body .modalHost .durandal-wrapper .overlayPannel').append('<header data-bind="text: title">詳細</header>');
+        $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 data-bind="attr: { "class" : type }"><span data-bind="text: title">保障内容</span><div data-bind="text:summary">詳細情報</div></h1></section>');
+        $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
     });
 </script>

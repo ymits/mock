@@ -93,7 +93,7 @@
                 $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 class="JYOHO" data-bind="attr: { "class" : type }"><span data-bind="text: title">ヘルプ</span><div data-bind="text:summary">用語</div></h1><p data-bind="html: message">用語説明メッセージ</p></section>');
                 $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
             });
-            $('body').on('click', '.detail', function(){
+            $('body').on('click', '.detail, .linkBtn.cell', function(){
                 $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
                 $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
                 $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');

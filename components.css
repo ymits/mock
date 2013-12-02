@@ -90,6 +90,19 @@ filter: none; /* IE6-8 */
 	background-image:none;
 	background-color:#eeeeee;
 }
+.keiyakugaiyou .linkBtn.cell {
+    line-height: 1;
+    display: table-cell;
+    vertical-align: middle;
+    border: none;
+    box-shadow: 2px 4px 4px rgba(255,255,255,0.5) inset,-2px -2px 4px rgba(0,0,0,0.3) inset;
+    border-radius: 0;
+    width: 100%;
+    padding: 5px 10px;
+}
+.keiyakugaiyou .linkBtn.cell:active {
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+}
 
 /** タブ関連 */
 .keiyakugaiyou .tab-content > .tab-pane{

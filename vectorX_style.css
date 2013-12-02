@@ -113,7 +113,11 @@ span.selWrap.invalid {
 }
 #hokenNaiyo table tr td:nth-child(1) {
 	text-align:left;
-	padding-left:12px;
+	padding:0;
+	width: 280px;
+}
+#hokenNaiyo table tr td:nth-child(1) .linkBtn.btn {
+	width: 280px;
 }
 #hokenNaiyo table tr td:nth-child(2),#hokenNaiyo table tr td:nth-child(3) {
 	text-align:right;
