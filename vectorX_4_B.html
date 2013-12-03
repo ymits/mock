@@ -1,4 +1,7 @@
 <style type="text/css">
+#hokenRyo-suii {
+    overflow-x:hidden; 
+}
 #hokenRyo-suii > .unit {
   text-align:right;
 }
@@ -260,3 +263,8 @@
         </ul>
     </div>
 </section>
+<script type="text/javascript">
+$('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
+    $('#hokenRyo-suii .list').tablefix({width: 805, height: 300, fixRows: 1});
+});
+</script>
