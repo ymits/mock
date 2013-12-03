@@ -7,6 +7,7 @@
 (function($){
 	$.fn.tableScroll = function(options) {
 		return this.each(function(index){
+
 			// 処理継続の判定
 			var opts = $.extend({}, options);
 			var baseTable = $(this);
@@ -15,7 +16,7 @@
 			// 外部 div の設定
 			baseTable.wrap("<div></div>");
 			var div = baseTable.parent();
-			div.css({position: "relative"}).width(baseTable.width());
+			div.css({position: "relative"}).width(baseTable.outerWidth());
 			// スクロール部オフセットの取得
 			var offsetHY = baseTable.find('tbody tr:first-child').position().top || 0;
 			var offsetFY = baseTable.height();
@@ -24,13 +25,13 @@
 			});
 			
 			// テーブルの分割と初期化
-			var headTable = baseTable.wrap('<div></div>').addClass('scroll-head');
-			var footTable = baseTable.clone().wrap('<div></div>').addClass('scroll-foot');
-			var bodyTable = baseTable.clone().wrap('<div></div>').addClass('scroll-body');
+			var headTable = baseTable.wrap('<div></div>');
+			var footTable = baseTable.clone().wrap('<div></div>');
+			var bodyTable = baseTable.clone().wrap('<div></div>');
 			var headDiv = headTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 			var footDiv = footTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 			var bodyDivIn = bodyTable.parent().css({overflow: "hidden"}).wrap('<div></div>');
-			var bodyDivOut = bodyDivIn.parent().css({position: "absolute", overflow: "auto", width:"100%"});
+			var bodyDivOut = bodyDivIn.parent().css({position: "absolute", overflow: "auto", width:"100%", position:"relative"});
 			div.append(footDiv).append(bodyDivOut);
 
 			// 領域の設定
@@ -49,9 +50,7 @@
 			bodyDivOut.height(bodyHeight).css({top: offsetHY + 'px'});
 			bodyDivIn.height(baseTable.height() - offsetHY - footHeight);
 			bodyTable.height(bodyHeight).css({
-				marginTop: -offsetHY + 'px',
-				marginLeft: '0px',
-				marginRight: '20px'
+				marginTop: -offsetHY + 'px'
 			});
 
 			headTable.width(bodyTable.width());
