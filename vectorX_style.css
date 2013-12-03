@@ -179,10 +179,6 @@ span.selWrap.invalid {
 	margin-bottom:10px;
 }
 
-#henreikin-suii	.kaiyakuhenreikin-table-wrap {
-	height:670px;
-}
-
 #henreikin-suii .kaiyakuhenreikin-table {
 	width : 100%;
 	border : solid 1px;
@@ -217,7 +213,7 @@ span.selWrap.invalid {
 	background-color: #CCF1B3;
 }
 #henreikin-suii {
-	padding-top : 12px;
+	padding : 15px;
 	height : 10%;
 	overflow-y : scroll;
 	margin-bottom:1px;
@@ -226,6 +222,7 @@ span.selWrap.invalid {
 	text-indent:-1em;
 	padding-left:1em;
 	font-size:12px;
+	line-height: 1.2;
 }
 #henreikin-suii .red{
 	color:red;

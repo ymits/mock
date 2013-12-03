@@ -61,19 +61,18 @@
     width: 50px;
     padding: 0; 
 }
-#hokenRyo-suii .list tbody td.pagingArea > div{
+#hokenRyo-suii .list .pagingArea > div{
     height: 280px;
     width: 50px;
-    top: 0;
-    right: 0;
-    position: absolute;
+    top: 150px;
+    position: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-#hokenRyo-suii .list td.pagingArea .nextPage {
+#hokenRyo-suii .list .pagingArea .nextPage {
     background-image:url(img/tmp/nextPage.png);
 }
-#hokenRyo-suii .list td.pagingArea .beforePage {
+#hokenRyo-suii .list .pagingArea .beforePage {
     background-image:url(img/tmp/beforePage.png);
 }
 #hokenRyo-suii .message {
@@ -298,7 +297,7 @@ $('#hokenRyo-suii .list thead tr').each(function(rowNum){
         if(colNum > 6){
             $(this).hide();
             if(colNum === 7){
-                $(this).before('<th class="pagingArea"></th>');
+                $(this).before('<th class="pagingArea">&nbsp;</th>');
             }
         }
     });
@@ -308,7 +307,7 @@ $('#hokenRyo-suii .list tfoot tr').each(function(rowNum){
         if(colNum > 6){
             $(this).hide();
             if(colNum === 7){
-                $(this).before('<td class="pagingArea"></td>');
+                $(this).before('<td class="pagingArea">&nbsp;</td>');
             }
         }
     });
@@ -333,7 +332,7 @@ $('#hokenRyo-suii').on('click', '.list .nextPage', function(){
             }
         });
     });
-    $(this).removeClass('nextPage').addClass('beforePage');
+    $('#hokenRyo-suii .nextPage').removeClass('nextPage').addClass('beforePage');
 });
 $('#hokenRyo-suii').on('click', '.list .beforePage', function(){
     $('#hokenRyo-suii .list tr').each(function(rowNum){
@@ -345,7 +344,7 @@ $('#hokenRyo-suii').on('click', '.list .beforePage', function(){
             }
         });
     });
-    $(this).removeClass('beforePage').addClass('nextPage');
+    $('#hokenRyo-suii .beforePage').removeClass('beforePage').addClass('nextPage');
 });
 $('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
     $('#hokenRyo-suii > .list').tableScroll({height:325});

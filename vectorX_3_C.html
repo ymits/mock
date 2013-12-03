@@ -12,9 +12,14 @@
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .message ul{
   padding-left: 20px;
+  line-height: 1.2;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .unit{
   text-align:right;
+  float: right;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list > div{
+  display: inline-block;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table{
   display: inline-table;
@@ -28,6 +33,9 @@
   text-align:right;
   padding-right: 5px;
   border-left: 1px solid #7D26CD;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(2) td{
+  border-top: 1px solid #7D26CD;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(2) td{
   border-top: 1px solid #7D26CD;
@@ -57,7 +65,8 @@
     display:block;
 }
 */
-#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1{
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table1,
+#tsumitateHoken-tsuimitatekinSuii .listArea .list > div:first-child{
   width: 60%;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 tr:first-child th:last-child{
@@ -90,7 +99,8 @@
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table1 .ex3{
   width:20%;
 }
-#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2{
+#tsumitateHoken-tsuimitatekinSuii .listArea .list .table2,
+#tsumitateHoken-tsuimitatekinSuii .listArea .list > div:last-child{
   width: 38%;
   float: right;
 }
@@ -102,6 +112,9 @@
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table2 .rate{
   width: 20%;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .note{
+  line-height: 1.2;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .note span{
   vertical-align: top;
@@ -188,13 +201,13 @@
 <section class="tab-pane fade" id="tsumitateHoken-tsuimitatekinSuii">
     <div class="listArea">
         <div class="message">
+            <div class="small unit">【単位：円】</div>
             【<span class="info">ご契約時の運用利率 年1.00%</span>】(<span class="info">最低基準利率 (年1.00%)</span>は保障されます。)
             <ul class="small">
                 <li>例1：1年経過以降の適用利率がご契約時の適用利利のまま推移した場合</li>
                 <li>例2：1年経過以降の適用利率がご契約時の適用利利の+1.00%で推移した場合</li>
             </ul>
         </div>
-        <div class="small unit">【単位：円】</div>
         <div class="list">
             <table class="table1">
                 <thead>
@@ -567,3 +580,8 @@
         </ul>
     </div>
 </section>
+<script type="text/javascript">
+$('#tsumitateHoken [data-target=#tsumitateHoken-tsuimitatekinSuii]').on('shown', function(){
+    $('#tsumitateHoken-tsuimitatekinSuii .list > table').tableScroll({height:170});
+});
+</script>
