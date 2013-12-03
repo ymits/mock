@@ -17,7 +17,7 @@
   line-height:1;
   height: 35px;
   vertical-align: middle;
-  min-width: 100px;
+  width: 100px;
 }
 #hokenRyo-suii .list tr th:first-child,
 #hokenRyo-suii .list tr td:first-child{
@@ -30,34 +30,39 @@
     text-align:center;
     background-color: #d0e0ef;
 }
-#hokenRyo-suii .list tbody tr:last-child td{
-    border-bottom: solid 2px #000000;
-}
-#hokenRyo-suii .list tbody tr td{
+#hokenRyo-suii .list tbody tr td,
+#hokenRyo-suii .list tfoot tr td{
     text-align:right;
     padding: 0 5px;
+    background-color: #ffffff;
 }
 #hokenRyo-suii .list tbody tr td:first-child{
     text-align:left;
     padding: 0px;
 }
-#hokenRyo-suii .list tbody tr:nth-last-child(2) td{
+#hokenRyo-suii .list tbody tr:last-child td{
     border-bottom: 3px double #000000;
 }
-#hokenRyo-suii .list tbody tr:nth-last-child(4) td{
+#hokenRyo-suii .list tfoot tr:last-child td{
     border-bottom: solid 2px #000000;
+}
+#hokenRyo-suii .list tfoot tr td:first-child,
+#hokenRyo-suii .list tr.summary1 td:first-child,
+#hokenRyo-suii .list tr.summary2 td:first-child{
+    text-align:left;
+    padding: 0px 5px;
+}
+#hokenRyo-suii .list tr.summary1 td {
+    border-top: solid 2px #000000;
 }
 #hokenRyo-suii .list .btn.linkBtn {
     width: 200px;
 }
-#hokenRyo-suii .list th.pagingArea {
+#hokenRyo-suii .list .pagingArea {
     width: 50px;
-    min-width: 50px;
 }
-#hokenRyo-suii .list td.pagingArea {
-    width: 50px;
-    min-width: 50px;
-    border-bottom: solid 2px #000000;
+#hokenRyo-suii .list tbody td.pagingArea {
+    border-bottom: 3px double #000000;
     border-right: solid 2px #000000;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -71,6 +76,9 @@
 #hokenRyo-suii .message {
     border:1px solid #000000;
     padding:5px 10px;
+}
+.scroll-table .scroll-table-inner {
+    height: 325px;
 }
 </style>
 <section id="hokenRyo-suii" class="tab-pane fade">
@@ -89,6 +97,19 @@
                 <th>80歳時</th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <td class="large">払込保険料</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+                <td>999,999,999</td>
+            </tr>
+        </tfoot>
         <tbody>
             <tr>
                 <td><a href="javascript:void(0);" class="btn linkBtn cell">定期保険特約2007</a></td>
@@ -233,7 +254,7 @@
                 <td>999,999,999</td>
                 <td>999,999,999</td>
             </tr>
-            <tr>
+            <tr class="summary1">
                 <td>保障部分の保険料</td>
                 <td>999,999,999</td>
                 <td>999,999,999</td>
@@ -244,19 +265,8 @@
                 <td>999,999,999</td>
                 <td>999,999,999</td>
             </tr>
-            <tr>
+            <tr class="summary2">
                 <td>新積立保険部分の保険料</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-                <td>999,999,999</td>
-            </tr>
-            <tr>
-                <td class="large">払込保険料</td>
                 <td>999,999,999</td>
                 <td>999,999,999</td>
                 <td>999,999,999</td>
@@ -283,15 +293,32 @@
     </div>
 </section>
 <script type="text/javascript">
-$('#hokenRyo-suii .list tr').each(function(rowNum){
+$('#hokenRyo-suii .list thead tr').each(function(rowNum){
+    $(this).find('th').each(function(colNum){
+        if(colNum > 6){
+            $(this).hide();
+            if(colNum === 7){
+                $(this).before('<th class="pagingArea"></th>');
+            }
+        }
+    });
+});
+$('#hokenRyo-suii .list tfoot tr').each(function(rowNum){
+    $(this).find('td').each(function(colNum){
+        if(colNum > 6){
+            $(this).hide();
+            if(colNum === 7){
+                $(this).before('<td class="pagingArea"></td>');
+            }
+        }
+    });
+});
+$('#hokenRyo-suii .list tbody tr').each(function(rowNum){
     $(this).find('td,th').each(function(colNum){
         if(colNum > 6){
             $(this).hide();
-            if(rowNum === 0 && colNum === 7){
-                $(this).before('<th class="pagingArea"></th>');
-            }
-            if(rowNum === 1 && colNum === 7){
-                $(this).before('<td class="pagingArea nextPage" rowspan="'+($('#hokenRyo-suii .list tr').length-1)+'"></td>');
+            if(rowNum===0 && colNum === 7){
+                $(this).before('<td class="pagingArea nextPage" rowspan="'+$('#hokenRyo-suii .list tbody tr').length+'"></td>');
             }
         }
     });
