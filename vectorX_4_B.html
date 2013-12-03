@@ -2,6 +2,9 @@
 #hokenRyo-suii {
     overflow-x:hidden; 
 }
+#hokenRyo-suii * {
+    box-sizing: border-box;
+}
 #hokenRyo-suii > .unit {
   text-align:right;
 }
@@ -17,7 +20,6 @@
   line-height:1;
   height: 35px;
   vertical-align: middle;
-  width: 100px;
 }
 #hokenRyo-suii .list tr th:first-child,
 #hokenRyo-suii .list tr td:first-child{
@@ -33,17 +35,14 @@
 #hokenRyo-suii .list tbody tr td,
 #hokenRyo-suii .list tfoot tr td{
     text-align:right;
-    padding: 0 5px;
-    background-color: #ffffff;
+    padding: 0 5px 0 0;
 }
 #hokenRyo-suii .list tbody tr td:first-child{
     text-align:left;
     padding: 0px;
 }
-#hokenRyo-suii .list tbody tr:last-child td{
-    border-bottom: 3px double #000000;
-}
 #hokenRyo-suii .list tfoot tr:last-child td{
+    border-top: 3px double #000000;
     border-bottom: solid 2px #000000;
 }
 #hokenRyo-suii .list tfoot tr td:first-child,
@@ -62,8 +61,6 @@
     width: 50px;
 }
 #hokenRyo-suii .list tbody td.pagingArea {
-    border-bottom: 3px double #000000;
-    border-right: solid 2px #000000;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -76,9 +73,6 @@
 #hokenRyo-suii .message {
     border:1px solid #000000;
     padding:5px 10px;
-}
-.scroll-table .scroll-table-inner {
-    height: 325px;
 }
 </style>
 <section id="hokenRyo-suii" class="tab-pane fade">
@@ -323,7 +317,7 @@ $('#hokenRyo-suii .list tbody tr').each(function(rowNum){
         }
     });
 });
-$('#hokenRyo-suii .list').on('click', '.nextPage', function(){
+$('#hokenRyo-suii').on('click', '.list .nextPage', function(){
     $('#hokenRyo-suii .list tr').each(function(rowNum){
         $(this).find('td,th').each(function(colNum){
             if(colNum === 0 || colNum > 6){
@@ -335,8 +329,7 @@ $('#hokenRyo-suii .list').on('click', '.nextPage', function(){
     });
     $(this).removeClass('nextPage').addClass('beforePage');
 });
-$('#hokenRyo-suii .list').on('click', '.beforePage', function(){
-    console.log('click');
+$('#hokenRyo-suii').on('click', '.list .beforePage', function(){
     $('#hokenRyo-suii .list tr').each(function(rowNum){
         $(this).find('td,th').each(function(colNum){
             if($(this).hasClass("pagingArea") || colNum <= 6){
@@ -347,5 +340,8 @@ $('#hokenRyo-suii .list').on('click', '.beforePage', function(){
         });
     });
     $(this).removeClass('beforePage').addClass('nextPage');
+});
+$('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
+    $('#hokenRyo-suii .list').tableScroll({height:325});
 });
 </script>

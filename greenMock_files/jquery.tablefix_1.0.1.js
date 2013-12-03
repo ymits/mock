@@ -5,109 +5,57 @@
  * http://www.otchy.net
  */
 (function($){
-	$.fn.tablefix = function(options) {
+	$.fn.tableScroll = function(options) {
 		return this.each(function(index){
 			// 処理継続の判定
 			var opts = $.extend({}, options);
 			var baseTable = $(this);
-			var withWidth = (opts.width > 0);
-			var withHeight = (opts.height > 0);
-			if (withWidth) {
-				withWidth = (opts.width < baseTable.width());
-			} else {
-				opts.width = baseTable.width();
-			}
-			if (withHeight) {
-				withHeight = (opts.height < baseTable.height());
-			} else {
-				opts.height = baseTable.height();
-			}
-			if (withWidth || withHeight) {
-				if (withWidth && withHeight) {
-					opts.width -= 20;
-					opts.height -= 20;
-				} else if (withWidth) {
-					opts.width -= 20;
-				} else {
-					opts.height -= 20;
-				}
-			} else {
-				return;
-			}
+			opts.height = opts.height || baseTable.height();
+
 			// 外部 div の設定
 			baseTable.wrap("<div></div>");
 			var div = baseTable.parent();
-			div.css({position: "relative"});
+			div.css({position: "relative"}).width(baseTable.width());
 			// スクロール部オフセットの取得
-			var fixRows = (opts.fixRows > 0) ? opts.fixRows : 0;
-			var fixCols = (opts.fixCols > 0) ? opts.fixCols : 0;
-			var offsetX = 0;
-			var offsetY = 0;
-			baseTable.find('tr').each(function(indexY) {
-				$(this).find('td,th').each(function(indexX){
-					if (indexY == fixRows && indexX == fixCols) {
-						var cell = $(this);
-						offsetX = cell.position().left;
-						offsetY = cell.parent('tr').position().top;
-						return false;
-					}
-				});
-				if (indexY == fixRows) {
-					return false;
-				}
+			var offsetHY = baseTable.find('tbody tr:first-child').position().top || 0;
+			var offsetFY = baseTable.height();
+			baseTable.find('tfoot tr:first-child').each(function(){
+				offsetFY = $(this).position().top - 2;
 			});
+			
 			// テーブルの分割と初期化
-			var crossTable = baseTable.wrap('<div></div>');
-			var rowTable = baseTable.clone().wrap('<div></div>');
-			var colTable = baseTable.clone().wrap('<div></div>');
-			var bodyTable = baseTable.clone().wrap('<div></div>');
-			var crossDiv = crossTable.parent().css({position: "absolute", overflow: "hidden"});
-			var rowDiv = rowTable.parent().css({position: "absolute", overflow: "hidden"});
-			var colDiv = colTable.parent().css({position: "absolute", overflow: "hidden"});
-			var bodyDiv = bodyTable.parent().css({position: "absolute", overflow: "auto"});
-			div.append(rowDiv).append(colDiv).append(bodyDiv);
-			// クリップ領域の設定
-			var bodyWidth = opts.width - offsetX;
-			var bodyHeight = opts.height - offsetY;
-			crossDiv.width(offsetX).height(offsetY);
-			rowDiv
-				.width(bodyWidth)
-				.height(offsetY)
-				.css({left: offsetX + 'px'});
-			rowTable.css({
-				marginLeft: -offsetX + 'px',
-				marginRight: (withHeight ? 20 : 0) + 'px'
+			var headTable = baseTable.wrap('<div></div>').addClass('scroll-head');
+			var footTable = baseTable.clone().wrap('<div></div>').addClass('scroll-foot');
+			var bodyTable = baseTable.clone().wrap('<div></div>').addClass('scroll-body');
+			var headDiv = headTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
+			var footDiv = footTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
+			var bodyDivIn = bodyTable.parent().css({overflow: "hidden"}).wrap('<div></div>');
+			var bodyDivOut = bodyDivIn.parent().css({position: "absolute", overflow: "auto", width:"100%"});
+			div.append(footDiv).append(bodyDivOut);
+
+			// 領域の設定
+			div.height(opts.height);
+
+			headDiv.height(offsetHY).css({top:'0px'});
+			headTable.height(offsetHY);
+
+			var footHeight = baseTable.height() - offsetFY + 2;
+			footDiv.height(footHeight).css({bottom:'0px'});
+			footTable.height(footHeight).css({
+				marginTop: -offsetFY + 'px'
 			});
-			colDiv
-				.width(offsetX)
-				.height(bodyHeight - (withWidth ? 20 : 0))
-				.css({top: offsetY + 'px'});
-			colTable.css({
-				marginTop: -offsetY + 'px',
-				marginBottom: (withWidth ? 20 : 0) + 'px'
+
+			var bodyHeight = opts.height - offsetHY - footHeight;
+			bodyDivOut.height(bodyHeight).css({top: offsetHY + 'px'});
+			bodyDivIn.height(baseTable.height() - offsetHY - footHeight);
+			bodyTable.height(bodyHeight).css({
+				marginTop: -offsetHY + 'px',
+				marginLeft: '0px',
+				marginRight: '20px'
 			});
-			bodyDiv
-				.width(bodyWidth)
-				.height(bodyHeight - (withWidth ? 20 : 0))
-				.css({left: offsetX + 'px', top: offsetY + 'px'});
-			bodyTable.css({
-				marginLeft: -offsetX + 'px',
-				marginTop: -offsetY + 'px',
-				marginRight: (withHeight ? 20 : 0) + 'px',
-				marginBottom: (withWidth ? 20 : 0) + 'px'
-			});
-			if (withHeight) {
-				rowTable.width(bodyTable.width());
-			}
-			// スクロール連動
-			bodyDiv.scroll(function() {
-				rowDiv.scrollLeft(bodyDiv.scrollLeft());
-				colDiv.scrollTop(bodyDiv.scrollTop());
-			});
-			// 外部 div の設定
-			div
-				.width(opts.width)
-				.height(opts.height);
+
+			headTable.width(bodyTable.width());
+			footTable.width(bodyTable.width());
 		});
 	}
 })(jQuery);
