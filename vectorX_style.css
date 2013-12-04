@@ -140,6 +140,10 @@ span.selWrap.invalid {
 	margin-left: 20px;
 }
 
+#hokenNaiyo > ul {
+	margin-top: 10px;
+}
+
 #hokenNaiyo ul li .item{
 	width: 20px;
 	float: left;

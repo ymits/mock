@@ -551,10 +551,17 @@
 <script type="text/javascript">
 $('#tsumitateHoken [data-target=#tsumitateHoken-tsuimitatekinSuii]').on('shown', function(){
     $('#tsumitateHoken-tsuimitatekinSuii .list > table').tableScroll({height:175});
+    
     $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().css('overflow', 'hidden');
     $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-head').width($('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').width());
     $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-foot').width($('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').width());
-
+    
+    /*
+    $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().off('scroll');
+    $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().on('scroll', function(){
+        $('#tsumitateHoken-tsuimitatekinSuii .table2.scroll-body').parent().parent().scrollTop($(this).scrollTop());
+    });
+    */
     $('#tsumitateHoken-tsuimitatekinSuii .table2.scroll-body').parent().parent().off('scroll');
     $('#tsumitateHoken-tsuimitatekinSuii .table2.scroll-body').parent().parent().on('scroll', function(){
         $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().scrollTop($(this).scrollTop());

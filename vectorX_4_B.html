@@ -75,6 +75,9 @@
 #hokenRyo-suii .list .pagingArea .beforePage {
     background-image:url(img/tmp/beforePage.png);
 }
+#hokenRyo-suii > ul.items {
+    margin: 3px 0;
+}
 #hokenRyo-suii .message {
     border:1px solid #000000;
     padding:5px 10px;
@@ -348,7 +351,7 @@ $('#hokenRyo-suii').on('click', '.list .beforePage', function(){
 });
 $('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
     setTimeout(function(){
-        $('#hokenRyo-suii > .list').tableScroll({height:325});
+        $('#hokenRyo-suii > .list').tableScroll({height:320});
     }, 10);
     
 });
