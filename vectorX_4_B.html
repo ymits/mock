@@ -347,6 +347,9 @@ $('#hokenRyo-suii').on('click', '.list .beforePage', function(){
     $('#hokenRyo-suii .beforePage').removeClass('beforePage').addClass('nextPage');
 });
 $('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
-    $('#hokenRyo-suii > .list').tableScroll({height:325});
+    setTimeout(function(){
+        $('#hokenRyo-suii > .list').tableScroll({height:325});
+    }, 10);
+    
 });
 </script>

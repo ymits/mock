@@ -23,6 +23,7 @@
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table{
   display: inline-table;
+  border: 1px solid #7D26CD;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table th{
   border-left: 1px solid #ffffff;
@@ -32,29 +33,16 @@
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table td{
   text-align:right;
   padding-right: 5px;
-  border-left: 1px solid #7D26CD;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(2) td{
-  border-top: 1px solid #7D26CD;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(2) td{
-  border-top: 1px solid #7D26CD;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:last-child td{
-  border-bottom: 1px solid #7D26CD;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr td:last-child{
   border-right: 1px solid #7D26CD;
+}
+
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:first-child td{
+  border-top: 1px solid #7D26CD;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(even) td{
   background-color: #d6ffd6;
 }
-/*
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody {
-  border-top: 15px solid white;
-}
-*/
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody .separator{
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table thead .separator{
     height: 10px;
 }
 /*
@@ -102,7 +90,6 @@
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table2,
 #tsumitateHoken-tsuimitatekinSuii .listArea .list > div:last-child{
   width: 38%;
-  float: right;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table2 .withdrawal{
   width: 40%;
@@ -116,32 +103,16 @@
 #tsumitateHoken-tsuimitatekinSuii .listArea .note{
   line-height: 1.2;
 }
-#tsumitateHoken-tsuimitatekinSuii .listArea .note span{
-  vertical-align: top;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .note .reference{
-  vertical-align: top;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .note dl{
-  display: inline-block;
+#tsumitateHoken-tsuimitatekinSuii .listArea .note .reference > div{
+    display: inline-block;
+    vertical-align: top;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .note dt{
-    float: left;
     width: 280px;
-    overflow: hidden;
-    clear: left;
-    text-align: left;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .note dd{
     margin-left: 300px;
-    text-align: right;
-}
-#tsumitateHoken-tsuimitatekinSuii .listArea .note dd .unit{
-    display: inline-block;
-    min-width: 50px;
-    text-align: left;
+    width: 120px;
 }
 
 #tsumitateHoken-tsuimitatekinSuii .example{
@@ -221,9 +192,9 @@
                         <th class="ex2">例2：2.00%</th>
                         <th class="ex3">&nbsp;</th>
                     </tr>
+                    <tr class="separator" colspan="5"></tr>
                 </thead>
                 <tbody>
-                    <tr class="separator" colspan="5"></tr>
                     <tr>
                         <td class="duration">0</td>
                         <td class="totalInsurnce">19,069,534</td>
@@ -408,9 +379,9 @@
                         <th class="policyValue">例1の場合の<br>解約返戻金</th>
                         <th class="rate">年平均<br>利回り</th>
                     </tr>
+                    <tr class="separator" colspan="5"></tr>
                 </thead>
                 <tbody>
-                    <tr class="separator" colspan="5"></tr>
                     <tr>
                         <td class="withdrawal">18,500,751</td>
                         <td class="policyValue">18,510,451</td>
@@ -544,14 +515,16 @@
                 <li>・経過年数「0」は、ご契約直後の数値を表示しております。</li>
                 <li>・記載の新積立保険の累計保険料には、任意積立保険料・転換価格を含めています。</li>
             </ul>
-            <div>
-                <span class="reference">＜参考＞</span>
-                <dl>
-                    <dt>[ご契約直後の積立金の引出可能額]</dt>
-                    <dd>18,500,751<span class="unit">円</span></dd>
-                    <dt>[上記金額を引き出された場合の積立金残高]</dt>
-                    <dd>約10,000<span class="unit">円</span></dd>
-                </dl>
+            <div class="reference">
+                <div>＜参考＞</div>
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>[ご契約直後の積立金の引出可能額]</dt>
+                        <dd>18,500,751<span class="unit">円</span></dd>
+                        <dt>[上記金額を引き出された場合の積立金残高]</dt>
+                        <dd>約10,000<span class="unit">円</span></dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>

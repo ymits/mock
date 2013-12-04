@@ -13,23 +13,25 @@ $.fn.tableScroll = function(options) {
 		var baseTable = $(this);
 		opts.height = opts.height || baseTable.height();
 
-		// スクロール部オフセットの取得
+		// 基本数値の取得
 		//var offsetHY = baseTable.find('tbody tr:first-child').position().top || 0;
+		var baseWidth = baseTable.outerWidth();
+		var baseHeight = baseTable.outerHeight();
 		var offsetHY = baseTable.find('tbody tr:first-child').offset().top - baseTable.offset().top;
-		var offsetFY = baseTable.height();
+		var offsetFY = baseHeight;
 		baseTable.find('tfoot tr:first-child').each(function(){
-			offsetFY = $(this).offset().top - $(this).closest('table').offset().top;
+			offsetFY = $(this).offset().top - $(this).closest('table').offset().top - 2;
 		});
+		
 
 		// 外部 div の設定
-		var baseWidth = baseTable.outerWidth();
 		baseTable.wrap("<div></div>");
 		var div = baseTable.parent();
 		div.css({position: "relative"}).css({width:baseWidth+"px"});
 		// テーブルの分割と初期化
-		var headTable = baseTable.wrap('<div></div>').css({width:"100%"});
-		var footTable = baseTable.clone().wrap('<div></div>').css({width:"100%"});
-		var bodyTable = baseTable.clone().wrap('<div></div>').css({width:"100%"});
+		var headTable = baseTable.wrap('<div></div>').css({width:"100%",display:"table"});
+		var footTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"});
+		var bodyTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"});
 		var headDiv = headTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 		var footDiv = footTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 		var bodyDivIn = bodyTable.parent().css({overflow: "hidden"}).wrap('<div></div>');
@@ -39,24 +41,28 @@ $.fn.tableScroll = function(options) {
 		// 領域の設定
 		div.height(opts.height);
 
+		// header
 		headDiv.height(offsetHY).css({top:'0px'});
-		headTable.height(offsetHY);
 
-		var footHeight = baseTable.height() - offsetFY + 2;
+		// footer
+		var footHeight = baseHeight - offsetFY + 2;
 		footDiv.height(footHeight).css({bottom:'0px'});
-		footTable.height(footHeight).css({
+		footTable.css({
 			marginTop: -offsetFY + 'px'
 		});
 
+		// body
 		var bodyHeight = opts.height - offsetHY - footHeight;
 		bodyDivOut.height(bodyHeight).css({top: offsetHY + 'px'});
-		bodyDivIn.height(baseTable.height() - offsetHY - footHeight);
-		bodyTable.height(bodyHeight).css({
+		bodyDivIn.height(baseHeight - offsetHY - footHeight);
+		bodyTable.css({
 			marginTop: -offsetHY + 'px'
 		});
 
 		headTable.width(bodyTable.width());
 		footTable.width(bodyTable.width());
+
+		console.log('head:'+headTable.width()+'-'+headTable.height()+' foot:'+footTable.width()+'-'+footTable.height()+' body:'+bodyTable.width()+'-'+bodyTable.height());
 	});
 }
 })(jQuery);
