@@ -24,6 +24,7 @@
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table{
   display: inline-table;
   border: 1px solid #7D26CD;
+  border-top: none; 
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table th{
   border-left: 1px solid #ffffff;
@@ -35,24 +36,18 @@
   padding-right: 5px;
   border-right: 1px solid #7D26CD;
 }
-
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table thead th:last-child{
+  border-right: 1px solid #ffffff;
+}
+#tsumitateHoken-tsuimitatekinSuii .listArea .list table thead .separator{
+    height: 5px;
+}
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:first-child td{
   border-top: 1px solid #7D26CD;
 }
 #tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody tr:nth-child(even) td{
   background-color: #d6ffd6;
 }
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table thead .separator{
-    height: 10px;
-}
-/*
-#tsumitateHoken-tsuimitatekinSuii .listArea .list table tbody:before {
-    line-height:0.3em;
-    content:"-";
-    color:white; 
-    display:block;
-}
-*/
 #tsumitateHoken-tsuimitatekinSuii .listArea .list .table1,
 #tsumitateHoken-tsuimitatekinSuii .listArea .list > div:first-child{
   width: 60%;
@@ -555,6 +550,21 @@
 </section>
 <script type="text/javascript">
 $('#tsumitateHoken [data-target=#tsumitateHoken-tsuimitatekinSuii]').on('shown', function(){
-    $('#tsumitateHoken-tsuimitatekinSuii .list > table').tableScroll({height:170});
+    $('#tsumitateHoken-tsuimitatekinSuii .list > table').tableScroll({height:175});
+    $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().css('overflow', 'hidden');
+    $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-head').width($('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').width());
+    $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-foot').width($('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').width());
+
+    $('#tsumitateHoken-tsuimitatekinSuii .table2.scroll-body').parent().parent().off('scroll');
+    $('#tsumitateHoken-tsuimitatekinSuii .table2.scroll-body').parent().parent().on('scroll', function(){
+        $('#tsumitateHoken-tsuimitatekinSuii .table1.scroll-body').parent().parent().scrollTop($(this).scrollTop());
+    });
 });
+
+/*
+bodyDiv.scroll(function() {
+                rowDiv.scrollLeft(bodyDiv.scrollLeft());
+                colDiv.scrollTop(bodyDiv.scrollTop());
+            });
+*/
 </script>

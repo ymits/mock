@@ -20,8 +20,9 @@ $.fn.tableScroll = function(options) {
 		var offsetHY = baseTable.find('tbody tr:first-child').offset().top - baseTable.offset().top;
 		var offsetFY = baseHeight;
 		baseTable.find('tfoot tr:first-child').each(function(){
-			offsetFY = $(this).offset().top - $(this).closest('table').offset().top - 2;
+			offsetFY = $(this).offset().top - $(this).closest('table').offset().top;
 		});
+		offsetFY -= 2;
 		
 
 		// 外部 div の設定
@@ -29,9 +30,9 @@ $.fn.tableScroll = function(options) {
 		var div = baseTable.parent();
 		div.css({position: "relative"}).css({width:baseWidth+"px"});
 		// テーブルの分割と初期化
-		var headTable = baseTable.wrap('<div></div>').css({width:"100%",display:"table"});
-		var footTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"});
-		var bodyTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"});
+		var headTable = baseTable.wrap('<div></div>').css({width:"100%",display:"table"}).addClass('scroll-head');
+		var footTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"}).addClass('scroll-foot');
+		var bodyTable = baseTable.clone().wrap('<div></div>').css({width:"100%",display:"table"}).addClass('scroll-body');
 		var headDiv = headTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 		var footDiv = footTable.parent().css({position: "absolute", overflow: "hidden", width:"100%"});
 		var bodyDivIn = bodyTable.parent().css({overflow: "hidden"}).wrap('<div></div>');
@@ -45,7 +46,7 @@ $.fn.tableScroll = function(options) {
 		headDiv.height(offsetHY).css({top:'0px'});
 
 		// footer
-		var footHeight = baseHeight - offsetFY + 2;
+		var footHeight = baseHeight - offsetFY;
 		footDiv.height(footHeight).css({bottom:'0px'});
 		footTable.css({
 			marginTop: -offsetFY + 'px'
@@ -61,8 +62,6 @@ $.fn.tableScroll = function(options) {
 
 		headTable.width(bodyTable.width());
 		footTable.width(bodyTable.width());
-
-		console.log('head:'+headTable.width()+'-'+headTable.height()+' foot:'+footTable.width()+'-'+footTable.height()+' body:'+bodyTable.width()+'-'+bodyTable.height());
 	});
 }
 })(jQuery);
