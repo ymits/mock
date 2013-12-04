@@ -295,64 +295,100 @@
     </div>
 </section>
 <script type="text/javascript">
-$('#hokenRyo-suii .list thead tr').each(function(rowNum){
-    $(this).find('th').each(function(colNum){
-        if(colNum > 6){
-            $(this).hide();
-            if(colNum === 7){
-                $(this).before('<th class="pagingArea">&nbsp;</th>');
-            }
-        }
-    });
-});
-$('#hokenRyo-suii .list tfoot tr').each(function(rowNum){
-    $(this).find('td').each(function(colNum){
-        if(colNum > 6){
-            $(this).hide();
-            if(colNum === 7){
-                $(this).before('<td class="pagingArea">&nbsp;</td>');
-            }
-        }
-    });
-});
-$('#hokenRyo-suii .list tbody tr').each(function(rowNum){
-    $(this).find('td,th').each(function(colNum){
-        if(colNum > 6){
-            $(this).hide();
-            if(rowNum===0 && colNum === 7){
-                $(this).before('<td class="pagingArea" rowspan="'+$('#hokenRyo-suii .list tbody tr').length+'"><div class="nextPage"></div></td>');
-            }
-        }
-    });
-});
-$('#hokenRyo-suii').on('click', '.list .nextPage', function(){
-    $('#hokenRyo-suii .list tr').each(function(rowNum){
-        $(this).find('td,th').each(function(colNum){
-            if(colNum === 0 || colNum > 6){
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
+var beforePage = function(){
+    $('#hokenRyo-suii .list thead').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('th').each(function(colNum){
+                if(colNum === 6){
+                    $(this).after('<th class="pagingArea">&nbsp;</th>');
+                } else if(colNum > 6){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
         });
     });
-    $('#hokenRyo-suii .nextPage').removeClass('nextPage').addClass('beforePage');
+    $('#hokenRyo-suii .list tfoot').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('td').each(function(colNum){
+                if(colNum === 6){
+                    $(this).after('<td class="pagingArea">&nbsp;</td>');
+                } else if(colNum > 6){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+    $('#hokenRyo-suii .list tbody').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('td,th').each(function(colNum){
+                if(rowNum===0 && colNum === 6){
+                    $(this).after('<td class="pagingArea" rowspan="'+$('#hokenRyo-suii .list tbody tr').length+'"><div class="nextPage"></div></td>');
+                } else if(colNum > 6){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+}
+var nextPage = function(){
+    $('#hokenRyo-suii .list thead').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('th').each(function(colNum){
+                if(colNum === 3){
+                    $(this).before('<th class="pagingArea">&nbsp;</th>');
+                } else if(colNum > 0 && colNum < 3){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+    $('#hokenRyo-suii .list tfoot').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('td').each(function(colNum){
+                if(colNum === 3){
+                    $(this).before('<td class="pagingArea">&nbsp;</td>');
+                } else if(colNum > 0 && colNum < 3){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+    $('#hokenRyo-suii .list tbody').each(function(){
+        $(this).find('tr').each(function(rowNum){
+            $(this).find('td,th').each(function(colNum){
+                if(rowNum===0 && colNum === 3){
+                    $(this).before('<td class="pagingArea" rowspan="'+$('#hokenRyo-suii .list tbody tr').length+'"><div class="beforePage"></div></td>');
+                } else if(colNum > 0 && colNum < 3){
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+}
+beforePage();
+$('#hokenRyo-suii').on('click', '.list .nextPage', function(){
+    $('#hokenRyo-suii .list .pagingArea').remove();
+    nextPage();
 });
 $('#hokenRyo-suii').on('click', '.list .beforePage', function(){
-    $('#hokenRyo-suii .list tr').each(function(rowNum){
-        $(this).find('td,th').each(function(colNum){
-            if($(this).hasClass("pagingArea") || colNum <= 6){
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-    });
-    $('#hokenRyo-suii .beforePage').removeClass('beforePage').addClass('nextPage');
+    $('#hokenRyo-suii .list .pagingArea').remove();
+    beforePage();
 });
 $('#hokenRyo [data-target=#hokenRyo-suii]').on('shown', function(){
     setTimeout(function(){
         $('#hokenRyo-suii > .list').tableScroll({height:320});
     }, 10);
-    
 });
 </script>
