@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost:8080/#/keiyaku/gaiyo/1035 -->
+<html style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Keiyaku/gaiyo | Green PPL Tablet</title>
+        <meta charset="utf-8">
+        
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="imagetoolbar" content="no">
+        <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width">
+
+<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-landscape.png" media="(orientation:landscape)" /> -->
+<!--         <link rel="apple-touch-startup-image" href="resources/content/images/ios-startup-image-portrait.png" media="(orientation:portrait)" /> -->
+<!--         <link rel="apple-touch-icon" href="resources/content/images/icon.png"/> -->
+        <!-- TODO durandal.cssのダイアログスタイルをstyle.cssに移動する -->
+        <link rel="stylesheet" href="http://localhost:8080/resources/content/durandal.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.mCustomScrollbar.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/root2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/base2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/toggles2.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/parts.css">
+
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery-ui-datepicker.custom.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/each_own.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./greenMock_files/jquery.powertip.css">
+
+
+        <link rel="stylesheet" type="text/css" media="all" href="base.css">
+        <link rel="stylesheet" type="text/css" media="all" href="components.css">
+        <link rel="stylesheet" type="text/css" media="all" href="vectorX_style.css">
+        
+    </head>
+    <body style="margin-right: 0px;">
+        <!-- FIXME: OSSIデザインから消えていたので、直スタイルを当ててレイアウトがくずれないようにしている。HTMLが完成したらcssで対応するなりすること -->
+        <div id="applicationHost" style="height:100%"><section style="height:100%" data-view="views/shell" data-active-view="true">
+<!--ko compose: {
+    model: router.activeItem, //wiring the router
+    afterCompose: router.afterCompose, //wiring the router
+    transition: 'entrance', //use the 'entrance' transition when switching views
+    cacheViews: false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
+}--><div class="durandal-wrapper" data-view="views/keiyaku/gaiyo" style="margin-left: 0px; margin-right: 0px; opacity: 1; display: block;height:100%" data-active-view="true">
+<div id="wrapper" class="outline">
+    <header id="pageHeader">
+        <nav id="transfer">
+            <ul>
+                <li class="homeLink"><a data-bind="attr: { href: routing.paths.home.hash }" href="./index.html">HOME</a></li>
+                <li class="return"><a href="javascript:void(0);" data-bind="click: function() { $root.clickBackButton(false) }, active: senimotoShortName !== ''" class="">前画面に戻る</a></li>
+            </ul>
+                
+        </nav>
+        <h1>設計書（契約概要）</h1>
+        <div class="font-size-area">
+        	<span>文字サイズ</span>
+        	<a href="javascript:void(0);" class="btn sub selected">普通</a><a href="javascript:void(0);" class="btn sub">拡大</a>
+        </div>
+    </header>
+    <main class="keiyakugaiyou"></main>
+    <footer id="pageFooter">
+        <nav class="btnArray links">
+            <ul>
+                <li class="prevPage"><a href="javascript:void(0);">提案書編集画面</a></li>
+            </ul>
+        </nav>
+
+        <nav class="btnArray functions">
+            <ul>
+                <li class="open"><a data-bind="click: $root.clickPrintButton">印刷・MYページ</a></li>
+                <li class="apply"><a href="javascript:void(0);" data-bind="click: clickMoushikomiButton">申込準備</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div></div><!--/ko-->
+</section></div>
+
+        <script src="./greenMock_files/jquery.js"></script>
+        <script src="./greenMock_files/bootstrap.js"></script>
+        <script src="./greenMock_files/jquery.tablefix_1.0.1.js"></script>
+        <script type="text/javascript">
+
+            $('body').on('click', '.explain', function(){
+                $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
+                $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
+                $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');
+                $('body .modalHost .durandal-wrapper').append('<div class="overlayPannel confWin"></div>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<header data-bind="text: title">ヘルプ</header>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 class="JYOHO" data-bind="attr: { "class" : type }"><span data-bind="text: title">ヘルプ</span><div data-bind="text:summary">用語</div></h1><p data-bind="html: message">用語説明メッセージ</p></section>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
+            });
+            $('body').on('click', '.detail, .linkBtn.cell', function(){
+                $('body').append('<div class="modalBlockout" style="z-index: 1057; opacity: 0.2;"></div>');
+                $('body').append('<div class="modalHost" style="z-index: 1058; opacity: 1;"></div>');
+                $('body .modalHost').append('<div class="durandal-wrapper" data-view="views/dialogs/hanyoDialog" data-active-view="true" style="margin-top: 0px; margin-left: 0px;"></div>');
+                $('body .modalHost .durandal-wrapper').append('<div class="overlayPannel confWin"></div>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<header data-bind="text: title">詳細</header>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<section><h1 data-bind="attr: { "class" : type }"><span data-bind="text: title">保障内容</span><div data-bind="text:summary">詳細情報</div></h1></section>');
+                $('body .modalHost .durandal-wrapper .overlayPannel').append('<footer><p><a href="javascript:void(0);" class="btn sub" data-bind="click: function () { $root.selectOption($data); }, text: $data.caption, attr:{class:$data.style}">閉じる</a></p></footer>');
+            });
+
+            $('body').on('click', '.modalHost .btn.sub', function(){
+                $('.modalBlockout').remove();
+                $('.modalHost').remove();
+            });
+            $('#pageHeader .font-size-area .btn:first-of-type').on('click', function(evt){
+            	$(this).parent().find('.btn').removeClass('selected');
+            	$(this).addClass('selected');
+            	$('main.keiyakugaiyou').removeClass('fontL');
+            });
+            $('#pageHeader .font-size-area .btn:last-of-type').on('click', function(evt){
+            	$(this).parent().find('.btn').removeClass('selected');
+            	$(this).addClass('selected');
+            	$('main.keiyakugaiyou').addClass('fontL');
+            });
+            
+            $(function(){
+               $.get('./dreamcruise_home.html', function(data){
+                   $('main.keiyakugaiyou').append(data);
+               });
+            });
+            
+        </script>
+</body></html>
