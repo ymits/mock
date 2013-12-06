@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/* --------------------------------- */
+/* merge from dreamcruise_4_A.html     */
+/* --------------------------------- */
+	#yen-attention .bold {font-weight:bold;}
+	#yen-attention .red{color:red;}
+	#yen-attention .underline{text-decoration:underline}
+	/*
+	#yen-attention .detail:after {
+		content: "円換算レートについて";
+	}
+	#yen-attention .detail {
+		background-image:url(img/tmp/exLinkWhite.png), url(img/tmp/arrow.png);
+		background-repeat: no-repeat, no-repeat;
+		background-size: 10px 10px, 95% 70%;
+		background-position: 153px 10px, 0px 3px;
+		width: 225px;
+		height: 30px;
+	}
+	*/
+	#yen-attention .yen-attention-text{
+		margin-left: 1em;
+	}
+	#yen-attention .marginbottom {
+		margin-bottom: 1em;
+	}
+
+/* --------------------------------- */
+/* merge from dreamcruise_4_B.html     */
+/* --------------------------------- */
+<style>
+	#yen-simulation .bgblue{
+		background-color:#d6eeff;
+	}
+	#yen-simulation .bold{
+		font-weight:bold;
+	}
+	#yen-simulation .red{
+		color:red;
+	}
+	#yen-simulation .blue{
+		color:#0088CC;
+	}
+	#yen-simulation .indent{
+		padding-left: 2em;
+	}
+	#yen-simulation .underline{
+		text-decoration:underline;
+	}
+	#yen-simulation table th , #yen-simulation table td{
+		border : solid 1px;
+	}
+	#yen-simulation table th{
+		background-color:#d6eeff;
+		text-align:center;
+		vertical-align:middle;
+		line-height:1.2;
+	}
+	#yen-simulation table td{
+		text-align:right;
+		vertical-align:middle;
+		padding-right:3px;
+	}
+	#yen-simulation .yenkansan-simulation-sanko{
+		margin-bottom:12px;
+	}
+	#yen-simulation .yenkansan-simulation-sanko .yenkansan-simulation-sanko-left {
+		float : left;
+	}
+	#yen-simulation .yenkansan-simulation-sanko .yenkansan-simulation-sanko-left .yenkansan-simulation-text{
+		background-color: #0000FF;
+		color: #FFFFFF;
+		font-weight:bold;
+		margin-bottom:1em;
+	}
+	#yen-simulation .yenkansan-simulation-sanko .yenkansan-simulation-sanko-left .kijunbi-box{
+		background-color:#d6eeff;
+		border : solid 1px ;
+	}
+	#yen-simulation .yenkansan-simulation-sanko .yenkansan-simulation-sanko-right{
+		margin-left: 300px;
+	}
+	#yen-simulation .yenkansan-simulation-sanko .yenkansan-simulation-sanko-right table{
+		width: 100%;
+	}
+	#yen-simulation .yenkansan-simulation-sanko  .kijunbi-box .marginminus{
+		margin-top: -5px;
+		margin-bottom: -5px;		
+	}
+	#yen-simulation .yen-simulation-tables{
+		margin-top:6px;
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-left-table{
+		float:left;
+		width:282px;
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-left-table table{
+		width:100%;
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-right-table{
+		margin-left:300px;
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-right-table table{
+		width:100%;
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-right-table table thead th:nth-child(1){
+		width:150px
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-right-table table thead th:nth-child(2){
+		width:176px
+	}
+	#yen-simulation .yen-simulation-tables .yen-simulation-right-table table{
+		width:100%;
+	}
+	#yen-simulation .yen-simulation-attention{
+		clear:left;
+		margin-top:5px;
+		padding:5px;
+	}
+	#yen-simulation .yen-simulation-freedial{
+		margin-top:10px;
+		border: solid 1px;
+	}
+	/* カラムサイズ 微調整用 */
+	#yen-simulation .yenkansan-simulation-sanko-right table thead tr{
+		height:38px;
+	}
+	#yen-simulation .yenkansan-simulation-sanko-right table tbody tr{
+		height:27px;
+	}
+	#yen-simulation .yen-simulation-tables table thead tr{
+		height:23px;
+	}
+	#yen-simulation .yen-simulation-tables table thead tr:nth-child(1){
+		height:38px;
+	}
+	#yen-simulation .yen-simulation-tables table tbody tr{
+		height:23px;
+	}
+/* --------------------------------- */
+/* merge from dreamcruise_5.html     */
+/* --------------------------------- */
+	#proposal-detail table.main-table th{
+		border : solid 1px;
+		font-weight : bold;
+		background-color: #d0e0ef;
+		text-align: center;
+		vertical-align : middle;
+		padding: 2px;
+		line-height:1.2;
+	}
+	#proposal-detail table.main-table td{
+		border : solid 1px;		
+		padding: 2px;
+		text-align:center;
+	}
+	#proposal-detail table.main-table tbody td:nth-child(1){
+		text-align:left;
+		padding-left:1em;
+		width:260px;
+	}
+	#proposal-detail table.main-table tbody td:nth-child(2){
+		width:150px;
+	}
+	#proposal-detail table.main-table tbody:last-child td:nth-child(3){
+		text-align:left;
+		pading-left:1em;	
+	}
+	#proposal-detail .hosoku{
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	#proposal-detail .items li{
+	}
+/* --------------------------------- */
+/* merge from dreamcruise_6.html     */
+/* --------------------------------- */
+	#nenkinbarai-tokuyaku .red{
+		color:red;
+	}
+	#nenkinbarai-tokuyaku .underline{
+		text-decoration:underline;
+	}
+	#nenkinbarai-tokuyaku .small{
+		font-size:12px;
+	}
+	#nenkinbarai-tokuyaku .blue{
+		color:#0088CC;
+	}
+	#nenkinbarai-tokuyaku .margintop{
+		margin-top:10px;
+	}
+	#nenkinbarai-tokuyaku .bold{
+		font-weight:bold;
+	}
+/* --------------------------------- */
+/* merge from dreamcruise_7.html     */
+/* --------------------------------- */
+	#dreamcruise-sonota div.explain-sonota > div.explain-sonota-title{
+	color:#FFFFFF;
+	background-color:#006bbd;
+	border-style:solid;
+	border-color:#002220;
+	width:100%;
+	margin-top:10px;
+	margin-bottom:10px;
+	}
+	#dreamcruise-sonota div.explain-sonota > div.explain-sonota-text {
+	text-indent:-1em;
+	padding-left:2em;
+	padding-right:2em;
+	}

@@ -1,0 +1,20 @@
+<section class="tab-pane fade" id="yen-attention-simulation">
+	<ul class="subTabs">
+	<li class="active">
+		<a href="javascript:void(0);" data-target="#yen-attention" data-toggle="tab">→円でお取り扱いする際のご注意</a>
+	</li>
+	<li>
+		<a href="javascript:void(0);" data-target="#yen-simulation" data-toggle="tab">→【参考】円換算シミュレーション</a>
+	</li>
+	</ul>
+	<div class="tab-content"></div>
+</section>
+<script type="text/javascript">
+    var yenAttentionSimulationContentInclude = function (url) {
+        $.get(url, function (data) {
+            $("#yen-attention-simulation .tab-content").append(data);
+        });
+    };
+    yenAttentionSimulationContentInclude("./dreamcruise_4_A.html");
+    yenAttentionSimulationContentInclude("./dreamcruise_4_B.html");
+</script>

@@ -1,46 +1,155 @@
 <style type="text/css">
-#shikumi .shikumi-chart {
+#tokutyo-shikumi .tokutyo .items li{
+    line-height: 1.64;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart {
     position: relative;
 }
-#shikumi .shikumi-chart .word{
+#tokutyo-shikumi .shikumi .shikumi-chart img{
+    margin-bottom: 5px;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word{
     position: absolute;
+    line-height: 1;
 }
-#shikumi .shikumi-chart .word.w1{
-    top: 5px;
-    left: 70px;
+#tokutyo-shikumi .shikumi .shikumi-chart .word.w1{
+    top: 3px;
+    left: 60px;
+    width: 110px;
+    text-align: center;
 }
-#shikumi .shikumi-chart .word.w2{
-    top: 5px;
-    left: 185px;
+#tokutyo-shikumi .shikumi .shikumi-chart .word.w2{
+    top: 3px;
+    left: 170px;
+    width: 110px;
+    text-align: center;
 }
-#shikumi .shikumi-chart .word.w3{
-    top: 5px;
-    left: 300px;
+#tokutyo-shikumi .shikumi .shikumi-chart .word.w3{
+    top: 3px;
+    left: 280px;
+    width: 110px;
+    text-align: center;
 }
-#shikumi .shikumi-chart .word.w4{
-    top: 5px;
-    left: 415px;
+#tokutyo-shikumi .shikumi .shikumi-chart .word.w4{
+    top: 3px;
+    left: 390px;
+    width: 110px;
+    text-align: center;
 }
-#shikumi .shikumi-chart .word.w5{
-    top: 5px;
-    left: 530px;
+#tokutyo-shikumi .shikumi .shikumi-chart .word.w5{
+    top: 3px;
+    left: 505px;
+    width: 110px;
+    text-align: center;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.hoken-kingaku{
+    top: 104px;
+    left: 30px;
+    width: 20px;
+    line-height: 1.64;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.hosho-naiyo{
+    top: 85px;
+    left: 108px;
+    width: 350px;
+    line-height: 1.64;
+}#tokutyo-shikumi .shikumi .shikumi-chart .word.hosho-naiyo .unit{
+    min-width: 70px;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.suii{
+    top: 247px;
+    left: 195px;
+    width: 300px;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.hoken-kikan{
+    top: 280px;
+    left: 240px;
+    width: 200px;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.start{
+    top: 284px;
+    left: -5px;
+    width: 50px;
+    text-align: center;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.end{
+    top: 284px;
+    left: 529px;
+    width: 70px;
+    text-align: center;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.riritsu-koukai{
+    top: 223px;
+    left: 495px;
+    width: 160px;
+    line-height: 1.2;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.pattern1{
+    top: 115px;
+    left: 585px;
+    width: 160px;
+    line-height: 1.2;
+}
+#tokutyo-shikumi .shikumi .shikumi-chart .word.pattern2{
+    top: 201px;
+    left: 682px;
+    width: 160px;
+    line-height: 1.2;
 }
 </style>
-<section class="tab-pane fade" id="shikumi">
-    <div class="shikumi-chart">
-        <img src="./img/tmp/F45141Z4.png" width="100%" height="300" alt="ベクトルX">
-        <div class="word w1">word1</div>
-        <div class="word w2">word2</div>
-        <div class="word w3">word3</div>
-        <div class="word w4">word4</div>
-        <div class="word w5">word5</div>
-        <div class="word w6">word6</div>
-        <div class="word w7">word7</div>
-        <div class="word w8">word8</div>
-        <div class="word w9">word9</div>
-        <div class="word w10">word10</div>
-        <div class="word w11">word11</div>
-    </div>
+<section class="tab-pane fade" id="tokutyo-shikumi">
+    <section class="tokutyo">
+        <h1 class="large section-header">商品の特徴</h1>
+        <ul class="items">
+            <li>・死亡・<a href="javascript:void(0);" class="link explain">所定の高度障害状態</a>の保障を準備できる終身保険です。</li>
+            <li>・保険料や保険金が豪ドル建のため、保険料や保険金などを円に換算する際、外国為替相場の変動により円に換算した金額が増減する商品です。</li>
+        </ul>
+    </section>
+    <section class="shikumi">
+        <h1 class="large section-header">商品のしくみ</h1>
+        <div class="shikumi-chart">
+            <img src="./img/tmp/F45141Z4.png" width="100%" height="300" alt="ベクトルX">
+            <div class="word w1 small">42歳時<br>96,000豪ドル<br>(8,973,120円<span class="appendix second"></span>)<br>基本保険金額<br>× 3%</div>
+            <div class="word w2 small">45歳時<br>96,000豪ドル<br>(8,973,120円<span class="appendix second"></span>)<br>基本保険金額<br>× 3%</div>
+            <div class="word w3 small">48歳時<br>96,000豪ドル<br>(8,973,120円<span class="appendix second"></span>)<br>基本保険金額<br>× 3%</div>
+            <div class="word w4 small">51歳時<br>96,000豪ドル<br>(8,973,120円<span class="appendix second"></span>)<br>基本保険金額<br>× 3%</div>
+            <div class="word w5 small">54歳時<br>480,000豪ドル<br>(44,865,600円<span class="appendix second"></span>)<br>基本保険金額<br>× 15%</div>
+            <div class="word hoken-kingaku">基本保険金額</div>
+            <div class="word hosho-naiyo">
+                <div class="title large">●死亡・<a href="javascript:void(0);" class="link explain">所定の高度障害状態</a>の保障</div>
+                <dl class="dl-horizontal">
+                    <dt>基本保障金額・・・</dt>
+                    <dd><em >50,000</em><span class="small unit">豪ドル<span class="appendix first inline"></span></span></dd>
+                    <dt>(</dt>
+                    <dd><em>3,963,000</em><span class="small unit">円<span class="appendix second inline"></span>)</span></dd>
+                </dl>
+            </div>
+            <div class="word large suii">解約返戻金の推移<span class="appendix third inline"></span></div>
+            <div class="word hoken-kikan">保険料払込期間</div>
+            <div class="word start">39歳<br>ご契約</div>
+            <div class="word end">54歳<br>払込満了</div>
+            <div class="word small riritsu-koukai">予定利率の更改<br>(以降１５年ごとに更改)</div>
+            <div class="word small pattern1">更改後の予定利率が、<br>契約時予定利率と同じ場合</div>
+            <div class="word small pattern2">更改後の予定利率が、<br>最低保予定利率となる場合</div>
+        </div>
+        <div class="notes">
+            <ul class="items small">
+                <li><span class="appendix first"></span>基本保険金額は、予定利率が更改されても増減しません。なお、死亡・所定の高度障害状態のときに<a href="javascript:void(0)" class="link explain">責任準備金額</a>が基本保険金額以上の場合は、責任準備金額の1.01倍相当額をお支払いします。詳細は<a href="javascript:void(0);" class="detail">ご契約の推移</a>の(2)死亡保険金額・高度障害保険金額でご確認ください。</li>
+                <li><span class="appendix second"></span>当社所定の円換算レート（支払い用）[1豪ドル=79.26円（換算基準日：2013年4月14日）]で計算しております。<span class="attention">なお、実際の円に換算した保険金額・生存給付金額は、お支払い時に適用される円換算レート（支払用）で計算するため、記載の金額は確定しているものではありません。</span></li>
+                <li><span class="appendix third"></span>ご契約年齢、保険料払込期間、予定利率等により記載のイメージとは相違することがありますので、詳細は<a href="javascript:void(0);" class="detail">ご契約の推移</a>でご確認ください。</li>
+            </ul>
+        </div>
+    </section>
 </section>
-
+<script type="text/javascript">
+$('#tokutyo-shikumi .detail').on('click', function(evt){
+    $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(4) a').tab('show');
+    
+    evt.preventDefault();
+    evt.stopPropagation();
+});
+$('#shikumi .tsumitate .tsumitateHoken a').on('click', function(evt){
+    $('.keiyakugaiyou #menuArea .mainTabs li:nth-child(4) a').tab('show');
+});
+</script>
     

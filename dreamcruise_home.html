@@ -32,6 +32,18 @@
     #home ul.items li {
         margin-top: 10px;
     }
+    #home .notice {
+        margin-top: 10px;
+        background-color: #003f93;
+        border: solid 1px #ff0000;
+        color: #ffffff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,1);
+        padding: 5px 5px 5px 40px; 
+        background-image: url(img/icons/icnNoticeAlert.png);
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 10px 3px;
+    }
     #home nav {
         position: absolute;
         bottom: 20px;
@@ -40,20 +52,23 @@
         display: inline;
     }
     #home nav .btn {
+        color: #ffffff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,1);
         height: 100px;
         width: 220px;
         line-height: 100px;
         margin: 20px 0 0 20px;
 
-        background: #b4e391; /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I0ZTM5MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzYxYzQxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiNGUzOTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top,  #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+        background: #007bc8; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwN2JjOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwM2Y5MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDdiYzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #007bc8 0%, #003f93 50%, #007bc8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007bc8), color-stop(50%,#003f93), color-stop(100%,#007bc8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #007bc8 0%,#003f93 50%,#007bc8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #007bc8 0%,#003f93 50%,#007bc8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #007bc8 0%,#003f93 50%,#007bc8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #007bc8 0%,#003f93 50%,#007bc8 100%); /* W3C */
+
         filter: none; /* IE6-8 */
     }
     #home nav .btn:active {
@@ -101,6 +116,9 @@
             <li>※お支払事由や給付にあたっての制限事項は、概要や代表事例を表示しています。お支払事由の詳細や、制限事項等についての詳細ならびに主な保険用語のご説明等については、<a href="" class="link">ご契約のしおりー約款</a>に記載しております。</li>
             <li>※保険料額、保険金額、解約返戻金額などは、特に円建である、または円換算後の金額である旨の表示がない限り、オーストラリア連邦通貨（以下「豪ドル」といいます）建の金額となります。</li>
         </ul>
+        <div class="notice">
+            書面でお渡しする「契約締結前交付書面」をあわせて必ずご覧ください。
+        </div>
         <nav>
             <ul>
                 <li><a href="javascript:void(0);" data-index="1" class="btn linkBtn"><span class="num large">1.</span><span class="title large">商品の特徴としくみ</span></a></li>

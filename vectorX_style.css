@@ -152,7 +152,7 @@ span.selWrap.invalid {
 #hokenNaiyo ul li .text{
 	padding-left:20px;
 }
-
+/*
 #hokenNaiyo .detail {
 	background-image:url(img/tmp/exLinkWhite.png), url(img/tmp/arrow.png);
 	background-repeat: no-repeat, no-repeat;
@@ -165,6 +165,7 @@ span.selWrap.invalid {
 #hokenNaiyo .detail:after {
 	content: "特約一覧";
 }
+*/
 #hokenNaiyo .red {
 	color:red;
 }
